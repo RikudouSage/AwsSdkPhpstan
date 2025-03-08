@@ -1,0 +1,31 @@
+{
+  "name": "rikudou/aws-sdk-phpstan",
+  "license": "MIT",
+  "type": "library",
+  "description": "Allows strong typing for AWS SDK",
+  "autoload": {
+    "psr-4": {
+      "Rikudou\\AwsSdkPhpstan\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^8.0",
+    "composer-runtime-api": "^2.2",
+    "aws/aws-sdk-php": "^3.0"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^2.1",
+    "nikic/php-parser": "^5.4",
+    "symfony/yaml": "^7.2"
+  },
+  "extra": {
+    "phpstan": {
+      "includes": [
+        "extension.neon"
+      ]
+    }
+  },
+  "bin": [
+    "bin/generate-aws-phpstan"
+  ]
+}

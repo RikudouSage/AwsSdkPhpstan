@@ -1,0 +1,1613 @@
+services:
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AccessAnalyzerClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AccountClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AcmClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ACMPCAClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\PrometheusServiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AmplifyClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AmplifyBackendClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AmplifyUIBuilderClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ApiGatewayClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ApiGatewayManagementApiClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ApiGatewayV2ClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AppConfigClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AppConfigDataClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AppFabricClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AppflowClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AppIntegrationsServiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ApplicationAutoScalingClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ApplicationInsightsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ApplicationSignalsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ApplicationCostProfilerClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AppMeshClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AppRunnerClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AppstreamClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AppSyncClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AppTestClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ARCZonalShiftClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ArtifactClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AthenaClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AuditManagerClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AutoScalingClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AutoScalingPlansClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\B2biClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\BackupClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\BackupGatewayClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\BackupSearchClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\BatchClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\BCMDataExportsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\BCMPricingCalculatorClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\BedrockClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\BedrockAgentClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\BedrockAgentRuntimeClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\BedrockDataAutomationClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\BedrockDataAutomationRuntimeClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\BedrockRuntimeClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\BillingClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\BillingConductorClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\BraketClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\BudgetsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CostExplorerClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ChatbotClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ChimeClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ChimeSDKIdentityClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ChimeSDKMediaPipelinesClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ChimeSDKMeetingsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ChimeSDKMessagingClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ChimeSDKVoiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CleanRoomsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CleanRoomsMLClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\Cloud9ClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CloudControlApiClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CloudDirectoryClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CloudFormationClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CloudFrontClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CloudFrontKeyValueStoreClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CloudHsmClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CloudHSMV2ClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CloudSearchClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CloudSearchDomainClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CloudTrailClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CloudTrailDataClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CodeArtifactClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CodeBuildClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CodeCatalystClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CodeCommitClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CodeConnectionsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CodeDeployClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CodeGuruReviewerClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CodeGuruSecurityClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CodeGuruProfilerClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CodePipelineClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CodeStarconnectionsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CodeStarNotificationsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CognitoIdentityClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CognitoIdentityProviderClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CognitoSyncClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ComprehendClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ComprehendMedicalClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ComputeOptimizerClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ConfigServiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ConnectClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ConnectContactLensClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ConnectCampaignServiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ConnectCampaignsV2ClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ConnectCasesClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ConnectParticipantClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ControlCatalogClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ControlTowerClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CostOptimizationHubClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CostandUsageReportServiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CustomerProfilesClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\IotDataPlaneClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\GlueDataBrewClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\DataExchangeClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\DataPipelineClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\DataSyncClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\DataZoneClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\DAXClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\DeadlineClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\DetectiveClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\DeviceFarmClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\DevOpsGuruClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\DirectConnectClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\DirectoryServiceDataClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ApplicationDiscoveryServiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\DLMClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\DatabaseMigrationServiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\DocDBClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\DocDBElasticClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\drsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\DirectoryServiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\DSQLClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\DynamoDbClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\EBSClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\Ec2ClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\EC2InstanceConnectClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\EcrClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ECRPublicClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\EcsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\EKSClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\EKSAuthClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ElastiCacheClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ElasticBeanstalkClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\EfsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ElasticLoadBalancingClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ElasticLoadBalancingV2ClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\EmrClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ElasticTranscoderClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SesClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\EMRContainersClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\EMRServerlessClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MarketplaceEntitlementServiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\EntityResolutionClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ElasticsearchServiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\EventBridgeClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CloudWatchEventsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CloudWatchEvidentlyClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\finspaceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\FinSpaceDataClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\FirehoseClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\FISClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\FMSClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ForecastServiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ForecastQueryServiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\FraudDetectorClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\FreeTierClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\FSxClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\GameLiftClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\GameLiftStreamsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\GeoMapsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\GeoPlacesClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\GeoRoutesClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\GlacierClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\GlobalAcceleratorClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\GlueClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ManagedGrafanaClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\GreengrassClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\GreengrassV2ClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\GroundStationClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\GuardDutyClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\HealthClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\HealthLakeClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\IamClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\IdentityStoreClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\imagebuilderClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ImportExportClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\InspectorClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\InspectorScanClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\Inspector2ClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\InternetMonitorClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\InvoicingClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\IotClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\IoTJobsDataPlaneClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\IoTManagedIntegrationsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\IoTAnalyticsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\IoTDeviceAdvisorClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\IoTEventsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\IoTEventsDataClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\IoTFleetHubClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\IoTFleetWiseClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\IoTSecureTunnelingClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\IoTSiteWiseClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\IoTThingsGraphClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\IoTTwinMakerClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\IoTWirelessClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\IVSClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\IVSRealTimeClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ivschatClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\KafkaClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\KafkaConnectClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\kendraClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\KendraRankingClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\KeyspacesClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\KinesisClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\KinesisVideoArchivedMediaClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\KinesisVideoMediaClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\KinesisVideoSignalingChannelsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\KinesisVideoWebRTCStorageClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\KinesisAnalyticsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\KinesisAnalyticsV2ClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\KinesisVideoClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\KmsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\LakeFormationClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\LambdaClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\LaunchWizardClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\LexModelBuildingServiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\LicenseManagerClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\LicenseManagerLinuxSubscriptionsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\LicenseManagerUserSubscriptionsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\LightsailClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\LocationServiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CloudWatchLogsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\LookoutEquipmentClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\LookoutMetricsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\LookoutforVisionClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MainframeModernizationClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MachineLearningClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\Macie2ClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MailManagerClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ManagedBlockchainClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ManagedBlockchainQueryClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MarketplaceAgreementClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MarketplaceCatalogClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MarketplaceDeploymentClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MarketplaceReportingClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MarketplaceCommerceAnalyticsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MediaConnectClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MediaConvertClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MediaLiveClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MediaPackageClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MediaPackageVodClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MediaPackageV2ClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MediaStoreClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MediaStoreDataClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MediaTailorClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MedicalImagingClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MemoryDBClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MarketplaceMeteringClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MigrationHubClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\mgnClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MigrationHubRefactorSpacesClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MigrationHubConfigClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MigrationHubOrchestratorClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MigrationHubStrategyRecommendationsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\LexModelsV2ClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CloudWatchClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MQClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MTurkClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\MWAAClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\NeptuneClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\NeptuneGraphClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\NeptunedataClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\NetworkFirewallClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\NetworkFlowMonitorClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\NetworkManagerClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\NetworkMonitorClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\NotificationsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\NotificationsContactsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\OAMClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ObservabilityAdminClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\OmicsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\OpenSearchServiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\OpenSearchServerlessClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\OpsWorksClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\OpsWorksCMClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\OrganizationsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\OSISClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\OutpostsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\PanoramaClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\PartnerCentralSellingClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\PaymentCryptographyClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\PaymentCryptographyDataClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\PcaConnectorAdClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\PcaConnectorScepClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\PCSClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\PersonalizeClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\PersonalizeEventsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\PersonalizeRuntimeClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\PIClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\PinpointClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\PinpointEmailClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\PinpointSMSVoiceV2ClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\PipesClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\PollyClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\PricingClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\PrivateNetworksClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ProtonClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\QAppsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\QBusinessClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\QConnectClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\QLDBClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\QLDBSessionClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\QuickSightClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\RAMClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\RecycleBinClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\RdsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\RDSDataServiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\RedshiftClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\RedshiftDataAPIServiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\RedshiftServerlessClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\RekognitionClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\RepostspaceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ResilienceHubClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ResourceExplorer2ClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ResourceGroupsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ResourceGroupsTaggingAPIClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\RoboMakerClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\RolesAnywhereClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\Route53ClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\Route53RecoveryClusterClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\Route53RecoveryControlConfigClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\Route53RecoveryReadinessClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\Route53DomainsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\Route53ProfilesClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\Route53ResolverClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\CloudWatchRUMClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\LexRuntimeServiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\LexRuntimeV2ClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SageMakerRuntimeClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\S3ClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\S3ControlClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\S3OutpostsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\S3TablesClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SageMakerClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AugmentedAIRuntimeClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SagemakerEdgeManagerClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SageMakerFeatureStoreRuntimeClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SageMakerGeospatialClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SageMakerMetricsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SavingsPlansClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SchedulerClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SchemasClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SecretsManagerClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SecurityIRClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SecurityHubClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SecurityLakeClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ServerlessApplicationRepositoryClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ServiceQuotasClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ServiceCatalogClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\AppRegistryClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ServiceDiscoveryClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SesV2ClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ShieldClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\signerClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SimSpaceWeaverClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SmsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\PinpointSMSVoiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SnowDeviceManagementClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SnowBallClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SnsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SocialMessagingClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SqsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SsmClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SSMContactsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SSMIncidentsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SSMQuickSetupClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SsmSapClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SSOClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SSOAdminClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SSOOIDCClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SfnClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\StorageGatewayClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\DynamoDbStreamsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\StsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SupplyChainClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SupportClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SupportAppClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SwfClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\SyntheticsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\TaxSettingsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\TextractClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\TimestreamInfluxDBClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\TimestreamQueryClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\TimestreamWriteClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\TnbClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\TranscribeServiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\TransferClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\TranslateClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\TrustedAdvisorClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\VerifiedPermissionsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\VoiceIDClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\VPCLatticeClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\WafClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\WafRegionalClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\WAFV2ClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\WellArchitectedClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\ConnectWisdomServiceClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\WorkDocsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\WorkMailClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\WorkMailMessageFlowClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\WorkSpacesClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\WorkSpacesThinClientClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\WorkSpacesWebClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\XRayClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension

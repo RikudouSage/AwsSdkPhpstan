@@ -1,0 +1,31 @@
+#!/usr/bin/env php
+<?php
+
+use PhpParser\PrettyPrinter\Standard;
+use Rikudou\AwsSdkPhpstan\Generator\TypeExtensionGenerator;
+use Symfony\Component\Yaml\Yaml;
+
+require $_composer_autoload_path ?? __DIR__ . '/../vendor/autoload.php';
+
+$composerJsonFile = isset($_composer_autoload_path) ? __DIR__ . '/../../../../composer.json' : __DIR__ . '/../composer.json';
+
+if (!is_file($composerJsonFile)) {
+    throw new RuntimeException('Could not find composer.json');
+}
+
+if (!class_exists(Standard::class) || !class_exists(Yaml::class)) {
+    echo "To generate a custom build of the PHPStan config for AWS SDK, please make sure that nikic/php-parser and symfony/yaml is available in your project.", PHP_EOL;
+    exit(1);
+}
+
+$json = json_decode(file_get_contents($composerJsonFile), true);
+$vendorDir = $json['config']['vendor-dir'] ?? $_ENV['COMPOSER_VENDOR_DIR'] ?? 'vendor';
+if (!str_starts_with($vendorDir, '/')) {
+    $vendorDir = dirname($composerJsonFile) . '/' . $vendorDir;
+}
+$vendorDir = realpath($vendorDir);
+
+$only = $json['extra']['aws-sdk-phpstan']['only'] ?? [];
+
+$generator = new TypeExtensionGenerator($vendorDir, $only);
+$generator->generate();

@@ -1,0 +1,130 @@
+<?php
+
+namespace Aws;
+
+use ArrayAccess;
+use Countable;
+use IteratorAggregate;
+use Traversable;
+
+interface MonitoringEventsInterface
+{
+    /**
+     * @return array<mixed>
+     */
+    public function getMonitoringEvents(): array;
+
+    /**
+     * @param array<mixed> $event
+     */
+    public function prependMonitoringEvent(array $event): void;
+
+    /**
+     * @param array<mixed> $event
+     */
+    public function appendMonitoringEvent(array $event): void;
+
+}
+
+/**
+ * @template T of array<string, mixed>
+ *
+ * @extends ArrayAccess<key-of<T>, value-of<T>>
+ * @extends IteratorAggregate<key-of<T>, value-of<T>>
+ */
+interface ResultInterface extends ArrayAccess, IteratorAggregate, Countable
+{
+    public function __toString(): string;
+
+    /**
+     * @return T
+     */
+    public function toArray(): array;
+
+    public function hasKey(string $name): bool;
+
+    /**
+     * @template TKey of (key-of<T>|string)
+     * @param TKey $key
+     * @return (TKey is key-of<T> ? T[TKey] : null)
+     */
+    public function get(string $key): mixed;
+
+    public function search(string $expression): mixed;
+}
+
+/**
+ * @template T of array<string, mixed>
+ * @implements ResultInterface<T>
+ */
+class Result implements ResultInterface, MonitoringEventsInterface
+{
+    /**
+     * @param T $data
+     */
+    public function __construct(array $data = []) {}
+
+    public function hasKey(string $name): bool {}
+
+    public function search(string $expression): mixed {}
+
+    public function __toString(): string {}
+
+    public function getPath(string $path): mixed {}
+
+    /**
+     * @template TKey of (key-of<T>|string)
+     * @param TKey $key
+     * @return (TKey is key-of<T> ? T[TKey] : null)
+     */
+    public function get(string $key): mixed {}
+
+    /**
+     * @return Traversable<key-of<T>, value-of<T>>
+     */
+    public function getIterator(): Traversable {}
+
+    /**
+     * @param key-of<T> $offset
+     */
+    public function offsetExists(mixed $offset): bool {}
+
+    /**
+     * @param key-of<T> $offset
+     * @return value-of<T>
+     */
+    public function offsetGet(mixed $offset): mixed {}
+
+    /**
+     * @param key-of<T>|null $offset
+     * @param value-of<T> $value
+     */
+    public function offsetSet(mixed $offset, mixed $value): void {}
+
+    /**
+     * @param key-of<T> $offset
+     */
+    public function offsetUnset(mixed $offset): void {}
+
+    public function count(): int {}
+
+    /**
+     * @return array<mixed>
+     */
+    public function getMonitoringEvents(): array {}
+
+    /**
+     * @param array<mixed> $event
+     */
+    public function prependMonitoringEvent(array $event): void {}
+
+    /**
+     * @param array<mixed> $event
+     */
+    public function appendMonitoringEvent(array $event): void {}
+
+    /**
+     * @return T
+     */
+    public function toArray(): array {}
+}
