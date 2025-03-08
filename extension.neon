@@ -1,3 +1,6 @@
+parameters:
+    stubFiles:
+        - stubs/Result.stub
 services:
     -
         class: Rikudou\AwsSdkPhpstan\Types\AccessAnalyzerClientReturnTypeExtension
