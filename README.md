@@ -2,6 +2,14 @@
 
 This extension helps PHPStan to correctly determine the return type of all the SDK api calls.
 
+<!-- TOC -->
+* [AWS SDK PHPStan extension](#aws-sdk-phpstan-extension)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [How does it work?](#how-does-it-work)
+  * [Fine-tuning](#fine-tuning)
+<!-- TOC -->
+
 ## Installation
 
 `composer require --dev rikudou/aws-sdk-phpstan`
