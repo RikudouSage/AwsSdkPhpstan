@@ -239,56 +239,92 @@ final class GroundStationClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('SCHEDULED'),
                     new \PHPStan\Type\Constant\ConstantStringType('SCHEDULING'),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('destination'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('source'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('configDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('configId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('configType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dataflowDestinationRegion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('destination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('source'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('antennaDemodDecodeDetails'),
-                            new \PHPStan\Type\Constant\ConstantStringType('endpointDetails'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3RecordingDetails'),
+                            new \PHPStan\Type\Constant\ConstantStringType('configDetails'),
+                            new \PHPStan\Type\Constant\ConstantStringType('configId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('configType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('dataflowDestinationRegion'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('outputNode'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('awsGroundStationAgentEndpoint'),
-                                new \PHPStan\Type\Constant\ConstantStringType('endpoint'),
-                                new \PHPStan\Type\Constant\ConstantStringType('healthReasons'),
-                                new \PHPStan\Type\Constant\ConstantStringType('healthStatus'),
-                                new \PHPStan\Type\Constant\ConstantStringType('securityDetails'),
+                                new \PHPStan\Type\Constant\ConstantStringType('antennaDemodDecodeDetails'),
+                                new \PHPStan\Type\Constant\ConstantStringType('endpointDetails'),
+                                new \PHPStan\Type\Constant\ConstantStringType('s3RecordingDetails'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('agentStatus'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('auditResults'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('egressAddress'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ingressAddress'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('outputNode'),
                                 ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
-                                    ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('awsGroundStationAgentEndpoint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('endpoint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('healthReasons'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('healthStatus'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('securityDetails'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('agentStatus'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('auditResults'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('egressAddress'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ingressAddress'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                                        ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('mtu'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('socketAddress'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('mtu'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('socketAddress'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('portRange'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('maximum'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('minimum'),
+                                                ], [
+                                                    new \PHPStan\Type\IntegerType(),
+                                                    new \PHPStan\Type\IntegerType(),
+                                                ]),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('address'),
                                         new \PHPStan\Type\Constant\ConstantStringType('mtu'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('socketAddress'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('status'),
                                     ], [
-                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('name'),
                                             new \PHPStan\Type\Constant\ConstantStringType('port'),
@@ -296,140 +332,146 @@ final class GroundStationClientReturnTypeExtension implements \PHPStan\Type\Dyna
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\IntegerType(),
                                         ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('created'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('creating'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('failed'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_REGISTERED_AGENT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_IP_OWNERSHIP'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NOT_AUTHORIZED_TO_CREATE_SLR'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UNVERIFIED_IP_OWNERSHIP'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('INITIALIZING_DATAPLANE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DATAPLANE_FAILURE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('mtu'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('socketAddress'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
                                     ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('portRange'),
-                                        ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\StringType(),
+                                        ])),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\StringType(),
+                                        ])),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('bucketArn'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('keyTemplate'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('antenna-downlink'),
+                                new \PHPStan\Type\Constant\ConstantStringType('antenna-downlink-demod-decode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('antenna-uplink'),
+                                new \PHPStan\Type\Constant\ConstantStringType('dataflow-endpoint'),
+                                new \PHPStan\Type\Constant\ConstantStringType('tracking'),
+                                new \PHPStan\Type\Constant\ConstantStringType('uplink-echo'),
+                                new \PHPStan\Type\Constant\ConstantStringType('s3-recording'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('configDetails'),
+                            new \PHPStan\Type\Constant\ConstantStringType('configId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('configType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('dataflowSourceRegion'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('antennaDemodDecodeDetails'),
+                                new \PHPStan\Type\Constant\ConstantStringType('endpointDetails'),
+                                new \PHPStan\Type\Constant\ConstantStringType('s3RecordingDetails'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('outputNode'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('awsGroundStationAgentEndpoint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('endpoint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('healthReasons'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('healthStatus'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('securityDetails'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('agentStatus'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('auditResults'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('egressAddress'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ingressAddress'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                                        ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('mtu'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('socketAddress'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('maximum'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('minimum'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('port'),
                                             ], [
-                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\StringType(),
                                                 new \PHPStan\Type\IntegerType(),
                                             ]),
                                         ]),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('address'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('mtu'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('mtu'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('socketAddress'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('portRange'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('maximum'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('minimum'),
+                                                ], [
+                                                    new \PHPStan\Type\IntegerType(),
+                                                    new \PHPStan\Type\IntegerType(),
+                                                ]),
+                                            ]),
+                                        ]),
                                         new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('created'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('creating'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('deleted'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('failed'),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('NO_REGISTERED_AGENT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INVALID_IP_OWNERSHIP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_AUTHORIZED_TO_CREATE_SLR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UNVERIFIED_IP_OWNERSHIP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INITIALIZING_DATAPLANE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DATAPLANE_FAILURE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('bucketArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('keyTemplate'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('antenna-downlink'),
-                            new \PHPStan\Type\Constant\ConstantStringType('antenna-downlink-demod-decode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('antenna-uplink'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dataflow-endpoint'),
-                            new \PHPStan\Type\Constant\ConstantStringType('tracking'),
-                            new \PHPStan\Type\Constant\ConstantStringType('uplink-echo'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3-recording'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('configDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('configId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('configType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dataflowSourceRegion'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('antennaDemodDecodeDetails'),
-                            new \PHPStan\Type\Constant\ConstantStringType('endpointDetails'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3RecordingDetails'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('outputNode'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('awsGroundStationAgentEndpoint'),
-                                new \PHPStan\Type\Constant\ConstantStringType('endpoint'),
-                                new \PHPStan\Type\Constant\ConstantStringType('healthReasons'),
-                                new \PHPStan\Type\Constant\ConstantStringType('healthStatus'),
-                                new \PHPStan\Type\Constant\ConstantStringType('securityDetails'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('agentStatus'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('auditResults'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('egressAddress'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ingressAddress'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
-                                    ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('address'),
                                         new \PHPStan\Type\Constant\ConstantStringType('mtu'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('socketAddress'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('status'),
                                     ], [
-                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('name'),
                                             new \PHPStan\Type\Constant\ConstantStringType('port'),
@@ -437,95 +479,67 @@ final class GroundStationClientReturnTypeExtension implements \PHPStan\Type\Dyna
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\IntegerType(),
                                         ]),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('mtu'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('socketAddress'),
-                                    ], [
                                         new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('portRange'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('maximum'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('minimum'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('created'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('creating'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('failed'),
                                         ]),
                                     ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('address'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('mtu'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_REGISTERED_AGENT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_IP_OWNERSHIP'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NOT_AUTHORIZED_TO_CREATE_SLR'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UNVERIFIED_IP_OWNERSHIP'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('INITIALIZING_DATAPLANE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DATAPLANE_FAILURE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
+                                    ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
                                     ], [
                                         new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\StringType(),
+                                        ])),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\StringType(),
+                                        ])),
                                     ]),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('created'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('creating'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('deleted'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('failed'),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('NO_REGISTERED_AGENT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INVALID_IP_OWNERSHIP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_AUTHORIZED_TO_CREATE_SLR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UNVERIFIED_IP_OWNERSHIP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INITIALIZING_DATAPLANE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DATAPLANE_FAILURE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('bucketArn'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('keyTemplate'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
                                 ]),
                             ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('bucketArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('keyTemplate'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('antenna-downlink'),
+                                new \PHPStan\Type\Constant\ConstantStringType('antenna-downlink-demod-decode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('antenna-uplink'),
+                                new \PHPStan\Type\Constant\ConstantStringType('dataflow-endpoint'),
+                                new \PHPStan\Type\Constant\ConstantStringType('tracking'),
+                                new \PHPStan\Type\Constant\ConstantStringType('uplink-echo'),
+                                new \PHPStan\Type\Constant\ConstantStringType('s3-recording'),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('antenna-downlink'),
-                            new \PHPStan\Type\Constant\ConstantStringType('antenna-downlink-demod-decode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('antenna-uplink'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dataflow-endpoint'),
-                            new \PHPStan\Type\Constant\ConstantStringType('tracking'),
-                            new \PHPStan\Type\Constant\ConstantStringType('uplink-echo'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3-recording'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -843,35 +857,71 @@ final class GroundStationClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('awsGroundStationAgentEndpoint'),
-                    new \PHPStan\Type\Constant\ConstantStringType('endpoint'),
-                    new \PHPStan\Type\Constant\ConstantStringType('healthReasons'),
-                    new \PHPStan\Type\Constant\ConstantStringType('healthStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('securityDetails'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('agentStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('auditResults'),
-                        new \PHPStan\Type\Constant\ConstantStringType('egressAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ingressAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('awsGroundStationAgentEndpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('endpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('healthReasons'),
+                        new \PHPStan\Type\Constant\ConstantStringType('healthStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('securityDetails'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('agentStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('auditResults'),
+                            new \PHPStan\Type\Constant\ConstantStringType('egressAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ingressAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('mtu'),
+                                new \PHPStan\Type\Constant\ConstantStringType('socketAddress'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('mtu'),
+                                new \PHPStan\Type\Constant\ConstantStringType('socketAddress'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('portRange'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('maximum'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('minimum'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('address'),
                             new \PHPStan\Type\Constant\ConstantStringType('mtu'),
-                            new \PHPStan\Type\Constant\ConstantStringType('socketAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
                         ], [
-                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('name'),
                                 new \PHPStan\Type\Constant\ConstantStringType('port'),
@@ -879,74 +929,46 @@ final class GroundStationClientReturnTypeExtension implements \PHPStan\Type\Dyna
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\IntegerType(),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('mtu'),
-                            new \PHPStan\Type\Constant\ConstantStringType('socketAddress'),
-                        ], [
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('portRange'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('maximum'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('minimum'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('created'),
+                                new \PHPStan\Type\Constant\ConstantStringType('creating'),
+                                new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                                new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                                new \PHPStan\Type\Constant\ConstantStringType('failed'),
                             ]),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('address'),
-                        new \PHPStan\Type\Constant\ConstantStringType('mtu'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NO_REGISTERED_AGENT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INVALID_IP_OWNERSHIP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NOT_AUTHORIZED_TO_CREATE_SLR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UNVERIFIED_IP_OWNERSHIP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INITIALIZING_DATAPLANE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DATAPLANE_FAILURE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
+                        ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('created'),
-                            new \PHPStan\Type\Constant\ConstantStringType('creating'),
-                            new \PHPStan\Type\Constant\ConstantStringType('deleted'),
-                            new \PHPStan\Type\Constant\ConstantStringType('deleting'),
-                            new \PHPStan\Type\Constant\ConstantStringType('failed'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NO_REGISTERED_AGENT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INVALID_IP_OWNERSHIP'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NOT_AUTHORIZED_TO_CREATE_SLR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNVERIFIED_IP_OWNERSHIP'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INITIALIZING_DATAPLANE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DATAPLANE_FAILURE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
@@ -988,7 +1010,11 @@ final class GroundStationClientReturnTypeExtension implements \PHPStan\Type\Dyna
             ], [
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ])),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1033,7 +1059,9 @@ final class GroundStationClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('SPACE_TRACK'),
                     ]),
                 ]),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1047,25 +1075,27 @@ final class GroundStationClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('configList'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('configArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('configId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('configType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('antenna-downlink'),
-                        new \PHPStan\Type\Constant\ConstantStringType('antenna-downlink-demod-decode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('antenna-uplink'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dataflow-endpoint'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tracking'),
-                        new \PHPStan\Type\Constant\ConstantStringType('uplink-echo'),
-                        new \PHPStan\Type\Constant\ConstantStringType('s3-recording'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('configArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('antenna-downlink'),
+                            new \PHPStan\Type\Constant\ConstantStringType('antenna-downlink-demod-decode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('antenna-uplink'),
+                            new \PHPStan\Type\Constant\ConstantStringType('dataflow-endpoint'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tracking'),
+                            new \PHPStan\Type\Constant\ConstantStringType('uplink-echo'),
+                            new \PHPStan\Type\Constant\ConstantStringType('s3-recording'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1077,62 +1107,64 @@ final class GroundStationClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('contactList'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('contactId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('contactStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('groundStation'),
-                    new \PHPStan\Type\Constant\ConstantStringType('maximumElevation'),
-                    new \PHPStan\Type\Constant\ConstantStringType('missionProfileArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('postPassEndTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('prePassStartTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('region'),
-                    new \PHPStan\Type\Constant\ConstantStringType('satelliteArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('visibilityEndTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('visibilityStartTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AWS_CANCELLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AWS_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED_TO_SCHEDULE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PASS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('POSTPASS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PREPASS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SCHEDULED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SCHEDULING'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('contactId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('contactStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('groundStation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('maximumElevation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('missionProfileArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('postPassEndTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('prePassStartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('region'),
+                        new \PHPStan\Type\Constant\ConstantStringType('satelliteArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('visibilityEndTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('visibilityStartTime'),
                     ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DEGREE_ANGLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RADIAN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AWS_CANCELLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AWS_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED_TO_SCHEDULE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PASS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('POSTPASS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PREPASS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SCHEDULED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SCHEDULING'),
                         ]),
-                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DEGREE_ANGLE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RADIAN'),
+                            ]),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1144,13 +1176,15 @@ final class GroundStationClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('dataflowEndpointGroupList'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('dataflowEndpointGroupArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('dataflowEndpointGroupId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('dataflowEndpointGroupArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dataflowEndpointGroupId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1162,38 +1196,40 @@ final class GroundStationClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('ephemerides'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ephemerisId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('priority'),
-                    new \PHPStan\Type\Constant\ConstantStringType('sourceS3Object'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('bucket'),
-                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('version'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ephemerisId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('priority'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceS3Object'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
                     ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                            new \PHPStan\Type\Constant\ConstantStringType('key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('version'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VALIDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVALID'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('VALIDATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INVALID'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1205,15 +1241,17 @@ final class GroundStationClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('groundStationList'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('groundStationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('groundStationName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('region'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('groundStationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('groundStationName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('region'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1225,17 +1263,19 @@ final class GroundStationClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('missionProfileList'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('missionProfileArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('missionProfileId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('region'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('missionProfileArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('missionProfileId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('region'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1248,32 +1288,36 @@ final class GroundStationClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('satellites'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('currentEphemeris'),
-                    new \PHPStan\Type\Constant\ConstantStringType('groundStations'),
-                    new \PHPStan\Type\Constant\ConstantStringType('noradSatelliteID'),
-                    new \PHPStan\Type\Constant\ConstantStringType('satelliteArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('satelliteId'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ephemerisId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('epoch'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('source'),
+                        new \PHPStan\Type\Constant\ConstantStringType('currentEphemeris'),
+                        new \PHPStan\Type\Constant\ConstantStringType('groundStations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('noradSatelliteID'),
+                        new \PHPStan\Type\Constant\ConstantStringType('satelliteArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('satelliteId'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_PROVIDED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SPACE_TRACK'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ephemerisId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('epoch'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('source'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_PROVIDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SPACE_TRACK'),
+                            ]),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }

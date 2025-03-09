@@ -113,57 +113,65 @@ final class SupportClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('cases'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('caseId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('displayId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('subject'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('serviceCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('categoryCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('severityCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('submittedBy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('timeCreated'),
-                    new \PHPStan\Type\Constant\ConstantStringType('recentCommunications'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ccEmailAddresses'),
-                    new \PHPStan\Type\Constant\ConstantStringType('language'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('communications'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+                        new \PHPStan\Type\Constant\ConstantStringType('caseId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('displayId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('subject'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('serviceCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('categoryCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('severityCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('submittedBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('timeCreated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('recentCommunications'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ccEmailAddresses'),
+                        new \PHPStan\Type\Constant\ConstantStringType('language'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('caseId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('body'),
-                            new \PHPStan\Type\Constant\ConstantStringType('submittedBy'),
-                            new \PHPStan\Type\Constant\ConstantStringType('timeCreated'),
-                            new \PHPStan\Type\Constant\ConstantStringType('attachmentSet'),
+                            new \PHPStan\Type\Constant\ConstantStringType('communications'),
+                            new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
                         ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('caseId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('body'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('submittedBy'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('timeCreated'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('attachmentSet'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('attachmentId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('fileName'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                    ])),
+                                ]),
+                            ])),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('attachmentId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('fileName'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -175,25 +183,29 @@ final class SupportClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('communications'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('caseId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('body'),
-                    new \PHPStan\Type\Constant\ConstantStringType('submittedBy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('timeCreated'),
-                    new \PHPStan\Type\Constant\ConstantStringType('attachmentSet'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('attachmentId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('fileName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('caseId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('body'),
+                        new \PHPStan\Type\Constant\ConstantStringType('submittedBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('timeCreated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('attachmentSet'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('attachmentId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fileName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -206,27 +218,33 @@ final class SupportClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('communicationTypes'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('supportedHours'),
-                    new \PHPStan\Type\Constant\ConstantStringType('datesWithoutSupport'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('supportedHours'),
+                        new \PHPStan\Type\Constant\ConstantStringType('datesWithoutSupport'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('startDateTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('endDateTime'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('startDateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('endDateTime'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -236,21 +254,25 @@ final class SupportClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('services'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('code'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('categories'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('code'),
                         new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('categories'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('code'),
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -260,13 +282,15 @@ final class SupportClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('severityLevels'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('code'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -276,15 +300,17 @@ final class SupportClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('supportedLanguages'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('code'),
-                    new \PHPStan\Type\Constant\ConstantStringType('language'),
-                    new \PHPStan\Type\Constant\ConstantStringType('display'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('language'),
+                        new \PHPStan\Type\Constant\ConstantStringType('display'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -294,15 +320,17 @@ final class SupportClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('statuses'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('checkId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('millisUntilNextRefreshable'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('checkId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('millisUntilNextRefreshable'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -345,19 +373,23 @@ final class SupportClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\FloatType(),
                         ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('region'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('isSuppressed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('isSuppressed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('metadata'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -368,41 +400,43 @@ final class SupportClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('summaries'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('checkId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('hasFlaggedResources'),
-                    new \PHPStan\Type\Constant\ConstantStringType('resourcesSummary'),
-                    new \PHPStan\Type\Constant\ConstantStringType('categorySpecificSummary'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('resourcesProcessed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourcesFlagged'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourcesIgnored'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourcesSuppressed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('checkId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('hasFlaggedResources'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resourcesSummary'),
+                        new \PHPStan\Type\Constant\ConstantStringType('categorySpecificSummary'),
                     ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('costOptimizing'),
-                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('estimatedMonthlySavings'),
-                            new \PHPStan\Type\Constant\ConstantStringType('estimatedPercentMonthlySavings'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourcesProcessed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourcesFlagged'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourcesIgnored'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourcesSuppressed'),
                         ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('costOptimizing'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('estimatedMonthlySavings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('estimatedPercentMonthlySavings'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
                         ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -412,19 +446,23 @@ final class SupportClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('checks'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('category'),
-                    new \PHPStan\Type\Constant\ConstantStringType('metadata'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('category'),
+                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                ])),
             ]),
         ]);
     }

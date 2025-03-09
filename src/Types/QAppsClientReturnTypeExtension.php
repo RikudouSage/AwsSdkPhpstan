@@ -194,12 +194,14 @@ final class QAppsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('FileUpload'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatorMode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RetrievalMode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PluginMode'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FileUpload'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatorMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RetrievalMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PluginMode'),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -225,27 +227,29 @@ final class QAppsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('action'),
-                    new \PHPStan\Type\Constant\ConstantStringType('principal'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('read'),
-                        new \PHPStan\Type\Constant\ConstantStringType('write'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('userId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('email'),
+                        new \PHPStan\Type\Constant\ConstantStringType('action'),
+                        new \PHPStan\Type\Constant\ConstantStringType('principal'),
                     ], [
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('owner'),
-                            new \PHPStan\Type\Constant\ConstantStringType('user'),
+                            new \PHPStan\Type\Constant\ConstantStringType('read'),
+                            new \PHPStan\Type\Constant\ConstantStringType('write'),
                         ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('userId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('userType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('email'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('owner'),
+                                new \PHPStan\Type\Constant\ConstantStringType('user'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -296,17 +300,19 @@ final class QAppsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('title'),
-                    new \PHPStan\Type\Constant\ConstantStringType('color'),
-                    new \PHPStan\Type\Constant\ConstantStringType('appCount'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('color'),
+                        new \PHPStan\Type\Constant\ConstantStringType('appCount'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
@@ -352,302 +358,336 @@ final class QAppsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('FileUpload'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatorMode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RetrievalMode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PluginMode'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FileUpload'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatorMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RetrievalMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PluginMode'),
+                    ]),
+                ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('appDefinitionVersion'),
                     new \PHPStan\Type\Constant\ConstantStringType('cards'),
                     new \PHPStan\Type\Constant\ConstantStringType('canEdit'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('textInput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('qQuery'),
-                        new \PHPStan\Type\Constant\ConstantStringType('qPlugin'),
-                        new \PHPStan\Type\Constant\ConstantStringType('fileUpload'),
-                        new \PHPStan\Type\Constant\ConstantStringType('formInput'),
-                    ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('id'),
-                            new \PHPStan\Type\Constant\ConstantStringType('title'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dependencies'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('placeholder'),
-                            new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('textInput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('qQuery'),
+                            new \PHPStan\Type\Constant\ConstantStringType('qPlugin'),
+                            new \PHPStan\Type\Constant\ConstantStringType('fileUpload'),
+                            new \PHPStan\Type\Constant\ConstantStringType('formInput'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('text-input'),
-                                new \PHPStan\Type\Constant\ConstantStringType('q-query'),
-                                new \PHPStan\Type\Constant\ConstantStringType('file-upload'),
-                                new \PHPStan\Type\Constant\ConstantStringType('q-plugin'),
-                                new \PHPStan\Type\Constant\ConstantStringType('form-input'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('id'),
-                            new \PHPStan\Type\Constant\ConstantStringType('title'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dependencies'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('prompt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('outputSource'),
-                            new \PHPStan\Type\Constant\ConstantStringType('attributeFilter'),
-                            new \PHPStan\Type\Constant\ConstantStringType('memoryReferences'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('text-input'),
-                                new \PHPStan\Type\Constant\ConstantStringType('q-query'),
-                                new \PHPStan\Type\Constant\ConstantStringType('file-upload'),
-                                new \PHPStan\Type\Constant\ConstantStringType('q-plugin'),
-                                new \PHPStan\Type\Constant\ConstantStringType('form-input'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('approved-sources'),
-                                new \PHPStan\Type\Constant\ConstantStringType('llm'),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                new \PHPStan\Type\Constant\ConstantStringType('title'),
+                                new \PHPStan\Type\Constant\ConstantStringType('dependencies'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('placeholder'),
+                                new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('text-input'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('q-query'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('file-upload'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('q-plugin'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('form-input'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('andAllFilters'),
-                                new \PHPStan\Type\Constant\ConstantStringType('orAllFilters'),
-                                new \PHPStan\Type\Constant\ConstantStringType('notFilter'),
-                                new \PHPStan\Type\Constant\ConstantStringType('equalsTo'),
-                                new \PHPStan\Type\Constant\ConstantStringType('containsAll'),
-                                new \PHPStan\Type\Constant\ConstantStringType('containsAny'),
-                                new \PHPStan\Type\Constant\ConstantStringType('greaterThan'),
-                                new \PHPStan\Type\Constant\ConstantStringType('greaterThanOrEquals'),
-                                new \PHPStan\Type\Constant\ConstantStringType('lessThan'),
-                                new \PHPStan\Type\Constant\ConstantStringType('lessThanOrEquals'),
+                                new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                new \PHPStan\Type\Constant\ConstantStringType('title'),
+                                new \PHPStan\Type\Constant\ConstantStringType('dependencies'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('prompt'),
+                                new \PHPStan\Type\Constant\ConstantStringType('outputSource'),
+                                new \PHPStan\Type\Constant\ConstantStringType('attributeFilter'),
+                                new \PHPStan\Type\Constant\ConstantStringType('memoryReferences'),
                             ], [
-                                new \PHPStan\Type\MixedType(),
-                                new \PHPStan\Type\MixedType(),
-                                new \PHPStan\Type\MixedType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('longValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                    ]),
+                                ])),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('text-input'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('q-query'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('file-upload'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('q-plugin'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('form-input'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('approved-sources'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('llm'),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('andAllFilters'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('orAllFilters'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('notFilter'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('equalsTo'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('containsAll'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('containsAny'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('greaterThan'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('greaterThanOrEquals'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('lessThan'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('lessThanOrEquals'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\MixedType(),
+                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\MixedType(),
+                                    ])),
+                                    new \PHPStan\Type\MixedType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('longValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                                     ], [
                                         new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('longValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        ]),
                                     ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('longValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                                     ], [
                                         new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('longValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        ]),
                                     ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('longValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                                     ], [
                                         new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('longValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        ]),
                                     ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('longValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                                     ], [
                                         new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('longValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        ]),
                                     ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('longValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                                     ], [
                                         new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('longValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        ]),
                                     ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('longValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                                     ], [
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('longValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                    ], [
                                         new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('longValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        ]),
                                     ]),
                                 ]),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('id'),
-                            new \PHPStan\Type\Constant\ConstantStringType('title'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dependencies'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('prompt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('pluginType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('pluginId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('actionIdentifier'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('text-input'),
-                                new \PHPStan\Type\Constant\ConstantStringType('q-query'),
-                                new \PHPStan\Type\Constant\ConstantStringType('file-upload'),
-                                new \PHPStan\Type\Constant\ConstantStringType('q-plugin'),
-                                new \PHPStan\Type\Constant\ConstantStringType('form-input'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SERVICE_NOW'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SALESFORCE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('JIRA'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ZENDESK'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ASANA'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ATLASSIAN_CONFLUENCE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('GOOGLE_CALENDAR'),
-                                new \PHPStan\Type\Constant\ConstantStringType('JIRA_CLOUD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MICROSOFT_EXCHANGE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MICROSOFT_TEAMS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PAGERDUTY_ADVANCE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SALESFORCE_CRM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SERVICENOW_NOW_PLATFORM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SMARTSHEET'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ZENDESK_SUITE'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('id'),
-                            new \PHPStan\Type\Constant\ConstantStringType('title'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dependencies'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('filename'),
-                            new \PHPStan\Type\Constant\ConstantStringType('fileId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('allowOverride'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('text-input'),
-                                new \PHPStan\Type\Constant\ConstantStringType('q-query'),
-                                new \PHPStan\Type\Constant\ConstantStringType('file-upload'),
-                                new \PHPStan\Type\Constant\ConstantStringType('q-plugin'),
-                                new \PHPStan\Type\Constant\ConstantStringType('form-input'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('id'),
-                            new \PHPStan\Type\Constant\ConstantStringType('title'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dependencies'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('metadata'),
-                            new \PHPStan\Type\Constant\ConstantStringType('computeMode'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('text-input'),
-                                new \PHPStan\Type\Constant\ConstantStringType('q-query'),
-                                new \PHPStan\Type\Constant\ConstantStringType('file-upload'),
-                                new \PHPStan\Type\Constant\ConstantStringType('q-plugin'),
-                                new \PHPStan\Type\Constant\ConstantStringType('form-input'),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('schema'),
+                                new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                new \PHPStan\Type\Constant\ConstantStringType('title'),
+                                new \PHPStan\Type\Constant\ConstantStringType('dependencies'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('prompt'),
+                                new \PHPStan\Type\Constant\ConstantStringType('pluginType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('pluginId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('actionIdentifier'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('text-input'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('q-query'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('file-upload'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('q-plugin'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('form-input'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SERVICE_NOW'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SALESFORCE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('JIRA'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ZENDESK'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ASANA'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ATLASSIAN_CONFLUENCE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('GOOGLE_CALENDAR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('JIRA_CLOUD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MICROSOFT_EXCHANGE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MICROSOFT_TEAMS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PAGERDUTY_ADVANCE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SALESFORCE_CRM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SERVICENOW_NOW_PLATFORM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SMARTSHEET'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ZENDESK_SUITE'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('append'),
-                                new \PHPStan\Type\Constant\ConstantStringType('replace'),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                new \PHPStan\Type\Constant\ConstantStringType('title'),
+                                new \PHPStan\Type\Constant\ConstantStringType('dependencies'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('filename'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fileId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowOverride'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('text-input'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('q-query'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('file-upload'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('q-plugin'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('form-input'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                new \PHPStan\Type\Constant\ConstantStringType('title'),
+                                new \PHPStan\Type\Constant\ConstantStringType('dependencies'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('metadata'),
+                                new \PHPStan\Type\Constant\ConstantStringType('computeMode'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('text-input'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('q-query'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('file-upload'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('q-plugin'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('form-input'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('schema'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('append'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('replace'),
+                                ]),
                             ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                 ]),
             ]),
@@ -689,15 +729,17 @@ final class QAppsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('submissionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('submissionId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                    ])),
                 ])),
                 new \PHPStan\Type\BooleanType(),
             ]),
@@ -745,45 +787,7 @@ final class QAppsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('categories'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('title'),
-                    new \PHPStan\Type\Constant\ConstantStringType('color'),
-                    new \PHPStan\Type\Constant\ConstantStringType('appCount'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
-            ]),
-        ]);
-    }
-    private function listLibraryItems(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('libraryItems'),
-                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('libraryItemId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('appId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('appVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('categories'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdBy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updatedBy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ratingCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('isRatedByUser'),
-                    new \PHPStan\Type\Constant\ConstantStringType('userCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('isVerified'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('id'),
                         new \PHPStan\Type\Constant\ConstantStringType('title'),
@@ -795,16 +799,60 @@ final class QAppsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\BooleanType(),
-                ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function listLibraryItems(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('libraryItems'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('libraryItemId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('appId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('appVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('categories'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updatedBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ratingCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('isRatedByUser'),
+                        new \PHPStan\Type\Constant\ConstantStringType('userCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('isVerified'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                new \PHPStan\Type\Constant\ConstantStringType('title'),
+                                new \PHPStan\Type\Constant\ConstantStringType('color'),
+                                new \PHPStan\Type\Constant\ConstantStringType('appCount'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -820,23 +868,25 @@ final class QAppsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('cardId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                    new \PHPStan\Type\Constant\ConstantStringType('user'),
-                    new \PHPStan\Type\Constant\ConstantStringType('submissionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('userId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cardId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('user'),
+                        new \PHPStan\Type\Constant\ConstantStringType('submissionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('userId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -848,25 +898,27 @@ final class QAppsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('apps'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('appId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('appArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('title'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('canEdit'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('isVerified'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('appId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('appArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('canEdit'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('isVerified'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -899,259 +951,279 @@ final class QAppsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\Constant\ConstantStringType('cards'),
                         new \PHPStan\Type\Constant\ConstantStringType('initialPrompt'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('textInput'),
-                            new \PHPStan\Type\Constant\ConstantStringType('qQuery'),
-                            new \PHPStan\Type\Constant\ConstantStringType('qPlugin'),
-                            new \PHPStan\Type\Constant\ConstantStringType('fileUpload'),
-                            new \PHPStan\Type\Constant\ConstantStringType('formInput'),
-                        ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('title'),
-                                new \PHPStan\Type\Constant\ConstantStringType('id'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('placeholder'),
-                                new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('textInput'),
+                                new \PHPStan\Type\Constant\ConstantStringType('qQuery'),
+                                new \PHPStan\Type\Constant\ConstantStringType('qPlugin'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fileUpload'),
+                                new \PHPStan\Type\Constant\ConstantStringType('formInput'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('text-input'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('q-query'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('file-upload'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('q-plugin'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('form-input'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('title'),
-                                new \PHPStan\Type\Constant\ConstantStringType('id'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('prompt'),
-                                new \PHPStan\Type\Constant\ConstantStringType('outputSource'),
-                                new \PHPStan\Type\Constant\ConstantStringType('attributeFilter'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('text-input'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('q-query'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('file-upload'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('q-plugin'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('form-input'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('approved-sources'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('llm'),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('title'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('placeholder'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('text-input'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('q-query'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('file-upload'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('q-plugin'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('form-input'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('andAllFilters'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('orAllFilters'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('notFilter'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('equalsTo'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('containsAll'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('containsAny'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('greaterThan'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('greaterThanOrEquals'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('lessThan'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('lessThanOrEquals'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('title'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('prompt'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('outputSource'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('attributeFilter'),
                                 ], [
-                                    new \PHPStan\Type\MixedType(),
-                                    new \PHPStan\Type\MixedType(),
-                                    new \PHPStan\Type\MixedType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('longValue'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                        ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('text-input'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('q-query'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('file-upload'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('q-plugin'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('form-input'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('approved-sources'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('llm'),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('andAllFilters'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('orAllFilters'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('notFilter'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('equalsTo'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('containsAll'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('containsAny'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('greaterThan'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('greaterThanOrEquals'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('lessThan'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('lessThanOrEquals'),
                                     ], [
-                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\MixedType(),
+                                        ])),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\MixedType(),
+                                        ])),
+                                        new \PHPStan\Type\MixedType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('longValue'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('longValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            ]),
                                         ]),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('longValue'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('longValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            ]),
                                         ]),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('longValue'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('longValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            ]),
                                         ]),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('longValue'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('longValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            ]),
                                         ]),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('longValue'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('longValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            ]),
                                         ]),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('longValue'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('longValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                        ], [
                                             new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('stringListValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('longValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('dateValue'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            ]),
                                         ]),
                                     ]),
-                                ]),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('title'),
-                                new \PHPStan\Type\Constant\ConstantStringType('id'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('prompt'),
-                                new \PHPStan\Type\Constant\ConstantStringType('pluginId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('actionIdentifier'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('text-input'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('q-query'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('file-upload'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('q-plugin'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('form-input'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('title'),
-                                new \PHPStan\Type\Constant\ConstantStringType('id'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('filename'),
-                                new \PHPStan\Type\Constant\ConstantStringType('fileId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('allowOverride'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('text-input'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('q-query'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('file-upload'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('q-plugin'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('form-input'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\BooleanType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('title'),
-                                new \PHPStan\Type\Constant\ConstantStringType('id'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('metadata'),
-                                new \PHPStan\Type\Constant\ConstantStringType('computeMode'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('text-input'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('q-query'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('file-upload'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('q-plugin'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('form-input'),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('schema'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('title'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('prompt'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('pluginId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('actionIdentifier'),
                                 ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('text-input'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('q-query'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('file-upload'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('q-plugin'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('form-input'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('append'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('replace'),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('title'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('filename'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('fileId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('allowOverride'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('text-input'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('q-query'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('file-upload'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('q-plugin'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('form-input'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\BooleanType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('title'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('metadata'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('computeMode'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('text-input'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('q-query'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('file-upload'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('q-plugin'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('form-input'),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('schema'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                                    ]),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('append'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('replace'),
+                                    ]),
                                 ]),
                             ]),
-                        ]),
+                        ])),
                         new \PHPStan\Type\StringType(),
                     ]),
                 ]),
@@ -1210,17 +1282,19 @@ final class QAppsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('title'),
-                    new \PHPStan\Type\Constant\ConstantStringType('color'),
-                    new \PHPStan\Type\Constant\ConstantStringType('appCount'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('color'),
+                        new \PHPStan\Type\Constant\ConstantStringType('appCount'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
@@ -1271,12 +1345,14 @@ final class QAppsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('FileUpload'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatorMode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RetrievalMode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PluginMode'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FileUpload'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatorMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RetrievalMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PluginMode'),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1290,27 +1366,29 @@ final class QAppsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('action'),
-                    new \PHPStan\Type\Constant\ConstantStringType('principal'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('read'),
-                        new \PHPStan\Type\Constant\ConstantStringType('write'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('userId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('email'),
+                        new \PHPStan\Type\Constant\ConstantStringType('action'),
+                        new \PHPStan\Type\Constant\ConstantStringType('principal'),
                     ], [
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('owner'),
-                            new \PHPStan\Type\Constant\ConstantStringType('user'),
+                            new \PHPStan\Type\Constant\ConstantStringType('read'),
+                            new \PHPStan\Type\Constant\ConstantStringType('write'),
                         ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('userId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('userType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('email'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('owner'),
+                                new \PHPStan\Type\Constant\ConstantStringType('user'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }

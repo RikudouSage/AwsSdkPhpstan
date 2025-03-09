@@ -180,26 +180,32 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('UnsuccessfulFaceAssociations'),
                 new \PHPStan\Type\Constant\ConstantStringType('UserStatus'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Reasons'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FACE_NOT_FOUND'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATED_TO_A_DIFFERENT_USER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LOW_MATCH_CONFIDENCE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                     ]),
-                ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Reasons'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('FACE_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATED_TO_A_DIFFERENT_USER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOW_MATCH_CONFIDENCE'),
+                            ]),
+                        ])),
+                    ]),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                     new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
@@ -236,11 +242,121 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     ]),
                     new \PHPStan\Type\FloatType(),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Similarity'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Face'),
-                ], [
-                    new \PHPStan\Type\FloatType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Similarity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Face'),
+                    ], [
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Landmarks'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Pose'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Quality'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Emotions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Smile'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('nose'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
+                                    ]),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Roll'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SAD'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CALM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
+                                    ]),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
                         new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
@@ -262,46 +378,48 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             new \PHPStan\Type\FloatType(),
                         ]),
                         new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('X'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Y'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('nose'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
-                                new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
-                                new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('nose'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
+                                ]),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
                             ]),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Roll'),
                             new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
@@ -318,23 +436,25 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             new \PHPStan\Type\FloatType(),
                             new \PHPStan\Type\FloatType(),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SAD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CALM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SAD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CALM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
+                                ]),
+                                new \PHPStan\Type\FloatType(),
                             ]),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Value'),
                             new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
@@ -343,109 +463,7 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             new \PHPStan\Type\FloatType(),
                         ]),
                     ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Landmarks'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Pose'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Quality'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Emotions'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Smile'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('X'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Y'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nose'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
-                            new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
-                            new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
-                            new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
-                        ]),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Roll'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SAD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CALM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
-                        ]),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('ROTATE_0'),
                     new \PHPStan\Type\Constant\ConstantStringType('ROTATE_90'),
@@ -564,19 +582,25 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('DeletedFaces'),
                 new \PHPStan\Type\Constant\ConstantStringType('UnsuccessfulFaceDeletions'),
             ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Reasons'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATED_TO_AN_EXISTING_USER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FACE_NOT_FOUND'),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Reasons'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATED_TO_AN_EXISTING_USER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FACE_NOT_FOUND'),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -708,203 +732,230 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('ProjectVersionDescriptions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ProjectVersionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MinInferenceUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BillableTrainingTimeInSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TrainingEndTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OutputConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TrainingDataResult'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TestingDataResult'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EvaluationResult'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ManifestSummary'),
-                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MaxInferenceUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SourceProjectVersionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VersionDescription'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Feature'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BaseModelVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FeatureConfig'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TRAINING_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TRAINING_COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TRAINING_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COPYING_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COPYING_COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COPYING_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DEPRECATED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3Bucket'),
-                        new \PHPStan\Type\Constant\ConstantStringType('S3KeyPrefix'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProjectVersionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MinInferenceUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BillableTrainingTimeInSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TrainingEndTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OutputConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TrainingDataResult'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TestingDataResult'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EvaluationResult'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManifestSummary'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxInferenceUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceProjectVersionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VersionDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Feature'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BaseModelVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FeatureConfig'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TRAINING_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TRAINING_COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TRAINING_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COPYING_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COPYING_COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COPYING_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPRECATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
+                        ]),
                         new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Input'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Output'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Validation'),
-                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Assets'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Bucket'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3KeyPrefix'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Input'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Output'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Validation'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('GroundTruthManifest'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Assets'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
-                                ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('GroundTruthManifest'),
                                     ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                        ]),
                                     ]),
-                                ]),
+                                ])),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Assets'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('GroundTruthManifest'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                        ]),
+                                    ]),
+                                ])),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Assets'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('GroundTruthManifest'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                        ]),
+                                    ]),
+                                ])),
                             ]),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Assets'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Input'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Output'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Validation'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('GroundTruthManifest'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Assets'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoCreate'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
-                                ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('GroundTruthManifest'),
                                     ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                        ]),
                                     ]),
-                                ]),
+                                ])),
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Assets'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoCreate'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('GroundTruthManifest'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                        ]),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Assets'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('GroundTruthManifest'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                        ]),
+                                    ]),
+                                ])),
                             ]),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Assets'),
+                            new \PHPStan\Type\Constant\ConstantStringType('F1Score'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Summary'),
                         ], [
+                            new \PHPStan\Type\FloatType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('GroundTruthManifest'),
+                                new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
                                 ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]),
                             ]),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Input'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Output'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Validation'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Assets'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AutoCreate'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('GroundTruthManifest'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ]),
-                            ]),
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Assets'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AutoCreate'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('GroundTruthManifest'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ]),
-                            ]),
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Assets'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('GroundTruthManifest'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ]),
-                            ]),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('F1Score'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Summary'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
                         ], [
@@ -918,39 +969,26 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\StringType(),
                             ]),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
-                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CONTENT_MODERATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_LABELS'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ContentModeration'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ConfidenceThreshold'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                            ]),
                         ]),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CONTENT_MODERATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_LABELS'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ContentModeration'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ConfidenceThreshold'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -962,60 +1000,64 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('ProjectDescriptions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ProjectArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Datasets'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Feature'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AutoUpdate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ProjectArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DatasetType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DatasetArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessageCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Datasets'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Feature'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AutoUpdate'),
                     ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TRAIN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TEST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DatasetType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DatasetArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                                new \PHPStan\Type\Constant\ConstantStringType('StatusMessageCode'),
+                            ], [
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('TRAIN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TEST'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CREATE_COMPLETE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UPDATE_COMPLETE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SERVICE_ERROR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CLIENT_ERROR'),
+                                ]),
+                            ]),
+                        ])),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_COMPLETE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_COMPLETE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CONTENT_MODERATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_LABELS'),
                         ]),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SERVICE_ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLIENT_ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CONTENT_MODERATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_LABELS'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1094,7 +1136,9 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('Labels'),
                         new \PHPStan\Type\Constant\ConstantStringType('MinConfidence'),
                     ], [
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\FloatType(),
                     ]),
                 ]),
@@ -1104,29 +1148,33 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Polygon'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Polygon'),
                     ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                        ])),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('X'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Y'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('OptIn'),
                 ], [
@@ -1141,37 +1189,41 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('CustomLabels'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Geometry'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Polygon'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Geometry'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Polygon'),
                         ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('X'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Y'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                            ])),
                         ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1182,1054 +1234,7 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('FaceDetails'),
                 new \PHPStan\Type\Constant\ConstantStringType('OrientationCorrection'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AgeRange'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Smile'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Eyeglasses'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Sunglasses'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Gender'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Beard'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Mustache'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EyesOpen'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MouthOpen'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Emotions'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Landmarks'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Pose'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Quality'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FaceOccluded'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EyeDirection'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Low'),
-                        new \PHPStan\Type\Constant\ConstantStringType('High'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Male'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Female'),
-                        ]),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SAD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CALM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
-                        ]),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('X'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Y'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nose'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
-                            new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
-                            new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
-                            new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
-                        ]),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Roll'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_0'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_90'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_180'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_270'),
-                ]),
-            ]),
-        ]);
-    }
-    private function detectLabels(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Labels'),
-                new \PHPStan\Type\Constant\ConstantStringType('OrientationCorrection'),
-                new \PHPStan\Type\Constant\ConstantStringType('LabelModelVersion'),
-                new \PHPStan\Type\Constant\ConstantStringType('ImageProperties'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Instances'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Parents'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Aliases'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Categories'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DominantColors'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Red'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Blue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Green'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HexCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CSSColor'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SimplifiedColor'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PixelPercent'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_0'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_90'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_180'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_270'),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Quality'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DominantColors'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Foreground'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Background'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Contrast'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Red'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Blue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Green'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HexCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CSSColor'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SimplifiedColor'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PixelPercent'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Quality'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DominantColors'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Contrast'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Red'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Blue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Green'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HexCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CSSColor'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SimplifiedColor'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PixelPercent'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Quality'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DominantColors'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Contrast'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Red'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Blue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Green'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HexCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CSSColor'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SimplifiedColor'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PixelPercent'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                    ]),
-                ]),
-            ]),
-        ]);
-    }
-    private function detectModerationLabels(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('ModerationLabels'),
-                new \PHPStan\Type\Constant\ConstantStringType('ModerationModelVersion'),
-                new \PHPStan\Type\Constant\ConstantStringType('HumanLoopActivationOutput'),
-                new \PHPStan\Type\Constant\ConstantStringType('ProjectVersion'),
-                new \PHPStan\Type\Constant\ConstantStringType('ContentTypes'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ParentName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TaxonomyLevel'),
-                ], [
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('HumanLoopArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HumanLoopActivationReasons'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HumanLoopActivationConditionsEvaluationResults'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                ], [
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-            ]),
-        ]);
-    }
-    private function detectProtectiveEquipment(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('ProtectiveEquipmentModelVersion'),
-                new \PHPStan\Type\Constant\ConstantStringType('Persons'),
-                new \PHPStan\Type\Constant\ConstantStringType('Summary'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('BodyParts'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EquipmentDetections'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FACE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HEAD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LEFT_HAND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RIGHT_HAND'),
-                        ]),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CoversBodyPart'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('FACE_COVER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HAND_COVER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HEAD_COVER'),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\BooleanType(),
-                            ]),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('PersonsWithRequiredEquipment'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PersonsWithoutRequiredEquipment'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PersonsIndeterminate'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
-            ]),
-        ]);
-    }
-    private function detectText(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('TextDetections'),
-                new \PHPStan\Type\Constant\ConstantStringType('TextModelVersion'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DetectedText'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ParentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Geometry'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LINE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WORD'),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Polygon'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('X'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Y'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function disassociateFaces(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('DisassociatedFaces'),
-                new \PHPStan\Type\Constant\ConstantStringType('UnsuccessfulFaceDisassociations'),
-                new \PHPStan\Type\Constant\ConstantStringType('UserStatus'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Reasons'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FACE_NOT_FOUND'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATED_TO_A_DIFFERENT_USER'),
-                    ]),
-                ]),
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                ]),
-            ]),
-        ]);
-    }
-    private function distributeDatasetEntries(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([], []),
-        ]);
-    }
-    private function getCelebrityInfo(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Urls'),
-                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                new \PHPStan\Type\Constant\ConstantStringType('KnownGender'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Male'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Female'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Nonbinary'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unlisted'),
-                    ]),
-                ]),
-            ]),
-        ]);
-    }
-    private function getCelebrityRecognition(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('JobStatus'),
-                new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                new \PHPStan\Type\Constant\ConstantStringType('VideoMetadata'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-                new \PHPStan\Type\Constant\ConstantStringType('Celebrities'),
-                new \PHPStan\Type\Constant\ConstantStringType('JobId'),
-                new \PHPStan\Type\Constant\ConstantStringType('Video'),
-                new \PHPStan\Type\Constant\ConstantStringType('JobTag'),
-            ], [
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Codec'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DurationMillis'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Format'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FrameRate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FrameHeight'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FrameWidth'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ColorRange'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FULL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LIMITED'),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Celebrity'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Urls'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Face'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KnownGender'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AgeRange'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Smile'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Eyeglasses'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Sunglasses'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Gender'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Beard'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Mustache'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EyesOpen'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MouthOpen'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Emotions'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Landmarks'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Pose'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Quality'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FaceOccluded'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EyeDirection'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Low'),
-                                new \PHPStan\Type\Constant\ConstantStringType('High'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                            ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                            ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                            ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Male'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Female'),
-                                ]),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                            ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                            ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                            ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                            ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SAD'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CALM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
-                                ]),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('X'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Y'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('nose'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
-                                ]),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Roll'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                            ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Male'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Female'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Nonbinary'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Unlisted'),
-                            ]),
-                        ]),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function getContentModeration(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('JobStatus'),
-                new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                new \PHPStan\Type\Constant\ConstantStringType('VideoMetadata'),
-                new \PHPStan\Type\Constant\ConstantStringType('ModerationLabels'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-                new \PHPStan\Type\Constant\ConstantStringType('ModerationModelVersion'),
-                new \PHPStan\Type\Constant\ConstantStringType('JobId'),
-                new \PHPStan\Type\Constant\ConstantStringType('Video'),
-                new \PHPStan\Type\Constant\ConstantStringType('JobTag'),
-                new \PHPStan\Type\Constant\ConstantStringType('GetRequestMetadata'),
-            ], [
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Codec'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DurationMillis'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Format'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FrameRate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FrameHeight'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FrameWidth'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ColorRange'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FULL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LIMITED'),
-                    ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ModerationLabel'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartTimestampMillis'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EndTimestampMillis'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DurationMillis'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ContentTypes'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParentName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaxonomyLevel'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('SortBy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AggregateBy'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NAME'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMPS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SEGMENTS'),
-                    ]),
-                ]),
-            ]),
-        ]);
-    }
-    private function getFaceDetection(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('JobStatus'),
-                new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                new \PHPStan\Type\Constant\ConstantStringType('VideoMetadata'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-                new \PHPStan\Type\Constant\ConstantStringType('Faces'),
-                new \PHPStan\Type\Constant\ConstantStringType('JobId'),
-                new \PHPStan\Type\Constant\ConstantStringType('Video'),
-                new \PHPStan\Type\Constant\ConstantStringType('JobTag'),
-            ], [
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Codec'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DurationMillis'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Format'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FrameRate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FrameHeight'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FrameWidth'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ColorRange'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FULL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LIMITED'),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Face'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
                         new \PHPStan\Type\Constant\ConstantStringType('AgeRange'),
@@ -2326,63 +1331,67 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             new \PHPStan\Type\BooleanType(),
                             new \PHPStan\Type\FloatType(),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SAD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CALM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SAD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CALM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
+                                ]),
+                                new \PHPStan\Type\FloatType(),
                             ]),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('X'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Y'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('nose'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
-                                new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
-                                new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('nose'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
+                                ]),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
                             ]),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Roll'),
                             new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
@@ -2417,118 +1426,489 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             new \PHPStan\Type\FloatType(),
                         ]),
                     ]),
+                ])),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_0'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_90'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_180'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_270'),
                 ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
-    private function getFaceLivenessSessionResults(): ?\PHPStan\Type\Type
+    private function detectLabels(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('SessionId'),
-                new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                new \PHPStan\Type\Constant\ConstantStringType('ReferenceImage'),
-                new \PHPStan\Type\Constant\ConstantStringType('AuditImages'),
+                new \PHPStan\Type\Constant\ConstantStringType('Labels'),
+                new \PHPStan\Type\Constant\ConstantStringType('OrientationCorrection'),
+                new \PHPStan\Type\Constant\ConstantStringType('LabelModelVersion'),
+                new \PHPStan\Type\Constant\ConstantStringType('ImageProperties'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Instances'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Parents'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Aliases'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Categories'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DominantColors'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Red'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Blue'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Green'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('HexCode'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CSSColor'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SimplifiedColor'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PixelPercent'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                ])),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                    ]),
+                ])),
                 new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_0'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_90'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_180'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_270'),
                 ]),
-                new \PHPStan\Type\FloatType(),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Bytes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Quality'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DominantColors'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Foreground'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Background'),
                 ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ResourceType(),
-                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Contrast'),
                     ], [
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
                     ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Bytes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ResourceType(),
-                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Red'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Blue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Green'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HexCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CSSColor'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SimplifiedColor'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PixelPercent'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Quality'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DominantColors'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Contrast'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Red'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Blue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Green'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HexCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CSSColor'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SimplifiedColor'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PixelPercent'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Quality'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DominantColors'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Contrast'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Red'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Blue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Green'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HexCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CSSColor'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SimplifiedColor'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PixelPercent'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                        ])),
                     ]),
                 ]),
             ]),
         ]);
     }
-    private function getFaceSearch(): ?\PHPStan\Type\Type
+    private function detectModerationLabels(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ModerationLabels'),
+                new \PHPStan\Type\Constant\ConstantStringType('ModerationModelVersion'),
+                new \PHPStan\Type\Constant\ConstantStringType('HumanLoopActivationOutput'),
+                new \PHPStan\Type\Constant\ConstantStringType('ProjectVersion'),
+                new \PHPStan\Type\Constant\ConstantStringType('ContentTypes'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ParentName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TaxonomyLevel'),
+                    ], [
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('HumanLoopArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('HumanLoopActivationReasons'),
+                    new \PHPStan\Type\Constant\ConstantStringType('HumanLoopActivationConditionsEvaluationResults'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    ], [
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function detectProtectiveEquipment(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ProtectiveEquipmentModelVersion'),
+                new \PHPStan\Type\Constant\ConstantStringType('Persons'),
+                new \PHPStan\Type\Constant\ConstantStringType('Summary'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('BodyParts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EquipmentDetections'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('FACE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('HEAD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LEFT_HAND'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RIGHT_HAND'),
+                                ]),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CoversBodyPart'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                                        ], [
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('FACE_COVER'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('HAND_COVER'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('HEAD_COVER'),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                        ], [
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\BooleanType(),
+                                        ]),
+                                    ]),
+                                ])),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PersonsWithRequiredEquipment'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PersonsWithoutRequiredEquipment'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PersonsIndeterminate'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\IntegerType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\IntegerType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\IntegerType(),
+                    ])),
+                ]),
+            ]),
+        ]);
+    }
+    private function detectText(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('TextDetections'),
+                new \PHPStan\Type\Constant\ConstantStringType('TextModelVersion'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DetectedText'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ParentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Geometry'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('LINE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WORD'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Polygon'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                            ])),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function disassociateFaces(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('DisassociatedFaces'),
+                new \PHPStan\Type\Constant\ConstantStringType('UnsuccessfulFaceDisassociations'),
+                new \PHPStan\Type\Constant\ConstantStringType('UserStatus'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Reasons'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('FACE_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATED_TO_A_DIFFERENT_USER'),
+                            ]),
+                        ])),
+                    ]),
+                ])),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                ]),
+            ]),
+        ]);
+    }
+    private function distributeDatasetEntries(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+        ]);
+    }
+    private function getCelebrityInfo(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Urls'),
+                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                new \PHPStan\Type\Constant\ConstantStringType('KnownGender'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Male'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Female'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Nonbinary'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Unlisted'),
+                    ]),
+                ]),
+            ]),
+        ]);
+    }
+    private function getCelebrityRecognition(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('JobStatus'),
                 new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
                 new \PHPStan\Type\Constant\ConstantStringType('VideoMetadata'),
-                new \PHPStan\Type\Constant\ConstantStringType('Persons'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('Celebrities'),
                 new \PHPStan\Type\Constant\ConstantStringType('JobId'),
                 new \PHPStan\Type\Constant\ConstantStringType('Video'),
                 new \PHPStan\Type\Constant\ConstantStringType('JobTag'),
@@ -2538,7 +1918,6 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
                     new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                 ]),
-                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Codec'),
@@ -2560,29 +1939,416 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('LIMITED'),
                     ]),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Person'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FaceMatches'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Index'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Face'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Celebrity'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Urls'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Face'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KnownGender'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AgeRange'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Smile'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Eyeglasses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Sunglasses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Gender'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Beard'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Mustache'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EyesOpen'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MouthOpen'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Emotions'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Landmarks'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Pose'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Quality'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FaceOccluded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EyeDirection'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Low'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('High'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Male'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Female'),
+                                    ]),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SAD'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CALM'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
+                                        ]),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('nose'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
+                                        ]),
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Roll'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Male'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Female'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Nonbinary'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Unlisted'),
+                                ]),
+                            ]),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function getContentModeration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('JobStatus'),
+                new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                new \PHPStan\Type\Constant\ConstantStringType('VideoMetadata'),
+                new \PHPStan\Type\Constant\ConstantStringType('ModerationLabels'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('ModerationModelVersion'),
+                new \PHPStan\Type\Constant\ConstantStringType('JobId'),
+                new \PHPStan\Type\Constant\ConstantStringType('Video'),
+                new \PHPStan\Type\Constant\ConstantStringType('JobTag'),
+                new \PHPStan\Type\Constant\ConstantStringType('GetRequestMetadata'),
+            ], [
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Codec'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DurationMillis'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Format'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FrameRate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FrameHeight'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FrameWidth'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ColorRange'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FULL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LIMITED'),
+                    ]),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ModerationLabel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTimestampMillis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTimestampMillis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DurationMillis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ContentTypes'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ParentName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaxonomyLevel'),
                         ], [
                             new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('SortBy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AggregateBy'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NAME'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMPS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SEGMENTS'),
+                    ]),
+                ]),
+            ]),
+        ]);
+    }
+    private function getFaceDetection(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('JobStatus'),
+                new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                new \PHPStan\Type\Constant\ConstantStringType('VideoMetadata'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('Faces'),
+                new \PHPStan\Type\Constant\ConstantStringType('JobId'),
+                new \PHPStan\Type\Constant\ConstantStringType('Video'),
+                new \PHPStan\Type\Constant\ConstantStringType('JobTag'),
+            ], [
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Codec'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DurationMillis'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Format'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FrameRate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FrameHeight'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FrameWidth'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ColorRange'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FULL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LIMITED'),
+                    ]),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Face'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
                             new \PHPStan\Type\Constant\ConstantStringType('AgeRange'),
@@ -2679,63 +2445,67 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\BooleanType(),
                                 new \PHPStan\Type\FloatType(),
                             ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SAD'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CALM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SAD'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CALM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
+                                    ]),
+                                    new \PHPStan\Type\FloatType(),
                                 ]),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('X'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Y'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('nose'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('nose'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
+                                    ]),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
                                 ]),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
+                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Roll'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
@@ -2771,21 +2541,164 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             ]),
                         ]),
                     ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Similarity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Face'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function getFaceLivenessSessionResults(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('SessionId'),
+                new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                new \PHPStan\Type\Constant\ConstantStringType('ReferenceImage'),
+                new \PHPStan\Type\Constant\ConstantStringType('AuditImages'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
+                ]),
+                new \PHPStan\Type\FloatType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Bytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ResourceType(),
+                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Top'),
                     ], [
                         new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
+                    ]),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Bytes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ResourceType(),
+                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                        ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ImageId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExternalImageId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFacesModelVersion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function getFaceSearch(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('JobStatus'),
+                new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('VideoMetadata'),
+                new \PHPStan\Type\Constant\ConstantStringType('Persons'),
+                new \PHPStan\Type\Constant\ConstantStringType('JobId'),
+                new \PHPStan\Type\Constant\ConstantStringType('Video'),
+                new \PHPStan\Type\Constant\ConstantStringType('JobTag'),
+            ], [
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Codec'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DurationMillis'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Format'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FrameRate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FrameHeight'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FrameWidth'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ColorRange'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FULL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LIMITED'),
+                    ]),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Person'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FaceMatches'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Index'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Face'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Width'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Height'),
@@ -2797,14 +2710,235 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\FloatType(),
                                 new \PHPStan\Type\FloatType(),
                             ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AgeRange'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Smile'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Eyeglasses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Sunglasses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Gender'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Beard'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Mustache'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EyesOpen'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MouthOpen'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Emotions'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Landmarks'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Pose'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Quality'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FaceOccluded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EyeDirection'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Low'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('High'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Male'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Female'),
+                                    ]),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SAD'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CALM'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
+                                        ]),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('nose'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
+                                        ]),
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Roll'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                            ]),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Similarity'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Face'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ImageId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ExternalImageId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexFacesModelVersion'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                                    ], [
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
@@ -2865,79 +2999,91 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     ]),
                 ]),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Label'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartTimestampMillis'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EndTimestampMillis'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DurationMillis'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Instances'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Parents'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Aliases'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Categories'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Label'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTimestampMillis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTimestampMillis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DurationMillis'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
                             new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DominantColors'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Instances'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Parents'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Aliases'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Categories'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Red'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Blue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Green'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HexCode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CSSColor'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SimplifiedColor'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PixelPercent'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DominantColors'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                                    ], [
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Red'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Blue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Green'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('HexCode'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CSSColor'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SimplifiedColor'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PixelPercent'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                    ])),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3122,27 +3268,530 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     ]),
                 ]),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Person'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Index'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Face'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Person'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Index'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Face'),
                         ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AgeRange'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Smile'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Eyeglasses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Sunglasses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Gender'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Beard'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Mustache'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EyesOpen'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MouthOpen'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Emotions'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Landmarks'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Pose'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Quality'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FaceOccluded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EyeDirection'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Low'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('High'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Male'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Female'),
+                                    ]),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SAD'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CALM'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
+                                        ]),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('nose'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
+                                        ]),
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Roll'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                            ]),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function getSegmentDetection(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('JobStatus'),
+                new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                new \PHPStan\Type\Constant\ConstantStringType('VideoMetadata'),
+                new \PHPStan\Type\Constant\ConstantStringType('AudioMetadata'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('Segments'),
+                new \PHPStan\Type\Constant\ConstantStringType('SelectedSegmentTypes'),
+                new \PHPStan\Type\Constant\ConstantStringType('JobId'),
+                new \PHPStan\Type\Constant\ConstantStringType('Video'),
+                new \PHPStan\Type\Constant\ConstantStringType('JobTag'),
+            ], [
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Codec'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DurationMillis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Format'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FrameRate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FrameHeight'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FrameWidth'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ColorRange'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FULL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LIMITED'),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Codec'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DurationMillis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SampleRate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NumberOfChannels'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTimestampMillis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTimestampMillis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DurationMillis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTimecodeSMPTE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTimecodeSMPTE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DurationSMPTE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TechnicalCueSegment'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ShotSegment'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartFrameNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndFrameNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DurationFrames'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TECHNICAL_CUE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SHOT'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ColorBars'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EndCredits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BlackFrames'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OpeningCredits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('StudioLogo'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Slate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Content'),
+                            ]),
                             new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Index'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ModelVersion'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TECHNICAL_CUE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SHOT'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function getTextDetection(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('JobStatus'),
+                new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                new \PHPStan\Type\Constant\ConstantStringType('VideoMetadata'),
+                new \PHPStan\Type\Constant\ConstantStringType('TextDetections'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('TextModelVersion'),
+                new \PHPStan\Type\Constant\ConstantStringType('JobId'),
+                new \PHPStan\Type\Constant\ConstantStringType('Video'),
+                new \PHPStan\Type\Constant\ConstantStringType('JobTag'),
+            ], [
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Codec'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DurationMillis'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Format'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FrameRate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FrameHeight'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FrameWidth'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ColorRange'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FULL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LIMITED'),
+                    ]),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TextDetection'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DetectedText'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ParentId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Geometry'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LINE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WORD'),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Polygon'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                                    ], [
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                ])),
+                            ]),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function indexFaces(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('FaceRecords'),
+                new \PHPStan\Type\Constant\ConstantStringType('OrientationCorrection'),
+                new \PHPStan\Type\Constant\ConstantStringType('FaceModelVersion'),
+                new \PHPStan\Type\Constant\ConstantStringType('UnindexedFaces'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Face'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FaceDetail'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ImageId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExternalImageId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexFacesModelVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
@@ -3240,23 +3889,806 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\BooleanType(),
                                 new \PHPStan\Type\FloatType(),
                             ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SAD'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CALM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
+                                    ]),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('nose'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
+                                    ]),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Roll'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_0'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_90'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_180'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_270'),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Reasons'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FaceDetail'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('EXCEEDS_MAX_FACES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EXTREME_POSE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOW_BRIGHTNESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOW_SHARPNESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOW_CONFIDENCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SMALL_BOUNDING_BOX'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOW_FACE_QUALITY'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AgeRange'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Smile'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Eyeglasses'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Sunglasses'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Gender'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Beard'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Mustache'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EyesOpen'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MouthOpen'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Emotions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Landmarks'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Pose'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Quality'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FaceOccluded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EyeDirection'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Low'),
+                                new \PHPStan\Type\Constant\ConstantStringType('High'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
                             ], [
                                 new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SAD'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CALM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Male'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Female'),
                                 ]),
                                 new \PHPStan\Type\FloatType(),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SAD'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CALM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
+                                    ]),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('nose'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
+                                    ]),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Roll'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                        ]),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function listCollections(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('CollectionIds'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('FaceModelVersions'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
+            ]),
+        ]);
+    }
+    private function listDatasetEntries(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('DatasetEntries'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listDatasetLabels(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('DatasetLabelDescriptions'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LabelName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LabelStats'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EntryCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BoundingBoxCount'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listFaces(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Faces'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('FaceModelVersion'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImageId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExternalImageId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IndexFacesModelVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listMediaAnalysisJobs(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('MediaAnalysisJobs'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('JobId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OperationsConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FailureDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CompletionTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Input'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OutputConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Results'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManifestSummary'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DetectModerationLabels'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MinConfidence'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ProjectVersion'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INVALID_S3_OBJECT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INVALID_MANIFEST'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INVALID_OUTPUT_CONFIG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INVALID_KMS_KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ACCESS_DENIED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_NOT_READY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('THROTTLED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Bucket'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3KeyPrefix'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ModelVersions'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Moderation'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function listProjectPolicies(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ProjectPolicies'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ProjectArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyRevisionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyDocument'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listStreamProcessors(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('StreamProcessors'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        ]),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function listTagsForResource(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+            ]),
+        ]);
+    }
+    private function listUsers(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Users'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserStatus'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function putProjectPolicy(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('PolicyRevisionId'),
+            ], [
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function recognizeCelebrities(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('CelebrityFaces'),
+                new \PHPStan\Type\Constant\ConstantStringType('UnrecognizedFaces'),
+                new \PHPStan\Type\Constant\ConstantStringType('OrientationCorrection'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Urls'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Face'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MatchConfidence'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KnownGender'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Landmarks'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Pose'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Quality'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Emotions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Smile'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('nose'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
+                                    ]),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Roll'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SAD'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CALM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
+                                    ]),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Male'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Female'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Nonbinary'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Unlisted'),
+                            ]),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Landmarks'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Pose'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Quality'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Emotions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Smile'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Type'),
                                 new \PHPStan\Type\Constant\ConstantStringType('X'),
@@ -3297,6 +4729,598 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\FloatType(),
                                 new \PHPStan\Type\FloatType(),
                             ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Roll'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SAD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CALM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
+                                ]),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_0'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_90'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_180'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_270'),
+                ]),
+            ]),
+        ]);
+    }
+    private function searchFaces(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('SearchedFaceId'),
+                new \PHPStan\Type\Constant\ConstantStringType('FaceMatches'),
+                new \PHPStan\Type\Constant\ConstantStringType('FaceModelVersion'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Similarity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Face'),
+                    ], [
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ImageId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExternalImageId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexFacesModelVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function searchFacesByImage(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('SearchedFaceBoundingBox'),
+                new \PHPStan\Type\Constant\ConstantStringType('SearchedFaceConfidence'),
+                new \PHPStan\Type\Constant\ConstantStringType('FaceMatches'),
+                new \PHPStan\Type\Constant\ConstantStringType('FaceModelVersion'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                ], [
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\FloatType(),
+                ]),
+                new \PHPStan\Type\FloatType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Similarity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Face'),
+                    ], [
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ImageId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExternalImageId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexFacesModelVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function searchUsers(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('UserMatches'),
+                new \PHPStan\Type\Constant\ConstantStringType('FaceModelVersion'),
+                new \PHPStan\Type\Constant\ConstantStringType('SearchedFace'),
+                new \PHPStan\Type\Constant\ConstantStringType('SearchedUser'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Similarity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('User'),
+                    ], [
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UserStatus'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                            ]),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                ]),
+            ]),
+        ]);
+    }
+    private function searchUsersByImage(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('UserMatches'),
+                new \PHPStan\Type\Constant\ConstantStringType('FaceModelVersion'),
+                new \PHPStan\Type\Constant\ConstantStringType('SearchedFace'),
+                new \PHPStan\Type\Constant\ConstantStringType('UnsearchedFaces'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Similarity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('User'),
+                    ], [
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UserStatus'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                            ]),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('FaceDetail'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AgeRange'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Smile'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Eyeglasses'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Sunglasses'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Gender'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Beard'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Mustache'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EyesOpen'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MouthOpen'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Emotions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Landmarks'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Pose'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Quality'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FaceOccluded'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EyeDirection'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Low'),
+                            new \PHPStan\Type\Constant\ConstantStringType('High'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Male'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Female'),
+                            ]),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SAD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CALM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
+                                ]),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('nose'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
+                                ]),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Roll'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                    ]),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FaceDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Reasons'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AgeRange'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Smile'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Eyeglasses'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Sunglasses'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Gender'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Beard'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Mustache'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EyesOpen'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MouthOpen'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Emotions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Landmarks'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Pose'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Quality'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FaceOccluded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EyeDirection'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Left'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Top'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Low'),
+                                new \PHPStan\Type\Constant\ConstantStringType('High'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Male'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Female'),
+                                ]),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SAD'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CALM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
+                                    ]),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('nose'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
+                                    ]),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Roll'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
@@ -3331,1814 +5355,20 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\FloatType(),
                             ]),
                         ]),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function getSegmentDetection(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('JobStatus'),
-                new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                new \PHPStan\Type\Constant\ConstantStringType('VideoMetadata'),
-                new \PHPStan\Type\Constant\ConstantStringType('AudioMetadata'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-                new \PHPStan\Type\Constant\ConstantStringType('Segments'),
-                new \PHPStan\Type\Constant\ConstantStringType('SelectedSegmentTypes'),
-                new \PHPStan\Type\Constant\ConstantStringType('JobId'),
-                new \PHPStan\Type\Constant\ConstantStringType('Video'),
-                new \PHPStan\Type\Constant\ConstantStringType('JobTag'),
-            ], [
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Codec'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DurationMillis'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Format'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FrameRate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FrameHeight'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FrameWidth'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ColorRange'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FULL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LIMITED'),
-                    ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Codec'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DurationMillis'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SampleRate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NumberOfChannels'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartTimestampMillis'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EndTimestampMillis'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DurationMillis'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartTimecodeSMPTE'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EndTimecodeSMPTE'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DurationSMPTE'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TechnicalCueSegment'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ShotSegment'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartFrameNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EndFrameNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DurationFrames'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TECHNICAL_CUE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SHOT'),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ColorBars'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndCredits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BlackFrames'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OpeningCredits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StudioLogo'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Slate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Content'),
-                        ]),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Index'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ModelVersion'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TECHNICAL_CUE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SHOT'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function getTextDetection(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('JobStatus'),
-                new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                new \PHPStan\Type\Constant\ConstantStringType('VideoMetadata'),
-                new \PHPStan\Type\Constant\ConstantStringType('TextDetections'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-                new \PHPStan\Type\Constant\ConstantStringType('TextModelVersion'),
-                new \PHPStan\Type\Constant\ConstantStringType('JobId'),
-                new \PHPStan\Type\Constant\ConstantStringType('Video'),
-                new \PHPStan\Type\Constant\ConstantStringType('JobTag'),
-            ], [
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Codec'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DurationMillis'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Format'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FrameRate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FrameHeight'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FrameWidth'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ColorRange'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FULL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LIMITED'),
-                    ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TextDetection'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DetectedText'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParentId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Geometry'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LINE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WORD'),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Polygon'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('X'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Y'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                        ]),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function indexFaces(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('FaceRecords'),
-                new \PHPStan\Type\Constant\ConstantStringType('OrientationCorrection'),
-                new \PHPStan\Type\Constant\ConstantStringType('FaceModelVersion'),
-                new \PHPStan\Type\Constant\ConstantStringType('UnindexedFaces'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Face'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FaceDetail'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ImageId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExternalImageId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexFacesModelVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AgeRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Smile'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Eyeglasses'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Sunglasses'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Gender'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Beard'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Mustache'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EyesOpen'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MouthOpen'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Emotions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Landmarks'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Pose'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Quality'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FaceOccluded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EyeDirection'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Low'),
-                            new \PHPStan\Type\Constant\ConstantStringType('High'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Male'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Female'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FACE_NOT_LARGEST'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EXCEEDS_MAX_FACES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EXTREME_POSE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOW_BRIGHTNESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOW_SHARPNESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOW_CONFIDENCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SMALL_BOUNDING_BOX'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOW_FACE_QUALITY'),
                             ]),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SAD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CALM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
-                            ]),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('X'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Y'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('nose'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
-                                new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
-                                new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
-                            ]),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Roll'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
+                        ])),
                     ]),
-                ]),
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_0'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_90'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_180'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_270'),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Reasons'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FaceDetail'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EXCEEDS_MAX_FACES'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EXTREME_POSE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LOW_BRIGHTNESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LOW_SHARPNESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LOW_CONFIDENCE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SMALL_BOUNDING_BOX'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LOW_FACE_QUALITY'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AgeRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Smile'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Eyeglasses'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Sunglasses'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Gender'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Beard'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Mustache'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EyesOpen'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MouthOpen'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Emotions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Landmarks'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Pose'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Quality'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FaceOccluded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EyeDirection'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Low'),
-                            new \PHPStan\Type\Constant\ConstantStringType('High'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Male'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Female'),
-                            ]),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SAD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CALM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
-                            ]),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('X'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Y'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('nose'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
-                                new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
-                                new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
-                            ]),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Roll'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                    ]),
-                ]),
-            ]),
-        ]);
-    }
-    private function listCollections(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('CollectionIds'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-                new \PHPStan\Type\Constant\ConstantStringType('FaceModelVersions'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listDatasetEntries(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('DatasetEntries'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listDatasetLabels(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('DatasetLabelDescriptions'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('LabelName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LabelStats'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EntryCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBoxCount'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listFaces(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Faces'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-                new \PHPStan\Type\Constant\ConstantStringType('FaceModelVersion'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ImageId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExternalImageId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IndexFacesModelVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listMediaAnalysisJobs(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-                new \PHPStan\Type\Constant\ConstantStringType('MediaAnalysisJobs'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('JobId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OperationsConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FailureDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CompletionTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Input'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OutputConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Results'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ManifestSummary'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DetectModerationLabels'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MinConfidence'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProjectVersion'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_S3_OBJECT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_MANIFEST'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_OUTPUT_CONFIG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_KMS_KEY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCESS_DENIED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_NOT_FOUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_NOT_READY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('THROTTLED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3Bucket'),
-                        new \PHPStan\Type\Constant\ConstantStringType('S3KeyPrefix'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ModelVersions'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Moderation'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3Object'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                ]),
-            ]),
-        ]);
-    }
-    private function listProjectPolicies(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('ProjectPolicies'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ProjectArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PolicyRevisionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PolicyDocument'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listStreamProcessors(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-                new \PHPStan\Type\Constant\ConstantStringType('StreamProcessors'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                    ]),
-                ]),
-            ]),
-        ]);
-    }
-    private function listTagsForResource(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-            ]),
-        ]);
-    }
-    private function listUsers(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Users'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('UserId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserStatus'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function putProjectPolicy(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('PolicyRevisionId'),
-            ], [
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function recognizeCelebrities(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('CelebrityFaces'),
-                new \PHPStan\Type\Constant\ConstantStringType('UnrecognizedFaces'),
-                new \PHPStan\Type\Constant\ConstantStringType('OrientationCorrection'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Urls'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Face'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MatchConfidence'),
-                    new \PHPStan\Type\Constant\ConstantStringType('KnownGender'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Landmarks'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Pose'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Quality'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Emotions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Smile'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('X'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Y'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('nose'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
-                                new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
-                                new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
-                            ]),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Roll'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SAD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CALM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
-                            ]),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Male'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Female'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Nonbinary'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Unlisted'),
-                        ]),
-                    ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Landmarks'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Pose'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Quality'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Emotions'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Smile'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('X'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Y'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nose'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
-                            new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
-                            new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
-                            new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
-                            new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
-                            new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
-                            new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
-                        ]),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Roll'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SAD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CALM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
-                        ]),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                    ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_0'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_90'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_180'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ROTATE_270'),
-                ]),
-            ]),
-        ]);
-    }
-    private function searchFaces(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('SearchedFaceId'),
-                new \PHPStan\Type\Constant\ConstantStringType('FaceMatches'),
-                new \PHPStan\Type\Constant\ConstantStringType('FaceModelVersion'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Similarity'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Face'),
-                ], [
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ImageId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExternalImageId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexFacesModelVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function searchFacesByImage(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('SearchedFaceBoundingBox'),
-                new \PHPStan\Type\Constant\ConstantStringType('SearchedFaceConfidence'),
-                new \PHPStan\Type\Constant\ConstantStringType('FaceMatches'),
-                new \PHPStan\Type\Constant\ConstantStringType('FaceModelVersion'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                ], [
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
-                ]),
-                new \PHPStan\Type\FloatType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Similarity'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Face'),
-                ], [
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ImageId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExternalImageId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexFacesModelVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function searchUsers(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('UserMatches'),
-                new \PHPStan\Type\Constant\ConstantStringType('FaceModelVersion'),
-                new \PHPStan\Type\Constant\ConstantStringType('SearchedFace'),
-                new \PHPStan\Type\Constant\ConstantStringType('SearchedUser'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Similarity'),
-                    new \PHPStan\Type\Constant\ConstantStringType('User'),
-                ], [
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UserStatus'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                        ]),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('FaceId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('UserId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
-            ]),
-        ]);
-    }
-    private function searchUsersByImage(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('UserMatches'),
-                new \PHPStan\Type\Constant\ConstantStringType('FaceModelVersion'),
-                new \PHPStan\Type\Constant\ConstantStringType('SearchedFace'),
-                new \PHPStan\Type\Constant\ConstantStringType('UnsearchedFaces'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Similarity'),
-                    new \PHPStan\Type\Constant\ConstantStringType('User'),
-                ], [
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UserStatus'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                        ]),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('FaceDetail'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AgeRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Smile'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Eyeglasses'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Sunglasses'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Gender'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Beard'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Mustache'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EyesOpen'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MouthOpen'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Emotions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Landmarks'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Pose'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Quality'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FaceOccluded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EyeDirection'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Low'),
-                            new \PHPStan\Type\Constant\ConstantStringType('High'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Male'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Female'),
-                            ]),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SAD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CALM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
-                            ]),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('X'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Y'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('nose'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
-                                new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
-                                new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
-                            ]),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Roll'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                    ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('FaceDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Reasons'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BoundingBox'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AgeRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Smile'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Eyeglasses'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Sunglasses'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Gender'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Beard'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Mustache'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EyesOpen'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MouthOpen'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Emotions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Landmarks'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Pose'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Quality'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FaceOccluded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EyeDirection'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Width'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Height'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Left'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Top'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Low'),
-                            new \PHPStan\Type\Constant\ConstantStringType('High'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Male'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Female'),
-                            ]),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HAPPY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SAD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ANGRY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CONFUSED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DISGUSTED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SURPRISED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CALM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FEAR'),
-                            ]),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('X'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Y'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('eyeLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('eyeRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('nose'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeBrowUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeBrowUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftEyeDown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightEyeDown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('noseLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('noseRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthUp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mouthDown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('leftPupil'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rightPupil'),
-                                new \PHPStan\Type\Constant\ConstantStringType('upperJawlineLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('midJawlineLeft'),
-                                new \PHPStan\Type\Constant\ConstantStringType('chinBottom'),
-                                new \PHPStan\Type\Constant\ConstantStringType('midJawlineRight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('upperJawlineRight'),
-                            ]),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Roll'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Brightness'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Sharpness'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Yaw'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Pitch'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FACE_NOT_LARGEST'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EXCEEDS_MAX_FACES'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EXTREME_POSE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LOW_BRIGHTNESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LOW_SHARPNESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LOW_CONFIDENCE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SMALL_BOUNDING_BOX'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LOW_FACE_QUALITY'),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }

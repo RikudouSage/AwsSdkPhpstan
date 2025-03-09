@@ -99,12 +99,16 @@ final class LicenseManagerUserSubscriptionsClientReturnTypeExtension implements 
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                 ]),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
                                 ]),
                             ]),
                             new \PHPStan\Type\UnionType([
@@ -164,26 +168,28 @@ final class LicenseManagerUserSubscriptionsClientReturnTypeExtension implements 
                         new \PHPStan\Type\Constant\ConstantStringType('DELETION_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('HealthStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Ipv4Address'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisioningStatus'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('HealthStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Ipv4Address'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ProvisioningStatus'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PROVISIONING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROVISIONING_FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROVISIONED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETION_FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                            ]),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PROVISIONING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROVISIONING_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROVISIONED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETION_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
                     ], [
@@ -233,12 +239,16 @@ final class LicenseManagerUserSubscriptionsClientReturnTypeExtension implements 
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                 ]),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
                                 ]),
                             ]),
                             new \PHPStan\Type\UnionType([
@@ -255,7 +265,9 @@ final class LicenseManagerUserSubscriptionsClientReturnTypeExtension implements 
                         new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -305,12 +317,16 @@ final class LicenseManagerUserSubscriptionsClientReturnTypeExtension implements 
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                 ]),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
                                 ]),
                             ]),
                             new \PHPStan\Type\UnionType([
@@ -336,64 +352,72 @@ final class LicenseManagerUserSubscriptionsClientReturnTypeExtension implements 
                 new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('FailureMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IdentityProvider'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Product'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Settings'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ActiveDirectoryIdentityProvider'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FailureMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IdentityProvider'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Product'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Settings'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
                     ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ActiveDirectorySettings'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ActiveDirectoryType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DirectoryId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ActiveDirectoryIdentityProvider'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DomainCredentialsProvider'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DomainIpv4List'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DomainNetworkSettings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ActiveDirectorySettings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ActiveDirectoryType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DirectoryId'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerCredentialsProvider'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DomainCredentialsProvider'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DomainIpv4List'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DomainNetworkSettings'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('SecretId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerCredentialsProvider'),
                                     ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('SecretId'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
+                                    ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\StringType(),
+                                        ])),
                                     ]),
                                 ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SELF_MANAGED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_MANAGED'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
                             ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SELF_MANAGED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_MANAGED'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
-                    ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -405,19 +429,23 @@ final class LicenseManagerUserSubscriptionsClientReturnTypeExtension implements 
                 new \PHPStan\Type\Constant\ConstantStringType('InstanceSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastStatusCheckDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Products'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastStatusCheckDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Products'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -429,39 +457,21 @@ final class LicenseManagerUserSubscriptionsClientReturnTypeExtension implements 
                 new \PHPStan\Type\Constant\ConstantStringType('LicenseServerEndpoints'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LicenseServerEndpointArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LicenseServerEndpointId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LicenseServerEndpointProvisioningStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LicenseServers'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ServerEndpoint'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ServerType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PROVISIONING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PROVISIONING_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PROVISIONED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETION_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('HealthStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Ipv4Address'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisioningStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LicenseServerEndpointArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LicenseServerEndpointId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LicenseServerEndpointProvisioningStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LicenseServers'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServerEndpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServerType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('PROVISIONING'),
@@ -471,15 +481,37 @@ final class LicenseManagerUserSubscriptionsClientReturnTypeExtension implements 
                             new \PHPStan\Type\Constant\ConstantStringType('DELETION_FAILED'),
                             new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
-                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HealthStatus'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ipv4Address'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ProvisioningStatus'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PROVISIONING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PROVISIONING_FAILED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PROVISIONED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DELETION_FAILED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                                ]),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('RDS_SAL'),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('RDS_SAL'),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -492,64 +524,70 @@ final class LicenseManagerUserSubscriptionsClientReturnTypeExtension implements 
                 new \PHPStan\Type\Constant\ConstantStringType('ProductUserSummaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Domain'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IdentityProvider'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Product'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProductUserArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SubscriptionEndDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SubscriptionStartDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Username'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ActiveDirectoryIdentityProvider'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Domain'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IdentityProvider'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Product'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProductUserArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubscriptionEndDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubscriptionStartDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Username'),
                     ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ActiveDirectorySettings'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ActiveDirectoryType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DirectoryId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ActiveDirectoryIdentityProvider'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DomainCredentialsProvider'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DomainIpv4List'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DomainNetworkSettings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ActiveDirectorySettings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ActiveDirectoryType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DirectoryId'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerCredentialsProvider'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DomainCredentialsProvider'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DomainIpv4List'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DomainNetworkSettings'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('SecretId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerCredentialsProvider'),
                                     ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('SecretId'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
+                                    ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\StringType(),
+                                        ])),
                                     ]),
                                 ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SELF_MANAGED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_MANAGED'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
                             ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SELF_MANAGED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_MANAGED'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -570,64 +608,70 @@ final class LicenseManagerUserSubscriptionsClientReturnTypeExtension implements 
                 new \PHPStan\Type\Constant\ConstantStringType('InstanceUserSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('AssociationDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DisassociationDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Domain'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IdentityProvider'),
-                    new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('InstanceUserArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Username'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ActiveDirectoryIdentityProvider'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AssociationDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisassociationDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Domain'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IdentityProvider'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InstanceUserArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Username'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ActiveDirectorySettings'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ActiveDirectoryType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DirectoryId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ActiveDirectoryIdentityProvider'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DomainCredentialsProvider'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DomainIpv4List'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DomainNetworkSettings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ActiveDirectorySettings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ActiveDirectoryType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DirectoryId'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerCredentialsProvider'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DomainCredentialsProvider'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DomainIpv4List'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DomainNetworkSettings'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('SecretId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerCredentialsProvider'),
                                     ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('SecretId'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
+                                    ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\StringType(),
+                                        ])),
                                     ]),
                                 ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SELF_MANAGED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_MANAGED'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
                             ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SELF_MANAGED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_MANAGED'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -670,12 +714,16 @@ final class LicenseManagerUserSubscriptionsClientReturnTypeExtension implements 
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                 ]),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
                                 ]),
                             ]),
                             new \PHPStan\Type\UnionType([
@@ -692,7 +740,9 @@ final class LicenseManagerUserSubscriptionsClientReturnTypeExtension implements 
                         new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -740,12 +790,16 @@ final class LicenseManagerUserSubscriptionsClientReturnTypeExtension implements 
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                 ]),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
                                 ]),
                             ]),
                             new \PHPStan\Type\UnionType([
@@ -807,12 +861,16 @@ final class LicenseManagerUserSubscriptionsClientReturnTypeExtension implements 
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                 ]),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
                                 ]),
                             ]),
                             new \PHPStan\Type\UnionType([
@@ -883,12 +941,16 @@ final class LicenseManagerUserSubscriptionsClientReturnTypeExtension implements 
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                 ]),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
                                 ]),
                             ]),
                             new \PHPStan\Type\UnionType([
@@ -905,7 +967,9 @@ final class LicenseManagerUserSubscriptionsClientReturnTypeExtension implements 
                         new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\StringType(),
                 ]),

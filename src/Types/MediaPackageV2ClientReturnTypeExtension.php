@@ -107,13 +107,15 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('HLS'),
                     new \PHPStan\Type\Constant\ConstantStringType('CMAF'),
@@ -197,21 +199,27 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('DashManifests'),
                     new \PHPStan\Type\Constant\ConstantStringType('LowLatencyHlsManifests'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -283,17 +291,19 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ScteFilter'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SPLICE_INSERT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BREAK'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_ADVERTISEMENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISTRIBUTOR_ADVERTISEMENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_PLACEMENT_OPPORTUNITY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISTRIBUTOR_PLACEMENT_OPPORTUNITY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROGRAM'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SPLICE_INSERT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BREAK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_ADVERTISEMENT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISTRIBUTOR_ADVERTISEMENT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_PLACEMENT_OPPORTUNITY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISTRIBUTOR_PLACEMENT_OPPORTUNITY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROGRAM'),
+                            ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
@@ -348,13 +358,15 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                 ]),
                             ]),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CLEAR_KEY_AES_128'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FAIRPLAY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PLAYREADY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WIDEVINE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IRDETO'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CLEAR_KEY_AES_128'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FAIRPLAY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PLAYREADY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WIDEVINE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('IRDETO'),
+                                ]),
+                            ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
@@ -364,163 +376,173 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChildManifestName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ManifestWindowSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProgramDateTimeIntervalSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ScteHls'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartTag'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AdMarkerHls'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('DATERANGE'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ManifestFilter'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Start'),
-                        new \PHPStan\Type\Constant\ConstantStringType('End'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeDelaySeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ClipStartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChildManifestName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManifestWindowSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProgramDateTimeIntervalSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ScteHls'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTag'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeOffset'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Precise'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChildManifestName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ManifestWindowSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProgramDateTimeIntervalSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ScteHls'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartTag'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AdMarkerHls'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('DATERANGE'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ManifestFilter'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Start'),
-                        new \PHPStan\Type\Constant\ConstantStringType('End'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeDelaySeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ClipStartTime'),
-                    ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeOffset'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Precise'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ManifestWindowSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MinUpdatePeriodSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MinBufferTimeSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SuggestedPresentationDelaySeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SegmentTemplateFormat'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PeriodTriggers'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ScteDash'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DrmSignaling'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UtcTiming'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ManifestFilter'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Start'),
-                        new \PHPStan\Type\Constant\ConstantStringType('End'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeDelaySeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ClipStartTime'),
-                    ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('NUMBER_WITH_TIMELINE'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AVAILS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DRM_KEY_ROTATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SOURCE_CHANGES'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SOURCE_DISRUPTIONS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AdMarkerDash'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BINARY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('XML'),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AdMarkerHls'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('DATERANGE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ManifestFilter'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Start'),
+                            new \PHPStan\Type\Constant\ConstantStringType('End'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TimeDelaySeconds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClipStartTime'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TimeOffset'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Precise'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\BooleanType(),
                         ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('INDIVIDUAL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REFERENCED'),
-                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TimingMode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TimingSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChildManifestName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManifestWindowSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProgramDateTimeIntervalSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ScteHls'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTag'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HTTP_HEAD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HTTP_ISO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HTTP_XSDATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UTC_DIRECT'),
-                        ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AdMarkerHls'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('DATERANGE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ManifestFilter'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Start'),
+                            new \PHPStan\Type\Constant\ConstantStringType('End'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TimeDelaySeconds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClipStartTime'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TimeOffset'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Precise'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
                     ]),
-                ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManifestWindowSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MinUpdatePeriodSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MinBufferTimeSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SuggestedPresentationDelaySeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SegmentTemplateFormat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PeriodTriggers'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ScteDash'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DrmSignaling'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UtcTiming'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ManifestFilter'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Start'),
+                            new \PHPStan\Type\Constant\ConstantStringType('End'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TimeDelaySeconds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClipStartTime'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('NUMBER_WITH_TIMELINE'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AVAILS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DRM_KEY_ROTATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SOURCE_CHANGES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SOURCE_DISRUPTIONS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AdMarkerDash'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BINARY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('XML'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INDIVIDUAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REFERENCED'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TimingMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TimingSource'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HTTP_HEAD'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HTTP_ISO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HTTP_XSDATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UTC_DIRECT'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('EndpointErrorConditions'),
                 ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('STALE_MANIFEST'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INCOMPLETE_MANIFEST'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MISSING_DRM_KEY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SLATE_INPUT'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('STALE_MANIFEST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INCOMPLETE_MANIFEST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MISSING_DRM_KEY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SLATE_INPUT'),
+                        ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -580,13 +602,15 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('HLS'),
                     new \PHPStan\Type\Constant\ConstantStringType('CMAF'),
@@ -684,21 +708,27 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('DashManifests'),
                     new \PHPStan\Type\Constant\ConstantStringType('LowLatencyHlsManifests'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -770,17 +800,19 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ScteFilter'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SPLICE_INSERT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BREAK'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_ADVERTISEMENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISTRIBUTOR_ADVERTISEMENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_PLACEMENT_OPPORTUNITY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISTRIBUTOR_PLACEMENT_OPPORTUNITY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROGRAM'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SPLICE_INSERT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BREAK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_ADVERTISEMENT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISTRIBUTOR_ADVERTISEMENT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_PLACEMENT_OPPORTUNITY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISTRIBUTOR_PLACEMENT_OPPORTUNITY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROGRAM'),
+                            ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
@@ -835,13 +867,15 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                 ]),
                             ]),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CLEAR_KEY_AES_128'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FAIRPLAY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PLAYREADY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WIDEVINE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IRDETO'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CLEAR_KEY_AES_128'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FAIRPLAY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PLAYREADY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WIDEVINE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('IRDETO'),
+                                ]),
+                            ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
@@ -851,163 +885,173 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChildManifestName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ManifestWindowSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProgramDateTimeIntervalSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ScteHls'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartTag'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AdMarkerHls'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('DATERANGE'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ManifestFilter'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Start'),
-                        new \PHPStan\Type\Constant\ConstantStringType('End'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeDelaySeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ClipStartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChildManifestName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManifestWindowSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProgramDateTimeIntervalSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ScteHls'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTag'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeOffset'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Precise'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChildManifestName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ManifestWindowSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProgramDateTimeIntervalSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ScteHls'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartTag'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AdMarkerHls'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('DATERANGE'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ManifestFilter'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Start'),
-                        new \PHPStan\Type\Constant\ConstantStringType('End'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeDelaySeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ClipStartTime'),
-                    ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeOffset'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Precise'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ManifestWindowSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MinUpdatePeriodSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MinBufferTimeSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SuggestedPresentationDelaySeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SegmentTemplateFormat'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PeriodTriggers'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ScteDash'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DrmSignaling'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UtcTiming'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ManifestFilter'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Start'),
-                        new \PHPStan\Type\Constant\ConstantStringType('End'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeDelaySeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ClipStartTime'),
-                    ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('NUMBER_WITH_TIMELINE'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AVAILS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DRM_KEY_ROTATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SOURCE_CHANGES'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SOURCE_DISRUPTIONS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AdMarkerDash'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BINARY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('XML'),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AdMarkerHls'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('DATERANGE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ManifestFilter'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Start'),
+                            new \PHPStan\Type\Constant\ConstantStringType('End'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TimeDelaySeconds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClipStartTime'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TimeOffset'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Precise'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\BooleanType(),
                         ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('INDIVIDUAL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REFERENCED'),
-                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TimingMode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TimingSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChildManifestName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManifestWindowSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProgramDateTimeIntervalSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ScteHls'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTag'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HTTP_HEAD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HTTP_ISO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HTTP_XSDATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UTC_DIRECT'),
-                        ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AdMarkerHls'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('DATERANGE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ManifestFilter'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Start'),
+                            new \PHPStan\Type\Constant\ConstantStringType('End'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TimeDelaySeconds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClipStartTime'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TimeOffset'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Precise'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
                     ]),
-                ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManifestWindowSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MinUpdatePeriodSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MinBufferTimeSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SuggestedPresentationDelaySeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SegmentTemplateFormat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PeriodTriggers'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ScteDash'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DrmSignaling'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UtcTiming'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ManifestFilter'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Start'),
+                            new \PHPStan\Type\Constant\ConstantStringType('End'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TimeDelaySeconds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClipStartTime'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('NUMBER_WITH_TIMELINE'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AVAILS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DRM_KEY_ROTATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SOURCE_CHANGES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SOURCE_DISRUPTIONS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AdMarkerDash'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BINARY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('XML'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INDIVIDUAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REFERENCED'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TimingMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TimingSource'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HTTP_HEAD'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HTTP_ISO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HTTP_XSDATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UTC_DIRECT'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('EndpointErrorConditions'),
                 ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('STALE_MANIFEST'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INCOMPLETE_MANIFEST'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MISSING_DRM_KEY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SLATE_INPUT'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('STALE_MANIFEST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INCOMPLETE_MANIFEST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MISSING_DRM_KEY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SLATE_INPUT'),
+                        ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -1037,19 +1081,21 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Items'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ChannelGroupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ModifiedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ChannelGroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ModifiedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1061,26 +1107,28 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Items'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChannelName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChannelGroupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ModifiedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('InputType'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('HLS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CMAF'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChannelName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChannelGroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ModifiedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InputType'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('HLS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CMAF'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1092,79 +1140,87 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Items'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ChannelGroupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChannelName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OriginEndpointName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Destination'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HarvestJobName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HarvestedManifests'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ScheduleConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ModifiedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ETag'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3Destination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChannelGroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChannelName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OriginEndpointName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Destination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HarvestJobName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HarvestedManifests'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ScheduleConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ModifiedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ETag'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BucketName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DestinationPath'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Destination'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BucketName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DestinationPath'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('HlsManifests'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DashManifests'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LowLatencyHlsManifests'),
-                    ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HlsManifests'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DashManifests'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LowLatencyHlsManifests'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                         ]),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
-                    ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1176,67 +1232,77 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Items'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChannelGroupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChannelName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OriginEndpointName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ContainerType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ModifiedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HlsManifests'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LowLatencyHlsManifests'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DashManifests'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ForceEndpointErrorConfiguration'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CMAF'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChildManifestName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChannelGroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChannelName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OriginEndpointName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ContainerType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ModifiedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HlsManifests'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LowLatencyHlsManifests'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DashManifests'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ForceEndpointErrorConfiguration'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChildManifestName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                    ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EndpointErrorConditions'),
-                    ], [
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('STALE_MANIFEST'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INCOMPLETE_MANIFEST'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MISSING_DRM_KEY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SLATE_INPUT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CMAF'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ChildManifestName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ChildManifestName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointErrorConditions'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('STALE_MANIFEST'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INCOMPLETE_MANIFEST'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MISSING_DRM_KEY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SLATE_INPUT'),
+                                ]),
+                            ])),
                         ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1298,13 +1364,15 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('HLS'),
                     new \PHPStan\Type\Constant\ConstantStringType('CMAF'),
@@ -1394,17 +1462,19 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ScteFilter'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SPLICE_INSERT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BREAK'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_ADVERTISEMENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISTRIBUTOR_ADVERTISEMENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_PLACEMENT_OPPORTUNITY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISTRIBUTOR_PLACEMENT_OPPORTUNITY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROGRAM'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SPLICE_INSERT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BREAK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_ADVERTISEMENT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISTRIBUTOR_ADVERTISEMENT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_PLACEMENT_OPPORTUNITY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISTRIBUTOR_PLACEMENT_OPPORTUNITY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROGRAM'),
+                            ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
@@ -1459,13 +1529,15 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                 ]),
                             ]),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CLEAR_KEY_AES_128'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FAIRPLAY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PLAYREADY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WIDEVINE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IRDETO'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CLEAR_KEY_AES_128'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FAIRPLAY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PLAYREADY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WIDEVINE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('IRDETO'),
+                                ]),
+                            ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
@@ -1475,166 +1547,176 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChildManifestName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ManifestWindowSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProgramDateTimeIntervalSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ScteHls'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartTag'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AdMarkerHls'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('DATERANGE'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ManifestFilter'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Start'),
-                        new \PHPStan\Type\Constant\ConstantStringType('End'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeDelaySeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ClipStartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChildManifestName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManifestWindowSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProgramDateTimeIntervalSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ScteHls'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTag'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AdMarkerHls'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('DATERANGE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ManifestFilter'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Start'),
+                            new \PHPStan\Type\Constant\ConstantStringType('End'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TimeDelaySeconds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClipStartTime'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TimeOffset'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Precise'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
                     ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeOffset'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Precise'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChildManifestName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ManifestWindowSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProgramDateTimeIntervalSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ScteHls'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartTag'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AdMarkerHls'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('DATERANGE'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ManifestFilter'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Start'),
-                        new \PHPStan\Type\Constant\ConstantStringType('End'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeDelaySeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ClipStartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChildManifestName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManifestWindowSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProgramDateTimeIntervalSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ScteHls'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTag'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AdMarkerHls'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('DATERANGE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ManifestFilter'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Start'),
+                            new \PHPStan\Type\Constant\ConstantStringType('End'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TimeDelaySeconds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClipStartTime'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TimeOffset'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Precise'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeOffset'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Precise'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('EndpointErrorConditions'),
                 ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('STALE_MANIFEST'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INCOMPLETE_MANIFEST'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MISSING_DRM_KEY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SLATE_INPUT'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('STALE_MANIFEST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INCOMPLETE_MANIFEST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MISSING_DRM_KEY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SLATE_INPUT'),
+                        ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ManifestWindowSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MinUpdatePeriodSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MinBufferTimeSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SuggestedPresentationDelaySeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SegmentTemplateFormat'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PeriodTriggers'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ScteDash'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DrmSignaling'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UtcTiming'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ManifestFilter'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Start'),
-                        new \PHPStan\Type\Constant\ConstantStringType('End'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeDelaySeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ClipStartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManifestWindowSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MinUpdatePeriodSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MinBufferTimeSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SuggestedPresentationDelaySeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SegmentTemplateFormat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PeriodTriggers'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ScteDash'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DrmSignaling'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UtcTiming'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('NUMBER_WITH_TIMELINE'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AVAILS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DRM_KEY_ROTATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SOURCE_CHANGES'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SOURCE_DISRUPTIONS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AdMarkerDash'),
-                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ManifestFilter'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Start'),
+                            new \PHPStan\Type\Constant\ConstantStringType('End'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TimeDelaySeconds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClipStartTime'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('NUMBER_WITH_TIMELINE'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AVAILS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DRM_KEY_ROTATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SOURCE_CHANGES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SOURCE_DISRUPTIONS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AdMarkerDash'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BINARY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('XML'),
+                            ]),
+                        ]),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BINARY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('XML'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INDIVIDUAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REFERENCED'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TimingMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TimingSource'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HTTP_HEAD'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HTTP_ISO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HTTP_XSDATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UTC_DIRECT'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('INDIVIDUAL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REFERENCED'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TimingMode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TimingSource'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HTTP_HEAD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HTTP_ISO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HTTP_XSDATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UTC_DIRECT'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }

@@ -99,97 +99,105 @@ final class InternetMonitorClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ASName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ASNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Subdivision'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Metro'),
-                    new \PHPStan\Type\Constant\ConstantStringType('City'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Latitude'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Longitude'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CountryCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SubdivisionCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ServiceLocation'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CausedBy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('InternetHealth'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Ipv4Prefixes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Networks'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AsPath'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NetworkEventType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ASName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ASNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Subdivision'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Metro'),
+                        new \PHPStan\Type\Constant\ConstantStringType('City'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Latitude'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Longitude'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CountryCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubdivisionCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CausedBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InternetHealth'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Ipv4Prefixes'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ASName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ASNumber'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ASName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ASNumber'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Internet'),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Availability'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Performance'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ExperienceScore'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PercentOfTotalTrafficImpacted'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PercentOfClientLocationImpacted'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ExperienceScore'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PercentOfTotalTrafficImpacted'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PercentOfClientLocationImpacted'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoundTripTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Networks'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AsPath'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NetworkEventType'),
                         ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ASName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ASNumber'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ASName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ASNumber'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Internet'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Availability'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Performance'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('P50'),
-                                new \PHPStan\Type\Constant\ConstantStringType('P90'),
-                                new \PHPStan\Type\Constant\ConstantStringType('P95'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ExperienceScore'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PercentOfTotalTrafficImpacted'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PercentOfClientLocationImpacted'),
                             ], [
                                 new \PHPStan\Type\FloatType(),
                                 new \PHPStan\Type\FloatType(),
                                 new \PHPStan\Type\FloatType(),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ExperienceScore'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PercentOfTotalTrafficImpacted'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PercentOfClientLocationImpacted'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RoundTripTime'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('P50'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('P90'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('P95'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                            ]),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                     new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
@@ -271,7 +279,9 @@ final class InternetMonitorClientReturnTypeExtension implements \PHPStan\Type\Dy
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
                     new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
@@ -352,14 +362,20 @@ final class InternetMonitorClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Data'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -387,129 +403,139 @@ final class InternetMonitorClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('HealthEvents'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('EventArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EndedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ImpactedLocations'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PercentOfTotalTrafficImpacted'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ImpactType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HealthScoreThreshold'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ASName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ASNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Subdivision'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Metro'),
-                        new \PHPStan\Type\Constant\ConstantStringType('City'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Latitude'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Longitude'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CountryCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SubdivisionCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImpactedLocations'),
                         new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CausedBy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InternetHealth'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Ipv4Prefixes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PercentOfTotalTrafficImpacted'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImpactType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HealthScoreThreshold'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ASName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ASNumber'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Subdivision'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Metro'),
+                                new \PHPStan\Type\Constant\ConstantStringType('City'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Latitude'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Longitude'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CountryCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SubdivisionCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ServiceLocation'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CausedBy'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternetHealth'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ipv4Prefixes'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Networks'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AsPath'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NetworkEventType'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('ASName'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ASNumber'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('ASName'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ASNumber'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('AWS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Internet'),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Availability'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Performance'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ExperienceScore'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PercentOfTotalTrafficImpacted'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PercentOfClientLocationImpacted'),
+                                    ], [
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ExperienceScore'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PercentOfTotalTrafficImpacted'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PercentOfClientLocationImpacted'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RoundTripTime'),
+                                    ], [
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('P50'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('P90'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('P95'),
+                                        ], [
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
+                        ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                             new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Networks'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AsPath'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkEventType'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ASName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ASNumber'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ASName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ASNumber'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Internet'),
-                            ]),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABILITY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PERFORMANCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LOCAL_AVAILABILITY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LOCAL_PERFORMANCE'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Availability'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Performance'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ExperienceScore'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PercentOfTotalTrafficImpacted'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PercentOfClientLocationImpacted'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ExperienceScore'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PercentOfTotalTrafficImpacted'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PercentOfClientLocationImpacted'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RoundTripTime'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('P50'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('P90'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('P95'),
-                                ], [
-                                    new \PHPStan\Type\FloatType(),
-                                    new \PHPStan\Type\FloatType(),
-                                    new \PHPStan\Type\FloatType(),
-                                ]),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\FloatType(),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
-                    ]),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABILITY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PERFORMANCE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LOCAL_AVAILABILITY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LOCAL_PERFORMANCE'),
-                    ]),
-                    new \PHPStan\Type\FloatType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -521,47 +547,49 @@ final class InternetMonitorClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('InternetEvents'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('EventId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EndedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ClientLocation'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventStatus'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ASName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ASNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Subdivision'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Metro'),
-                        new \PHPStan\Type\Constant\ConstantStringType('City'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Latitude'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Longitude'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ClientLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventStatus'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ASName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ASNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Subdivision'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Metro'),
+                            new \PHPStan\Type\Constant\ConstantStringType('City'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Latitude'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Longitude'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABILITY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PERFORMANCE'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABILITY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PERFORMANCE'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -573,29 +601,31 @@ final class InternetMonitorClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Monitors'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('MonitorName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MonitorArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProcessingStatus'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MonitorName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MonitorArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProcessingStatus'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('OK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COLLECTING_DATA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INSUFFICIENT_DATA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAULT_SERVICE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAULT_ACCESS_CLOUDWATCH'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('OK'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COLLECTING_DATA'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INSUFFICIENT_DATA'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAULT_SERVICE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAULT_ACCESS_CLOUDWATCH'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

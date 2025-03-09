@@ -169,8 +169,12 @@ final class MWAAClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
                         new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
                         new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('DagProcessingLogs'),
@@ -316,7 +320,9 @@ final class MWAAClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
                 new \PHPStan\Type\Constant\ConstantStringType('Environments'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

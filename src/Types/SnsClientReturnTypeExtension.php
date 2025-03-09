@@ -269,13 +269,15 @@ final class SnsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Endpoints'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('EndpointArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EndpointArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -288,29 +290,33 @@ final class SnsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('PhoneNumbers'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PhoneNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Iso2CountryCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RouteType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NumberCapabilities'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Transactional'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Promotional'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Premium'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Iso2CountryCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RouteType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NumberCapabilities'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Transactional'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Promotional'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Premium'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SMS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MMS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VOICE'),
+                            ]),
+                        ])),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SMS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MMS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VOICE'),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -321,7 +327,9 @@ final class SnsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('phoneNumbers'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -333,13 +341,15 @@ final class SnsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('PlatformApplications'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('PlatformApplicationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PlatformApplicationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -351,16 +361,18 @@ final class SnsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('PhoneNumbers'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('PhoneNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Verified'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Verified'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -372,19 +384,21 @@ final class SnsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Subscriptions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('SubscriptionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SubscriptionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -396,19 +410,21 @@ final class SnsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Subscriptions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('SubscriptionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SubscriptionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -419,13 +435,15 @@ final class SnsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -436,11 +454,13 @@ final class SnsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Topics'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -470,26 +490,30 @@ final class SnsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Successful'),
                 new \PHPStan\Type\Constant\ConstantStringType('Failed'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MessageId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SequenceNumber'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SenderFault'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MessageId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SequenceNumber'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SenderFault'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                ])),
             ]),
         ]);
     }

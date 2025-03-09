@@ -75,32 +75,36 @@ final class ECRPublicClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('layers'),
                 new \PHPStan\Type\Constant\ConstantStringType('failures'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('layerDigest'),
-                    new \PHPStan\Type\Constant\ConstantStringType('layerAvailability'),
-                    new \PHPStan\Type\Constant\ConstantStringType('layerSize'),
-                    new \PHPStan\Type\Constant\ConstantStringType('mediaType'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNAVAILABLE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('layerDigest'),
+                        new \PHPStan\Type\Constant\ConstantStringType('layerAvailability'),
+                        new \PHPStan\Type\Constant\ConstantStringType('layerSize'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mediaType'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNAVAILABLE'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('layerDigest'),
-                    new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('failureReason'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InvalidLayerDigest'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MissingLayerDigest'),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('layerDigest'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failureReason'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InvalidLayerDigest'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MissingLayerDigest'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -111,18 +115,7 @@ final class ECRPublicClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('imageIds'),
                 new \PHPStan\Type\Constant\ConstantStringType('failures'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('imageDigest'),
-                    new \PHPStan\Type\Constant\ConstantStringType('imageTag'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('imageId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('failureReason'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('imageDigest'),
                         new \PHPStan\Type\Constant\ConstantStringType('imageTag'),
@@ -130,17 +123,32 @@ final class ECRPublicClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InvalidImageDigest'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InvalidImageTag'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ImageTagDoesNotMatchDigest'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ImageNotFound'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MissingDigestAndTag'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ImageReferencedByManifestList'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KmsError'),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('imageId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failureReason'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('imageDigest'),
+                            new \PHPStan\Type\Constant\ConstantStringType('imageTag'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InvalidImageDigest'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InvalidImageTag'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ImageTagDoesNotMatchDigest'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ImageNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MissingDigestAndTag'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ImageReferencedByManifestList'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KmsError'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -190,8 +198,12 @@ final class ECRPublicClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('marketplaceCertified'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -243,27 +255,29 @@ final class ECRPublicClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('imageTagDetails'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('imageTag'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('imageDetail'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('imageDigest'),
-                        new \PHPStan\Type\Constant\ConstantStringType('imageSizeInBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('imagePushedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('imageManifestMediaType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('artifactMediaType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('imageTag'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('imageDetail'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('imageDigest'),
+                            new \PHPStan\Type\Constant\ConstantStringType('imageSizeInBytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('imagePushedAt'),
+                            new \PHPStan\Type\Constant\ConstantStringType('imageManifestMediaType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('artifactMediaType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -275,25 +289,29 @@ final class ECRPublicClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('imageDetails'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('registryId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('repositoryName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('imageDigest'),
-                    new \PHPStan\Type\Constant\ConstantStringType('imageTags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('imageSizeInBytes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('imagePushedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('imageManifestMediaType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('artifactMediaType'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('registryId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('repositoryName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('imageDigest'),
+                        new \PHPStan\Type\Constant\ConstantStringType('imageTags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('imageSizeInBytes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('imagePushedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('imageManifestMediaType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('artifactMediaType'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -305,33 +323,37 @@ final class ECRPublicClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('registries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('registryId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('registryArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('registryUri'),
-                    new \PHPStan\Type\Constant\ConstantStringType('verified'),
-                    new \PHPStan\Type\Constant\ConstantStringType('aliases'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('primaryRegistryAlias'),
-                        new \PHPStan\Type\Constant\ConstantStringType('defaultRegistryAlias'),
+                        new \PHPStan\Type\Constant\ConstantStringType('registryId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('registryArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('registryUri'),
+                        new \PHPStan\Type\Constant\ConstantStringType('verified'),
+                        new \PHPStan\Type\Constant\ConstantStringType('aliases'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('primaryRegistryAlias'),
+                                new \PHPStan\Type\Constant\ConstantStringType('defaultRegistryAlias'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
+                                ]),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -343,19 +365,21 @@ final class ECRPublicClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('repositories'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('repositoryArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('registryId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('repositoryName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('repositoryUri'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('repositoryArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('registryId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('repositoryName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('repositoryUri'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -406,8 +430,12 @@ final class ECRPublicClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('marketplaceCertified'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -448,13 +476,15 @@ final class ECRPublicClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -516,8 +546,12 @@ final class ECRPublicClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('marketplaceCertified'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),

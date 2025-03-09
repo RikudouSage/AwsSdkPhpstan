@@ -82,36 +82,40 @@ final class IoTJobsDataPlaneClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\Constant\ConstantStringType('inProgressJobs'),
                 new \PHPStan\Type\Constant\ConstantStringType('queuedJobs'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('jobId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('queuedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('startedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('versionNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('executionNumber'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('jobId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('queuedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('startedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('versionNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('executionNumber'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('jobId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('queuedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('versionNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('executionNumber'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('jobId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('queuedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('versionNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('executionNumber'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
             ]),
         ]);
     }

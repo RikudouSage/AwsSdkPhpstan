@@ -53,28 +53,34 @@ final class CloudSearchDomainClientReturnTypeExtension implements \PHPStan\Type\
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('fields'),
-                        new \PHPStan\Type\Constant\ConstantStringType('exprs'),
-                        new \PHPStan\Type\Constant\ConstantStringType('highlights'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('fields'),
+                            new \PHPStan\Type\Constant\ConstantStringType('exprs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('highlights'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ]))),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('buckets'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('count'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('count'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                    ])),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('min'),
@@ -119,15 +125,17 @@ final class CloudSearchDomainClientReturnTypeExtension implements \PHPStan\Type\
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('suggestion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('score'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('suggestion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('score'),
+                            new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -144,11 +152,13 @@ final class CloudSearchDomainClientReturnTypeExtension implements \PHPStan\Type\
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('message'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }

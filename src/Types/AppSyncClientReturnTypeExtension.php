@@ -328,82 +328,90 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                         new \PHPStan\Type\Constant\ConstantStringType('defaultSubscribeAuthModes'),
                         new \PHPStan\Type\Constant\ConstantStringType('logConfig'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('cognitoConfig'),
-                            new \PHPStan\Type\Constant\ConstantStringType('openIDConnectConfig'),
-                            new \PHPStan\Type\Constant\ConstantStringType('lambdaAuthorizerConfig'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('userPoolId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('appIdClientRegex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('authType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('cognitoConfig'),
+                                new \PHPStan\Type\Constant\ConstantStringType('openIDConnectConfig'),
+                                new \PHPStan\Type\Constant\ConstantStringType('lambdaAuthorizerConfig'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('userPoolId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('appIdClientRegex'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('issuer'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('clientId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('iatTTL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('authTTL'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('authorizerResultTtlInSeconds'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('authorizerUri'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('identityValidationExpression'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
                             ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('issuer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('clientId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('iatTTL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('authTTL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('authType'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                                ]),
                             ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('authorizerResultTtlInSeconds'),
-                                new \PHPStan\Type\Constant\ConstantStringType('authorizerUri'),
-                                new \PHPStan\Type\Constant\ConstantStringType('identityValidationExpression'),
+                                new \PHPStan\Type\Constant\ConstantStringType('authType'),
                             ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                                ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('authType'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                                ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
-                            ]),
-                        ]),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('logLevel'),
                             new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogsRoleArn'),
@@ -516,28 +524,32 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                            ]),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
@@ -841,49 +853,51 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('authenticationType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('openIDConnectConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userPoolConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lambdaAuthorizerConfig'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('issuer'),
-                            new \PHPStan\Type\Constant\ConstantStringType('clientId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('iatTTL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('authTTL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('authenticationType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('openIDConnectConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('userPoolConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('lambdaAuthorizerConfig'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('issuer'),
+                                new \PHPStan\Type\Constant\ConstantStringType('clientId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('iatTTL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('authTTL'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('userPoolId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('appIdClientRegex'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('authorizerResultTtlInSeconds'),
+                                new \PHPStan\Type\Constant\ConstantStringType('authorizerUri'),
+                                new \PHPStan\Type\Constant\ConstantStringType('identityValidationExpression'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('userPoolId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('appIdClientRegex'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authorizerResultTtlInSeconds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('authorizerUri'),
-                            new \PHPStan\Type\Constant\ConstantStringType('identityValidationExpression'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -970,7 +984,9 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('functions'),
                     ], [
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('conflictHandler'),
@@ -998,7 +1014,9 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                         new \PHPStan\Type\Constant\ConstantStringType('cachingKeys'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1162,25 +1180,29 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('codeErrors'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('errorType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('location'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('line'),
-                            new \PHPStan\Type\Constant\ConstantStringType('column'),
-                            new \PHPStan\Type\Constant\ConstantStringType('span'),
+                            new \PHPStan\Type\Constant\ConstantStringType('errorType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('location'),
                         ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('line'),
+                                new \PHPStan\Type\Constant\ConstantStringType('column'),
+                                new \PHPStan\Type\Constant\ConstantStringType('span'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                 ]),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1202,7 +1224,9 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 ], [
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1248,82 +1272,90 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                         new \PHPStan\Type\Constant\ConstantStringType('defaultSubscribeAuthModes'),
                         new \PHPStan\Type\Constant\ConstantStringType('logConfig'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('cognitoConfig'),
-                            new \PHPStan\Type\Constant\ConstantStringType('openIDConnectConfig'),
-                            new \PHPStan\Type\Constant\ConstantStringType('lambdaAuthorizerConfig'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('userPoolId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('appIdClientRegex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('authType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('cognitoConfig'),
+                                new \PHPStan\Type\Constant\ConstantStringType('openIDConnectConfig'),
+                                new \PHPStan\Type\Constant\ConstantStringType('lambdaAuthorizerConfig'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('userPoolId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('appIdClientRegex'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('issuer'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('clientId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('iatTTL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('authTTL'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('authorizerResultTtlInSeconds'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('authorizerUri'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('identityValidationExpression'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
                             ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('issuer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('clientId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('iatTTL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('authTTL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('authType'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                                ]),
                             ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('authorizerResultTtlInSeconds'),
-                                new \PHPStan\Type\Constant\ConstantStringType('authorizerUri'),
-                                new \PHPStan\Type\Constant\ConstantStringType('identityValidationExpression'),
+                                new \PHPStan\Type\Constant\ConstantStringType('authType'),
                             ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                                ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('authType'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                                ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
-                            ]),
-                        ]),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('logLevel'),
                             new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogsRoleArn'),
@@ -1440,28 +1472,32 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                            ]),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
@@ -1618,49 +1654,61 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('models'),
                     new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('fields'),
-                        new \PHPStan\Type\Constant\ConstantStringType('primaryKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('indexes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('sdl'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('length'),
+                            new \PHPStan\Type\Constant\ConstantStringType('fields'),
+                            new \PHPStan\Type\Constant\ConstantStringType('primaryKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('indexes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sdl'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('length'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('kind'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('values'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\MixedType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\StringType(),
+                                        ])),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('kind'),
                                 new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('values'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fields'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\MixedType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('fields'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('fields'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('fields'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                ]),
+                            ])),
                             new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -1833,49 +1881,51 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('authenticationType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('openIDConnectConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userPoolConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lambdaAuthorizerConfig'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('issuer'),
-                            new \PHPStan\Type\Constant\ConstantStringType('clientId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('iatTTL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('authTTL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('authenticationType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('openIDConnectConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('userPoolConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('lambdaAuthorizerConfig'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('issuer'),
+                                new \PHPStan\Type\Constant\ConstantStringType('clientId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('iatTTL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('authTTL'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('userPoolId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('appIdClientRegex'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('authorizerResultTtlInSeconds'),
+                                new \PHPStan\Type\Constant\ConstantStringType('authorizerUri'),
+                                new \PHPStan\Type\Constant\ConstantStringType('identityValidationExpression'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('userPoolId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('appIdClientRegex'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authorizerResultTtlInSeconds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('authorizerUri'),
-                            new \PHPStan\Type\Constant\ConstantStringType('identityValidationExpression'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1986,7 +2036,9 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('functions'),
                     ], [
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('conflictHandler'),
@@ -2014,7 +2066,9 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                         new \PHPStan\Type\Constant\ConstantStringType('cachingKeys'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2134,17 +2188,19 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('apiKeys'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('expires'),
-                    new \PHPStan\Type\Constant\ConstantStringType('deletes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('expires'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deletes'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2156,125 +2212,135 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('apis'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('apiId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ownerContact'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('dns'),
-                    new \PHPStan\Type\Constant\ConstantStringType('apiArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('created'),
-                    new \PHPStan\Type\Constant\ConstantStringType('xrayEnabled'),
-                    new \PHPStan\Type\Constant\ConstantStringType('wafWebAclArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventConfig'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('authProviders'),
-                        new \PHPStan\Type\Constant\ConstantStringType('connectionAuthModes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('defaultPublishAuthModes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('defaultSubscribeAuthModes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('logConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('apiId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ownerContact'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dns'),
+                        new \PHPStan\Type\Constant\ConstantStringType('apiArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('created'),
+                        new \PHPStan\Type\Constant\ConstantStringType('xrayEnabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('wafWebAclArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventConfig'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('cognitoConfig'),
-                            new \PHPStan\Type\Constant\ConstantStringType('openIDConnectConfig'),
-                            new \PHPStan\Type\Constant\ConstantStringType('lambdaAuthorizerConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('authProviders'),
+                            new \PHPStan\Type\Constant\ConstantStringType('connectionAuthModes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('defaultPublishAuthModes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('defaultSubscribeAuthModes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('logConfig'),
                         ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('authType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('cognitoConfig'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('openIDConnectConfig'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('lambdaAuthorizerConfig'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('userPoolId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('appIdClientRegex'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('issuer'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('clientId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('iatTTL'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('authTTL'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('authorizerResultTtlInSeconds'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('authorizerUri'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('identityValidationExpression'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('authType'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('authType'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('authType'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                                    ]),
+                                ]),
+                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('userPoolId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('appIdClientRegex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('logLevel'),
+                                new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogsRoleArn'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('issuer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('clientId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('iatTTL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('authTTL'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('authorizerResultTtlInSeconds'),
-                                new \PHPStan\Type\Constant\ConstantStringType('authorizerUri'),
-                                new \PHPStan\Type\Constant\ConstantStringType('identityValidationExpression'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INFO'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DEBUG'),
+                                ]),
                                 new \PHPStan\Type\StringType(),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('logLevel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogsRoleArn'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INFO'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DEBUG'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
                         ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2286,47 +2352,53 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('channelNamespaces'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('apiId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('subscribeAuthModes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('publishAuthModes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('codeHandlers'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('channelNamespaceArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('created'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModified'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('authType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('apiId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('subscribeAuthModes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('publishAuthModes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('codeHandlers'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('channelNamespaceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('created'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModified'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('authType'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                                ]),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('authType'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                                ]),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2338,124 +2410,126 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('dataSources'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('dataSourceArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('serviceRoleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('dynamodbConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lambdaConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('elasticsearchConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('openSearchServiceConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('httpConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('relationalDatabaseConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventBridgeConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('metricsConfig'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_DYNAMODB'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_ELASTICSEARCH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HTTP'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RELATIONAL_DATABASE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_OPENSEARCH_SERVICE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_EVENTBRIDGE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_BEDROCK_RUNTIME'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('tableName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('useCallerCredentials'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deltaSyncConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('versioned'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dataSourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('serviceRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dynamodbConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lambdaConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('elasticsearchConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('openSearchServiceConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('httpConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('relationalDatabaseConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventBridgeConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('metricsConfig'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('baseTableTTL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('deltaSyncTableName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('deltaSyncTableTTL'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_DYNAMODB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_ELASTICSEARCH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HTTP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RELATIONAL_DATABASE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_OPENSEARCH_SERVICE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_EVENTBRIDGE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_BEDROCK_RUNTIME'),
                         ]),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('lambdaFunctionArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('endpoint'),
-                        new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('endpoint'),
-                        new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('endpoint'),
-                        new \PHPStan\Type\Constant\ConstantStringType('authorizationConfig'),
-                    ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authorizationType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('awsIamConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tableName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('useCallerCredentials'),
+                            new \PHPStan\Type\Constant\ConstantStringType('deltaSyncConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('versioned'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('signingRegion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('signingServiceName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('baseTableTTL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('deltaSyncTableName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('deltaSyncTableTTL'),
                             ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('lambdaFunctionArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('endpoint'),
+                            new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('endpoint'),
+                            new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('endpoint'),
+                            new \PHPStan\Type\Constant\ConstantStringType('authorizationConfig'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('authorizationType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('awsIamConfig'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('signingRegion'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('signingServiceName'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('relationalDatabaseSourceType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('rdsHttpEndpointConfig'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('RDS_HTTP_ENDPOINT'),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('dbClusterIdentifier'),
+                                new \PHPStan\Type\Constant\ConstantStringType('databaseName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('schema'),
+                                new \PHPStan\Type\Constant\ConstantStringType('awsSecretStoreArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('relationalDatabaseSourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('rdsHttpEndpointConfig'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('RDS_HTTP_ENDPOINT'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dbClusterIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('databaseName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('schema'),
-                            new \PHPStan\Type\Constant\ConstantStringType('awsSecretStoreArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eventBusArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('eventBusArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2467,19 +2541,21 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('domainNameConfigs'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('domainName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('appsyncDomainName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('hostedZoneId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('domainName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('appsyncDomainName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('hostedZoneId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2491,59 +2567,61 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('functions'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('functionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('functionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('dataSourceName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('requestMappingTemplate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('responseMappingTemplate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('functionVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('syncConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('maxBatchSize'),
-                    new \PHPStan\Type\Constant\ConstantStringType('runtime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('code'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('conflictHandler'),
-                        new \PHPStan\Type\Constant\ConstantStringType('conflictDetection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lambdaConflictHandlerConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('functionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('functionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dataSourceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('requestMappingTemplate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('responseMappingTemplate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('functionVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('syncConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('maxBatchSize'),
+                        new \PHPStan\Type\Constant\ConstantStringType('runtime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('code'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OPTIMISTIC_CONCURRENCY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUTOMERGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('VERSION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('lambdaConflictHandlerArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('conflictHandler'),
+                            new \PHPStan\Type\Constant\ConstantStringType('conflictDetection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('lambdaConflictHandlerConfig'),
                         ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('OPTIMISTIC_CONCURRENCY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AUTOMERGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VERSION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('lambdaConflictHandlerArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('runtimeVersion'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('APPSYNC_JS'),
                             new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('runtimeVersion'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('APPSYNC_JS'),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2555,95 +2633,69 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('graphqlApis'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('apiId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('authenticationType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('logConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('userPoolConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('openIDConnectConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('uris'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('additionalAuthenticationProviders'),
-                    new \PHPStan\Type\Constant\ConstantStringType('xrayEnabled'),
-                    new \PHPStan\Type\Constant\ConstantStringType('wafWebAclArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lambdaAuthorizerConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('dns'),
-                    new \PHPStan\Type\Constant\ConstantStringType('visibility'),
-                    new \PHPStan\Type\Constant\ConstantStringType('apiType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('mergedApiExecutionRoleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('owner'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ownerContact'),
-                    new \PHPStan\Type\Constant\ConstantStringType('introspectionConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('queryDepthLimit'),
-                    new \PHPStan\Type\Constant\ConstantStringType('resolverCountLimit'),
-                    new \PHPStan\Type\Constant\ConstantStringType('enhancedMetricsConfig'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('fieldLogLevel'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogsRoleArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('excludeVerboseContent'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INFO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEBUG'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('userPoolId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('defaultAction'),
-                        new \PHPStan\Type\Constant\ConstantStringType('appIdClientRegex'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DENY'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('issuer'),
-                        new \PHPStan\Type\Constant\ConstantStringType('clientId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('iatTTL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('authTTL'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('apiId'),
                         new \PHPStan\Type\Constant\ConstantStringType('authenticationType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('openIDConnectConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('logConfig'),
                         new \PHPStan\Type\Constant\ConstantStringType('userPoolConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('openIDConnectConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('uris'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('additionalAuthenticationProviders'),
+                        new \PHPStan\Type\Constant\ConstantStringType('xrayEnabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('wafWebAclArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('lambdaAuthorizerConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dns'),
+                        new \PHPStan\Type\Constant\ConstantStringType('visibility'),
+                        new \PHPStan\Type\Constant\ConstantStringType('apiType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mergedApiExecutionRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('owner'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ownerContact'),
+                        new \PHPStan\Type\Constant\ConstantStringType('introspectionConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('queryDepthLimit'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resolverCountLimit'),
+                        new \PHPStan\Type\Constant\ConstantStringType('enhancedMetricsConfig'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
                             new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
                             new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
                             new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
                             new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('fieldLogLevel'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogsRoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('excludeVerboseContent'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INFO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DEBUG'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('userPoolId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('defaultAction'),
+                            new \PHPStan\Type\Constant\ConstantStringType('appIdClientRegex'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DENY'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('issuer'),
@@ -2656,15 +2708,56 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('userPoolId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('appIdClientRegex'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('authenticationType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('openIDConnectConfig'),
+                                new \PHPStan\Type\Constant\ConstantStringType('userPoolConfig'),
+                                new \PHPStan\Type\Constant\ConstantStringType('lambdaAuthorizerConfig'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('issuer'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('clientId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('iatTTL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('authTTL'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('userPoolId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('appIdClientRegex'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('authorizerResultTtlInSeconds'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('authorizerUri'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('identityValidationExpression'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('authorizerResultTtlInSeconds'),
                             new \PHPStan\Type\Constant\ConstantStringType('authorizerUri'),
@@ -2674,55 +2767,44 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('authorizerResultTtlInSeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('authorizerUri'),
-                        new \PHPStan\Type\Constant\ConstantStringType('identityValidationExpression'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('GLOBAL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('GRAPHQL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MERGED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('resolverLevelMetricsBehavior'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dataSourceLevelMetricsBehavior'),
-                        new \PHPStan\Type\Constant\ConstantStringType('operationLevelMetricsConfig'),
-                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FULL_REQUEST_RESOLVER_METRICS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PER_RESOLVER_METRICS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GLOBAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
                         ]),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FULL_REQUEST_DATA_SOURCE_METRICS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PER_DATA_SOURCE_METRICS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GRAPHQL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MERGED'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('resolverLevelMetricsBehavior'),
+                            new \PHPStan\Type\Constant\ConstantStringType('dataSourceLevelMetricsBehavior'),
+                            new \PHPStan\Type\Constant\ConstantStringType('operationLevelMetricsConfig'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('FULL_REQUEST_RESOLVER_METRICS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PER_RESOLVER_METRICS'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('FULL_REQUEST_DATA_SOURCE_METRICS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PER_DATA_SOURCE_METRICS'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            ]),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2734,79 +2816,85 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('resolvers'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('typeName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('dataSourceName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('resolverArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('requestMappingTemplate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('responseMappingTemplate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('kind'),
-                    new \PHPStan\Type\Constant\ConstantStringType('pipelineConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('syncConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('cachingConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('maxBatchSize'),
-                    new \PHPStan\Type\Constant\ConstantStringType('runtime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('code'),
-                    new \PHPStan\Type\Constant\ConstantStringType('metricsConfig'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UNIT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PIPELINE'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('functions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('typeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dataSourceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resolverArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('requestMappingTemplate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('responseMappingTemplate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('kind'),
+                        new \PHPStan\Type\Constant\ConstantStringType('pipelineConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('syncConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cachingConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('maxBatchSize'),
+                        new \PHPStan\Type\Constant\ConstantStringType('runtime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('metricsConfig'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('conflictHandler'),
-                        new \PHPStan\Type\Constant\ConstantStringType('conflictDetection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lambdaConflictHandlerConfig'),
-                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OPTIMISTIC_CONCURRENCY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUTOMERGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('VERSION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNIT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PIPELINE'),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('lambdaConflictHandlerArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('functions'),
                         ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('conflictHandler'),
+                            new \PHPStan\Type\Constant\ConstantStringType('conflictDetection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('lambdaConflictHandlerConfig'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('OPTIMISTIC_CONCURRENCY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AUTOMERGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VERSION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('lambdaConflictHandlerArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ttl'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cachingKeys'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('runtimeVersion'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('APPSYNC_JS'),
                             new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ttl'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cachingKeys'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('runtimeVersion'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('APPSYNC_JS'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2818,79 +2906,85 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('resolvers'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('typeName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('dataSourceName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('resolverArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('requestMappingTemplate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('responseMappingTemplate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('kind'),
-                    new \PHPStan\Type\Constant\ConstantStringType('pipelineConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('syncConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('cachingConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('maxBatchSize'),
-                    new \PHPStan\Type\Constant\ConstantStringType('runtime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('code'),
-                    new \PHPStan\Type\Constant\ConstantStringType('metricsConfig'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UNIT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PIPELINE'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('functions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('typeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dataSourceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resolverArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('requestMappingTemplate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('responseMappingTemplate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('kind'),
+                        new \PHPStan\Type\Constant\ConstantStringType('pipelineConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('syncConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cachingConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('maxBatchSize'),
+                        new \PHPStan\Type\Constant\ConstantStringType('runtime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('metricsConfig'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('conflictHandler'),
-                        new \PHPStan\Type\Constant\ConstantStringType('conflictDetection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lambdaConflictHandlerConfig'),
-                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OPTIMISTIC_CONCURRENCY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUTOMERGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('VERSION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNIT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PIPELINE'),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('lambdaConflictHandlerArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('functions'),
                         ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('conflictHandler'),
+                            new \PHPStan\Type\Constant\ConstantStringType('conflictDetection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('lambdaConflictHandlerConfig'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('OPTIMISTIC_CONCURRENCY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AUTOMERGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VERSION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('lambdaConflictHandlerArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ttl'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cachingKeys'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('runtimeVersion'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('APPSYNC_JS'),
                             new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ttl'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cachingKeys'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('runtimeVersion'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('APPSYNC_JS'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2902,23 +2996,25 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('sourceApiAssociationSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('associationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('associationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('sourceApiId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('sourceApiArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('mergedApiId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('mergedApiArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('associationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('associationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceApiId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceApiArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mergedApiId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mergedApiArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2940,22 +3036,24 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('types'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('definition'),
-                    new \PHPStan\Type\Constant\ConstantStringType('format'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SDL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('definition'),
+                        new \PHPStan\Type\Constant\ConstantStringType('format'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SDL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2967,22 +3065,24 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('types'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('definition'),
-                    new \PHPStan\Type\Constant\ConstantStringType('format'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SDL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('definition'),
+                        new \PHPStan\Type\Constant\ConstantStringType('format'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SDL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3097,82 +3197,90 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                         new \PHPStan\Type\Constant\ConstantStringType('defaultSubscribeAuthModes'),
                         new \PHPStan\Type\Constant\ConstantStringType('logConfig'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('cognitoConfig'),
-                            new \PHPStan\Type\Constant\ConstantStringType('openIDConnectConfig'),
-                            new \PHPStan\Type\Constant\ConstantStringType('lambdaAuthorizerConfig'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('userPoolId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('appIdClientRegex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('authType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('cognitoConfig'),
+                                new \PHPStan\Type\Constant\ConstantStringType('openIDConnectConfig'),
+                                new \PHPStan\Type\Constant\ConstantStringType('lambdaAuthorizerConfig'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('userPoolId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('appIdClientRegex'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('issuer'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('clientId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('iatTTL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('authTTL'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('authorizerResultTtlInSeconds'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('authorizerUri'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('identityValidationExpression'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
                             ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('issuer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('clientId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('iatTTL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('authTTL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('authType'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                                ]),
                             ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('authorizerResultTtlInSeconds'),
-                                new \PHPStan\Type\Constant\ConstantStringType('authorizerUri'),
-                                new \PHPStan\Type\Constant\ConstantStringType('identityValidationExpression'),
+                                new \PHPStan\Type\Constant\ConstantStringType('authType'),
                             ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                                ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('authType'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                                ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
-                            ]),
-                        ]),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('logLevel'),
                             new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogsRoleArn'),
@@ -3285,28 +3393,32 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                            ]),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('authType'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
@@ -3610,49 +3722,51 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('authenticationType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('openIDConnectConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userPoolConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lambdaAuthorizerConfig'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('issuer'),
-                            new \PHPStan\Type\Constant\ConstantStringType('clientId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('iatTTL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('authTTL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('authenticationType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('openIDConnectConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('userPoolConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('lambdaAuthorizerConfig'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('issuer'),
+                                new \PHPStan\Type\Constant\ConstantStringType('clientId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('iatTTL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('authTTL'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('userPoolId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('appIdClientRegex'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('authorizerResultTtlInSeconds'),
+                                new \PHPStan\Type\Constant\ConstantStringType('authorizerUri'),
+                                new \PHPStan\Type\Constant\ConstantStringType('identityValidationExpression'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('userPoolId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('awsRegion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('appIdClientRegex'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authorizerResultTtlInSeconds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('authorizerUri'),
-                            new \PHPStan\Type\Constant\ConstantStringType('identityValidationExpression'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3739,7 +3853,9 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('functions'),
                     ], [
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('conflictHandler'),
@@ -3767,7 +3883,9 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                         new \PHPStan\Type\Constant\ConstantStringType('cachingKeys'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([

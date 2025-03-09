@@ -147,16 +147,18 @@ final class AppConfigClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Content'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('JSON_SCHEMA'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Content'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('JSON_SCHEMA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -215,13 +217,15 @@ final class AppConfigClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('ROLLED_BACK'),
                     new \PHPStan\Type\Constant\ConstantStringType('REVERTED'),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('AlarmArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AlarmRoleArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AlarmArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AlarmRoleArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -251,17 +255,19 @@ final class AppConfigClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('ON_DEPLOYMENT_BAKING'),
                     new \PHPStan\Type\Constant\ConstantStringType('ON_DEPLOYMENT_COMPLETE'),
                     new \PHPStan\Type\Constant\ConstantStringType('ON_DEPLOYMENT_ROLLED_BACK'),
-                ]), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Uri'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ])),
+                ]), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Uri'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]))),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Description'),
                     new \PHPStan\Type\Constant\ConstantStringType('Required'),
@@ -433,16 +439,18 @@ final class AppConfigClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Content'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('JSON_SCHEMA'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Content'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('JSON_SCHEMA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -501,62 +509,68 @@ final class AppConfigClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('ROLLED_BACK'),
                     new \PHPStan\Type\Constant\ConstantStringType('REVERTED'),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('EventType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TriggeredBy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ActionInvocations'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OccurredAt'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PERCENTAGE_UPDATED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_STARTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BAKE_TIME_STARTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STARTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REVERT_COMPLETED'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('USER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('APPCONFIG'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH_ALARM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ExtensionIdentifier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ActionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Uri'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InvocationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TriggeredBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ActionInvocations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OccurredAt'),
                     ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PERCENTAGE_UPDATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_STARTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BAKE_TIME_STARTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STARTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REVERT_COMPLETED'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('USER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('APPCONFIG'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH_ALARM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
+                        ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ExtensionIdentifier'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ActionName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Uri'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InvocationId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\FloatType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ExtensionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExtensionAssociationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VersionNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ExtensionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExtensionAssociationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VersionNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -615,13 +629,15 @@ final class AppConfigClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('ROLLED_BACK'),
                     new \PHPStan\Type\Constant\ConstantStringType('REVERTED'),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('AlarmArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AlarmRoleArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AlarmArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AlarmRoleArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -651,17 +667,19 @@ final class AppConfigClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('ON_DEPLOYMENT_BAKING'),
                     new \PHPStan\Type\Constant\ConstantStringType('ON_DEPLOYMENT_COMPLETE'),
                     new \PHPStan\Type\Constant\ConstantStringType('ON_DEPLOYMENT_ROLLED_BACK'),
-                ]), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Uri'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ])),
+                ]), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Uri'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]))),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Description'),
                     new \PHPStan\Type\Constant\ConstantStringType('Required'),
@@ -729,15 +747,17 @@ final class AppConfigClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('Items'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -749,24 +769,28 @@ final class AppConfigClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('Items'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LocationUri'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ValidatorTypes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('JSON_SCHEMA'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LocationUri'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ValidatorTypes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('JSON_SCHEMA'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -778,31 +802,33 @@ final class AppConfigClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('Items'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeploymentDurationInMinutes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GrowthType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GrowthFactor'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FinalBakeTimeInMinutes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReplicateTo'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LINEAR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EXPONENTIAL'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeploymentDurationInMinutes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GrowthType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GrowthFactor'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FinalBakeTimeInMinutes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplicateTo'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('LINEAR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EXPONENTIAL'),
+                        ]),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SSM_DOCUMENT'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SSM_DOCUMENT'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -814,44 +840,46 @@ final class AppConfigClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('Items'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DeploymentNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeploymentDurationInMinutes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GrowthType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GrowthFactor'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FinalBakeTimeInMinutes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PercentageComplete'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CompletedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VersionLabel'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LINEAR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EXPONENTIAL'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DeploymentNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConfigurationName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConfigurationVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeploymentDurationInMinutes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GrowthType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GrowthFactor'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FinalBakeTimeInMinutes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PercentageComplete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CompletedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VersionLabel'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('LINEAR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EXPONENTIAL'),
+                        ]),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BAKING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VALIDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROLLING_BACK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROLLED_BACK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REVERTED'),
+                        ]),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BAKING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VALIDATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ROLLING_BACK'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ROLLED_BACK'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REVERTED'),
-                    ]),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -863,33 +891,37 @@ final class AppConfigClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('Items'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Monitors'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('READY_FOR_DEPLOYMENT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ROLLING_BACK'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ROLLED_BACK'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REVERTED'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AlarmArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AlarmRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Monitors'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('READY_FOR_DEPLOYMENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROLLING_BACK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROLLED_BACK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REVERTED'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AlarmArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AlarmRoleArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -901,15 +933,17 @@ final class AppConfigClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('Items'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExtensionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExtensionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -921,19 +955,21 @@ final class AppConfigClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('Items'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VersionNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VersionNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -945,23 +981,25 @@ final class AppConfigClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('Items'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationProfileId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VersionNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ContentType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VersionLabel'),
-                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConfigurationProfileId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VersionNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ContentType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VersionLabel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KmsKeyArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1028,62 +1066,68 @@ final class AppConfigClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('ROLLED_BACK'),
                     new \PHPStan\Type\Constant\ConstantStringType('REVERTED'),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('EventType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TriggeredBy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ActionInvocations'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OccurredAt'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PERCENTAGE_UPDATED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_STARTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BAKE_TIME_STARTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STARTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REVERT_COMPLETED'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('USER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('APPCONFIG'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH_ALARM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ExtensionIdentifier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ActionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Uri'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InvocationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TriggeredBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ActionInvocations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OccurredAt'),
                     ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PERCENTAGE_UPDATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_STARTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BAKE_TIME_STARTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STARTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REVERT_COMPLETED'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('USER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('APPCONFIG'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH_ALARM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
+                        ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ExtensionIdentifier'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ActionName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Uri'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InvocationId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\FloatType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ExtensionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExtensionAssociationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VersionNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ExtensionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExtensionAssociationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VersionNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1142,62 +1186,68 @@ final class AppConfigClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('ROLLED_BACK'),
                     new \PHPStan\Type\Constant\ConstantStringType('REVERTED'),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('EventType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TriggeredBy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ActionInvocations'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OccurredAt'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PERCENTAGE_UPDATED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_STARTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BAKE_TIME_STARTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STARTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REVERT_COMPLETED'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('USER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('APPCONFIG'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH_ALARM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ExtensionIdentifier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ActionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Uri'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InvocationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TriggeredBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ActionInvocations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OccurredAt'),
                     ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PERCENTAGE_UPDATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_STARTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BAKE_TIME_STARTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STARTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REVERT_COMPLETED'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('USER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('APPCONFIG'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH_ALARM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
+                        ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ExtensionIdentifier'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ActionName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Uri'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InvocationId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\FloatType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ExtensionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExtensionAssociationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VersionNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ExtensionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExtensionAssociationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VersionNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1267,16 +1317,18 @@ final class AppConfigClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Content'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('JSON_SCHEMA'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Content'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('JSON_SCHEMA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1335,13 +1387,15 @@ final class AppConfigClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('ROLLED_BACK'),
                     new \PHPStan\Type\Constant\ConstantStringType('REVERTED'),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('AlarmArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AlarmRoleArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AlarmArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AlarmRoleArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1371,17 +1425,19 @@ final class AppConfigClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('ON_DEPLOYMENT_BAKING'),
                     new \PHPStan\Type\Constant\ConstantStringType('ON_DEPLOYMENT_COMPLETE'),
                     new \PHPStan\Type\Constant\ConstantStringType('ON_DEPLOYMENT_ROLLED_BACK'),
-                ]), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Uri'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ])),
+                ]), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Uri'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]))),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Description'),
                     new \PHPStan\Type\Constant\ConstantStringType('Required'),

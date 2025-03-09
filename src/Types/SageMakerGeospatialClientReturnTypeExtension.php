@@ -223,12 +223,26 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Coordinates'),
                                 ], [
-                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\FloatType(),
+                                                ])),
+                                            ])),
+                                        ])),
+                                    ])),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Coordinates'),
                                 ], [
-                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\FloatType(),
+                                            ])),
+                                        ])),
+                                    ])),
                                 ]),
                             ]),
                         ]),
@@ -237,65 +251,67 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                             new \PHPStan\Type\Constant\ConstantStringType('Properties'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantStringType('AND'),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Property'),
-                            ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('EoCloudCover'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LandsatCloudCoverLand'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Platform'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ViewOffNadir'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ViewSunAzimuth'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ViewSunElevation'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Property'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('LowerBound'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('UpperBound'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EoCloudCover'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LandsatCloudCoverLand'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Platform'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ViewOffNadir'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ViewSunAzimuth'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ViewSunElevation'),
                                     ], [
-                                        new \PHPStan\Type\FloatType(),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('LowerBound'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('UpperBound'),
-                                    ], [
-                                        new \PHPStan\Type\FloatType(),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ComparisonOperator'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('EQUALS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('NOT_EQUALS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('STARTS_WITH'),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('LowerBound'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UpperBound'),
+                                        ], [
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
                                         ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('LowerBound'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('UpperBound'),
-                                    ], [
-                                        new \PHPStan\Type\FloatType(),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('LowerBound'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('UpperBound'),
-                                    ], [
-                                        new \PHPStan\Type\FloatType(),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('LowerBound'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('UpperBound'),
-                                    ], [
-                                        new \PHPStan\Type\FloatType(),
-                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('LowerBound'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UpperBound'),
+                                        ], [
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('ComparisonOperator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('EQUALS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('NOT_EQUALS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('STARTS_WITH'),
+                                            ]),
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('LowerBound'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UpperBound'),
+                                        ], [
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('LowerBound'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UpperBound'),
+                                        ], [
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('LowerBound'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UpperBound'),
+                                        ], [
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
                                     ]),
                                 ]),
-                            ]),
+                            ])),
                         ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
@@ -326,23 +342,27 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Operations'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Equation'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OutputType'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('INT32'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FLOAT32'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INT16'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FLOAT64'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UINT16'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Equation'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OutputType'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('INT32'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('FLOAT32'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('INT16'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('FLOAT64'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UINT16'),
+                                    ]),
                                 ]),
-                            ]),
+                            ])),
                         ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([], []),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -352,7 +372,9 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                     ], [
                         new \PHPStan\Type\Constant\ConstantStringType('INTERPOLATION'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('AlgorithmName'),
@@ -374,7 +396,9 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                             new \PHPStan\Type\Constant\ConstantStringType('Q3'),
                             new \PHPStan\Type\Constant\ConstantStringType('SUM'),
                         ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([], []),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -409,7 +433,9 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                                 new \PHPStan\Type\FloatType(),
                             ]),
                         ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('OutputResolution'),
@@ -432,7 +458,9 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                                 new \PHPStan\Type\FloatType(),
                             ]),
                         ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('GroupBy'),
@@ -443,12 +471,16 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                             new \PHPStan\Type\Constant\ConstantStringType('ALL'),
                             new \PHPStan\Type\Constant\ConstantStringType('YEARLY'),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MEAN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIAN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD_DEVIATION'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MEAN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEDIAN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD_DEVIATION'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Statistics'),
@@ -456,34 +488,40 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                         new \PHPStan\Type\Constant\ConstantStringType('ZoneS3Path'),
                         new \PHPStan\Type\Constant\ConstantStringType('ZoneS3PathKmsKeyId'),
                     ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MEAN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEDIAN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD_DEVIATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MAX'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MIN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUM'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('BandName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OutputDataType'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MEAN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIAN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD_DEVIATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MAX'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MIN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SUM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INT32'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FLOAT32'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INT16'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FLOAT64'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UINT16'),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
                     ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('BandName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OutputDataType'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('INT32'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FLOAT32'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INT16'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FLOAT64'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UINT16'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('INITIALIZING'),
                     new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
@@ -514,19 +552,23 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Maximum'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Minimum'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                ], [
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Maximum'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Minimum'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    ], [
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
@@ -665,32 +707,34 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\Constant\ConstantStringType('EarthObservationJobSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DurationInSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OperationType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('INITIALIZING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DurationInSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OperationType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INITIALIZING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -703,37 +747,41 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\Constant\ConstantStringType('RasterDataCollectionSummaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DescriptionPageUrl'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SupportedFilters'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Maximum'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Minimum'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DescriptionPageUrl'),
                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SupportedFilters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                         new \PHPStan\Type\Constant\ConstantStringType('Type'),
                     ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Maximum'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Minimum'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PREMIUM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('USER'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PREMIUM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('USER'),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -755,35 +803,37 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\Constant\ConstantStringType('VectorEnrichmentJobSummaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DurationInSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('INITIALIZING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DurationInSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INITIALIZING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('REVERSE_GEOCODING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MAP_MATCHING'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('REVERSE_GEOCODING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MAP_MATCHING'),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -796,43 +846,51 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Assets'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Geometry'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Properties'),
-                ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Href'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Coordinates'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Assets'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Geometry'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Properties'),
                     ], [
-                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Href'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Coordinates'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\FloatType(),
+                                    ])),
+                                ])),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EoCloudCover'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LandsatCloudCoverLand'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Platform'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ViewOffNadir'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ViewSunAzimuth'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ViewSunElevation'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EoCloudCover'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LandsatCloudCoverLand'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Platform'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ViewOffNadir'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ViewSunAzimuth'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ViewSunElevation'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -878,12 +936,26 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Coordinates'),
                                 ], [
-                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\FloatType(),
+                                                ])),
+                                            ])),
+                                        ])),
+                                    ])),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Coordinates'),
                                 ], [
-                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\FloatType(),
+                                            ])),
+                                        ])),
+                                    ])),
                                 ]),
                             ]),
                         ]),
@@ -892,65 +964,67 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                             new \PHPStan\Type\Constant\ConstantStringType('Properties'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantStringType('AND'),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Property'),
-                            ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('EoCloudCover'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LandsatCloudCoverLand'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Platform'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ViewOffNadir'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ViewSunAzimuth'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ViewSunElevation'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Property'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('LowerBound'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('UpperBound'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EoCloudCover'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LandsatCloudCoverLand'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Platform'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ViewOffNadir'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ViewSunAzimuth'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ViewSunElevation'),
                                     ], [
-                                        new \PHPStan\Type\FloatType(),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('LowerBound'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('UpperBound'),
-                                    ], [
-                                        new \PHPStan\Type\FloatType(),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ComparisonOperator'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('EQUALS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('NOT_EQUALS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('STARTS_WITH'),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('LowerBound'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UpperBound'),
+                                        ], [
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
                                         ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('LowerBound'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('UpperBound'),
-                                    ], [
-                                        new \PHPStan\Type\FloatType(),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('LowerBound'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('UpperBound'),
-                                    ], [
-                                        new \PHPStan\Type\FloatType(),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('LowerBound'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('UpperBound'),
-                                    ], [
-                                        new \PHPStan\Type\FloatType(),
-                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('LowerBound'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UpperBound'),
+                                        ], [
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('ComparisonOperator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('EQUALS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('NOT_EQUALS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('STARTS_WITH'),
+                                            ]),
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('LowerBound'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UpperBound'),
+                                        ], [
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('LowerBound'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UpperBound'),
+                                        ], [
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('LowerBound'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UpperBound'),
+                                        ], [
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
                                     ]),
                                 ]),
-                            ]),
+                            ])),
                         ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
@@ -981,23 +1055,27 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Operations'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Equation'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OutputType'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('INT32'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FLOAT32'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INT16'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FLOAT64'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UINT16'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Equation'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OutputType'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('INT32'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('FLOAT32'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('INT16'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('FLOAT64'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UINT16'),
+                                    ]),
                                 ]),
-                            ]),
+                            ])),
                         ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([], []),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1007,7 +1085,9 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                     ], [
                         new \PHPStan\Type\Constant\ConstantStringType('INTERPOLATION'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('AlgorithmName'),
@@ -1029,7 +1109,9 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                             new \PHPStan\Type\Constant\ConstantStringType('Q3'),
                             new \PHPStan\Type\Constant\ConstantStringType('SUM'),
                         ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([], []),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1064,7 +1146,9 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                                 new \PHPStan\Type\FloatType(),
                             ]),
                         ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('OutputResolution'),
@@ -1087,7 +1171,9 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                                 new \PHPStan\Type\FloatType(),
                             ]),
                         ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('GroupBy'),
@@ -1098,12 +1184,16 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                             new \PHPStan\Type\Constant\ConstantStringType('ALL'),
                             new \PHPStan\Type\Constant\ConstantStringType('YEARLY'),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MEAN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIAN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD_DEVIATION'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MEAN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEDIAN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD_DEVIATION'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Statistics'),
@@ -1111,15 +1201,19 @@ final class SageMakerGeospatialClientReturnTypeExtension implements \PHPStan\Typ
                         new \PHPStan\Type\Constant\ConstantStringType('ZoneS3Path'),
                         new \PHPStan\Type\Constant\ConstantStringType('ZoneS3PathKmsKeyId'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MEAN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIAN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD_DEVIATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MAX'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MIN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SUM'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MEAN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEDIAN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD_DEVIATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MAX'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MIN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUM'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),

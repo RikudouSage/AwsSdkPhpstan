@@ -431,8 +431,12 @@ final class PrometheusServiceClientReturnTypeExtension implements \PHPStan\Type\
                             new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -514,34 +518,36 @@ final class PrometheusServiceClientReturnTypeExtension implements \PHPStan\Type\
                 new \PHPStan\Type\Constant\ConstantStringType('ruleGroupsNamespaces'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('modifiedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modifiedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
-                        ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -553,71 +559,77 @@ final class PrometheusServiceClientReturnTypeExtension implements \PHPStan\Type\
                 new \PHPStan\Type\Constant\ConstantStringType('scrapers'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('alias'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('destination'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('roleConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('scraperId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('source'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ampConfiguration'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('workspaceArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('sourceRoleArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('targetRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('alias'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('destination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('roleConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('scraperId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('source'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('eksConfiguration'),
-                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('clusterArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ampConfiguration'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('workspaceArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('sourceRoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('targetRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETION_FAILED'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('eksConfiguration'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('clusterArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                                new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
                         ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETION_FAILED'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -639,33 +651,35 @@ final class PrometheusServiceClientReturnTypeExtension implements \PHPStan\Type\
                 new \PHPStan\Type\Constant\ConstantStringType('workspaces'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('alias'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('kmsKeyArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('workspaceId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('alias'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('kmsKeyArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('workspaceId'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
+                            ]),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }

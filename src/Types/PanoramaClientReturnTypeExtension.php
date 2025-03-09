@@ -106,13 +106,15 @@ final class PanoramaClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Jobs'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -218,33 +220,35 @@ final class PanoramaClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DesiredState'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceReportedStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceReportedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RuntimeContextName'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REMOVED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DesiredState'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceReportedStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceReportedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RuntimeContextName'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REMOVED'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STOP_ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REMOVAL_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REMOVAL_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INSTALL_ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LAUNCHED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LAUNCH_ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INSTALL_IN_PROGRESS'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STOP_ERROR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REMOVAL_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REMOVAL_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INSTALL_ERROR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LAUNCHED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LAUNCH_ERROR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INSTALL_IN_PROGRESS'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_PENDING'),
@@ -321,11 +325,13 @@ final class PanoramaClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                 new \PHPStan\Type\Constant\ConstantStringType('Type'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('AWS_PANORAMA'),
@@ -445,7 +451,9 @@ final class PanoramaClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\Constant\ConstantStringType('Mask'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
@@ -465,7 +473,9 @@ final class PanoramaClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\Constant\ConstantStringType('Mask'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
@@ -473,7 +483,9 @@ final class PanoramaClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('NtpServers'),
                     ], [
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                 ]),
                 new \PHPStan\Type\UnionType([
@@ -568,40 +580,44 @@ final class PanoramaClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('Inputs'),
                     new \PHPStan\Type\Constant\ConstantStringType('Outputs'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaxConnections'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STRING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INT32'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLOAT32'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIA'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxConnections'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STRING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INT32'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FLOAT32'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEDIA'),
+                            ]),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STRING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INT32'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLOAT32'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIA'),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STRING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INT32'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FLOAT32'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEDIA'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -631,13 +647,15 @@ final class PanoramaClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             ], [
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantStringType('PACKAGE'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('PACKAGE'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -671,7 +689,9 @@ final class PanoramaClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('BinaryPrefixLocation'),
                     new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
@@ -686,7 +706,9 @@ final class PanoramaClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -726,13 +748,15 @@ final class PanoramaClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     ]),
                 ]),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantStringType('PACKAGE'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('PACKAGE'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('NODE_PACKAGE_VERSION'),
                     new \PHPStan\Type\Constant\ConstantStringType('MARKETPLACE_NODE_PACKAGE_VERSION'),
@@ -818,15 +842,17 @@ final class PanoramaClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('PackageObjects'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PackageVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PatchVersion'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PackageVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PatchVersion'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -838,28 +864,30 @@ final class PanoramaClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('NodeInstances'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CurrentStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NodeId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NodeInstanceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NodeName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PackageName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PackagePatchVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PackageVersion'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NOT_AVAILABLE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PAUSED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CurrentStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeInstanceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PackageName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PackagePatchVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PackageVersion'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_AVAILABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PAUSED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -870,75 +898,79 @@ final class PanoramaClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('ApplicationInstances'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationInstanceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DefaultRuntimeContextDevice'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DefaultRuntimeContextDeviceName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HealthStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RuntimeContextStates'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusDescription'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NOT_AVAILABLE'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DesiredState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeviceReportedStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeviceReportedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RuntimeContextName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationInstanceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DefaultRuntimeContextDevice'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DefaultRuntimeContextDeviceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HealthStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RuntimeContextStates'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REMOVED'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STOP_ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REMOVAL_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REMOVAL_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INSTALL_ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LAUNCHED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LAUNCH_ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INSTALL_IN_PROGRESS'),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_AVAILABLE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DesiredState'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DeviceReportedStatus'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DeviceReportedTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RuntimeContextName'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('REMOVED'),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STOP_ERROR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('REMOVAL_FAILED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('REMOVAL_IN_PROGRESS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INSTALL_ERROR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LAUNCHED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LAUNCH_ERROR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INSTALL_IN_PROGRESS'),
+                                ]),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_REQUESTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REMOVAL_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REMOVAL_REQUESTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REMOVAL_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REMOVAL_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REMOVAL_SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_REQUESTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_ERROR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_SUCCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REMOVAL_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REMOVAL_REQUESTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REMOVAL_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REMOVAL_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REMOVAL_SUCCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_FAILED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -950,78 +982,80 @@ final class PanoramaClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Devices'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Brand'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CurrentSoftware'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceAggregatedStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LatestDeviceJob'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LeaseExpirationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProvisioningStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AWS_PANORAMA'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LENOVO'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AWAITING_PROVISIONING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ONLINE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OFFLINE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LEASE_EXPIRED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_NEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REBOOTING'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ImageVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('JobType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Brand'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CurrentSoftware'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceAggregatedStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LatestDeviceJob'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LeaseExpirationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProvisioningStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
                     ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AWS_PANORAMA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LENOVO'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OTA'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REBOOT'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AWAITING_PROVISIONING'),
                             new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VERIFYING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REBOOTING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DOWNLOADING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
                             new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ONLINE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OFFLINE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LEASE_EXPIRED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_NEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REBOOTING'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ImageVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('JobType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('OTA'),
+                                new \PHPStan\Type\Constant\ConstantStringType('REBOOT'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VERIFYING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('REBOOTING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DOWNLOADING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AWAITING_PROVISIONING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PANORAMA_APPLIANCE_DEVELOPER_KIT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PANORAMA_APPLIANCE'),
                         ]),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AWAITING_PROVISIONING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PANORAMA_APPLIANCE_DEVELOPER_KIT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PANORAMA_APPLIANCE'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1033,22 +1067,24 @@ final class PanoramaClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('DeviceJobs'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobType'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('OTA'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REBOOT'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobType'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('OTA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REBOOT'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1061,25 +1097,27 @@ final class PanoramaClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('NodeFromTemplateJobs'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NodeName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TemplateType'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TemplateType'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('RTSP_CAMERA_STREAM'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('RTSP_CAMERA_STREAM'),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1091,36 +1129,38 @@ final class PanoramaClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Nodes'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Category'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NodeId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OwnerAccount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PackageArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PackageId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PackageName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PackageVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PatchVersion'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BUSINESS_LOGIC'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ML_MODEL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MEDIA_SOURCE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MEDIA_SINK'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Category'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OwnerAccount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PackageArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PackageId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PackageName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PackageVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PatchVersion'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BUSINESS_LOGIC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ML_MODEL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MEDIA_SOURCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MEDIA_SINK'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1132,28 +1172,30 @@ final class PanoramaClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('PackageImportJobs'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NODE_PACKAGE_VERSION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MARKETPLACE_NODE_PACKAGE_VERSION'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NODE_PACKAGE_VERSION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MARKETPLACE_NODE_PACKAGE_VERSION'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1165,19 +1207,21 @@ final class PanoramaClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Packages'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PackageId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PackageName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PackageId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PackageName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
             ]),
         ]);
     }

@@ -40,13 +40,17 @@ final class PricingClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('FormatVersion'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ServiceCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AttributeNames'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AttributeNames'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -59,11 +63,13 @@ final class PricingClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('AttributeValues'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -87,7 +93,9 @@ final class PricingClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -99,17 +107,21 @@ final class PricingClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('PriceLists'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('PriceListArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RegionCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CurrencyCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FileFormats'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PriceListArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RegionCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CurrencyCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FileFormats'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

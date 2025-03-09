@@ -95,20 +95,24 @@ final class IoTSecureTunnelingClientReturnTypeExtension implements \PHPStan\Type
                         new \PHPStan\Type\Constant\ConstantStringType('services'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('maxLifetimeTimeoutMinutes'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -121,13 +125,15 @@ final class IoTSecureTunnelingClientReturnTypeExtension implements \PHPStan\Type
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -138,24 +144,26 @@ final class IoTSecureTunnelingClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('tunnelSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('tunnelId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tunnelArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('tunnelId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tunnelArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

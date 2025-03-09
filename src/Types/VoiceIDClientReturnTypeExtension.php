@@ -95,7 +95,9 @@ final class VoiceIDClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
             ]),
         ]);
@@ -277,7 +279,9 @@ final class VoiceIDClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
             ]),
         ]);
@@ -349,7 +353,9 @@ final class VoiceIDClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantStringType('REGISTER_AS_NEW'),
                         ]),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                 ]),
             ]),
@@ -428,7 +434,9 @@ final class VoiceIDClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('FAIL'),
                             ]),
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -509,7 +517,9 @@ final class VoiceIDClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
             ]),
         ]);
@@ -581,10 +591,12 @@ final class VoiceIDClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                         new \PHPStan\Type\Constant\ConstantStringType('NOT_ENOUGH_SPEECH'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('KNOWN_FRAUDSTER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VOICE_SPOOFING'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('KNOWN_FRAUDSTER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VOICE_SPOOFING'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('KnownFraudsterRisk'),
                         new \PHPStan\Type\Constant\ConstantStringType('VoiceSpoofingRisk'),
@@ -620,53 +632,55 @@ final class VoiceIDClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('DomainSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DomainId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DomainStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ServerSideEncryptionConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ServerSideEncryptionUpdateDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WatchlistDetails'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DomainId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DomainStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServerSideEncryptionConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServerSideEncryptionUpdateDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WatchlistDetails'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OldKmsKeyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UpdateStatus'),
-                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OldKmsKeyId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpdateStatus'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DefaultWatchlistId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ]),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DefaultWatchlistId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -678,41 +692,43 @@ final class VoiceIDClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('JobSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DomainId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EndedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FailureDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobProgress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobStatus'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DomainId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FailureDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobProgress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobStatus'),
                     ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PercentComplete'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBMITTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED_WITH_ERRORS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PercentComplete'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SUBMITTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED_WITH_ERRORS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -724,17 +740,21 @@ final class VoiceIDClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('FraudsterSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DomainId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GeneratedFraudsterId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WatchlistIds'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DomainId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GeneratedFraudsterId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WatchlistIds'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -746,41 +766,43 @@ final class VoiceIDClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('JobSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DomainId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EndedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FailureDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobProgress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobStatus'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DomainId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FailureDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobProgress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobStatus'),
                     ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PercentComplete'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBMITTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED_WITH_ERRORS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PercentComplete'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SUBMITTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED_WITH_ERRORS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -793,28 +815,30 @@ final class VoiceIDClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('SpeakerSummaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CustomerSpeakerId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DomainId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GeneratedSpeakerId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastAccessedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENROLLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OPTED_OUT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CustomerSpeakerId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DomainId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GeneratedSpeakerId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastAccessedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENROLLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OPTED_OUT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -824,13 +848,15 @@ final class VoiceIDClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -842,23 +868,25 @@ final class VoiceIDClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('WatchlistSummaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DefaultWatchlist'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DomainId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WatchlistId'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DefaultWatchlist'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DomainId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WatchlistId'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -960,7 +988,9 @@ final class VoiceIDClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantStringType('REGISTER_AS_NEW'),
                         ]),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                 ]),
             ]),
@@ -1008,7 +1038,9 @@ final class VoiceIDClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('FAIL'),
                             ]),
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([

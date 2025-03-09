@@ -38,45 +38,59 @@ final class SageMakerFeatureStoreRuntimeClientReturnTypeExtension implements \PH
                 new \PHPStan\Type\Constant\ConstantStringType('Errors'),
                 new \PHPStan\Type\Constant\ConstantStringType('UnprocessedIdentifiers'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('FeatureGroupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RecordIdentifierValueAsString'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Record'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExpiresAt'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FeatureName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ValueAsString'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ValueAsStringList'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FeatureGroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RecordIdentifierValueAsString'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Record'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExpiresAt'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('FeatureName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ValueAsString'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ValueAsStringList'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FeatureGroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RecordIdentifierValueAsString'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('FeatureGroupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RecordIdentifierValueAsString'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('FeatureGroupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RecordIdentifiersValueAsString'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FeatureNames'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FeatureGroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RecordIdentifiersValueAsString'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FeatureNames'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -93,15 +107,19 @@ final class SageMakerFeatureStoreRuntimeClientReturnTypeExtension implements \PH
                 new \PHPStan\Type\Constant\ConstantStringType('Record'),
                 new \PHPStan\Type\Constant\ConstantStringType('ExpiresAt'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('FeatureName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ValueAsString'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ValueAsStringList'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FeatureName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ValueAsString'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ValueAsStringList'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

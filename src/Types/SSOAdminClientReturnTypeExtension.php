@@ -596,17 +596,21 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('AccessControlAttributes'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -718,7 +722,9 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('AuthorizedTargets'),
                 new \PHPStan\Type\Constant\ConstantStringType('Scope'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -766,18 +772,24 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('RedirectUris'),
                     ], [
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('AuthorizedTokenIssuers'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AuthorizedAudiences'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TrustedTokenIssuerArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AuthorizedAudiences'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TrustedTokenIssuerArn'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([], []),
                     new \PHPStan\Type\Constant\ConstantArrayType([], []),
@@ -824,19 +836,21 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('AccountAssignmentsCreationStatus'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -848,19 +862,21 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('AccountAssignmentsDeletionStatus'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -872,20 +888,22 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('AccountAssignments'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PermissionSetArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PrincipalId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PrincipalType'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('USER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionSetArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PrincipalId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PrincipalType'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('USER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -897,20 +915,22 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('AccountAssignments'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PermissionSetArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PrincipalId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PrincipalType'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('USER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionSetArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PrincipalId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PrincipalType'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('USER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -922,7 +942,9 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('AccountIds'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -935,13 +957,17 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Scopes'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('AuthorizedTargets'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Scope'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AuthorizedTargets'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Scope'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -952,18 +978,20 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('ApplicationAssignments'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PrincipalId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PrincipalType'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('USER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PrincipalId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PrincipalType'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('USER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -975,18 +1003,20 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('ApplicationAssignments'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PrincipalId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PrincipalType'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('USER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PrincipalId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PrincipalType'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('USER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -998,21 +1028,23 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMethods'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMethod'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMethodType'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Iam'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMethod'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMethodType'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ActorPolicy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Iam'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ActorPolicy'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                            ]),
                         ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('IAM'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('IAM'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1024,42 +1056,50 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Grants'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Grant'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GrantType'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AuthorizationCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('JwtBearer'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RefreshToken'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TokenExchange'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Grant'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GrantType'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RedirectUris'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AuthorizedTokenIssuers'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AuthorizationCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('JwtBearer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RefreshToken'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TokenExchange'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AuthorizedAudiences'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TrustedTokenIssuerArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RedirectUris'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AuthorizedTokenIssuers'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('AuthorizedAudiences'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TrustedTokenIssuerArn'),
+                                    ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\StringType(),
+                                        ])),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('authorization_code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('refresh_token'),
+                            new \PHPStan\Type\Constant\ConstantStringType('urn:ietf:params:oauth:grant-type:jwt-bearer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('urn:ietf:params:oauth:grant-type:token-exchange'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('authorization_code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('refresh_token'),
-                        new \PHPStan\Type\Constant\ConstantStringType('urn:ietf:params:oauth:grant-type:jwt-bearer'),
-                        new \PHPStan\Type\Constant\ConstantStringType('urn:ietf:params:oauth:grant-type:token-exchange'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1071,38 +1111,40 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('ApplicationProviders'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationProviderArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DisplayData'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FederationProtocol'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceServerConfig'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IconUrl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationProviderArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisplayData'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FederationProtocol'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceServerConfig'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SAML'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OAUTH'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Scopes'),
-                    ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DetailedTitle'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LongDescription'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IconUrl'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                        ])),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SAML'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OAUTH'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Scopes'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DetailedTitle'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LongDescription'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1114,36 +1156,42 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Applications'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationAccount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationProviderArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('InstanceArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PortalOptions'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SignInOptions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Visibility'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationAccount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationProviderArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InstanceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PortalOptions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ApplicationUrl'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Origin'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SignInOptions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Visibility'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ApplicationUrl'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Origin'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('IDENTITY_CENTER'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('APPLICATION'),
+                                ]),
+                            ]),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('IDENTITY_CENTER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('APPLICATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                             ]),
                         ]),
                         new \PHPStan\Type\UnionType([
@@ -1151,11 +1199,7 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1167,13 +1211,15 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('CustomerManagedPolicyReferences'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1185,25 +1231,27 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Instances'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IdentityStoreId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('InstanceArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OwnerAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IdentityStoreId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InstanceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OwnerAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1215,13 +1263,15 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('AttachedManagedPolicies'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1234,19 +1284,21 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('PermissionSetsProvisioningStatus'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1258,7 +1310,9 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('PermissionSets'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -1270,7 +1324,9 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('PermissionSets'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -1282,13 +1338,15 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1300,15 +1358,17 @@ final class SSOAdminClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('TrustedTokenIssuers'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TrustedTokenIssuerArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TrustedTokenIssuerType'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('OIDC_JWT'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TrustedTokenIssuerArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TrustedTokenIssuerType'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('OIDC_JWT'),
+                    ]),
+                ])),
             ]),
         ]);
     }

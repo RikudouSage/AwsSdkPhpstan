@@ -84,7 +84,9 @@ final class LicenseManagerLinuxSubscriptionsClientReturnTypeExtension implements
                 new \PHPStan\Type\Constant\ConstantStringType('Status'),
                 new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
                     new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
@@ -97,7 +99,9 @@ final class LicenseManagerLinuxSubscriptionsClientReturnTypeExtension implements
                         new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
                     ]),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
@@ -116,39 +120,43 @@ final class LicenseManagerLinuxSubscriptionsClientReturnTypeExtension implements
                 new \PHPStan\Type\Constant\ConstantStringType('Instances'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('AccountID'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AmiId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DualSubscription'),
-                    new \PHPStan\Type\Constant\ConstantStringType('InstanceID'),
-                    new \PHPStan\Type\Constant\ConstantStringType('InstanceType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OsVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProductCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RegisteredWithSubscriptionProvider'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SubscriptionName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SubscriptionProviderCreateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SubscriptionProviderUpdateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UsageOperation'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AccountID'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AmiId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DualSubscription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InstanceID'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InstanceType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OsVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProductCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RegisteredWithSubscriptionProvider'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubscriptionName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubscriptionProviderCreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubscriptionProviderUpdateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UsageOperation'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -161,15 +169,17 @@ final class LicenseManagerLinuxSubscriptionsClientReturnTypeExtension implements
                 new \PHPStan\Type\Constant\ConstantStringType('Subscriptions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('InstanceCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('InstanceCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -181,25 +191,27 @@ final class LicenseManagerLinuxSubscriptionsClientReturnTypeExtension implements
                 new \PHPStan\Type\Constant\ConstantStringType('RegisteredSubscriptionProviders'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('LastSuccessfulDataRetrievalTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SubscriptionProviderArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SubscriptionProviderSource'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SubscriptionProviderStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SubscriptionProviderStatusMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('RedHat'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INVALID'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LastSuccessfulDataRetrievalTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubscriptionProviderArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubscriptionProviderSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubscriptionProviderStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubscriptionProviderStatusMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('RedHat'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVALID'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -253,7 +265,9 @@ final class LicenseManagerLinuxSubscriptionsClientReturnTypeExtension implements
                 new \PHPStan\Type\Constant\ConstantStringType('Status'),
                 new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
                     new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
@@ -266,7 +280,9 @@ final class LicenseManagerLinuxSubscriptionsClientReturnTypeExtension implements
                         new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
                     ]),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('InProgress'),

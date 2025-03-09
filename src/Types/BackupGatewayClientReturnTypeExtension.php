@@ -129,21 +129,25 @@ final class BackupGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('BandwidthRateLimitIntervals'),
                 new \PHPStan\Type\Constant\ConstantStringType('GatewayArn'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('AverageUploadRateLimitInBitsPerSec'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DaysOfWeek'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EndHourOfDay'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EndMinuteOfHour'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartHourOfDay'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartMinuteOfHour'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AverageUploadRateLimitInBitsPerSec'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DaysOfWeek'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndHourOfDay'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndMinuteOfHour'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartHourOfDay'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartMinuteOfHour'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\IntegerType(),
+                        ])),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -237,17 +241,19 @@ final class BackupGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyna
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('AwsTagKey'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AwsTagValue'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VmwareCategory'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VmwareTagName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AwsTagKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AwsTagValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VmwareCategory'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VmwareTagName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -272,15 +278,17 @@ final class BackupGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('VmwareCategory'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VmwareTagDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VmwareTagName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VmwareCategory'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VmwareTagDescription'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VmwareTagName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -302,19 +310,21 @@ final class BackupGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('Gateways'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('GatewayArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GatewayDisplayName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GatewayType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HypervisorId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastSeenTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('BACKUP_VM'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('GatewayArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GatewayDisplayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GatewayType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HypervisorId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastSeenTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('BACKUP_VM'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -326,24 +336,26 @@ final class BackupGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('Hypervisors'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Host'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HypervisorArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ONLINE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OFFLINE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Host'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HypervisorArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KmsKeyArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ONLINE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OFFLINE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -356,13 +368,15 @@ final class BackupGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -374,21 +388,23 @@ final class BackupGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('VirtualMachines'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('HostName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HypervisorId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastBackupDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('HostName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HypervisorId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastBackupDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }

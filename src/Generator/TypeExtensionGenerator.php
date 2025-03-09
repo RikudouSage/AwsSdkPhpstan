@@ -385,9 +385,9 @@ final class TypeExtensionGenerator
             $values->items[] = $this->transformValueShape($valueShape, $childShape['shape'], $apiDoc, $callStack);
         }
 
-        if (count($values->items) === 1) {
-            return $values->items[0];
-        }
+//        if (count($values->items) === 1) {
+//            return $values->items[0];
+//        }
 
         $result->args[] = new Arg(
             new New_(

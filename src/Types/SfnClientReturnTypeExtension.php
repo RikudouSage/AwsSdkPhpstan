@@ -377,15 +377,17 @@ final class SfnClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('OFF'),
                     ]),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogsLogGroup'),
-                    ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('logGroupArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogsLogGroup'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('logGroupArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('enabled'),
@@ -407,7 +409,9 @@ final class SfnClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_MANAGED_KMS_KEY'),
                     ]),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ]))),
             ]),
         ]);
     }
@@ -425,13 +429,15 @@ final class SfnClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('stateMachineVersionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('stateMachineVersionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
             ]),
@@ -471,15 +477,17 @@ final class SfnClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('OFF'),
                     ]),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogsLogGroup'),
-                    ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('logGroupArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogsLogGroup'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('logGroupArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('enabled'),
@@ -501,7 +509,9 @@ final class SfnClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_MANAGED_KMS_KEY'),
                     ]),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ]))),
             ]),
         ]);
     }
@@ -524,484 +534,486 @@ final class SfnClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('events'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('previousEventId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('activityFailedEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('activityScheduleFailedEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('activityScheduledEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('activityStartedEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('activitySucceededEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('activityTimedOutEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('taskFailedEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('taskScheduledEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('taskStartFailedEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('taskStartedEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('taskSubmitFailedEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('taskSubmittedEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('taskSucceededEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('taskTimedOutEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('executionFailedEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('executionStartedEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('executionSucceededEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('executionAbortedEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('executionTimedOutEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('executionRedrivenEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('mapStateStartedEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('mapIterationStartedEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('mapIterationSucceededEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('mapIterationFailedEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('mapIterationAbortedEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lambdaFunctionFailedEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lambdaFunctionScheduleFailedEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lambdaFunctionScheduledEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lambdaFunctionStartFailedEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lambdaFunctionSucceededEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lambdaFunctionTimedOutEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('stateEnteredEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('stateExitedEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('mapRunStartedEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('mapRunFailedEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('mapRunRedrivenEventDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('evaluationFailedEventDetails'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ActivityFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ActivityScheduled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ActivityScheduleFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ActivityStarted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ActivitySucceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ActivityTimedOut'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChoiceStateEntered'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChoiceStateExited'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionAborted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionStarted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionSucceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionTimedOut'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FailStateEntered'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LambdaFunctionFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LambdaFunctionScheduled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LambdaFunctionScheduleFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LambdaFunctionStarted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LambdaFunctionStartFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LambdaFunctionSucceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LambdaFunctionTimedOut'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MapIterationAborted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MapIterationFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MapIterationStarted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MapIterationSucceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MapStateAborted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MapStateEntered'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MapStateExited'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MapStateFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MapStateStarted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MapStateSucceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParallelStateAborted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParallelStateEntered'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParallelStateExited'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParallelStateFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParallelStateStarted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParallelStateSucceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PassStateEntered'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PassStateExited'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SucceedStateEntered'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SucceedStateExited'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskScheduled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskStarted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskStartFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskStateAborted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskStateEntered'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskStateExited'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskSubmitFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskSubmitted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskSucceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskTimedOut'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WaitStateAborted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WaitStateEntered'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WaitStateExited'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MapRunAborted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MapRunFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MapRunStarted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MapRunSucceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionRedriven'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MapRunRedriven'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EvaluationFailed'),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cause'),
+                        new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('previousEventId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('activityFailedEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('activityScheduleFailedEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('activityScheduledEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('activityStartedEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('activitySucceededEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('activityTimedOutEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('taskFailedEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('taskScheduledEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('taskStartFailedEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('taskStartedEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('taskSubmitFailedEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('taskSubmittedEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('taskSucceededEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('taskTimedOutEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('executionFailedEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('executionStartedEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('executionSucceededEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('executionAbortedEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('executionTimedOutEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('executionRedrivenEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mapStateStartedEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mapIterationStartedEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mapIterationSucceededEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mapIterationFailedEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mapIterationAbortedEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lambdaFunctionFailedEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lambdaFunctionScheduleFailedEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lambdaFunctionScheduledEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lambdaFunctionStartFailedEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lambdaFunctionSucceededEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lambdaFunctionTimedOutEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('stateEnteredEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('stateExitedEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mapRunStartedEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mapRunFailedEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mapRunRedrivenEventDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('evaluationFailedEventDetails'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cause'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                        new \PHPStan\Type\Constant\ConstantStringType('input'),
-                        new \PHPStan\Type\Constant\ConstantStringType('inputDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('timeoutInSeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('heartbeatInSeconds'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('truncated'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ActivityFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ActivityScheduled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ActivityScheduleFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ActivityStarted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ActivitySucceeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ActivityTimedOut'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ChoiceStateEntered'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ChoiceStateExited'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionAborted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionStarted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionSucceeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionTimedOut'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FailStateEntered'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LambdaFunctionFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LambdaFunctionScheduled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LambdaFunctionScheduleFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LambdaFunctionStarted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LambdaFunctionStartFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LambdaFunctionSucceeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LambdaFunctionTimedOut'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MapIterationAborted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MapIterationFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MapIterationStarted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MapIterationSucceeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MapStateAborted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MapStateEntered'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MapStateExited'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MapStateFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MapStateStarted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MapStateSucceeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ParallelStateAborted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ParallelStateEntered'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ParallelStateExited'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ParallelStateFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ParallelStateStarted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ParallelStateSucceeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PassStateEntered'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PassStateExited'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SucceedStateEntered'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SucceedStateExited'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaskFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaskScheduled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaskStarted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaskStartFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaskStateAborted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaskStateEntered'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaskStateExited'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaskSubmitFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaskSubmitted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaskSucceeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaskTimedOut'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WaitStateAborted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WaitStateEntered'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WaitStateExited'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MapRunAborted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MapRunFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MapRunStarted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MapRunSucceeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionRedriven'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MapRunRedriven'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EvaluationFailed'),
                         ]),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('workerName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('output'),
-                        new \PHPStan\Type\Constant\ConstantStringType('outputDetails'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('truncated'),
+                            new \PHPStan\Type\Constant\ConstantStringType('error'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cause'),
                         ], [
-                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cause'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                        new \PHPStan\Type\Constant\ConstantStringType('error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cause'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                        new \PHPStan\Type\Constant\ConstantStringType('region'),
-                        new \PHPStan\Type\Constant\ConstantStringType('parameters'),
-                        new \PHPStan\Type\Constant\ConstantStringType('timeoutInSeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('heartbeatInSeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('taskCredentials'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('error'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cause'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('input'),
+                            new \PHPStan\Type\Constant\ConstantStringType('inputDetails'),
+                            new \PHPStan\Type\Constant\ConstantStringType('timeoutInSeconds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('heartbeatInSeconds'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('truncated'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('workerName'),
                         ], [
                             new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                        new \PHPStan\Type\Constant\ConstantStringType('error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cause'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                        new \PHPStan\Type\Constant\ConstantStringType('error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cause'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                        new \PHPStan\Type\Constant\ConstantStringType('output'),
-                        new \PHPStan\Type\Constant\ConstantStringType('outputDetails'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('truncated'),
+                            new \PHPStan\Type\Constant\ConstantStringType('output'),
+                            new \PHPStan\Type\Constant\ConstantStringType('outputDetails'),
                         ], [
-                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('truncated'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                        new \PHPStan\Type\Constant\ConstantStringType('output'),
-                        new \PHPStan\Type\Constant\ConstantStringType('outputDetails'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('truncated'),
+                            new \PHPStan\Type\Constant\ConstantStringType('error'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cause'),
                         ], [
-                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                        new \PHPStan\Type\Constant\ConstantStringType('error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cause'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cause'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('input'),
-                        new \PHPStan\Type\Constant\ConstantStringType('inputDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('stateMachineAliasArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('stateMachineVersionArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('truncated'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('error'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cause'),
                         ], [
-                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('output'),
-                        new \PHPStan\Type\Constant\ConstantStringType('outputDetails'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('truncated'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('parameters'),
+                            new \PHPStan\Type\Constant\ConstantStringType('timeoutInSeconds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('heartbeatInSeconds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('taskCredentials'),
                         ], [
-                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cause'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cause'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('redriveCount'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('length'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('index'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('index'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('index'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('index'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cause'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cause'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                        new \PHPStan\Type\Constant\ConstantStringType('input'),
-                        new \PHPStan\Type\Constant\ConstantStringType('inputDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('timeoutInSeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('taskCredentials'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('truncated'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('error'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cause'),
                         ], [
-                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('error'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cause'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('output'),
+                            new \PHPStan\Type\Constant\ConstantStringType('outputDetails'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('truncated'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('output'),
+                            new \PHPStan\Type\Constant\ConstantStringType('outputDetails'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('truncated'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('error'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cause'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('error'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cause'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('input'),
+                            new \PHPStan\Type\Constant\ConstantStringType('inputDetails'),
                             new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('stateMachineAliasArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('stateMachineVersionArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('truncated'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('output'),
+                            new \PHPStan\Type\Constant\ConstantStringType('outputDetails'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('truncated'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('error'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cause'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('error'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cause'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('redriveCount'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('length'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('index'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('index'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('index'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('index'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('error'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cause'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('error'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cause'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('input'),
+                            new \PHPStan\Type\Constant\ConstantStringType('inputDetails'),
+                            new \PHPStan\Type\Constant\ConstantStringType('timeoutInSeconds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('taskCredentials'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('truncated'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('error'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cause'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('output'),
+                            new \PHPStan\Type\Constant\ConstantStringType('outputDetails'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('truncated'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('error'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cause'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('input'),
+                            new \PHPStan\Type\Constant\ConstantStringType('inputDetails'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('truncated'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('output'),
+                            new \PHPStan\Type\Constant\ConstantStringType('outputDetails'),
+                            new \PHPStan\Type\Constant\ConstantStringType('assignedVariables'),
+                            new \PHPStan\Type\Constant\ConstantStringType('assignedVariablesDetails'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('truncated'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('truncated'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('mapRunArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cause'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('output'),
-                        new \PHPStan\Type\Constant\ConstantStringType('outputDetails'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('truncated'),
+                            new \PHPStan\Type\Constant\ConstantStringType('error'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cause'),
                         ], [
-                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('mapRunArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('redriveCount'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('error'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cause'),
+                            new \PHPStan\Type\Constant\ConstantStringType('location'),
+                            new \PHPStan\Type\Constant\ConstantStringType('state'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cause'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('input'),
-                        new \PHPStan\Type\Constant\ConstantStringType('inputDetails'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('truncated'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('output'),
-                        new \PHPStan\Type\Constant\ConstantStringType('outputDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('assignedVariables'),
-                        new \PHPStan\Type\Constant\ConstantStringType('assignedVariablesDetails'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('truncated'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('truncated'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('mapRunArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cause'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('mapRunArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('redriveCount'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cause'),
-                        new \PHPStan\Type\Constant\ConstantStringType('location'),
-                        new \PHPStan\Type\Constant\ConstantStringType('state'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1013,15 +1025,17 @@ final class SfnClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('activities'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('activityArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creationDate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('activityArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationDate'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1033,40 +1047,42 @@ final class SfnClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('executions'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('executionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('stateMachineArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('startDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('stopDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('mapRunArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('itemCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('stateMachineVersionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('stateMachineAliasArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('redriveCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('redriveDate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TIMED_OUT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ABORTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_REDRIVE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('executionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('stateMachineArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('stopDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mapRunArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('itemCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('stateMachineVersionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('stateMachineAliasArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('redriveCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('redriveDate'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TIMED_OUT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ABORTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_REDRIVE'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1078,19 +1094,21 @@ final class SfnClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('mapRuns'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('executionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('mapRunArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('stateMachineArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('startDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('stopDate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('executionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mapRunArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('stateMachineArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('stopDate'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1102,13 +1120,15 @@ final class SfnClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('stateMachineAliases'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('stateMachineAliasArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creationDate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('stateMachineAliasArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationDate'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1120,13 +1140,15 @@ final class SfnClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('stateMachineVersions'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('stateMachineVersionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creationDate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('stateMachineVersionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationDate'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1138,20 +1160,22 @@ final class SfnClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('stateMachines'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('stateMachineArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creationDate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EXPRESS'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('stateMachineArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationDate'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EXPRESS'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1162,13 +1186,15 @@ final class SfnClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1413,20 +1439,22 @@ final class SfnClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('OK'),
                     new \PHPStan\Type\Constant\ConstantStringType('FAIL'),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('severity'),
-                    new \PHPStan\Type\Constant\ConstantStringType('code'),
-                    new \PHPStan\Type\Constant\ConstantStringType('message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('location'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WARNING'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('severity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('location'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WARNING'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\BooleanType(),
             ]),
         ]);

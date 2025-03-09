@@ -69,16 +69,36 @@ final class CloudWatchRUMClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('Errors'),
                 new \PHPStan\Type\Constant\ConstantStringType('MetricDefinitions'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MetricDefinition'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MetricDefinition'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DimensionKeys'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EventPattern'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Namespace'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnitLabel'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ValueKey'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('DimensionKeys'),
                         new \PHPStan\Type\Constant\ConstantStringType('EventPattern'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MetricDefinitionId'),
                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
                         new \PHPStan\Type\Constant\ConstantStringType('Namespace'),
                         new \PHPStan\Type\Constant\ConstantStringType('UnitLabel'),
@@ -90,25 +110,9 @@ final class CloudWatchRUMClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DimensionKeys'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventPattern'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MetricDefinitionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Namespace'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UnitLabel'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ValueKey'),
-                ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -119,16 +123,20 @@ final class CloudWatchRUMClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('Errors'),
                 new \PHPStan\Type\Constant\ConstantStringType('MetricDefinitionIds'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MetricDefinitionId'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MetricDefinitionId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -139,23 +147,25 @@ final class CloudWatchRUMClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('MetricDefinitions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DimensionKeys'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventPattern'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MetricDefinitionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Namespace'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UnitLabel'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ValueKey'),
-                ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DimensionKeys'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventPattern'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MetricDefinitionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Namespace'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UnitLabel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ValueKey'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -223,17 +233,25 @@ final class CloudWatchRUMClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     ], [
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('errors'),
-                            new \PHPStan\Type\Constant\ConstantStringType('performance'),
-                            new \PHPStan\Type\Constant\ConstantStringType('http'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('errors'),
+                                new \PHPStan\Type\Constant\ConstantStringType('performance'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http'),
+                            ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -276,7 +294,9 @@ final class CloudWatchRUMClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('Events'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -300,23 +320,25 @@ final class CloudWatchRUMClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('AppMonitorSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Created'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Created'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -328,18 +350,20 @@ final class CloudWatchRUMClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('Destinations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Destination'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DestinationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatch'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Evidently'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Destination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DestinationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CloudWatch'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Evidently'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

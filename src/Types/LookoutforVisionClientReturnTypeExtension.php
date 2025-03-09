@@ -371,13 +371,15 @@ final class LookoutforVisionClientReturnTypeExtension implements \PHPStan\Type\D
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                         ]),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -423,28 +425,30 @@ final class LookoutforVisionClientReturnTypeExtension implements \PHPStan\Type\D
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DatasetType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_COMPLETE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_COMPLETE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED_ROLLBACK_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED_ROLLBACK_COMPLETE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_COMPLETE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DatasetType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATE_COMPLETE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATE_COMPLETE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED_ROLLBACK_IN_PROGRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED_ROLLBACK_COMPLETE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETE_COMPLETE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -469,19 +473,21 @@ final class LookoutforVisionClientReturnTypeExtension implements \PHPStan\Type\D
                     ]),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PixelAnomaly'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TotalPercentageArea'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Color'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PixelAnomaly'),
                         ], [
-                            new \PHPStan\Type\FloatType(),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TotalPercentageArea'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Color'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ResourceType(),
@@ -498,7 +504,9 @@ final class LookoutforVisionClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\Constant\ConstantStringType('DatasetEntries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -510,32 +518,34 @@ final class LookoutforVisionClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\Constant\ConstantStringType('ModelPackagingJobs'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('JobName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProjectName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ModelVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ModelPackagingJobDescription'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ModelPackagingMethod'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('JobName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProjectName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ModelVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ModelPackagingJobDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ModelPackagingMethod'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -547,41 +557,43 @@ final class LookoutforVisionClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\Constant\ConstantStringType('Models'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ModelVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ModelArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Performance'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TRAINING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TRAINED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TRAINING_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STARTING_HOSTING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HOSTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HOSTING_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STOPPING_HOSTING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SYSTEM_UPDATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('F1Score'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Recall'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Precision'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ModelVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ModelArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Performance'),
                     ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TRAINING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TRAINED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TRAINING_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STARTING_HOSTING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HOSTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HOSTING_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STOPPING_HOSTING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SYSTEM_UPDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('F1Score'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Recall'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Precision'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -593,15 +605,17 @@ final class LookoutforVisionClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\Constant\ConstantStringType('Projects'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ProjectArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProjectName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ProjectArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProjectName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -612,13 +626,15 @@ final class LookoutforVisionClientReturnTypeExtension implements \PHPStan\Type\D
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }

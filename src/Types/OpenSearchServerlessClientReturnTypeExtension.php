@@ -103,60 +103,64 @@ final class OpenSearchServerlessClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('collectionDetails'),
                 new \PHPStan\Type\Constant\ConstantStringType('collectionErrorDetails'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('kmsKeyArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('standbyReplicas'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collectionEndpoint'),
-                    new \PHPStan\Type\Constant\ConstantStringType('dashboardEndpoint'),
-                    new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('failureMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('kmsKeyArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('standbyReplicas'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collectionEndpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dashboardEndpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failureMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SEARCH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TIMESERIES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VECTORSEARCH'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SEARCH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TIMESERIES'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VECTORSEARCH'),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -167,32 +171,36 @@ final class OpenSearchServerlessClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('effectiveLifecyclePolicyDetails'),
                 new \PHPStan\Type\Constant\ConstantStringType('effectiveLifecyclePolicyErrorDetails'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                    new \PHPStan\Type\Constant\ConstantStringType('policyName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('retentionPeriod'),
-                    new \PHPStan\Type\Constant\ConstantStringType('noMinRetentionPeriod'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantStringType('retention'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('index'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantStringType('retention'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('policyName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('retentionPeriod'),
+                        new \PHPStan\Type\Constant\ConstantStringType('noMinRetentionPeriod'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('retention'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('index'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('retention'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -203,34 +211,38 @@ final class OpenSearchServerlessClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('lifecyclePolicyDetails'),
                 new \PHPStan\Type\Constant\ConstantStringType('lifecyclePolicyErrorDetails'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('policyVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('policy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedDate'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantStringType('retention'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantStringType('retention'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('policyVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('policy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedDate'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('retention'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('retention'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -241,41 +253,49 @@ final class OpenSearchServerlessClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointDetails'),
                 new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointErrorDetails'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('failureMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failureMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -743,21 +763,23 @@ final class OpenSearchServerlessClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('accessPolicySummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('policyVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedDate'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantStringType('data'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('policyVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedDate'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('data'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -769,22 +791,24 @@ final class OpenSearchServerlessClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('collectionSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -796,21 +820,23 @@ final class OpenSearchServerlessClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('lifecyclePolicySummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('policyVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedDate'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantStringType('retention'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('policyVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedDate'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('retention'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -822,24 +848,26 @@ final class OpenSearchServerlessClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('securityConfigSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('configVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedDate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('saml'),
-                        new \PHPStan\Type\Constant\ConstantStringType('iamidentitycenter'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedDate'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('saml'),
+                            new \PHPStan\Type\Constant\ConstantStringType('iamidentitycenter'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -851,24 +879,26 @@ final class OpenSearchServerlessClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('securityPolicySummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('policyVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedDate'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('encryption'),
-                        new \PHPStan\Type\Constant\ConstantStringType('network'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('policyVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedDate'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('encryption'),
+                            new \PHPStan\Type\Constant\ConstantStringType('network'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -879,13 +909,15 @@ final class OpenSearchServerlessClientReturnTypeExtension implements \PHPStan\Ty
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -896,20 +928,22 @@ final class OpenSearchServerlessClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1150,8 +1184,12 @@ final class OpenSearchServerlessClientReturnTypeExtension implements \PHPStan\Ty
                         new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                         new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\IntegerType(),
                 ]),
             ]),

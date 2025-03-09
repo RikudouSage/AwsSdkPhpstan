@@ -313,35 +313,37 @@ final class GlacierClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantStringType('bucket-owner-read'),
                             new \PHPStan\Type\Constant\ConstantStringType('bucket-owner-full-control'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Grantee'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Permission'),
-                        ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('URI'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ID'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Grantee'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Permission'),
                             ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AmazonCustomerByEmail'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CanonicalUser'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Group'),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('URI'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ID'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('AmazonCustomerByEmail'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CanonicalUser'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Group'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('FULL_CONTROL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WRITE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WRITE_ACP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('READ'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('READ_ACP'),
+                                ]),
                             ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('FULL_CONTROL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WRITE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WRITE_ACP'),
-                                new \PHPStan\Type\Constant\ConstantStringType('READ'),
-                                new \PHPStan\Type\Constant\ConstantStringType('READ_ACP'),
-                            ]),
-                        ]),
+                        ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\UnionType([
@@ -383,13 +385,15 @@ final class GlacierClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Rules'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Strategy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BytesPerHour'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Strategy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BytesPerHour'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -461,7 +465,9 @@ final class GlacierClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('Events'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
             ]),
         ]);
@@ -509,195 +515,199 @@ final class GlacierClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('JobList'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('JobId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobDescription'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Action'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ArchiveId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VaultARN'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Completed'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ArchiveSizeInBytes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('InventorySizeInBytes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SNSTopic'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CompletionDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SHA256TreeHash'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ArchiveSHA256TreeHash'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RetrievalByteRange'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('InventoryRetrievalParameters'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobOutputPath'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SelectParameters'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OutputLocation'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ArchiveRetrieval'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InventoryRetrieval'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Select'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Format'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StartDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EndDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Limit'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Marker'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ArchiveId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VaultARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Completed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ArchiveSizeInBytes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InventorySizeInBytes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SNSTopic'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CompletionDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SHA256TreeHash'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ArchiveSHA256TreeHash'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RetrievalByteRange'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InventoryRetrievalParameters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobOutputPath'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SelectParameters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OutputLocation'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InputSerialization'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExpressionType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Expression'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OutputSerialization'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('csv'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('FileHeaderInfo'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Comments'),
-                                new \PHPStan\Type\Constant\ConstantStringType('QuoteEscapeCharacter'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RecordDelimiter'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FieldDelimiter'),
-                                new \PHPStan\Type\Constant\ConstantStringType('QuoteCharacter'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('USE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IGNORE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ArchiveRetrieval'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InventoryRetrieval'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Select'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantStringType('SQL'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('csv'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('QuoteFields'),
-                                new \PHPStan\Type\Constant\ConstantStringType('QuoteEscapeCharacter'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RecordDelimiter'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FieldDelimiter'),
-                                new \PHPStan\Type\Constant\ConstantStringType('QuoteCharacter'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ALWAYS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ASNEEDED'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BucketName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Encryption'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CannedACL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AccessControlList'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tagging'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UserMetadata'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Format'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StartDate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndDate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Limit'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Marker'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InputSerialization'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExpressionType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Expression'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OutputSerialization'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('EncryptionType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KMSKeyId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KMSContext'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('aws:kms'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AES256'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('private'),
-                                new \PHPStan\Type\Constant\ConstantStringType('public-read'),
-                                new \PHPStan\Type\Constant\ConstantStringType('public-read-write'),
-                                new \PHPStan\Type\Constant\ConstantStringType('aws-exec-read'),
-                                new \PHPStan\Type\Constant\ConstantStringType('authenticated-read'),
-                                new \PHPStan\Type\Constant\ConstantStringType('bucket-owner-read'),
-                                new \PHPStan\Type\Constant\ConstantStringType('bucket-owner-full-control'),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Grantee'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Permission'),
+                                new \PHPStan\Type\Constant\ConstantStringType('csv'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('URI'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ID'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FileHeaderInfo'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Comments'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('QuoteEscapeCharacter'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordDelimiter'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FieldDelimiter'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('QuoteCharacter'),
                                 ], [
                                     new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('AmazonCustomerByEmail'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CanonicalUser'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Group'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('USE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('IGNORE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('SQL'),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('csv'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('QuoteFields'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('QuoteEscapeCharacter'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordDelimiter'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FieldDelimiter'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('QuoteCharacter'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ALWAYS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ASNEEDED'),
                                     ]),
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                 ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('FULL_CONTROL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('WRITE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('WRITE_ACP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('READ'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('READ_ACP'),
-                                ]),
                             ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('REDUCED_REDUNDANCY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD_IA'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BucketName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Encryption'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CannedACL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessControlList'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Tagging'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UserMetadata'),
+                                new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('EncryptionType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KMSKeyId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KMSContext'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('aws:kms'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AES256'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('private'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('public-read'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('public-read-write'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('aws-exec-read'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('authenticated-read'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('bucket-owner-read'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('bucket-owner-full-control'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Grantee'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Permission'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('URI'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ID'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('AmazonCustomerByEmail'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('CanonicalUser'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Group'),
+                                            ]),
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('FULL_CONTROL'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('WRITE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('WRITE_ACP'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('READ'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('READ_ACP'),
+                                        ]),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('REDUCED_REDUNDANCY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD_IA'),
+                                ]),
                             ]),
                         ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -709,19 +719,21 @@ final class GlacierClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('UploadsList'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('MultipartUploadId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VaultARN'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ArchiveDescription'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PartSizeInBytes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MultipartUploadId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VaultARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ArchiveDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PartSizeInBytes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -743,13 +755,15 @@ final class GlacierClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('RangeInBytes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SHA256TreeHash'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RangeInBytes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SHA256TreeHash'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -760,15 +774,17 @@ final class GlacierClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('ProvisionedCapacityList'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CapacityId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExpirationDate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CapacityId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExpirationDate'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -789,21 +805,23 @@ final class GlacierClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('VaultList'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('VaultARN'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VaultName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastInventoryDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NumberOfArchives'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SizeInBytes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('VaultARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VaultName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastInventoryDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NumberOfArchives'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SizeInBytes'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

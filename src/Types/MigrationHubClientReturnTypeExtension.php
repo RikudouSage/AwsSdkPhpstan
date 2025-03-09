@@ -140,24 +140,26 @@ final class MigrationHubClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\IntegerType(),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IPV4_ADDRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IPV6_ADDRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MAC_ADDRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FQDN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VM_MANAGER_ID'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VM_MANAGED_OBJECT_REFERENCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VM_NAME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VM_PATH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BIOS_ID'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MOTHERBOARD_SERIAL_NUMBER'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('IPV4_ADDRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IPV6_ADDRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MAC_ADDRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FQDN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VM_MANAGER_ID'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VM_MANAGED_OBJECT_REFERENCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VM_NAME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VM_PATH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BIOS_ID'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MOTHERBOARD_SERIAL_NUMBER'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -193,19 +195,21 @@ final class MigrationHubClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('ApplicationStateList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -218,13 +222,15 @@ final class MigrationHubClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('CreatedArtifactList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -236,13 +242,15 @@ final class MigrationHubClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('DiscoveredResourceList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ConfigurationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -254,28 +262,30 @@ final class MigrationHubClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('MigrationTaskUpdateList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdateDateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdateType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MigrationTaskState'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MIGRATION_TASK_STATE_UPDATED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusDetail'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProgressPercent'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdateDateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdateType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MigrationTaskState'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MIGRATION_TASK_STATE_UPDATED'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatusDetail'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ProgressPercent'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -287,26 +297,28 @@ final class MigrationHubClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('MigrationTaskSummaryList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ProgressUpdateStream'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MigrationTaskName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProgressPercent'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusDetail'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdateDateTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ProgressUpdateStream'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MigrationTaskName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProgressPercent'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusDetail'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdateDateTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -317,11 +329,13 @@ final class MigrationHubClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('ProgressUpdateStreamSummaryList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ProgressUpdateStreamName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ProgressUpdateStreamName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -334,15 +348,17 @@ final class MigrationHubClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('SourceResourceList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusDetail'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusDetail'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }

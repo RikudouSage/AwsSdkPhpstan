@@ -675,13 +675,15 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('Failed'),
                 ]),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DetailedErrorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DetailedErrorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DetailedErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DetailedErrorMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
             ]),
@@ -694,17 +696,19 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('ConnectivityInfo'),
                 new \PHPStan\Type\Constant\ConstantStringType('Message'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('HostAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Metadata'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PortNumber'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('HostAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Metadata'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PortNumber'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -749,15 +753,17 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Connectors'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ConnectorArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ConnectorArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -805,17 +811,19 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Cores'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SyncShadow'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ThingArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SyncShadow'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ThingArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -840,13 +848,15 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('ResetDeployment'),
                     new \PHPStan\Type\Constant\ConstantStringType('ForceResetDeployment'),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DetailedErrorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DetailedErrorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DetailedErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DetailedErrorMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -892,17 +902,19 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Devices'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SyncShadow'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ThingArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SyncShadow'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ThingArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -971,70 +983,74 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             ]),
                         ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FunctionArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FunctionConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EncodingType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Environment'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExecArgs'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Executable'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MemorySize'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Pinned'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Timeout'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FunctionRuntimeOverride'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FunctionArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FunctionConfiguration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
                         ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('binary'),
-                                new \PHPStan\Type\Constant\ConstantStringType('json'),
-                            ]),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AccessSysfs'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Execution'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceAccessPolicies'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Variables'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EncodingType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Environment'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ExecArgs'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Executable'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MemorySize'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Pinned'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Timeout'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FunctionRuntimeOverride'),
                             ], [
-                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('binary'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('json'),
+                                ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('IsolationMode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RunAs'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AccessSysfs'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Execution'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceAccessPolicies'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Variables'),
                                 ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('GreengrassContainer'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('NoContainer'),
-                                    ]),
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Gid'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Uid'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('IsolationMode'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RunAs'),
                                     ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('GreengrassContainer'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NoContainer'),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Gid'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Uid'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                        ]),
                                     ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Permission'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('ro'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('rw'),
+                                            ]),
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                                 ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Permission'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ro'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('rw'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
                             ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1167,31 +1183,33 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Loggers'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Component'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Level'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Space'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('GreengrassSystem'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Lambda'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Component'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Level'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Space'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('GreengrassSystem'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Lambda'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DEBUG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INFO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WARN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FATAL'),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('FileSystem'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWSCloudWatch'),
+                            ]),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DEBUG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INFO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WARN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FATAL'),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FileSystem'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWSCloudWatch'),
-                        ]),
-                    ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1237,93 +1255,97 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Resources'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceDataContainer'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LocalDeviceResourceData'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LocalVolumeResourceData'),
-                            new \PHPStan\Type\Constant\ConstantStringType('S3MachineLearningModelResourceData'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SageMakerMachineLearningModelResourceData'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerSecretResourceData'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceDataContainer'),
                         ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('GroupOwnerSetting'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SourcePath'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LocalDeviceResourceData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LocalVolumeResourceData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('S3MachineLearningModelResourceData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SageMakerMachineLearningModelResourceData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerSecretResourceData'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AutoAddGroupOwner'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GroupOwner'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('GroupOwnerSetting'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SourcePath'),
                                 ], [
-                                    new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DestinationPath'),
-                                new \PHPStan\Type\Constant\ConstantStringType('GroupOwnerSetting'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SourcePath'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AutoAddGroupOwner'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GroupOwner'),
-                                ], [
-                                    new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DestinationPath'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OwnerSetting'),
-                                new \PHPStan\Type\Constant\ConstantStringType('S3Uri'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('GroupOwner'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GroupPermission'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ro'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('rw'),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('AutoAddGroupOwner'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('GroupOwner'),
+                                    ], [
+                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ]),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DestinationPath'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OwnerSetting'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SageMakerJobArn'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('GroupOwner'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GroupPermission'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DestinationPath'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('GroupOwnerSetting'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SourcePath'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ro'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('rw'),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('AutoAddGroupOwner'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('GroupOwner'),
+                                    ], [
+                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ]),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ARN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AdditionalStagingLabelsToDownload'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DestinationPath'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OwnerSetting'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('S3Uri'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('GroupOwner'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('GroupPermission'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('ro'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rw'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DestinationPath'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OwnerSetting'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SageMakerJobArn'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('GroupOwner'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('GroupPermission'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('ro'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('rw'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AdditionalStagingLabelsToDownload'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                ]),
                             ]),
                         ]),
-                    ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1382,17 +1404,19 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Subscriptions'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Source'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Subject'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Target'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Subject'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Target'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1433,36 +1457,40 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Deployments'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeploymentArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeploymentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeploymentStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeploymentType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GroupArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NewDeployment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Redeployment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResetDeployment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ForceResetDeployment'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DetailedErrorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DetailedErrorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeploymentArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeploymentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeploymentStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeploymentType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GroupArn'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NewDeployment'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Redeployment'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResetDeployment'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ForceResetDeployment'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DetailedErrorCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DetailedErrorMessage'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1474,15 +1502,17 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('BulkDeployments'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('BulkDeploymentArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BulkDeploymentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('BulkDeploymentArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BulkDeploymentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1495,17 +1525,19 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Versions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1516,25 +1548,27 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Definitions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LatestVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LatestVersionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LatestVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LatestVersionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1547,17 +1581,19 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Versions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1568,25 +1604,27 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Definitions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LatestVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LatestVersionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LatestVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LatestVersionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1598,24 +1636,26 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Deployments'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeploymentArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeploymentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeploymentType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GroupArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NewDeployment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Redeployment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResetDeployment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ForceResetDeployment'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeploymentArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeploymentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeploymentType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GroupArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NewDeployment'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Redeployment'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResetDeployment'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ForceResetDeployment'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1628,17 +1668,19 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Versions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1649,25 +1691,27 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Definitions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LatestVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LatestVersionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LatestVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LatestVersionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1680,17 +1724,19 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Versions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1701,25 +1747,27 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Definitions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LatestVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LatestVersionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LatestVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LatestVersionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1730,13 +1778,15 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('GroupCertificateAuthorities'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('GroupCertificateAuthorityArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GroupCertificateAuthorityId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('GroupCertificateAuthorityArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GroupCertificateAuthorityId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1748,17 +1798,19 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Versions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1769,23 +1821,25 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Groups'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LatestVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LatestVersionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LatestVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LatestVersionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1798,17 +1852,19 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Versions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1819,25 +1875,27 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Definitions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LatestVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LatestVersionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LatestVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LatestVersionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1850,17 +1908,19 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Versions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1871,25 +1931,27 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Definitions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LatestVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LatestVersionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LatestVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LatestVersionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1902,17 +1964,19 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Versions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1923,25 +1987,27 @@ final class GreengrassClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Definitions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LatestVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LatestVersionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LatestVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LatestVersionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

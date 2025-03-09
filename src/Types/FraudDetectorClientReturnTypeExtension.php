@@ -174,15 +174,17 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('errors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('code'),
-                    new \PHPStan\Type\Constant\ConstantStringType('message'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -193,46 +195,50 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('variables'),
                 new \PHPStan\Type\Constant\ConstantStringType('errors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('dataType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('dataSource'),
-                    new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('variableType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('STRING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INTEGER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FLOAT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DATETIME'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dataType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dataSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('variableType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('STRING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTEGER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FLOAT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DATETIME'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EVENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MODEL_SCORE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL_MODEL_SCORE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EVENT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MODEL_SCORE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL_MODEL_SCORE'),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('code'),
-                    new \PHPStan\Type\Constant\ConstantStringType('message'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -446,21 +452,23 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('arn'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('detectorVersionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DRAFT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('detectorVersionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DRAFT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -473,279 +481,309 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('modelVersionDetails'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('modelId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('modelType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('modelVersionNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('trainingDataSource'),
-                    new \PHPStan\Type\Constant\ConstantStringType('trainingDataSchema'),
-                    new \PHPStan\Type\Constant\ConstantStringType('externalEventsDetail'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ingestedEventsDetail'),
-                    new \PHPStan\Type\Constant\ConstantStringType('trainingResult'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('trainingResultV2'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ONLINE_FRAUD_INSIGHTS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TRANSACTION_FRAUD_INSIGHTS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_TAKEOVER_INSIGHTS'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL_EVENTS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INGESTED_EVENTS'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('modelVariables'),
-                        new \PHPStan\Type\Constant\ConstantStringType('labelSchema'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modelId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modelType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modelVersionNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('trainingDataSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('trainingDataSchema'),
+                        new \PHPStan\Type\Constant\ConstantStringType('externalEventsDetail'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ingestedEventsDetail'),
+                        new \PHPStan\Type\Constant\ConstantStringType('trainingResult'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('trainingResultV2'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('labelMapper'),
-                            new \PHPStan\Type\Constant\ConstantStringType('unlabeledEventsTreatment'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('IGNORE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FRAUD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LEGIT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
-                            ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ONLINE_FRAUD_INSIGHTS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TRANSACTION_FRAUD_INSIGHTS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_TAKEOVER_INSIGHTS'),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('dataLocation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dataAccessRoleArn'),
-                    ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ingestedEventsTimeWindow'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('dataValidationMetrics'),
-                        new \PHPStan\Type\Constant\ConstantStringType('trainingMetrics'),
-                        new \PHPStan\Type\Constant\ConstantStringType('variableImportanceMetrics'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('fileLevelMessages'),
-                            new \PHPStan\Type\Constant\ConstantStringType('fieldLevelMessages'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('title'),
-                                new \PHPStan\Type\Constant\ConstantStringType('content'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('identifier'),
-                                new \PHPStan\Type\Constant\ConstantStringType('title'),
-                                new \PHPStan\Type\Constant\ConstantStringType('content'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL_EVENTS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INGESTED_EVENTS'),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('auc'),
-                            new \PHPStan\Type\Constant\ConstantStringType('metricDataPoints'),
+                            new \PHPStan\Type\Constant\ConstantStringType('modelVariables'),
+                            new \PHPStan\Type\Constant\ConstantStringType('labelSchema'),
                         ], [
-                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('fpr'),
-                                new \PHPStan\Type\Constant\ConstantStringType('precision'),
-                                new \PHPStan\Type\Constant\ConstantStringType('tpr'),
-                                new \PHPStan\Type\Constant\ConstantStringType('threshold'),
+                                new \PHPStan\Type\Constant\ConstantStringType('labelMapper'),
+                                new \PHPStan\Type\Constant\ConstantStringType('unlabeledEventsTreatment'),
                             ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('logOddsMetrics'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('variableName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('variableType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('variableImportance'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('dataValidationMetrics'),
-                        new \PHPStan\Type\Constant\ConstantStringType('trainingMetricsV2'),
-                        new \PHPStan\Type\Constant\ConstantStringType('variableImportanceMetrics'),
-                        new \PHPStan\Type\Constant\ConstantStringType('aggregatedVariablesImportanceMetrics'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('fileLevelMessages'),
-                            new \PHPStan\Type\Constant\ConstantStringType('fieldLevelMessages'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('title'),
-                                new \PHPStan\Type\Constant\ConstantStringType('content'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('identifier'),
-                                new \PHPStan\Type\Constant\ConstantStringType('title'),
-                                new \PHPStan\Type\Constant\ConstantStringType('content'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ofi'),
-                            new \PHPStan\Type\Constant\ConstantStringType('tfi'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ati'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('metricDataPoints'),
-                                new \PHPStan\Type\Constant\ConstantStringType('modelPerformance'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('fpr'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('precision'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('tpr'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('threshold'),
-                                ], [
-                                    new \PHPStan\Type\FloatType(),
-                                    new \PHPStan\Type\FloatType(),
-                                    new \PHPStan\Type\FloatType(),
-                                    new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ]))),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('IGNORE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FRAUD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LEGIT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                 ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('auc'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('uncertaintyRange'),
-                                ], [
-                                    new \PHPStan\Type\FloatType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('dataLocation'),
+                            new \PHPStan\Type\Constant\ConstantStringType('dataAccessRoleArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ingestedEventsTimeWindow'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('dataValidationMetrics'),
+                            new \PHPStan\Type\Constant\ConstantStringType('trainingMetrics'),
+                            new \PHPStan\Type\Constant\ConstantStringType('variableImportanceMetrics'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('fileLevelMessages'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fieldLevelMessages'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('lowerBoundValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('upperBoundValue'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('title'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('content'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('identifier'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('title'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('content'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('auc'),
+                                new \PHPStan\Type\Constant\ConstantStringType('metricDataPoints'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('fpr'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('precision'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('tpr'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('threshold'),
                                     ], [
                                         new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                ])),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('logOddsMetrics'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('variableName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('variableType'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('variableImportance'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                ])),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('dataValidationMetrics'),
+                            new \PHPStan\Type\Constant\ConstantStringType('trainingMetricsV2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('variableImportanceMetrics'),
+                            new \PHPStan\Type\Constant\ConstantStringType('aggregatedVariablesImportanceMetrics'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('fileLevelMessages'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fieldLevelMessages'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('title'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('content'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('identifier'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('title'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('content'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ofi'),
+                                new \PHPStan\Type\Constant\ConstantStringType('tfi'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ati'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('metricDataPoints'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('modelPerformance'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('fpr'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('precision'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('tpr'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('threshold'),
+                                        ], [
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('auc'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('uncertaintyRange'),
+                                    ], [
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('lowerBoundValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('upperBoundValue'),
+                                        ], [
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('metricDataPoints'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('modelPerformance'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('fpr'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('precision'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('tpr'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('threshold'),
+                                        ], [
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('auc'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('uncertaintyRange'),
+                                    ], [
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('lowerBoundValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('upperBoundValue'),
+                                        ], [
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('metricDataPoints'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('modelPerformance'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('cr'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('adr'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('threshold'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('atodr'),
+                                        ], [
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('asi'),
+                                    ], [
                                         new \PHPStan\Type\FloatType(),
                                     ]),
                                 ]),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('metricDataPoints'),
-                                new \PHPStan\Type\Constant\ConstantStringType('modelPerformance'),
+                                new \PHPStan\Type\Constant\ConstantStringType('logOddsMetrics'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('fpr'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('precision'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('tpr'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('threshold'),
-                                ], [
-                                    new \PHPStan\Type\FloatType(),
-                                    new \PHPStan\Type\FloatType(),
-                                    new \PHPStan\Type\FloatType(),
-                                    new \PHPStan\Type\FloatType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('auc'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('uncertaintyRange'),
-                                ], [
-                                    new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('lowerBoundValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('upperBoundValue'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('variableName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('variableType'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('variableImportance'),
                                     ], [
-                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\FloatType(),
                                     ]),
-                                ]),
+                                ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('metricDataPoints'),
-                                new \PHPStan\Type\Constant\ConstantStringType('modelPerformance'),
+                                new \PHPStan\Type\Constant\ConstantStringType('logOddsMetrics'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('cr'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('adr'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('threshold'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('atodr'),
-                                ], [
-                                    new \PHPStan\Type\FloatType(),
-                                    new \PHPStan\Type\FloatType(),
-                                    new \PHPStan\Type\FloatType(),
-                                    new \PHPStan\Type\FloatType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('asi'),
-                                ], [
-                                    new \PHPStan\Type\FloatType(),
-                                ]),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('logOddsMetrics'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('variableName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('variableType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('variableImportance'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('logOddsMetrics'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('variableNames'),
-                                new \PHPStan\Type\Constant\ConstantStringType('aggregatedVariablesImportance'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('variableNames'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('aggregatedVariablesImportance'),
+                                    ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\StringType(),
+                                        ])),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                ])),
                             ]),
                         ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -757,42 +795,44 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('batchImports'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('jobId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('failureReason'),
-                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('completionTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('inputPath'),
-                    new \PHPStan\Type\Constant\ConstantStringType('outputPath'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventTypeName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('iamRoleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('processedRecordsCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('failedRecordsCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('totalRecordsCount'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS_INITIALIZING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCEL_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('jobId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failureReason'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('completionTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputPath'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputPath'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventTypeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('iamRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('processedRecordsCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failedRecordsCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('totalRecordsCount'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS_INITIALIZING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCEL_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -804,46 +844,48 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('batchPredictions'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('jobId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('failureReason'),
-                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('completionTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastHeartbeatTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('inputPath'),
-                    new \PHPStan\Type\Constant\ConstantStringType('outputPath'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventTypeName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('detectorName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('detectorVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('iamRoleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('processedRecordsCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('totalRecordsCount'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS_INITIALIZING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCEL_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('jobId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failureReason'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('completionTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastHeartbeatTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputPath'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputPath'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventTypeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('detectorName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('detectorVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('iamRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('processedRecordsCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('totalRecordsCount'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS_INITIALIZING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCEL_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -886,31 +928,37 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('modelId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('modelType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('modelVersionNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ONLINE_FRAUD_INSIGHTS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TRANSACTION_FRAUD_INSIGHTS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_TAKEOVER_INSIGHTS'),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('modelId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modelType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modelVersionNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ONLINE_FRAUD_INSIGHTS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TRANSACTION_FRAUD_INSIGHTS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_TAKEOVER_INSIGHTS'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('detectorId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ruleId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ruleVersion'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('detectorId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ruleId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ruleVersion'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('DRAFT'),
                     new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
@@ -933,21 +981,23 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('detectors'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('detectorId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventTypeName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('detectorId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventTypeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -959,19 +1009,21 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('entityTypes'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -997,13 +1049,15 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('entityType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('entityId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('entityType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('entityId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1016,47 +1070,55 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('ruleResults'),
                 new \PHPStan\Type\Constant\ConstantStringType('externalModelOutputs'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('modelVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('scores'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('modelId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('modelType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('modelVersionNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modelVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('scores'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ONLINE_FRAUD_INSIGHTS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TRANSACTION_FRAUD_INSIGHTS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_TAKEOVER_INSIGHTS'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('modelId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('modelType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('modelVersionNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ONLINE_FRAUD_INSIGHTS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TRANSACTION_FRAUD_INSIGHTS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_TAKEOVER_INSIGHTS'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\FloatType()),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\FloatType()),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ruleId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('outcomes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('externalModel'),
-                    new \PHPStan\Type\Constant\ConstantStringType('outputs'),
-                ], [
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('modelEndpoint'),
-                        new \PHPStan\Type\Constant\ConstantStringType('modelSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ruleId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outcomes'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('SAGEMAKER'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('externalModel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputs'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('modelEndpoint'),
+                            new \PHPStan\Type\Constant\ConstantStringType('modelSource'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantStringType('SAGEMAKER'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1088,89 +1150,109 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                    new \PHPStan\Type\Constant\ConstantStringType('source'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ruleId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ruleVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('expression'),
-                    new \PHPStan\Type\Constant\ConstantStringType('expressionWithValues'),
-                    new \PHPStan\Type\Constant\ConstantStringType('outcomes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('evaluated'),
-                    new \PHPStan\Type\Constant\ConstantStringType('matched'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\BooleanType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('source'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ruleId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ruleVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('expression'),
+                        new \PHPStan\Type\Constant\ConstantStringType('expressionWithValues'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outcomes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('evaluated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('matched'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('ALL_MATCHED'),
                     new \PHPStan\Type\Constant\ConstantStringType('FIRST_MATCHED'),
                 ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('modelId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('modelVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('modelType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('evaluations'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('outputVariableName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('evaluationScore'),
-                        new \PHPStan\Type\Constant\ConstantStringType('predictionExplanations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modelId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modelVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modelType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('evaluations'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('variableImpactExplanations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('aggregatedVariablesImpactExplanations'),
-                        ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('eventVariableName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('relativeImpact'),
-                                new \PHPStan\Type\Constant\ConstantStringType('logOddsImpact'),
+                                new \PHPStan\Type\Constant\ConstantStringType('outputVariableName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('evaluationScore'),
+                                new \PHPStan\Type\Constant\ConstantStringType('predictionExplanations'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('variableImpactExplanations'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('aggregatedVariablesImpactExplanations'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('eventVariableName'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('relativeImpact'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('logOddsImpact'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('eventVariableNames'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('relativeImpact'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('logOddsImpact'),
+                                        ], [
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                    ])),
+                                ]),
                             ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('eventVariableNames'),
-                                new \PHPStan\Type\Constant\ConstantStringType('relativeImpact'),
-                                new \PHPStan\Type\Constant\ConstantStringType('logOddsImpact'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                        ]),
+                        ])),
                     ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('modelEndpoint'),
-                    new \PHPStan\Type\Constant\ConstantStringType('useEventVariables'),
-                    new \PHPStan\Type\Constant\ConstantStringType('inputVariables'),
-                    new \PHPStan\Type\Constant\ConstantStringType('outputVariables'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('modelEndpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('useEventVariables'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputVariables'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputVariables'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1182,50 +1264,58 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('eventTypes'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventVariables'),
-                    new \PHPStan\Type\Constant\ConstantStringType('labels'),
-                    new \PHPStan\Type\Constant\ConstantStringType('entityTypes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventIngestion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ingestedEventStatistics'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventOrchestration'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('numberOfEvents'),
-                        new \PHPStan\Type\Constant\ConstantStringType('eventDataSizeInBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('leastRecentEvent'),
-                        new \PHPStan\Type\Constant\ConstantStringType('mostRecentEvent'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventVariables'),
+                        new \PHPStan\Type\Constant\ConstantStringType('labels'),
+                        new \PHPStan\Type\Constant\ConstantStringType('entityTypes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventIngestion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ingestedEventStatistics'),
                         new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventOrchestration'),
                     ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('numberOfEvents'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eventDataSizeInBytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('leastRecentEvent'),
+                            new \PHPStan\Type\Constant\ConstantStringType('mostRecentEvent'),
+                            new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('eventBridgeEnabled'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('eventBridgeEnabled'),
-                    ], [
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1237,56 +1327,58 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('externalModels'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('modelEndpoint'),
-                    new \PHPStan\Type\Constant\ConstantStringType('modelSource'),
-                    new \PHPStan\Type\Constant\ConstantStringType('invokeModelEndpointRoleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('inputConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('outputConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('modelEndpointStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('SAGEMAKER'),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('eventTypeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('format'),
-                        new \PHPStan\Type\Constant\ConstantStringType('useEventVariables'),
-                        new \PHPStan\Type\Constant\ConstantStringType('jsonInputTemplate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('csvInputTemplate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modelEndpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modelSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('invokeModelEndpointRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modelEndpointStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TEXT_CSV'),
-                            new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_JSON'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SAGEMAKER'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('eventTypeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('format'),
+                            new \PHPStan\Type\Constant\ConstantStringType('useEventVariables'),
+                            new \PHPStan\Type\Constant\ConstantStringType('jsonInputTemplate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('csvInputTemplate'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TEXT_CSV'),
+                                new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_JSON'),
+                            ]),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('format'),
+                            new \PHPStan\Type\Constant\ConstantStringType('jsonKeyToVariableMap'),
+                            new \PHPStan\Type\Constant\ConstantStringType('csvIndexToVariableMap'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TEXT_CSV'),
+                                new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_JSONLINES'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISSOCIATED'),
+                        ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('format'),
-                        new \PHPStan\Type\Constant\ConstantStringType('jsonKeyToVariableMap'),
-                        new \PHPStan\Type\Constant\ConstantStringType('csvIndexToVariableMap'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TEXT_CSV'),
-                            new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_JSONLINES'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISSOCIATED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1312,19 +1404,21 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('labels'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1336,7 +1430,9 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('elements'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1348,21 +1444,23 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('lists'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('variableType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('variableType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1396,12 +1494,16 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('modelVariables'),
                     new \PHPStan\Type\Constant\ConstantStringType('labelSchema'),
                 ], [
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('labelMapper'),
                         new \PHPStan\Type\Constant\ConstantStringType('unlabeledEventsTreatment'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ]))),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('IGNORE'),
                             new \PHPStan\Type\Constant\ConstantStringType('FRAUD'),
@@ -1441,27 +1543,29 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('models'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('modelId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('modelType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventTypeName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ONLINE_FRAUD_INSIGHTS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TRANSACTION_FRAUD_INSIGHTS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_TAKEOVER_INSIGHTS'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('modelId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modelType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventTypeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ONLINE_FRAUD_INSIGHTS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TRANSACTION_FRAUD_INSIGHTS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_TAKEOVER_INSIGHTS'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1472,19 +1576,21 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('outcomes'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1496,29 +1602,33 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('ruleDetails'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ruleId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('detectorId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ruleVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('expression'),
-                    new \PHPStan\Type\Constant\ConstantStringType('language'),
-                    new \PHPStan\Type\Constant\ConstantStringType('outcomes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('DETECTORPL'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ruleId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('detectorId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ruleVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('expression'),
+                        new \PHPStan\Type\Constant\ConstantStringType('language'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outcomes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('DETECTORPL'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1530,37 +1640,39 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('variables'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('dataType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('dataSource'),
-                    new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('variableType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('STRING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INTEGER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FLOAT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DATETIME'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dataType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dataSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('variableType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('STRING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTEGER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FLOAT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DATETIME'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EVENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MODEL_SCORE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL_MODEL_SCORE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EVENT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MODEL_SCORE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL_MODEL_SCORE'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1572,21 +1684,23 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('eventPredictionSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('eventId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventTypeName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('predictionTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('detectorId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('detectorVersionId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('eventId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventTypeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('predictionTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('detectorId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('detectorVersionId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1598,13 +1712,15 @@ final class FraudDetectorClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

@@ -238,7 +238,9 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('CWL'),
                         new \PHPStan\Type\Constant\ConstantStringType('FH'),
                     ]),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('suffixPath'),
@@ -403,28 +405,30 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('accountPolicies'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('policyName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('policyDocument'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('policyType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('scope'),
-                    new \PHPStan\Type\Constant\ConstantStringType('selectionCriteria'),
-                    new \PHPStan\Type\Constant\ConstantStringType('accountId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DATA_PROTECTION_POLICY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUBSCRIPTION_FILTER_POLICY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FIELD_INDEX_POLICY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TRANSFORMER_POLICY'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('policyName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('policyDocument'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('policyType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('scope'),
+                        new \PHPStan\Type\Constant\ConstantStringType('selectionCriteria'),
+                        new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DATA_PROTECTION_POLICY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBSCRIPTION_FILTER_POLICY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FIELD_INDEX_POLICY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TRANSFORMER_POLICY'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -436,59 +440,71 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('configurationTemplates'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('service'),
-                    new \PHPStan\Type\Constant\ConstantStringType('logType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('deliveryDestinationType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('defaultDeliveryConfigValues'),
-                    new \PHPStan\Type\Constant\ConstantStringType('allowedFields'),
-                    new \PHPStan\Type\Constant\ConstantStringType('allowedOutputFormats'),
-                    new \PHPStan\Type\Constant\ConstantStringType('allowedActionForAllowVendedLogsDeliveryForResource'),
-                    new \PHPStan\Type\Constant\ConstantStringType('allowedFieldDelimiters'),
-                    new \PHPStan\Type\Constant\ConstantStringType('allowedSuffixPathFields'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CWL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FH'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('recordFields'),
-                        new \PHPStan\Type\Constant\ConstantStringType('fieldDelimiter'),
-                        new \PHPStan\Type\Constant\ConstantStringType('s3DeliveryConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('service'),
+                        new \PHPStan\Type\Constant\ConstantStringType('logType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deliveryDestinationType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('defaultDeliveryConfigValues'),
+                        new \PHPStan\Type\Constant\ConstantStringType('allowedFields'),
+                        new \PHPStan\Type\Constant\ConstantStringType('allowedOutputFormats'),
+                        new \PHPStan\Type\Constant\ConstantStringType('allowedActionForAllowVendedLogsDeliveryForResource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('allowedFieldDelimiters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('allowedSuffixPathFields'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('suffixPath'),
-                            new \PHPStan\Type\Constant\ConstantStringType('enableHiveCompatiblePath'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CWL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FH'),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('mandatory'),
-                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('recordFields'),
+                            new \PHPStan\Type\Constant\ConstantStringType('fieldDelimiter'),
+                            new \PHPStan\Type\Constant\ConstantStringType('s3DeliveryConfiguration'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('suffixPath'),
+                                new \PHPStan\Type\Constant\ConstantStringType('enableHiveCompatiblePath'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('mandatory'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('json'),
+                                new \PHPStan\Type\Constant\ConstantStringType('plain'),
+                                new \PHPStan\Type\Constant\ConstantStringType('w3c'),
+                                new \PHPStan\Type\Constant\ConstantStringType('raw'),
+                                new \PHPStan\Type\Constant\ConstantStringType('parquet'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('json'),
-                        new \PHPStan\Type\Constant\ConstantStringType('plain'),
-                        new \PHPStan\Type\Constant\ConstantStringType('w3c'),
-                        new \PHPStan\Type\Constant\ConstantStringType('raw'),
-                        new \PHPStan\Type\Constant\ConstantStringType('parquet'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -500,37 +516,41 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('deliveries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('deliverySourceName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('deliveryDestinationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('deliveryDestinationType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('recordFields'),
-                    new \PHPStan\Type\Constant\ConstantStringType('fieldDelimiter'),
-                    new \PHPStan\Type\Constant\ConstantStringType('s3DeliveryConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CWL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FH'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('suffixPath'),
-                        new \PHPStan\Type\Constant\ConstantStringType('enableHiveCompatiblePath'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deliverySourceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deliveryDestinationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deliveryDestinationType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('recordFields'),
+                        new \PHPStan\Type\Constant\ConstantStringType('fieldDelimiter'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3DeliveryConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CWL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FH'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('suffixPath'),
+                            new \PHPStan\Type\Constant\ConstantStringType('enableHiveCompatiblePath'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -542,35 +562,37 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('deliveryDestinations'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('deliveryDestinationType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('outputFormat'),
-                    new \PHPStan\Type\Constant\ConstantStringType('deliveryDestinationConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CWL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FH'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('json'),
-                        new \PHPStan\Type\Constant\ConstantStringType('plain'),
-                        new \PHPStan\Type\Constant\ConstantStringType('w3c'),
-                        new \PHPStan\Type\Constant\ConstantStringType('raw'),
-                        new \PHPStan\Type\Constant\ConstantStringType('parquet'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('destinationResourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deliveryDestinationType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputFormat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deliveryDestinationConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CWL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FH'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('json'),
+                            new \PHPStan\Type\Constant\ConstantStringType('plain'),
+                            new \PHPStan\Type\Constant\ConstantStringType('w3c'),
+                            new \PHPStan\Type\Constant\ConstantStringType('raw'),
+                            new \PHPStan\Type\Constant\ConstantStringType('parquet'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('destinationResourceArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -582,21 +604,25 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('deliverySources'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('resourceArns'),
-                    new \PHPStan\Type\Constant\ConstantStringType('service'),
-                    new \PHPStan\Type\Constant\ConstantStringType('logType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resourceArns'),
+                        new \PHPStan\Type\Constant\ConstantStringType('service'),
+                        new \PHPStan\Type\Constant\ConstantStringType('logType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -608,21 +634,23 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('destinations'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('destinationName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('targetArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('accessPolicy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('destinationName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('targetArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('accessPolicy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -634,46 +662,48 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('exportTasks'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('taskId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('taskName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('logGroupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('from'),
-                    new \PHPStan\Type\Constant\ConstantStringType('to'),
-                    new \PHPStan\Type\Constant\ConstantStringType('destination'),
-                    new \PHPStan\Type\Constant\ConstantStringType('destinationPrefix'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('executionInfo'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('taskId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('taskName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('logGroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('from'),
+                        new \PHPStan\Type\Constant\ConstantStringType('to'),
+                        new \PHPStan\Type\Constant\ConstantStringType('destination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('destinationPrefix'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('executionInfo'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_CANCEL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                        ]),
                         new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('completionTime'),
-                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PENDING_CANCEL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('completionTime'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -685,19 +715,21 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('fieldIndexes'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('logGroupIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('fieldIndexName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastScanTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('firstEventTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastEventTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('logGroupIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('fieldIndexName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastScanTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('firstEventTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastEventTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -709,22 +741,24 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('indexPolicies'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('logGroupIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('policyDocument'),
-                    new \PHPStan\Type\Constant\ConstantStringType('policyName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('source'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LOG_GROUP'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('logGroupIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('policyDocument'),
+                        new \PHPStan\Type\Constant\ConstantStringType('policyName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('source'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LOG_GROUP'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -736,39 +770,43 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('logGroups'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('logGroupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('retentionInDays'),
-                    new \PHPStan\Type\Constant\ConstantStringType('metricFilterCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('storedBytes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('kmsKeyId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('dataProtectionStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('inheritedProperties'),
-                    new \PHPStan\Type\Constant\ConstantStringType('logGroupClass'),
-                    new \PHPStan\Type\Constant\ConstantStringType('logGroupArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVATED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('logGroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('retentionInDays'),
+                        new \PHPStan\Type\Constant\ConstantStringType('metricFilterCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('storedBytes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('kmsKeyId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dataProtectionStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inheritedProperties'),
+                        new \PHPStan\Type\Constant\ConstantStringType('logGroupClass'),
+                        new \PHPStan\Type\Constant\ConstantStringType('logGroupArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_DATA_PROTECTION'),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INFREQUENT_ACCESS'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_DATA_PROTECTION'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INFREQUENT_ACCESS'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -780,25 +818,27 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('logStreams'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('logStreamName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('firstEventTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastEventTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastIngestionTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('uploadSequenceToken'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('storedBytes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('logStreamName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('firstEventTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastEventTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastIngestionTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('uploadSequenceToken'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('storedBytes'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -810,63 +850,67 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('metricFilters'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('filterName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('filterPattern'),
-                    new \PHPStan\Type\Constant\ConstantStringType('metricTransformations'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('logGroupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('applyOnTransformedLogs'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('metricName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('metricNamespace'),
-                        new \PHPStan\Type\Constant\ConstantStringType('metricValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dimensions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                        new \PHPStan\Type\Constant\ConstantStringType('filterName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('filterPattern'),
+                        new \PHPStan\Type\Constant\ConstantStringType('metricTransformations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('logGroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('applyOnTransformedLogs'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('metricName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('metricNamespace'),
+                                new \PHPStan\Type\Constant\ConstantStringType('metricValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('dimensions'),
+                                new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Seconds'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Microseconds'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Milliseconds'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Bytes'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Kilobytes'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Megabytes'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Gigabytes'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Terabytes'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Bits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Kilobits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Megabits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Gigabits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Terabits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Percent'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Bytes/Second'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Kilobytes/Second'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Megabytes/Second'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Gigabytes/Second'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Terabytes/Second'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Bits/Second'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Kilobits/Second'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Megabits/Second'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Gigabits/Second'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Terabits/Second'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Count/Second'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('None'),
+                                ]),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Seconds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Microseconds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Milliseconds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Bytes'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Kilobytes'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Megabytes'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Gigabytes'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Terabytes'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Bits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Kilobits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Megabits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Gigabits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Terabits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Percent'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Count'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Bytes/Second'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Kilobytes/Second'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Megabytes/Second'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Gigabytes/Second'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Terabytes/Second'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Bits/Second'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Kilobits/Second'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Megabits/Second'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Gigabits/Second'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Terabits/Second'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Count/Second'),
-                            new \PHPStan\Type\Constant\ConstantStringType('None'),
-                        ]),
+                        new \PHPStan\Type\BooleanType(),
                     ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -878,33 +922,35 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('queries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('queryLanguage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('queryId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('queryString'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('logGroupName'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CWLI'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SQL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PPL'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('queryLanguage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('queryId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('queryString'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('logGroupName'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CWLI'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SQL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PPL'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Scheduled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Running'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Complete'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Timeout'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Scheduled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Running'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Complete'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Timeout'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -916,25 +962,29 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('queryDefinitions'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('queryLanguage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('queryDefinitionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('queryString'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModified'),
-                    new \PHPStan\Type\Constant\ConstantStringType('logGroupNames'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CWLI'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SQL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PPL'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('queryLanguage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('queryDefinitionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('queryString'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModified'),
+                        new \PHPStan\Type\Constant\ConstantStringType('logGroupNames'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CWLI'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SQL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PPL'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -946,15 +996,17 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('resourcePolicies'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('policyName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('policyDocument'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('policyName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('policyDocument'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -966,28 +1018,30 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('subscriptionFilters'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('filterName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('logGroupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('filterPattern'),
-                    new \PHPStan\Type\Constant\ConstantStringType('destinationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('distribution'),
-                    new \PHPStan\Type\Constant\ConstantStringType('applyOnTransformedLogs'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Random'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ByLogStream'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('filterName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('logGroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('filterPattern'),
+                        new \PHPStan\Type\Constant\ConstantStringType('destinationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('distribution'),
+                        new \PHPStan\Type\Constant\ConstantStringType('applyOnTransformedLogs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Random'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ByLogStream'),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1006,26 +1060,30 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('searchedLogStreams'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('logStreamName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ingestionTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('logStreamName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('searchedCompletely'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('logStreamName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ingestionTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('logStreamName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('searchedCompletely'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1070,7 +1128,9 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('CWL'),
                         new \PHPStan\Type\Constant\ConstantStringType('FH'),
                     ]),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('suffixPath'),
@@ -1152,7 +1212,9 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -1351,7 +1413,9 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('anomalyVisibilityTime'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('ONE_MIN'),
                     new \PHPStan\Type\Constant\ConstantStringType('FIVE_MIN'),
@@ -1384,15 +1448,17 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('nextForwardToken'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextBackwardToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ingestionTime'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ingestionTime'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1404,13 +1470,15 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('logGroupFields'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('percent'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('percent'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1439,13 +1507,17 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('SQL'),
                     new \PHPStan\Type\Constant\ConstantStringType('PPL'),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('field'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('field'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
+                ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('recordsMatched'),
                     new \PHPStan\Type\Constant\ConstantStringType('recordsScanned'),
@@ -1486,245 +1558,273 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('addKeys'),
-                    new \PHPStan\Type\Constant\ConstantStringType('copyValue'),
-                    new \PHPStan\Type\Constant\ConstantStringType('csv'),
-                    new \PHPStan\Type\Constant\ConstantStringType('dateTimeConverter'),
-                    new \PHPStan\Type\Constant\ConstantStringType('deleteKeys'),
-                    new \PHPStan\Type\Constant\ConstantStringType('grok'),
-                    new \PHPStan\Type\Constant\ConstantStringType('listToMap'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lowerCaseString'),
-                    new \PHPStan\Type\Constant\ConstantStringType('moveKeys'),
-                    new \PHPStan\Type\Constant\ConstantStringType('parseCloudfront'),
-                    new \PHPStan\Type\Constant\ConstantStringType('parseJSON'),
-                    new \PHPStan\Type\Constant\ConstantStringType('parseKeyValue'),
-                    new \PHPStan\Type\Constant\ConstantStringType('parseRoute53'),
-                    new \PHPStan\Type\Constant\ConstantStringType('parsePostgres'),
-                    new \PHPStan\Type\Constant\ConstantStringType('parseVPC'),
-                    new \PHPStan\Type\Constant\ConstantStringType('parseWAF'),
-                    new \PHPStan\Type\Constant\ConstantStringType('renameKeys'),
-                    new \PHPStan\Type\Constant\ConstantStringType('splitString'),
-                    new \PHPStan\Type\Constant\ConstantStringType('substituteString'),
-                    new \PHPStan\Type\Constant\ConstantStringType('trimString'),
-                    new \PHPStan\Type\Constant\ConstantStringType('typeConverter'),
-                    new \PHPStan\Type\Constant\ConstantStringType('upperCaseString'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('entries'),
+                        new \PHPStan\Type\Constant\ConstantStringType('addKeys'),
+                        new \PHPStan\Type\Constant\ConstantStringType('copyValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('csv'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dateTimeConverter'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleteKeys'),
+                        new \PHPStan\Type\Constant\ConstantStringType('grok'),
+                        new \PHPStan\Type\Constant\ConstantStringType('listToMap'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lowerCaseString'),
+                        new \PHPStan\Type\Constant\ConstantStringType('moveKeys'),
+                        new \PHPStan\Type\Constant\ConstantStringType('parseCloudfront'),
+                        new \PHPStan\Type\Constant\ConstantStringType('parseJSON'),
+                        new \PHPStan\Type\Constant\ConstantStringType('parseKeyValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('parseRoute53'),
+                        new \PHPStan\Type\Constant\ConstantStringType('parsePostgres'),
+                        new \PHPStan\Type\Constant\ConstantStringType('parseVPC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('parseWAF'),
+                        new \PHPStan\Type\Constant\ConstantStringType('renameKeys'),
+                        new \PHPStan\Type\Constant\ConstantStringType('splitString'),
+                        new \PHPStan\Type\Constant\ConstantStringType('substituteString'),
+                        new \PHPStan\Type\Constant\ConstantStringType('trimString'),
+                        new \PHPStan\Type\Constant\ConstantStringType('typeConverter'),
+                        new \PHPStan\Type\Constant\ConstantStringType('upperCaseString'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('overwriteIfExists'),
+                            new \PHPStan\Type\Constant\ConstantStringType('entries'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('overwriteIfExists'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\BooleanType(),
+                                ]),
+                            ])),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('entries'),
-                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('source'),
-                            new \PHPStan\Type\Constant\ConstantStringType('target'),
-                            new \PHPStan\Type\Constant\ConstantStringType('overwriteIfExists'),
+                            new \PHPStan\Type\Constant\ConstantStringType('entries'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('source'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('target'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('overwriteIfExists'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\BooleanType(),
+                                ]),
+                            ])),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('quoteCharacter'),
-                        new \PHPStan\Type\Constant\ConstantStringType('delimiter'),
-                        new \PHPStan\Type\Constant\ConstantStringType('columns'),
-                        new \PHPStan\Type\Constant\ConstantStringType('source'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('source'),
-                        new \PHPStan\Type\Constant\ConstantStringType('target'),
-                        new \PHPStan\Type\Constant\ConstantStringType('targetFormat'),
-                        new \PHPStan\Type\Constant\ConstantStringType('matchPatterns'),
-                        new \PHPStan\Type\Constant\ConstantStringType('sourceTimezone'),
-                        new \PHPStan\Type\Constant\ConstantStringType('targetTimezone'),
-                        new \PHPStan\Type\Constant\ConstantStringType('locale'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('withKeys'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('source'),
-                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('source'),
-                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('valueKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('target'),
-                        new \PHPStan\Type\Constant\ConstantStringType('flatten'),
-                        new \PHPStan\Type\Constant\ConstantStringType('flattenedElement'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('first'),
-                            new \PHPStan\Type\Constant\ConstantStringType('last'),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('withKeys'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('entries'),
-                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('source'),
-                            new \PHPStan\Type\Constant\ConstantStringType('target'),
-                            new \PHPStan\Type\Constant\ConstantStringType('overwriteIfExists'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('source'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('source'),
-                        new \PHPStan\Type\Constant\ConstantStringType('destination'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('source'),
-                        new \PHPStan\Type\Constant\ConstantStringType('destination'),
-                        new \PHPStan\Type\Constant\ConstantStringType('fieldDelimiter'),
-                        new \PHPStan\Type\Constant\ConstantStringType('keyValueDelimiter'),
-                        new \PHPStan\Type\Constant\ConstantStringType('keyPrefix'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nonMatchValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('overwriteIfExists'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('source'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('source'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('source'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('source'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('entries'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('renameTo'),
-                            new \PHPStan\Type\Constant\ConstantStringType('overwriteIfExists'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('entries'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('source'),
+                            new \PHPStan\Type\Constant\ConstantStringType('quoteCharacter'),
                             new \PHPStan\Type\Constant\ConstantStringType('delimiter'),
+                            new \PHPStan\Type\Constant\ConstantStringType('columns'),
+                            new \PHPStan\Type\Constant\ConstantStringType('source'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('entries'),
-                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('source'),
-                            new \PHPStan\Type\Constant\ConstantStringType('from'),
-                            new \PHPStan\Type\Constant\ConstantStringType('to'),
+                            new \PHPStan\Type\Constant\ConstantStringType('target'),
+                            new \PHPStan\Type\Constant\ConstantStringType('targetFormat'),
+                            new \PHPStan\Type\Constant\ConstantStringType('matchPatterns'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sourceTimezone'),
+                            new \PHPStan\Type\Constant\ConstantStringType('targetTimezone'),
+                            new \PHPStan\Type\Constant\ConstantStringType('locale'),
                         ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('withKeys'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('entries'),
-                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('withKeys'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('source'),
+                            new \PHPStan\Type\Constant\ConstantStringType('match'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('source'),
+                            new \PHPStan\Type\Constant\ConstantStringType('key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('valueKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('target'),
+                            new \PHPStan\Type\Constant\ConstantStringType('flatten'),
+                            new \PHPStan\Type\Constant\ConstantStringType('flattenedElement'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('boolean'),
-                                new \PHPStan\Type\Constant\ConstantStringType('integer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('double'),
-                                new \PHPStan\Type\Constant\ConstantStringType('string'),
+                                new \PHPStan\Type\Constant\ConstantStringType('first'),
+                                new \PHPStan\Type\Constant\ConstantStringType('last'),
                             ]),
                         ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('withKeys'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('entries'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('source'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('target'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('overwriteIfExists'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\BooleanType(),
+                                ]),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('source'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('source'),
+                            new \PHPStan\Type\Constant\ConstantStringType('destination'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('source'),
+                            new \PHPStan\Type\Constant\ConstantStringType('destination'),
+                            new \PHPStan\Type\Constant\ConstantStringType('fieldDelimiter'),
+                            new \PHPStan\Type\Constant\ConstantStringType('keyValueDelimiter'),
+                            new \PHPStan\Type\Constant\ConstantStringType('keyPrefix'),
+                            new \PHPStan\Type\Constant\ConstantStringType('nonMatchValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('overwriteIfExists'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('source'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('source'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('source'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('source'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('entries'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('renameTo'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('overwriteIfExists'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\BooleanType(),
+                                ]),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('entries'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('source'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('delimiter'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('entries'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('source'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('from'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('to'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('withKeys'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('entries'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('boolean'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('integer'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('double'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('string'),
+                                    ]),
+                                ]),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('withKeys'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('withKeys'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1735,69 +1835,77 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('anomalies'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('anomalyId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('patternId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('anomalyDetectorArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('patternString'),
-                    new \PHPStan\Type\Constant\ConstantStringType('patternRegex'),
-                    new \PHPStan\Type\Constant\ConstantStringType('priority'),
-                    new \PHPStan\Type\Constant\ConstantStringType('firstSeen'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastSeen'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('active'),
-                    new \PHPStan\Type\Constant\ConstantStringType('state'),
-                    new \PHPStan\Type\Constant\ConstantStringType('histogram'),
-                    new \PHPStan\Type\Constant\ConstantStringType('logSamples'),
-                    new \PHPStan\Type\Constant\ConstantStringType('patternTokens'),
-                    new \PHPStan\Type\Constant\ConstantStringType('logGroupArnList'),
-                    new \PHPStan\Type\Constant\ConstantStringType('suppressed'),
-                    new \PHPStan\Type\Constant\ConstantStringType('suppressedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('suppressedUntil'),
-                    new \PHPStan\Type\Constant\ConstantStringType('isPatternLevelSuppression'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Active'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Suppressed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Baseline'),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('anomalyId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('patternId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('anomalyDetectorArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('patternString'),
+                        new \PHPStan\Type\Constant\ConstantStringType('patternRegex'),
+                        new \PHPStan\Type\Constant\ConstantStringType('priority'),
+                        new \PHPStan\Type\Constant\ConstantStringType('firstSeen'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastSeen'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('active'),
+                        new \PHPStan\Type\Constant\ConstantStringType('state'),
+                        new \PHPStan\Type\Constant\ConstantStringType('histogram'),
+                        new \PHPStan\Type\Constant\ConstantStringType('logSamples'),
+                        new \PHPStan\Type\Constant\ConstantStringType('patternTokens'),
+                        new \PHPStan\Type\Constant\ConstantStringType('logGroupArnList'),
+                        new \PHPStan\Type\Constant\ConstantStringType('suppressed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('suppressedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('suppressedUntil'),
+                        new \PHPStan\Type\Constant\ConstantStringType('isPatternLevelSuppression'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('dynamicTokenPosition'),
-                        new \PHPStan\Type\Constant\ConstantStringType('isDynamic'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tokenString'),
-                        new \PHPStan\Type\Constant\ConstantStringType('enumerations'),
-                        new \PHPStan\Type\Constant\ConstantStringType('inferredTokenName'),
-                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Active'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Suppressed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Baseline'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('dynamicTokenPosition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('isDynamic'),
+                                new \PHPStan\Type\Constant\ConstantStringType('tokenString'),
+                                new \PHPStan\Type\Constant\ConstantStringType('enumerations'),
+                                new \PHPStan\Type\Constant\ConstantStringType('inferredTokenName'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
-                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\BooleanType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1808,19 +1916,21 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('integrationSummaries'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('integrationName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('integrationType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('integrationStatus'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('OPENSEARCH'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PROVISIONING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('integrationName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('integrationType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('integrationStatus'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('OPENSEARCH'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PROVISIONING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1831,43 +1941,47 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('anomalyDetectors'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('anomalyDetectorArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('detectorName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('logGroupArnList'),
-                    new \PHPStan\Type\Constant\ConstantStringType('evaluationFrequency'),
-                    new \PHPStan\Type\Constant\ConstantStringType('filterPattern'),
-                    new \PHPStan\Type\Constant\ConstantStringType('anomalyDetectorStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('kmsKeyId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creationTimeStamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTimeStamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('anomalyVisibilityTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ONE_MIN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FIVE_MIN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TEN_MIN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FIFTEEN_MIN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('THIRTY_MIN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ONE_HOUR'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('anomalyDetectorArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('detectorName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('logGroupArnList'),
+                        new \PHPStan\Type\Constant\ConstantStringType('evaluationFrequency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('filterPattern'),
+                        new \PHPStan\Type\Constant\ConstantStringType('anomalyDetectorStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('kmsKeyId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationTimeStamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTimeStamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('anomalyVisibilityTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ONE_MIN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FIVE_MIN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TEN_MIN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FIFTEEN_MIN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('THIRTY_MIN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ONE_HOUR'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INITIALIZING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TRAINING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ANALYZING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PAUSED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('INITIALIZING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TRAINING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ANALYZING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PAUSED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1879,7 +1993,9 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('logGroupIdentifiers'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2017,7 +2133,9 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -2204,9 +2322,15 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2218,19 +2342,21 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         ], [
                             new \PHPStan\Type\BooleanType(),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('logStreamName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('logGroupIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('message'),
-                            new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ingestionTime'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('logStreamName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('logGroupIdentifier'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                                new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ingestionTime'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('message'),
@@ -2284,15 +2410,17 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('matches'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('eventNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('extractedValues'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('eventNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('extractedValues'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -2302,15 +2430,17 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('transformedLogs'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('eventNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('transformedEventMessage'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('eventNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('transformedEventMessage'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }

@@ -188,7 +188,9 @@ final class signerClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('revokedEntities'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -219,10 +221,12 @@ final class signerClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('allowedValues'),
                         new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RSA'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ECDSA'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('RSA'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ECDSA'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('RSA'),
                             new \PHPStan\Type\Constant\ConstantStringType('ECDSA'),
@@ -232,10 +236,12 @@ final class signerClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('allowedValues'),
                         new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SHA1'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SHA256'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SHA1'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SHA256'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('SHA1'),
                             new \PHPStan\Type\Constant\ConstantStringType('SHA256'),
@@ -246,11 +252,13 @@ final class signerClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('supportedFormats'),
                     new \PHPStan\Type\Constant\ConstantStringType('defaultFormat'),
                 ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                        new \PHPStan\Type\Constant\ConstantStringType('JSONEmbedded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('JSONDetached'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                            new \PHPStan\Type\Constant\ConstantStringType('JSONEmbedded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('JSONDetached'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('JSON'),
                         new \PHPStan\Type\Constant\ConstantStringType('JSONEmbedded'),
@@ -357,17 +365,19 @@ final class signerClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('action'),
-                    new \PHPStan\Type\Constant\ConstantStringType('principal'),
-                    new \PHPStan\Type\Constant\ConstantStringType('statementId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('profileVersion'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('action'),
+                        new \PHPStan\Type\Constant\ConstantStringType('principal'),
+                        new \PHPStan\Type\Constant\ConstantStringType('statementId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('profileVersion'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -379,67 +389,69 @@ final class signerClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('jobs'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('jobId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('source'),
-                    new \PHPStan\Type\Constant\ConstantStringType('signedObject'),
-                    new \PHPStan\Type\Constant\ConstantStringType('signingMaterial'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('isRevoked'),
-                    new \PHPStan\Type\Constant\ConstantStringType('profileName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('profileVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('platformId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('platformDisplayName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('signatureExpiresAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('jobOwner'),
-                    new \PHPStan\Type\Constant\ConstantStringType('jobInvoker'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('s3'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('bucketName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('version'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('s3'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('bucketName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('jobId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('source'),
+                        new \PHPStan\Type\Constant\ConstantStringType('signedObject'),
+                        new \PHPStan\Type\Constant\ConstantStringType('signingMaterial'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('isRevoked'),
+                        new \PHPStan\Type\Constant\ConstantStringType('profileName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('profileVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('platformId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('platformDisplayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('signatureExpiresAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('jobOwner'),
+                        new \PHPStan\Type\Constant\ConstantStringType('jobInvoker'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('bucketName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('version'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('bucketName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
-                    ]),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -451,71 +463,79 @@ final class signerClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('platforms'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('platformId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('displayName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('partner'),
-                    new \PHPStan\Type\Constant\ConstantStringType('target'),
-                    new \PHPStan\Type\Constant\ConstantStringType('category'),
-                    new \PHPStan\Type\Constant\ConstantStringType('signingConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('signingImageFormat'),
-                    new \PHPStan\Type\Constant\ConstantStringType('maxSizeInMB'),
-                    new \PHPStan\Type\Constant\ConstantStringType('revocationSupported'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('AWSIoT'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('encryptionAlgorithmOptions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('hashAlgorithmOptions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('platformId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('displayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('partner'),
+                        new \PHPStan\Type\Constant\ConstantStringType('target'),
+                        new \PHPStan\Type\Constant\ConstantStringType('category'),
+                        new \PHPStan\Type\Constant\ConstantStringType('signingConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('signingImageFormat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('maxSizeInMB'),
+                        new \PHPStan\Type\Constant\ConstantStringType('revocationSupported'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWSIoT'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('allowedValues'),
-                            new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('encryptionAlgorithmOptions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('hashAlgorithmOptions'),
                         ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('RSA'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ECDSA'),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedValues'),
+                                new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('RSA'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ECDSA'),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RSA'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ECDSA'),
+                                ]),
                             ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('RSA'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ECDSA'),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedValues'),
+                                new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('SHA1'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SHA256'),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SHA1'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SHA256'),
+                                ]),
                             ]),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('allowedValues'),
-                            new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('supportedFormats'),
+                            new \PHPStan\Type\Constant\ConstantStringType('defaultFormat'),
                         ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('JSONEmbedded'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('JSONDetached'),
+                                ]),
+                            ])),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SHA1'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SHA256'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SHA1'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SHA256'),
+                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                                new \PHPStan\Type\Constant\ConstantStringType('JSONEmbedded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('JSONDetached'),
                             ]),
                         ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\BooleanType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('supportedFormats'),
-                        new \PHPStan\Type\Constant\ConstantStringType('defaultFormat'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                            new \PHPStan\Type\Constant\ConstantStringType('JSONEmbedded'),
-                            new \PHPStan\Type\Constant\ConstantStringType('JSONDetached'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                            new \PHPStan\Type\Constant\ConstantStringType('JSONEmbedded'),
-                            new \PHPStan\Type\Constant\ConstantStringType('JSONDetached'),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\BooleanType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -527,49 +547,51 @@ final class signerClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('profiles'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('profileName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('profileVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('profileVersionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('signingMaterial'),
-                    new \PHPStan\Type\Constant\ConstantStringType('signatureValidityPeriod'),
-                    new \PHPStan\Type\Constant\ConstantStringType('platformId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('platformDisplayName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('signingParameters'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('profileName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('profileVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('profileVersionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('signingMaterial'),
+                        new \PHPStan\Type\Constant\ConstantStringType('signatureValidityPeriod'),
+                        new \PHPStan\Type\Constant\ConstantStringType('platformId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('platformDisplayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('signingParameters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('YEARS'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('YEARS'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Active'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Canceled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Revoked'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Active'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Canceled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Revoked'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

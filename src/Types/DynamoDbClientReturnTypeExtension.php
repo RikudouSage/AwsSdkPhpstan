@@ -143,28 +143,70 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Responses'),
                 new \PHPStan\Type\Constant\ConstantStringType('ConsumedCapacity'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TableName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Item'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Error'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TableName'),
                         new \PHPStan\Type\Constant\ConstantStringType('Item'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ConditionalCheckFailed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ItemCollectionSizeLimitExceeded'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RequestLimitExceeded'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ValidationError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputExceeded'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TransactionConflict'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ThrottlingError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InternalServerError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFound'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DuplicateItem'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Item'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ConditionalCheckFailed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ItemCollectionSizeLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RequestLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ValidationError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TransactionConflict'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThrottlingError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternalServerError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DuplicateItem'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('S'),
+                                new \PHPStan\Type\Constant\ConstantStringType('N'),
+                                new \PHPStan\Type\Constant\ConstantStringType('B'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('M'),
+                                new \PHPStan\Type\Constant\ConstantStringType('L'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NULL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ResourceType(),
+                                    new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ResourceType(),
+                                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\MixedType(),
+                                ])),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\BooleanType(),
+                            ])),
                         ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -186,93 +228,71 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                 new \PHPStan\Type\ResourceType(),
                                 new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                             ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ResourceType(),
-                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                            ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ResourceType(),
+                                    new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                ]),
+                            ])),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                            new \PHPStan\Type\MixedType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\MixedType(),
+                            ])),
                             new \PHPStan\Type\BooleanType(),
                             new \PHPStan\Type\BooleanType(),
                         ])),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S'),
-                        new \PHPStan\Type\Constant\ConstantStringType('N'),
-                        new \PHPStan\Type\Constant\ConstantStringType('B'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('M'),
-                        new \PHPStan\Type\Constant\ConstantStringType('L'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NULL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                        new \PHPStan\Type\MixedType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ])),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('TableName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Table'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LocalSecondaryIndexes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TableName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
                         new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
                         new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Table'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LocalSecondaryIndexes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
                     ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ])),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ])),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -284,44 +304,7 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('UnprocessedKeys'),
                 new \PHPStan\Type\Constant\ConstantStringType('ConsumedCapacity'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('S'),
-                    new \PHPStan\Type\Constant\ConstantStringType('N'),
-                    new \PHPStan\Type\Constant\ConstantStringType('B'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SS'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NS'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BS'),
-                    new \PHPStan\Type\Constant\ConstantStringType('M'),
-                    new \PHPStan\Type\Constant\ConstantStringType('L'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NULL'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ResourceType(),
-                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ResourceType(),
-                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                    new \PHPStan\Type\MixedType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\BooleanType(),
-                ]))),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Keys'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AttributesToGet'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ConsistentRead'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProjectionExpression'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExpressionAttributeNames'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('S'),
                         new \PHPStan\Type\Constant\ConstantStringType('N'),
@@ -341,64 +324,125 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\ResourceType(),
                             new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ResourceType(),
+                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                        new \PHPStan\Type\MixedType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\MixedType(),
+                        ])),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
                     ])),
-                    new \PHPStan\Type\StringType(),
+                ]))),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Keys'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AttributesToGet'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConsistentRead'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProjectionExpression'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExpressionAttributeNames'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('S'),
+                            new \PHPStan\Type\Constant\ConstantStringType('N'),
+                            new \PHPStan\Type\Constant\ConstantStringType('B'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('M'),
+                            new \PHPStan\Type\Constant\ConstantStringType('L'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NULL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ResourceType(),
+                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ResourceType(),
+                                    new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\MixedType(),
+                            ])),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\BooleanType(),
+                        ])),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('TableName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Table'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LocalSecondaryIndexes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TableName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
                         new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
                         new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Table'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LocalSecondaryIndexes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
                     ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ])),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ])),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -410,12 +454,103 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('ItemCollectionMetrics'),
                 new \PHPStan\Type\Constant\ConstantStringType('ConsumedCapacity'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('PutRequest'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeleteRequest'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Item'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PutRequest'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeleteRequest'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Item'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('S'),
+                                new \PHPStan\Type\Constant\ConstantStringType('N'),
+                                new \PHPStan\Type\Constant\ConstantStringType('B'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('M'),
+                                new \PHPStan\Type\Constant\ConstantStringType('L'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NULL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ResourceType(),
+                                    new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ResourceType(),
+                                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\MixedType(),
+                                ])),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\BooleanType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('S'),
+                                new \PHPStan\Type\Constant\ConstantStringType('N'),
+                                new \PHPStan\Type\Constant\ConstantStringType('B'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('M'),
+                                new \PHPStan\Type\Constant\ConstantStringType('L'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NULL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ResourceType(),
+                                    new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ResourceType(),
+                                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\MixedType(),
+                                ])),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\BooleanType(),
+                            ])),
+                        ]),
+                    ]),
+                ]))),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ItemCollectionKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SizeEstimateRangeGB'),
                     ], [
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('S'),
@@ -436,133 +571,74 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                 new \PHPStan\Type\ResourceType(),
                                 new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                             ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ResourceType(),
-                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                            ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ResourceType(),
+                                    new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                ]),
+                            ])),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                            new \PHPStan\Type\MixedType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\MixedType(),
+                            ])),
                             new \PHPStan\Type\BooleanType(),
                             new \PHPStan\Type\BooleanType(),
                         ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\FloatType(),
+                        ])),
                     ]),
+                ]))),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TableName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Table'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LocalSecondaryIndexes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('S'),
-                            new \PHPStan\Type\Constant\ConstantStringType('N'),
-                            new \PHPStan\Type\Constant\ConstantStringType('B'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('M'),
-                            new \PHPStan\Type\Constant\ConstantStringType('L'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NULL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ResourceType(),
-                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ResourceType(),
-                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                            new \PHPStan\Type\MixedType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
                         ])),
                     ]),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ItemCollectionKey'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SizeEstimateRangeGB'),
-                ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S'),
-                        new \PHPStan\Type\Constant\ConstantStringType('N'),
-                        new \PHPStan\Type\Constant\ConstantStringType('B'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('M'),
-                        new \PHPStan\Type\Constant\ConstantStringType('L'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NULL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                        new \PHPStan\Type\MixedType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ])),
-                    new \PHPStan\Type\FloatType(),
-                ])),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('TableName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Table'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LocalSecondaryIndexes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ])),
-                ]),
             ]),
         ]);
     }
@@ -613,65 +689,32 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalTableStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalTableName'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusPercentProgress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KMSMasterKeyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaInaccessibleDateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHIVING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusDescription'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusPercentProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KMSMasterKeyId'),
                             new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
                             new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
                             new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaInaccessibleDateTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
                         ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
@@ -695,21 +738,58 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                     new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHIVING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
                                 ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                        ]),
+                                    ]),
+                                ]),
+                            ])),
                             new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
+                                ]),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\UnionType([
@@ -757,28 +837,32 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
                     new \PHPStan\Type\Constant\ConstantStringType('MultiRegionConsistency'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('S'),
-                            new \PHPStan\Type\Constant\ConstantStringType('N'),
-                            new \PHPStan\Type\Constant\ConstantStringType('B'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('S'),
+                                new \PHPStan\Type\Constant\ConstantStringType('N'),
+                                new \PHPStan\Type\Constant\ConstantStringType('B'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
@@ -816,120 +900,132 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Projection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Projection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
-                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Projection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Backfilling'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Projection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Backfilling'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LastIncreaseDateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastDecreaseDateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NumberOfDecreasesToday'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxWriteRequestUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                             ]),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LastIncreaseDateTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LastDecreaseDateTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NumberOfDecreasesToday'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            ], [
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MaxWriteRequestUnits'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                ]),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('StreamEnabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('StreamViewType'),
@@ -945,65 +1041,32 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusPercentProgress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KMSMasterKeyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaInaccessibleDateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHIVING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusDescription'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusPercentProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KMSMasterKeyId'),
                             new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
                             new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
                             new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaInaccessibleDateTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
                         ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
@@ -1027,21 +1090,58 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                     new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHIVING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
                                 ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                        ]),
+                                    ]),
+                                ]),
+                            ])),
                             new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
+                                ]),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('SourceBackupArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('SourceTableArn'),
@@ -1177,16 +1277,18 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                ]),
                             ]),
-                        ]),
+                        ])),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
@@ -1215,78 +1317,90 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('TimeToLiveDescription'),
                         new \PHPStan\Type\Constant\ConstantStringType('SSEDescription'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Projection'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Projection'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                        ]),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
                                 ]),
                             ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Projection'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughput'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughput'),
                             ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
-                                ]),
                                 new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Projection'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughput'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughput'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                        ]),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaxWriteRequestUnits'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ]),
                             ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxWriteRequestUnits'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                        ]),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('StreamEnabled'),
                             new \PHPStan\Type\Constant\ConstantStringType('StreamViewType'),
@@ -1363,15 +1477,23 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\ResourceType(),
                         new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ResourceType(),
-                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ResourceType(),
+                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                    new \PHPStan\Type\MixedType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\MixedType(),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                 ])),
@@ -1439,19 +1561,29 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\ResourceType(),
                             new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ResourceType(),
+                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                        new \PHPStan\Type\MixedType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\MixedType(),
+                        ])),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
                     ])),
-                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\FloatType(),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1500,28 +1632,32 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
                     new \PHPStan\Type\Constant\ConstantStringType('MultiRegionConsistency'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('S'),
-                            new \PHPStan\Type\Constant\ConstantStringType('N'),
-                            new \PHPStan\Type\Constant\ConstantStringType('B'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('S'),
+                                new \PHPStan\Type\Constant\ConstantStringType('N'),
+                                new \PHPStan\Type\Constant\ConstantStringType('B'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
@@ -1559,120 +1695,132 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Projection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Projection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
-                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Projection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Backfilling'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Projection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Backfilling'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LastIncreaseDateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastDecreaseDateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NumberOfDecreasesToday'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxWriteRequestUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                             ]),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LastIncreaseDateTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LastDecreaseDateTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NumberOfDecreasesToday'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            ], [
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MaxWriteRequestUnits'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                ]),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('StreamEnabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('StreamViewType'),
@@ -1688,65 +1836,32 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusPercentProgress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KMSMasterKeyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaInaccessibleDateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHIVING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusDescription'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusPercentProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KMSMasterKeyId'),
                             new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
                             new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
                             new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaInaccessibleDateTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
                         ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
@@ -1770,21 +1885,58 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                     new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHIVING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
                                 ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                        ]),
+                                    ]),
+                                ]),
+                            ])),
                             new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
+                                ]),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('SourceBackupArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('SourceTableArn'),
@@ -1920,16 +2072,18 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                ]),
                             ]),
-                        ]),
+                        ])),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
@@ -1958,78 +2112,90 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('TimeToLiveDescription'),
                         new \PHPStan\Type\Constant\ConstantStringType('SSEDescription'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Projection'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Projection'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                        ]),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
                                 ]),
                             ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Projection'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughput'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughput'),
                             ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
-                                ]),
                                 new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Projection'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughput'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughput'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                        ]),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaxWriteRequestUnits'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ]),
                             ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxWriteRequestUnits'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                        ]),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('StreamEnabled'),
                             new \PHPStan\Type\Constant\ConstantStringType('StreamViewType'),
@@ -2124,7 +2290,9 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
                     new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -2149,13 +2317,15 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Endpoints'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Address'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CachePeriodInMinutes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CachePeriodInMinutes'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -2250,65 +2420,32 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalTableStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalTableName'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusPercentProgress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KMSMasterKeyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaInaccessibleDateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHIVING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusDescription'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusPercentProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KMSMasterKeyId'),
                             new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
                             new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
                             new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaInaccessibleDateTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
                         ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
@@ -2332,21 +2469,58 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                     new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHIVING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
                                 ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                        ]),
+                                    ]),
+                                ]),
+                            ])),
                             new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
+                                ]),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\UnionType([
@@ -2368,111 +2542,37 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('ReplicaSettings'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReplicaBillingModeSummary'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedReadCapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedReadCapacityAutoScalingSettings'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedWriteCapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedWriteCapacityAutoScalingSettings'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReplicaGlobalSecondaryIndexSettings'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BillingMode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdateToPayPerRequestDateTime'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PROVISIONED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAY_PER_REQUEST'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
-                            ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
-                            ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedReadCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedReadCapacityAutoScalingSettings'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedWriteCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedWriteCapacityAutoScalingSettings'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaBillingModeSummary'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedReadCapacityUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedReadCapacityAutoScalingSettings'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedWriteCapacityUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedWriteCapacityAutoScalingSettings'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaGlobalSecondaryIndexSettings'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
                             new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                             new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                             new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BillingMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LastUpdateToPayPerRequestDateTime'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PROVISIONED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAY_PER_REQUEST'),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         ]),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2486,23 +2586,25 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\BooleanType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
                                 ], [
-                                    new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
+                                    ], [
+                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
                                 ]),
-                            ]),
+                            ])),
                         ]),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2516,36 +2618,120 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\BooleanType(),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
+                                    ], [
+                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                ]),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexStatus'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ProvisionedReadCapacityUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ProvisionedReadCapacityAutoScalingSettings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ProvisionedWriteCapacityUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ProvisionedWriteCapacityAutoScalingSettings'),
                             ], [
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
                                 ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
+                                            ], [
+                                                new \PHPStan\Type\BooleanType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\FloatType(),
+                                            ]),
+                                        ]),
+                                    ])),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
+                                ], [
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
+                                            ], [
+                                                new \PHPStan\Type\BooleanType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\FloatType(),
+                                            ]),
+                                        ]),
+                                    ])),
                                 ]),
                             ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -2611,7 +2797,9 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\Constant\ConstantStringType('HeaderList'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -2630,27 +2818,31 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('S'),
-                                new \PHPStan\Type\Constant\ConstantStringType('N'),
-                                new \PHPStan\Type\Constant\ConstantStringType('B'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('S'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('N'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('B'),
+                                ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                ]),
                             ]),
-                        ]),
+                        ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('PROVISIONED'),
                             new \PHPStan\Type\Constant\ConstantStringType('PAY_PER_REQUEST'),
@@ -2681,58 +2873,64 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             ]),
                             new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Projection'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughput'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughput'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Projection'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughput'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughput'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                        ]),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaxWriteRequestUnits'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ]),
                             ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxWriteRequestUnits'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                        ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -2753,27 +2951,29 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('KinesisDataStreamDestinations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('StreamArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DestinationStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DestinationStatusDescription'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ApproximateCreationDateTimePrecision'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('StreamArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DestinationStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DestinationStatusDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApproximateCreationDateTimePrecision'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MILLISECOND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MICROSECOND'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MILLISECOND'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MICROSECOND'),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -2827,28 +3027,32 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
                     new \PHPStan\Type\Constant\ConstantStringType('MultiRegionConsistency'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('S'),
-                            new \PHPStan\Type\Constant\ConstantStringType('N'),
-                            new \PHPStan\Type\Constant\ConstantStringType('B'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('S'),
+                                new \PHPStan\Type\Constant\ConstantStringType('N'),
+                                new \PHPStan\Type\Constant\ConstantStringType('B'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
@@ -2886,120 +3090,132 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Projection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Projection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
-                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Projection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Backfilling'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Projection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Backfilling'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LastIncreaseDateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastDecreaseDateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NumberOfDecreasesToday'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxWriteRequestUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                             ]),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LastIncreaseDateTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LastDecreaseDateTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NumberOfDecreasesToday'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            ], [
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MaxWriteRequestUnits'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                ]),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('StreamEnabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('StreamViewType'),
@@ -3015,65 +3231,32 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusPercentProgress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KMSMasterKeyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaInaccessibleDateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHIVING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusDescription'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusPercentProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KMSMasterKeyId'),
                             new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
                             new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
                             new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaInaccessibleDateTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
                         ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
@@ -3097,21 +3280,58 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                     new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHIVING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
                                 ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                        ]),
+                                    ]),
+                                ]),
+                            ])),
                             new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
+                                ]),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('SourceBackupArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('SourceTableArn'),
@@ -3216,154 +3436,166 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('ARCHIVING'),
                         new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedReadCapacityAutoScalingSettings'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedWriteCapacityAutoScalingSettings'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProvisionedReadCapacityAutoScalingSettings'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProvisionedWriteCapacityAutoScalingSettings'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedReadCapacityAutoScalingSettings'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedWriteCapacityAutoScalingSettings'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexStatus'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ProvisionedReadCapacityAutoScalingSettings'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ProvisionedWriteCapacityAutoScalingSettings'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
+                                                ], [
+                                                    new \PHPStan\Type\BooleanType(),
+                                                    new \PHPStan\Type\IntegerType(),
+                                                    new \PHPStan\Type\IntegerType(),
+                                                    new \PHPStan\Type\FloatType(),
+                                                ]),
+                                            ]),
+                                        ])),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
+                                                ], [
+                                                    new \PHPStan\Type\BooleanType(),
+                                                    new \PHPStan\Type\IntegerType(),
+                                                    new \PHPStan\Type\IntegerType(),
+                                                    new \PHPStan\Type\FloatType(),
+                                                ]),
+                                            ]),
+                                        ])),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
+                                        ], [
+                                            new \PHPStan\Type\BooleanType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                    ]),
+                                ])),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
+                                        ], [
+                                            new \PHPStan\Type\BooleanType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                    ]),
+                                ])),
+                            ]),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
                                 new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
-                                    ], [
-                                        new \PHPStan\Type\BooleanType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
-                                ]),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
-                                    ], [
-                                        new \PHPStan\Type\BooleanType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
-                                ]),
+                                new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
                             ]),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
-                                ], [
-                                    new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\FloatType(),
-                                ]),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
-                                ], [
-                                    new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\FloatType(),
-                                ]),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                        ]),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -3458,36 +3690,46 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('ConsumedCapacity'),
                 new \PHPStan\Type\Constant\ConstantStringType('LastEvaluatedKey'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('S'),
-                    new \PHPStan\Type\Constant\ConstantStringType('N'),
-                    new \PHPStan\Type\Constant\ConstantStringType('B'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SS'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NS'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BS'),
-                    new \PHPStan\Type\Constant\ConstantStringType('M'),
-                    new \PHPStan\Type\Constant\ConstantStringType('L'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NULL'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('S'),
+                        new \PHPStan\Type\Constant\ConstantStringType('N'),
+                        new \PHPStan\Type\Constant\ConstantStringType('B'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('M'),
+                        new \PHPStan\Type\Constant\ConstantStringType('L'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NULL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ResourceType(),
-                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ResourceType(),
-                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                    new \PHPStan\Type\MixedType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ResourceType(),
+                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ResourceType(),
+                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\MixedType(),
+                        ])),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3550,15 +3792,23 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\ResourceType(),
                         new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ResourceType(),
-                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ResourceType(),
+                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                    new \PHPStan\Type\MixedType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\MixedType(),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                 ])),
@@ -3572,82 +3822,94 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Responses'),
                 new \PHPStan\Type\Constant\ConstantStringType('ConsumedCapacity'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Item'),
-                ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S'),
-                        new \PHPStan\Type\Constant\ConstantStringType('N'),
-                        new \PHPStan\Type\Constant\ConstantStringType('B'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('M'),
-                        new \PHPStan\Type\Constant\ConstantStringType('L'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NULL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                        new \PHPStan\Type\MixedType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ])),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('TableName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Table'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LocalSecondaryIndexes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Item'),
                     ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('S'),
+                            new \PHPStan\Type\Constant\ConstantStringType('N'),
+                            new \PHPStan\Type\Constant\ConstantStringType('B'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('M'),
+                            new \PHPStan\Type\Constant\ConstantStringType('L'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NULL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ResourceType(),
+                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ResourceType(),
+                                    new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\MixedType(),
+                            ])),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\BooleanType(),
+                        ])),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TableName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
                         new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
                         new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Table'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LocalSecondaryIndexes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
                     ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\FloatType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ])),
-                ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ])),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -3755,15 +4017,23 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\ResourceType(),
                         new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ResourceType(),
-                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ResourceType(),
+                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                    new \PHPStan\Type\MixedType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\MixedType(),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                 ])),
@@ -3885,7 +4155,9 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\Constant\ConstantStringType('HeaderList'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -3904,27 +4176,31 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('S'),
-                                new \PHPStan\Type\Constant\ConstantStringType('N'),
-                                new \PHPStan\Type\Constant\ConstantStringType('B'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('S'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('N'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('B'),
+                                ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                ]),
                             ]),
-                        ]),
+                        ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('PROVISIONED'),
                             new \PHPStan\Type\Constant\ConstantStringType('PAY_PER_REQUEST'),
@@ -3955,58 +4231,64 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             ]),
                             new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Projection'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughput'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughput'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Projection'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughput'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughput'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                        ]),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaxWriteRequestUnits'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ]),
                             ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxWriteRequestUnits'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                        ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -4026,37 +4308,39 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('BackupSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('LastEvaluatedBackupArn'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('TableName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TableId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TableArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BackupArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BackupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BackupCreationDateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BackupExpiryDateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BackupStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BackupType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BackupSizeBytes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TableName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TableId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TableArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BackupArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BackupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BackupCreationDateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BackupExpiryDateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BackupStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BackupType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BackupSizeBytes'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('USER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SYSTEM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AWS_BACKUP'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('USER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SYSTEM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AWS_BACKUP'),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -4068,21 +4352,23 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('ContributorInsightsSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('TableName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ContributorInsightsStatus'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TableName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ContributorInsightsStatus'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -4094,22 +4380,24 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('ExportSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ExportArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExportStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExportType'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ExportArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExportStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExportType'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FULL_EXPORT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INCREMENTAL_EXPORT'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FULL_EXPORT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INCREMENTAL_EXPORT'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -4121,17 +4409,21 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('GlobalTables'),
                 new \PHPStan\Type\Constant\ConstantStringType('LastEvaluatedGlobalTableName'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('GlobalTableName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReplicationGroup'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GlobalTableName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplicationGroup'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -4143,43 +4435,45 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('ImportSummaryList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ImportArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ImportStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TableArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('S3BucketSource'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLogGroupArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('InputFormat'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3BucketOwner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('S3Bucket'),
-                        new \PHPStan\Type\Constant\ConstantStringType('S3KeyPrefix'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImportArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImportStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TableArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('S3BucketSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLogGroupArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InputFormat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('S3BucketOwner'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Bucket'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3KeyPrefix'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DYNAMODB_JSON'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CSV'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DYNAMODB_JSON'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CSV'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -4191,7 +4485,9 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('TableNames'),
                 new \PHPStan\Type\Constant\ConstantStringType('LastEvaluatedTableName'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -4203,13 +4499,15 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -4241,15 +4539,23 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\ResourceType(),
                         new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ResourceType(),
-                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ResourceType(),
+                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                    new \PHPStan\Type\MixedType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\MixedType(),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                 ])),
@@ -4317,19 +4623,29 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\ResourceType(),
                             new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ResourceType(),
+                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                        new \PHPStan\Type\MixedType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\MixedType(),
+                        ])),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
                     ])),
-                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\FloatType(),
+                    ])),
                 ]),
             ]),
         ]);
@@ -4354,36 +4670,46 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('LastEvaluatedKey'),
                 new \PHPStan\Type\Constant\ConstantStringType('ConsumedCapacity'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('S'),
-                    new \PHPStan\Type\Constant\ConstantStringType('N'),
-                    new \PHPStan\Type\Constant\ConstantStringType('B'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SS'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NS'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BS'),
-                    new \PHPStan\Type\Constant\ConstantStringType('M'),
-                    new \PHPStan\Type\Constant\ConstantStringType('L'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NULL'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('S'),
+                        new \PHPStan\Type\Constant\ConstantStringType('N'),
+                        new \PHPStan\Type\Constant\ConstantStringType('B'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('M'),
+                        new \PHPStan\Type\Constant\ConstantStringType('L'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NULL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ResourceType(),
-                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ResourceType(),
-                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                    new \PHPStan\Type\MixedType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ResourceType(),
+                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ResourceType(),
+                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\MixedType(),
+                        ])),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ])),
                 ])),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
@@ -4406,15 +4732,23 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\ResourceType(),
                         new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ResourceType(),
-                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ResourceType(),
+                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                    new \PHPStan\Type\MixedType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\MixedType(),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                 ])),
@@ -4496,28 +4830,32 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
                     new \PHPStan\Type\Constant\ConstantStringType('MultiRegionConsistency'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('S'),
-                            new \PHPStan\Type\Constant\ConstantStringType('N'),
-                            new \PHPStan\Type\Constant\ConstantStringType('B'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('S'),
+                                new \PHPStan\Type\Constant\ConstantStringType('N'),
+                                new \PHPStan\Type\Constant\ConstantStringType('B'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
@@ -4555,120 +4893,132 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Projection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Projection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
-                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Projection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Backfilling'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Projection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Backfilling'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LastIncreaseDateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastDecreaseDateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NumberOfDecreasesToday'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxWriteRequestUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                             ]),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LastIncreaseDateTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LastDecreaseDateTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NumberOfDecreasesToday'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            ], [
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MaxWriteRequestUnits'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                ]),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('StreamEnabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('StreamViewType'),
@@ -4684,65 +5034,32 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusPercentProgress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KMSMasterKeyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaInaccessibleDateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHIVING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusDescription'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusPercentProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KMSMasterKeyId'),
                             new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
                             new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
                             new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaInaccessibleDateTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
                         ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
@@ -4766,21 +5083,58 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                     new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHIVING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
                                 ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                        ]),
+                                    ]),
+                                ]),
+                            ])),
                             new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
+                                ]),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('SourceBackupArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('SourceTableArn'),
@@ -4898,28 +5252,32 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
                     new \PHPStan\Type\Constant\ConstantStringType('MultiRegionConsistency'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('S'),
-                            new \PHPStan\Type\Constant\ConstantStringType('N'),
-                            new \PHPStan\Type\Constant\ConstantStringType('B'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('S'),
+                                new \PHPStan\Type\Constant\ConstantStringType('N'),
+                                new \PHPStan\Type\Constant\ConstantStringType('B'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
@@ -4957,120 +5315,132 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Projection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Projection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
-                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Projection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Backfilling'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Projection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Backfilling'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LastIncreaseDateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastDecreaseDateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NumberOfDecreasesToday'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxWriteRequestUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                             ]),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LastIncreaseDateTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LastDecreaseDateTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NumberOfDecreasesToday'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            ], [
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MaxWriteRequestUnits'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                ]),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('StreamEnabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('StreamViewType'),
@@ -5086,65 +5456,32 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusPercentProgress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KMSMasterKeyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaInaccessibleDateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHIVING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusDescription'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusPercentProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KMSMasterKeyId'),
                             new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
                             new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
                             new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaInaccessibleDateTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
                         ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
@@ -5168,21 +5505,58 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                     new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHIVING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
                                 ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                        ]),
+                                    ]),
+                                ]),
+                            ])),
                             new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
+                                ]),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('SourceBackupArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('SourceTableArn'),
@@ -5276,36 +5650,46 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('LastEvaluatedKey'),
                 new \PHPStan\Type\Constant\ConstantStringType('ConsumedCapacity'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('S'),
-                    new \PHPStan\Type\Constant\ConstantStringType('N'),
-                    new \PHPStan\Type\Constant\ConstantStringType('B'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SS'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NS'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BS'),
-                    new \PHPStan\Type\Constant\ConstantStringType('M'),
-                    new \PHPStan\Type\Constant\ConstantStringType('L'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NULL'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('S'),
+                        new \PHPStan\Type\Constant\ConstantStringType('N'),
+                        new \PHPStan\Type\Constant\ConstantStringType('B'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('M'),
+                        new \PHPStan\Type\Constant\ConstantStringType('L'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NULL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ResourceType(),
-                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ResourceType(),
-                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                    new \PHPStan\Type\MixedType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ResourceType(),
+                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ResourceType(),
+                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\MixedType(),
+                        ])),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ])),
                 ])),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
@@ -5328,15 +5712,23 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\ResourceType(),
                         new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ResourceType(),
-                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ResourceType(),
+                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                    new \PHPStan\Type\MixedType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\MixedType(),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                 ])),
@@ -5397,82 +5789,94 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('ConsumedCapacity'),
                 new \PHPStan\Type\Constant\ConstantStringType('Responses'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('TableName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Table'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LocalSecondaryIndexes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TableName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
                         new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
                         new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Table'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LocalSecondaryIndexes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
                     ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ])),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Item'),
                     ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ])),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Item'),
-                ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S'),
-                        new \PHPStan\Type\Constant\ConstantStringType('N'),
-                        new \PHPStan\Type\Constant\ConstantStringType('B'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('M'),
-                        new \PHPStan\Type\Constant\ConstantStringType('L'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NULL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('S'),
+                            new \PHPStan\Type\Constant\ConstantStringType('N'),
+                            new \PHPStan\Type\Constant\ConstantStringType('B'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('M'),
+                            new \PHPStan\Type\Constant\ConstantStringType('L'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NULL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
+                        ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                        new \PHPStan\Type\MixedType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ])),
-                ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ResourceType(),
+                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ResourceType(),
+                                    new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\MixedType(),
+                            ])),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\BooleanType(),
+                        ])),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -5483,84 +5887,98 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('ConsumedCapacity'),
                 new \PHPStan\Type\Constant\ConstantStringType('ItemCollectionMetrics'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('TableName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Table'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LocalSecondaryIndexes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TableName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
                         new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
                         new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Table'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LocalSecondaryIndexes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
                     ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ])),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUnits'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ])),
-                ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ItemCollectionKey'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SizeEstimateRangeGB'),
-                ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S'),
-                        new \PHPStan\Type\Constant\ConstantStringType('N'),
-                        new \PHPStan\Type\Constant\ConstantStringType('B'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('M'),
-                        new \PHPStan\Type\Constant\ConstantStringType('L'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NULL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                        new \PHPStan\Type\MixedType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ])),
-                    new \PHPStan\Type\FloatType(),
                 ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ItemCollectionKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SizeEstimateRangeGB'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('S'),
+                            new \PHPStan\Type\Constant\ConstantStringType('N'),
+                            new \PHPStan\Type\Constant\ConstantStringType('B'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('M'),
+                            new \PHPStan\Type\Constant\ConstantStringType('L'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NULL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ResourceType(),
+                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ResourceType(),
+                                    new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\MixedType(),
+                            ])),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\BooleanType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\FloatType(),
+                        ])),
+                    ]),
+                ]))),
             ]),
         ]);
     }
@@ -5635,65 +6053,32 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalTableStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalTableName'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusPercentProgress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KMSMasterKeyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaInaccessibleDateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHIVING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusDescription'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusPercentProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KMSMasterKeyId'),
                             new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
                             new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
                             new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaInaccessibleDateTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
                         ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
@@ -5717,21 +6102,58 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                     new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHIVING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
                                 ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                        ]),
+                                    ]),
+                                ]),
+                            ])),
                             new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
+                                ]),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\UnionType([
@@ -5753,111 +6175,37 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('ReplicaSettings'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReplicaBillingModeSummary'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedReadCapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedReadCapacityAutoScalingSettings'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedWriteCapacityUnits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedWriteCapacityAutoScalingSettings'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReplicaGlobalSecondaryIndexSettings'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BillingMode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdateToPayPerRequestDateTime'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PROVISIONED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAY_PER_REQUEST'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
-                            ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
-                            ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedReadCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedReadCapacityAutoScalingSettings'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedWriteCapacityUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedWriteCapacityAutoScalingSettings'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaBillingModeSummary'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedReadCapacityUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedReadCapacityAutoScalingSettings'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedWriteCapacityUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedWriteCapacityAutoScalingSettings'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaGlobalSecondaryIndexSettings'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
                             new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                             new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                             new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BillingMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LastUpdateToPayPerRequestDateTime'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PROVISIONED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAY_PER_REQUEST'),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         ]),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -5871,23 +6219,25 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\BooleanType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
                                 ], [
-                                    new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
+                                    ], [
+                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
                                 ]),
-                            ]),
+                            ])),
                         ]),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -5901,36 +6251,120 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\BooleanType(),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
+                                    ], [
+                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                ]),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexStatus'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ProvisionedReadCapacityUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ProvisionedReadCapacityAutoScalingSettings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ProvisionedWriteCapacityUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ProvisionedWriteCapacityAutoScalingSettings'),
                             ], [
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
                                 ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
+                                            ], [
+                                                new \PHPStan\Type\BooleanType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\FloatType(),
+                                            ]),
+                                        ]),
+                                    ])),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
+                                ], [
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
+                                            ], [
+                                                new \PHPStan\Type\BooleanType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\FloatType(),
+                                            ]),
+                                        ]),
+                                    ])),
                                 ]),
                             ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -5961,15 +6395,23 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\ResourceType(),
                         new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ResourceType(),
-                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ResourceType(),
+                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                    new \PHPStan\Type\MixedType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\MixedType(),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                 ])),
@@ -6037,19 +6479,29 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\ResourceType(),
                             new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ResourceType(),
+                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
-                        new \PHPStan\Type\MixedType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\MixedType(),
+                        ])),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
                     ])),
-                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\FloatType(),
+                    ])),
                 ]),
             ]),
         ]);
@@ -6118,28 +6570,32 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
                     new \PHPStan\Type\Constant\ConstantStringType('MultiRegionConsistency'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('S'),
-                            new \PHPStan\Type\Constant\ConstantStringType('N'),
-                            new \PHPStan\Type\Constant\ConstantStringType('B'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('S'),
+                                new \PHPStan\Type\Constant\ConstantStringType('N'),
+                                new \PHPStan\Type\Constant\ConstantStringType('B'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
@@ -6177,120 +6633,132 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Projection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Projection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
-                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Projection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Backfilling'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeySchema'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Projection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Backfilling'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexSizeBytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IndexArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HASH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HASH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RANGE'),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ProjectionType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NonKeyAttributes'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KEYS_ONLY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LastIncreaseDateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastDecreaseDateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NumberOfDecreasesToday'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxWriteRequestUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                             ]),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LastIncreaseDateTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LastDecreaseDateTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NumberOfDecreasesToday'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WriteCapacityUnits'),
+                            ], [
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MaxWriteRequestUnits'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                ]),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('StreamEnabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('StreamViewType'),
@@ -6306,65 +6774,32 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusPercentProgress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KMSMasterKeyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaInaccessibleDateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHIVING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusDescription'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatusPercentProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KMSMasterKeyId'),
                             new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
                             new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
                             new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaInaccessibleDateTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaTableClassSummary'),
                         ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
@@ -6388,21 +6823,58 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                     new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHIVING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
                                 ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ProvisionedThroughputOverride'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OnDemandThroughputOverride'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WarmThroughput'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ReadCapacityUnits'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('MaxReadRequestUnits'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ReadUnitsPerSecond'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('WriteUnitsPerSecond'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                        ]),
+                                    ]),
+                                ]),
+                            ])),
                             new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TableClass'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LastUpdateDateTime'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD_INFREQUENT_ACCESS'),
+                                ]),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('SourceBackupArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('SourceTableArn'),
@@ -6507,154 +6979,166 @@ final class DynamoDbClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('ARCHIVING'),
                         new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedReadCapacityAutoScalingSettings'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedWriteCapacityAutoScalingSettings'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProvisionedReadCapacityAutoScalingSettings'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProvisionedWriteCapacityAutoScalingSettings'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GlobalSecondaryIndexes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedReadCapacityAutoScalingSettings'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaProvisionedWriteCapacityAutoScalingSettings'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaStatus'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexStatus'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ProvisionedReadCapacityAutoScalingSettings'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ProvisionedWriteCapacityAutoScalingSettings'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
+                                                ], [
+                                                    new \PHPStan\Type\BooleanType(),
+                                                    new \PHPStan\Type\IntegerType(),
+                                                    new \PHPStan\Type\IntegerType(),
+                                                    new \PHPStan\Type\FloatType(),
+                                                ]),
+                                            ]),
+                                        ])),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
+                                                ], [
+                                                    new \PHPStan\Type\BooleanType(),
+                                                    new \PHPStan\Type\IntegerType(),
+                                                    new \PHPStan\Type\IntegerType(),
+                                                    new \PHPStan\Type\FloatType(),
+                                                ]),
+                                            ]),
+                                        ])),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
+                                        ], [
+                                            new \PHPStan\Type\BooleanType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                    ]),
+                                ])),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
+                                        ], [
+                                            new \PHPStan\Type\BooleanType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                    ]),
+                                ])),
+                            ]),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
                                 new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
-                                    ], [
-                                        new \PHPStan\Type\BooleanType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
-                                ]),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
-                                    ], [
-                                        new \PHPStan\Type\BooleanType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
-                                ]),
+                                new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
                             ]),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
-                                ], [
-                                    new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\FloatType(),
-                                ]),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MinimumUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaximumUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AutoScalingDisabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AutoScalingRoleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ScalingPolicies'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetTrackingScalingPolicyConfiguration'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DisableScaleIn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleInCooldown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScaleOutCooldown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetValue'),
-                                ], [
-                                    new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\FloatType(),
-                                ]),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REGION_DISABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
-                        ]),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);

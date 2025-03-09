@@ -220,32 +220,34 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberErrors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BadRequest'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Conflict'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Forbidden'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotFound'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PreconditionFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceFailure'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Throttled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Throttling'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unauthorized'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unprocessable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupAssociationsExist'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberAssociationsExist'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Gone'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BadRequest'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Conflict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Forbidden'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PreconditionFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Throttled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Throttling'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unauthorized'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unprocessable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupAssociationsExist'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberAssociationsExist'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Gone'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -255,32 +257,34 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberErrors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BadRequest'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Conflict'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Forbidden'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotFound'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PreconditionFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceFailure'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Throttled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Throttling'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unauthorized'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unprocessable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupAssociationsExist'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberAssociationsExist'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Gone'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BadRequest'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Conflict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Forbidden'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PreconditionFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Throttled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Throttling'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unauthorized'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unprocessable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupAssociationsExist'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberAssociationsExist'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Gone'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -290,32 +294,34 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberErrors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BadRequest'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Conflict'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Forbidden'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotFound'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PreconditionFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceFailure'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Throttled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Throttling'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unauthorized'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unprocessable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupAssociationsExist'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberAssociationsExist'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Gone'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BadRequest'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Conflict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Forbidden'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PreconditionFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Throttled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Throttling'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unauthorized'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unprocessable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupAssociationsExist'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberAssociationsExist'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Gone'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -325,32 +331,34 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberErrors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BadRequest'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Conflict'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Forbidden'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotFound'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PreconditionFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceFailure'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Throttled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Throttling'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unauthorized'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unprocessable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupAssociationsExist'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberAssociationsExist'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Gone'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BadRequest'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Conflict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Forbidden'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PreconditionFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Throttled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Throttling'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unauthorized'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unprocessable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupAssociationsExist'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberAssociationsExist'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Gone'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -391,17 +399,19 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('New'),
                         new \PHPStan\Type\Constant\ConstantStringType('Porting'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('E164PhoneNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Processing'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Acquired'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('E164PhoneNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Processing'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Acquired'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -438,20 +448,24 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('Closed'),
                     ]),
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Voice'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SMS'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Voice'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SMS'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProxyPhoneNumber'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PhoneNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ProxyPhoneNumber'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('PreferSticky'),
                         new \PHPStan\Type\Constant\ConstantStringType('AvoidSticky'),
@@ -489,11 +503,13 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LambdaArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('LambdaArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
@@ -539,15 +555,17 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('RequestUriHostname'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SipMediaApplicationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Priority'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AwsRegion'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SipMediaApplicationId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AwsRegion'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -614,13 +632,15 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Priority'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
@@ -778,32 +798,34 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberErrors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BadRequest'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Conflict'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Forbidden'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotFound'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PreconditionFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceFailure'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Throttled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Throttling'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unauthorized'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unprocessable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupAssociationsExist'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberAssociationsExist'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Gone'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BadRequest'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Conflict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Forbidden'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PreconditionFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Throttled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Throttling'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unauthorized'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unprocessable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupAssociationsExist'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberAssociationsExist'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Gone'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -813,32 +835,34 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberErrors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BadRequest'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Conflict'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Forbidden'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotFound'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PreconditionFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceFailure'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Throttled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Throttling'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unauthorized'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unprocessable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupAssociationsExist'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberAssociationsExist'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Gone'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BadRequest'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Conflict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Forbidden'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PreconditionFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Throttled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Throttling'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unauthorized'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unprocessable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupAssociationsExist'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberAssociationsExist'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Gone'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -918,19 +942,21 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociatedTimestamp'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SipRuleId'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AssociatedTimestamp'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SipRuleId'),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('Unassigned'),
@@ -984,17 +1010,19 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('New'),
                         new \PHPStan\Type\Constant\ConstantStringType('Porting'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('E164PhoneNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Processing'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Acquired'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('E164PhoneNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Processing'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Acquired'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -1043,20 +1071,24 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('Closed'),
                     ]),
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Voice'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SMS'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Voice'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SMS'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProxyPhoneNumber'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PhoneNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ProxyPhoneNumber'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('PreferSticky'),
                         new \PHPStan\Type\Constant\ConstantStringType('AvoidSticky'),
@@ -1094,11 +1126,13 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LambdaArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('LambdaArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
@@ -1120,7 +1154,9 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                         new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
                     ]),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1163,15 +1199,17 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('RequestUriHostname'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SipMediaApplicationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Priority'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AwsRegion'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SipMediaApplicationId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AwsRegion'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -1209,13 +1247,15 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('Results'),
                         new \PHPStan\Type\Constant\ConstantStringType('VoiceprintGenerationStatus'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ConfidenceScore'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VoiceProfileId'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ConfidenceScore'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VoiceProfileId'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -1279,15 +1319,17 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('DNIS'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EmergencyPhoneNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TestPhoneNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CallingCountry'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EmergencyPhoneNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TestPhoneNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CallingCountry'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1302,19 +1344,23 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('SessionBorderControllerTypes'),
                     new \PHPStan\Type\Constant\ConstantStringType('ContactCenterSystemTypes'),
                 ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RIBBON_SBC'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ORACLE_ACME_PACKET_SBC'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AVAYA_SBCE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CISCO_UNIFIED_BORDER_ELEMENT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AUDIOCODES_MEDIANT_SBC'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('GENESYS_ENGAGE_ON_PREMISES'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AVAYA_AURA_CALL_CENTER_ELITE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AVAYA_AURA_CONTACT_CENTER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CISCO_UNIFIED_CONTACT_CENTER_ENTERPRISE'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RIBBON_SBC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ORACLE_ACME_PACKET_SBC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AVAYA_SBCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CISCO_UNIFIED_BORDER_ELEMENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AUDIOCODES_MEDIANT_SBC'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('GENESYS_ENGAGE_ON_PREMISES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AVAYA_AURA_CALL_CENTER_ELITE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AVAYA_AURA_CONTACT_CENTER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CISCO_UNIFIED_CONTACT_CENTER_ENTERPRISE'),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1335,13 +1381,15 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Priority'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
@@ -1375,22 +1423,24 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('Routes'),
                     new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Host'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Priority'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Weight'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TCP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UDP'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Host'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Weight'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TCP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UDP'),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                 ]),
             ]),
@@ -1411,7 +1461,9 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1430,15 +1482,17 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 ], [
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NotificationTarget'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EventBridge'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SNS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SQS'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NotificationTarget'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('EventBridge'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SQS'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('ConfigurationArn'),
@@ -1465,8 +1519,12 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 ], [
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                 ]),
             ]),
@@ -1582,404 +1640,7 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorRegions'),
             ], [
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('us-east-1'),
-                    new \PHPStan\Type\Constant\ConstantStringType('us-west-2'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ca-central-1'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eu-central-1'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eu-west-1'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eu-west-2'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ap-northeast-2'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ap-northeast-1'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ap-southeast-1'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ap-southeast-2'),
-                ]),
-            ]),
-        ]);
-    }
-    private function listPhoneNumberOrders(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberOrders'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberOrderId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProductType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OrderType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OrderedPhoneNumbers'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedTimestamp'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('VoiceConnector'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SipMediaApplicationDialIn'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Processing'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Successful'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Partial'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PendingDocuments'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Submitted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FOC'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChangeRequested'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Exception'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CancelRequested'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('New'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Porting'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('E164PhoneNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Processing'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Acquired'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listPhoneNumbers(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('PhoneNumbers'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('E164PhoneNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProductType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Capabilities'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Associations'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CallingName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CallingNameStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeletionTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OrderId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Local'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TollFree'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('VoiceConnector'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SipMediaApplicationDialIn'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PortinCancelRequested'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PortinInProgress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AcquireInProgress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AcquireFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unassigned'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Assigned'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReleaseInProgress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeleteInProgress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReleaseFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeleteFailed'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InboundCall'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OutboundCall'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InboundSMS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OutboundSMS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InboundMMS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OutboundMMS'),
-                    ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociatedTimestamp'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SipRuleId'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Unassigned'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UpdateInProgress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UpdateSucceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UpdateFailed'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listProxySessions(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('ProxySessions'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProxySessionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExpiryMinutes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Capabilities'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EndedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Participants'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NumberSelectionBehavior'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GeoMatchLevel'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GeoMatchParams'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Open'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Closed'),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Voice'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SMS'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProxyPhoneNumber'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PreferSticky'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AvoidSticky'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AreaCode'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AreaCode'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listSipMediaApplications(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('SipMediaApplications'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('SipMediaApplicationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AwsRegion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Endpoints'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SipMediaApplicationArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LambdaArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listSipRules(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('SipRules'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('SipRuleId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TriggerType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TriggerValue'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TargetApplications'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedTimestamp'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ToPhoneNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RequestUriHostname'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SipMediaApplicationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Priority'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AwsRegion'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listSupportedPhoneNumberCountries(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberCountries'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CountryCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SupportedPhoneNumberTypes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Local'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TollFree'),
-                    ]),
-                ]),
-            ]),
-        ]);
-    }
-    private function listTagsForResource(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-            ]),
-        ]);
-    }
-    private function listVoiceConnectorGroups(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroups'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorItems'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Priority'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listVoiceConnectorTerminationCredentials(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Usernames'),
-            ], [
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listVoiceConnectors(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectors'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AwsRegion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OutboundHostName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RequireEncryption'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IntegrationType'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('us-east-1'),
                         new \PHPStan\Type\Constant\ConstantStringType('us-west-2'),
@@ -1992,17 +1653,452 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('ap-southeast-1'),
                         new \PHPStan\Type\Constant\ConstantStringType('ap-southeast-2'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CONNECT_CALL_TRANSFER_CONNECTOR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CONNECT_ANALYTICS_CONNECTOR'),
+                ])),
+            ]),
+        ]);
+    }
+    private function listPhoneNumberOrders(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberOrders'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberOrderId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProductType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OrderType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OrderedPhoneNumbers'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedTimestamp'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VoiceConnector'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SipMediaApplicationDialIn'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Processing'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Successful'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Partial'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PendingDocuments'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Submitted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FOC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ChangeRequested'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Exception'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CancelRequested'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('New'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Porting'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('E164PhoneNumber'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Processing'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Acquired'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                                ]),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listPhoneNumbers(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('PhoneNumbers'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('E164PhoneNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProductType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Capabilities'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Associations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CallingName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CallingNameStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeletionTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OrderId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Local'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TollFree'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VoiceConnector'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SipMediaApplicationDialIn'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PortinCancelRequested'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PortinInProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AcquireInProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AcquireFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unassigned'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Assigned'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReleaseInProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeleteInProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReleaseFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeleteFailed'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InboundCall'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OutboundCall'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InboundSMS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OutboundSMS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InboundMMS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OutboundMMS'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AssociatedTimestamp'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SipRuleId'),
+                                ]),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Unassigned'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpdateInProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpdateSucceeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpdateFailed'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listProxySessions(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ProxySessions'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProxySessionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExpiryMinutes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Capabilities'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Participants'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NumberSelectionBehavior'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GeoMatchLevel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GeoMatchParams'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Open'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Closed'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Voice'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SMS'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PhoneNumber'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ProxyPhoneNumber'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PreferSticky'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AvoidSticky'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AreaCode'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AreaCode'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listSipMediaApplications(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('SipMediaApplications'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SipMediaApplicationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AwsRegion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Endpoints'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SipMediaApplicationArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LambdaArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listSipRules(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('SipRules'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SipRuleId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TriggerType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TriggerValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetApplications'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedTimestamp'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ToPhoneNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestUriHostname'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SipMediaApplicationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AwsRegion'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listSupportedPhoneNumberCountries(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberCountries'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CountryCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SupportedPhoneNumberTypes'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Local'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TollFree'),
+                            ]),
+                        ])),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function listTagsForResource(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function listVoiceConnectorGroups(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroups'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorItems'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listVoiceConnectorTerminationCredentials(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Usernames'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
+            ]),
+        ]);
+    }
+    private function listVoiceConnectors(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectors'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AwsRegion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OutboundHostName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequireEncryption'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IntegrationType'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('us-east-1'),
+                            new \PHPStan\Type\Constant\ConstantStringType('us-west-2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ca-central-1'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eu-central-1'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eu-west-1'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eu-west-2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ap-northeast-2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ap-northeast-1'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ap-southeast-1'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ap-southeast-2'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CONNECT_CALL_TRANSFER_CONNECTOR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CONNECT_ANALYTICS_CONNECTOR'),
+                        ]),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2014,21 +2110,23 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('VoiceProfileDomains'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('VoiceProfileDomainId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VoiceProfileDomainArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedTimestamp'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('VoiceProfileDomainId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VoiceProfileDomainArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedTimestamp'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2040,21 +2138,23 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('VoiceProfiles'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('VoiceProfileId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VoiceProfileArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VoiceProfileDomainId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExpirationTimestamp'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('VoiceProfileId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VoiceProfileArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VoiceProfileDomainId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExpirationTimestamp'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2073,7 +2173,9 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                         new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
                     ]),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
             ]),
         ]);
@@ -2101,15 +2203,17 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('DNIS'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EmergencyPhoneNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TestPhoneNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CallingCountry'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EmergencyPhoneNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TestPhoneNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CallingCountry'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -2124,19 +2228,23 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('SessionBorderControllerTypes'),
                     new \PHPStan\Type\Constant\ConstantStringType('ContactCenterSystemTypes'),
                 ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RIBBON_SBC'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ORACLE_ACME_PACKET_SBC'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AVAYA_SBCE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CISCO_UNIFIED_BORDER_ELEMENT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AUDIOCODES_MEDIANT_SBC'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('GENESYS_ENGAGE_ON_PREMISES'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AVAYA_AURA_CALL_CENTER_ELITE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AVAYA_AURA_CONTACT_CENTER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CISCO_UNIFIED_CONTACT_CENTER_ENTERPRISE'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RIBBON_SBC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ORACLE_ACME_PACKET_SBC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AVAYA_SBCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CISCO_UNIFIED_BORDER_ELEMENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AUDIOCODES_MEDIANT_SBC'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('GENESYS_ENGAGE_ON_PREMISES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AVAYA_AURA_CALL_CENTER_ELITE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AVAYA_AURA_CONTACT_CENTER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CISCO_UNIFIED_CONTACT_CENTER_ENTERPRISE'),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -2167,22 +2275,24 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('Routes'),
                     new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Host'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Priority'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Weight'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TCP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UDP'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Host'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Weight'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TCP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UDP'),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                 ]),
             ]),
@@ -2203,7 +2313,9 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
             ]),
         ]);
@@ -2222,15 +2334,17 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 ], [
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NotificationTarget'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EventBridge'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SNS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SQS'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NotificationTarget'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('EventBridge'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SQS'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('ConfigurationArn'),
@@ -2257,8 +2371,12 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 ], [
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                 ]),
             ]),
@@ -2332,19 +2450,21 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociatedTimestamp'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SipRuleId'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AssociatedTimestamp'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SipRuleId'),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('Unassigned'),
@@ -2368,7 +2488,9 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('E164PhoneNumbers'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2404,13 +2526,15 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('Results'),
                         new \PHPStan\Type\Constant\ConstantStringType('VoiceprintGenerationStatus'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ConfidenceScore'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VoiceProfileId'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ConfidenceScore'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VoiceProfileId'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -2547,19 +2671,21 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociatedTimestamp'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SipRuleId'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AssociatedTimestamp'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SipRuleId'),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('Unassigned'),
@@ -2612,20 +2738,24 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('Closed'),
                     ]),
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Voice'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SMS'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Voice'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SMS'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProxyPhoneNumber'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PhoneNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ProxyPhoneNumber'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('PreferSticky'),
                         new \PHPStan\Type\Constant\ConstantStringType('AvoidSticky'),
@@ -2663,11 +2793,13 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LambdaArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('LambdaArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
@@ -2713,15 +2845,17 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('RequestUriHostname'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SipMediaApplicationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Priority'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AwsRegion'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SipMediaApplicationId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AwsRegion'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -2788,13 +2922,15 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Priority'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
@@ -2890,23 +3026,25 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('streetInfo'),
-                    new \PHPStan\Type\Constant\ConstantStringType('streetNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('city'),
-                    new \PHPStan\Type\Constant\ConstantStringType('state'),
-                    new \PHPStan\Type\Constant\ConstantStringType('postalCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('postalCodePlus4'),
-                    new \PHPStan\Type\Constant\ConstantStringType('country'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('streetInfo'),
+                        new \PHPStan\Type\Constant\ConstantStringType('streetNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('city'),
+                        new \PHPStan\Type\Constant\ConstantStringType('state'),
+                        new \PHPStan\Type\Constant\ConstantStringType('postalCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('postalCodePlus4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('country'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }

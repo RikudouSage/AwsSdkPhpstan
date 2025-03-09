@@ -141,29 +141,33 @@ final class CodeArtifactClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('repositoryName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('externalConnectionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('packageFormat'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('npm'),
-                            new \PHPStan\Type\Constant\ConstantStringType('pypi'),
-                            new \PHPStan\Type\Constant\ConstantStringType('maven'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nuget'),
-                            new \PHPStan\Type\Constant\ConstantStringType('generic'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruby'),
-                            new \PHPStan\Type\Constant\ConstantStringType('swift'),
-                            new \PHPStan\Type\Constant\ConstantStringType('cargo'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('repositoryName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantStringType('Available'),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('externalConnectionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('packageFormat'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('npm'),
+                                new \PHPStan\Type\Constant\ConstantStringType('pypi'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maven'),
+                                new \PHPStan\Type\Constant\ConstantStringType('nuget'),
+                                new \PHPStan\Type\Constant\ConstantStringType('generic'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ruby'),
+                                new \PHPStan\Type\Constant\ConstantStringType('swift'),
+                                new \PHPStan\Type\Constant\ConstantStringType('cargo'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('Available'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
             ]),
@@ -333,29 +337,33 @@ final class CodeArtifactClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('repositoryName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('externalConnectionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('packageFormat'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('npm'),
-                            new \PHPStan\Type\Constant\ConstantStringType('pypi'),
-                            new \PHPStan\Type\Constant\ConstantStringType('maven'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nuget'),
-                            new \PHPStan\Type\Constant\ConstantStringType('generic'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruby'),
-                            new \PHPStan\Type\Constant\ConstantStringType('swift'),
-                            new \PHPStan\Type\Constant\ConstantStringType('cargo'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('repositoryName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantStringType('Available'),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('externalConnectionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('packageFormat'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('npm'),
+                                new \PHPStan\Type\Constant\ConstantStringType('pypi'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maven'),
+                                new \PHPStan\Type\Constant\ConstantStringType('nuget'),
+                                new \PHPStan\Type\Constant\ConstantStringType('generic'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ruby'),
+                                new \PHPStan\Type\Constant\ConstantStringType('swift'),
+                                new \PHPStan\Type\Constant\ConstantStringType('cargo'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('Available'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
             ]),
@@ -588,29 +596,33 @@ final class CodeArtifactClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('repositoryName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('externalConnectionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('packageFormat'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('npm'),
-                            new \PHPStan\Type\Constant\ConstantStringType('pypi'),
-                            new \PHPStan\Type\Constant\ConstantStringType('maven'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nuget'),
-                            new \PHPStan\Type\Constant\ConstantStringType('generic'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruby'),
-                            new \PHPStan\Type\Constant\ConstantStringType('swift'),
-                            new \PHPStan\Type\Constant\ConstantStringType('cargo'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('repositoryName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantStringType('Available'),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('externalConnectionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('packageFormat'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('npm'),
+                                new \PHPStan\Type\Constant\ConstantStringType('pypi'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maven'),
+                                new \PHPStan\Type\Constant\ConstantStringType('nuget'),
+                                new \PHPStan\Type\Constant\ConstantStringType('generic'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ruby'),
+                                new \PHPStan\Type\Constant\ConstantStringType('swift'),
+                                new \PHPStan\Type\Constant\ConstantStringType('cargo'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('Available'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
             ]),
@@ -821,13 +833,15 @@ final class CodeArtifactClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('url'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('url'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('Published'),
@@ -881,29 +895,33 @@ final class CodeArtifactClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('repositoryName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('externalConnectionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('packageFormat'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('npm'),
-                            new \PHPStan\Type\Constant\ConstantStringType('pypi'),
-                            new \PHPStan\Type\Constant\ConstantStringType('maven'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nuget'),
-                            new \PHPStan\Type\Constant\ConstantStringType('generic'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruby'),
-                            new \PHPStan\Type\Constant\ConstantStringType('swift'),
-                            new \PHPStan\Type\Constant\ConstantStringType('cargo'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('repositoryName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantStringType('Available'),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('externalConnectionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('packageFormat'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('npm'),
+                                new \PHPStan\Type\Constant\ConstantStringType('pypi'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maven'),
+                                new \PHPStan\Type\Constant\ConstantStringType('nuget'),
+                                new \PHPStan\Type\Constant\ConstantStringType('generic'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ruby'),
+                                new \PHPStan\Type\Constant\ConstantStringType('swift'),
+                                new \PHPStan\Type\Constant\ConstantStringType('cargo'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('Available'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
             ]),
@@ -932,29 +950,33 @@ final class CodeArtifactClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('repositoryName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('externalConnectionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('packageFormat'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('npm'),
-                            new \PHPStan\Type\Constant\ConstantStringType('pypi'),
-                            new \PHPStan\Type\Constant\ConstantStringType('maven'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nuget'),
-                            new \PHPStan\Type\Constant\ConstantStringType('generic'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruby'),
-                            new \PHPStan\Type\Constant\ConstantStringType('swift'),
-                            new \PHPStan\Type\Constant\ConstantStringType('cargo'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('repositoryName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantStringType('Available'),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('externalConnectionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('packageFormat'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('npm'),
+                                new \PHPStan\Type\Constant\ConstantStringType('pypi'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maven'),
+                                new \PHPStan\Type\Constant\ConstantStringType('nuget'),
+                                new \PHPStan\Type\Constant\ConstantStringType('generic'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ruby'),
+                                new \PHPStan\Type\Constant\ConstantStringType('swift'),
+                                new \PHPStan\Type\Constant\ConstantStringType('cargo'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('Available'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
             ]),
@@ -1187,7 +1209,9 @@ final class CodeArtifactClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('allowedRepositories'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1199,29 +1223,31 @@ final class CodeArtifactClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('packages'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('format'),
-                    new \PHPStan\Type\Constant\ConstantStringType('namespace'),
-                    new \PHPStan\Type\Constant\ConstantStringType('package'),
-                    new \PHPStan\Type\Constant\ConstantStringType('associationType'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('npm'),
-                        new \PHPStan\Type\Constant\ConstantStringType('pypi'),
-                        new \PHPStan\Type\Constant\ConstantStringType('maven'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nuget'),
-                        new \PHPStan\Type\Constant\ConstantStringType('generic'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ruby'),
-                        new \PHPStan\Type\Constant\ConstantStringType('swift'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cargo'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('format'),
+                        new \PHPStan\Type\Constant\ConstantStringType('namespace'),
+                        new \PHPStan\Type\Constant\ConstantStringType('package'),
+                        new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('npm'),
+                            new \PHPStan\Type\Constant\ConstantStringType('pypi'),
+                            new \PHPStan\Type\Constant\ConstantStringType('maven'),
+                            new \PHPStan\Type\Constant\ConstantStringType('nuget'),
+                            new \PHPStan\Type\Constant\ConstantStringType('generic'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ruby'),
+                            new \PHPStan\Type\Constant\ConstantStringType('swift'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cargo'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('STRONG'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WEAK'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('STRONG'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WEAK'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1233,24 +1259,26 @@ final class CodeArtifactClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('domains'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('owner'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('encryptionKey'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Active'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Deleted'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('owner'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('encryptionKey'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Active'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Deleted'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1262,67 +1290,69 @@ final class CodeArtifactClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('packageGroups'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('pattern'),
-                    new \PHPStan\Type\Constant\ConstantStringType('domainName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('domainOwner'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('contactInfo'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('originConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('parent'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('restrictions'),
-                    ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL_UPSTREAM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_UPSTREAM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PUBLISH'),
-                        ]), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('mode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('effectiveMode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('inheritedFrom'),
-                            new \PHPStan\Type\Constant\ConstantStringType('repositoriesCount'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ALLOW_SPECIFIC_REPOSITORIES'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INHERIT'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ALLOW_SPECIFIC_REPOSITORIES'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INHERIT'),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('pattern'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
-                        ])),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('arn'),
                         new \PHPStan\Type\Constant\ConstantStringType('pattern'),
+                        new \PHPStan\Type\Constant\ConstantStringType('domainName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('domainOwner'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('contactInfo'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('originConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('parent'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('restrictions'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL_UPSTREAM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_UPSTREAM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PUBLISH'),
+                            ]), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('mode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('effectiveMode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('inheritedFrom'),
+                                new \PHPStan\Type\Constant\ConstantStringType('repositoriesCount'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALLOW_SPECIFIC_REPOSITORIES'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INHERIT'),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALLOW_SPECIFIC_REPOSITORIES'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INHERIT'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('pattern'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('pattern'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1354,20 +1384,22 @@ final class CodeArtifactClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('size'),
-                    new \PHPStan\Type\Constant\ConstantStringType('hashes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MD5'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SHA-1'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SHA-256'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SHA-512'),
-                    ]), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('size'),
+                        new \PHPStan\Type\Constant\ConstantStringType('hashes'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MD5'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SHA-1'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SHA-256'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SHA-512'),
+                        ]), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1398,17 +1430,19 @@ final class CodeArtifactClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('namespace'),
-                    new \PHPStan\Type\Constant\ConstantStringType('package'),
-                    new \PHPStan\Type\Constant\ConstantStringType('dependencyType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('versionRequirement'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('namespace'),
+                        new \PHPStan\Type\Constant\ConstantStringType('package'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dependencyType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('versionRequirement'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1436,40 +1470,42 @@ final class CodeArtifactClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('version'),
-                    new \PHPStan\Type\Constant\ConstantStringType('revision'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('origin'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Published'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unfinished'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unlisted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Archived'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Disposed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Deleted'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('domainEntryPoint'),
-                        new \PHPStan\Type\Constant\ConstantStringType('originType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('version'),
+                        new \PHPStan\Type\Constant\ConstantStringType('revision'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('origin'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('repositoryName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('externalConnectionName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Published'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unfinished'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unlisted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Archived'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Disposed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Deleted'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('domainEntryPoint'),
+                            new \PHPStan\Type\Constant\ConstantStringType('originType'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('repositoryName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('externalConnectionName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('INTERNAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            ]),
                         ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1481,42 +1517,44 @@ final class CodeArtifactClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('packages'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('format'),
-                    new \PHPStan\Type\Constant\ConstantStringType('namespace'),
-                    new \PHPStan\Type\Constant\ConstantStringType('package'),
-                    new \PHPStan\Type\Constant\ConstantStringType('originConfiguration'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('npm'),
-                        new \PHPStan\Type\Constant\ConstantStringType('pypi'),
-                        new \PHPStan\Type\Constant\ConstantStringType('maven'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nuget'),
-                        new \PHPStan\Type\Constant\ConstantStringType('generic'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ruby'),
-                        new \PHPStan\Type\Constant\ConstantStringType('swift'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cargo'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('restrictions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('format'),
+                        new \PHPStan\Type\Constant\ConstantStringType('namespace'),
+                        new \PHPStan\Type\Constant\ConstantStringType('package'),
+                        new \PHPStan\Type\Constant\ConstantStringType('originConfiguration'),
                     ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('npm'),
+                            new \PHPStan\Type\Constant\ConstantStringType('pypi'),
+                            new \PHPStan\Type\Constant\ConstantStringType('maven'),
+                            new \PHPStan\Type\Constant\ConstantStringType('nuget'),
+                            new \PHPStan\Type\Constant\ConstantStringType('generic'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ruby'),
+                            new \PHPStan\Type\Constant\ConstantStringType('swift'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cargo'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('publish'),
-                            new \PHPStan\Type\Constant\ConstantStringType('upstream'),
+                            new \PHPStan\Type\Constant\ConstantStringType('restrictions'),
                         ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('publish'),
+                                new \PHPStan\Type\Constant\ConstantStringType('upstream'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                                ]),
                             ]),
                         ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1528,23 +1566,25 @@ final class CodeArtifactClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('repositories'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('administratorAccount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('domainName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('domainOwner'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('administratorAccount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('domainName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('domainOwner'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1556,23 +1596,25 @@ final class CodeArtifactClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('repositories'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('administratorAccount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('domainName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('domainOwner'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('administratorAccount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('domainName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('domainOwner'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1584,67 +1626,69 @@ final class CodeArtifactClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('packageGroups'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('pattern'),
-                    new \PHPStan\Type\Constant\ConstantStringType('domainName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('domainOwner'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('contactInfo'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('originConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('parent'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('restrictions'),
-                    ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL_UPSTREAM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_UPSTREAM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PUBLISH'),
-                        ]), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('mode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('effectiveMode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('inheritedFrom'),
-                            new \PHPStan\Type\Constant\ConstantStringType('repositoriesCount'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ALLOW_SPECIFIC_REPOSITORIES'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INHERIT'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ALLOW_SPECIFIC_REPOSITORIES'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INHERIT'),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('pattern'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
-                        ])),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('arn'),
                         new \PHPStan\Type\Constant\ConstantStringType('pattern'),
+                        new \PHPStan\Type\Constant\ConstantStringType('domainName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('domainOwner'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('contactInfo'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('originConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('parent'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('restrictions'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL_UPSTREAM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_UPSTREAM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PUBLISH'),
+                            ]), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('mode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('effectiveMode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('inheritedFrom'),
+                                new \PHPStan\Type\Constant\ConstantStringType('repositoriesCount'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALLOW_SPECIFIC_REPOSITORIES'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INHERIT'),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALLOW_SPECIFIC_REPOSITORIES'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INHERIT'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('pattern'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('pattern'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1655,13 +1699,15 @@ final class CodeArtifactClientReturnTypeExtension implements \PHPStan\Type\Dynam
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1935,7 +1981,9 @@ final class CodeArtifactClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 ]), new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('ADDED'),
                     new \PHPStan\Type\Constant\ConstantStringType('REMOVED'),
-                ]), new \PHPStan\Type\StringType())),
+                ]), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])))),
             ]),
         ]);
     }
@@ -2000,29 +2048,33 @@ final class CodeArtifactClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('repositoryName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('externalConnectionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('packageFormat'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('npm'),
-                            new \PHPStan\Type\Constant\ConstantStringType('pypi'),
-                            new \PHPStan\Type\Constant\ConstantStringType('maven'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nuget'),
-                            new \PHPStan\Type\Constant\ConstantStringType('generic'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruby'),
-                            new \PHPStan\Type\Constant\ConstantStringType('swift'),
-                            new \PHPStan\Type\Constant\ConstantStringType('cargo'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('repositoryName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantStringType('Available'),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('externalConnectionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('packageFormat'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('npm'),
+                                new \PHPStan\Type\Constant\ConstantStringType('pypi'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maven'),
+                                new \PHPStan\Type\Constant\ConstantStringType('nuget'),
+                                new \PHPStan\Type\Constant\ConstantStringType('generic'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ruby'),
+                                new \PHPStan\Type\Constant\ConstantStringType('swift'),
+                                new \PHPStan\Type\Constant\ConstantStringType('cargo'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('Available'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
             ]),

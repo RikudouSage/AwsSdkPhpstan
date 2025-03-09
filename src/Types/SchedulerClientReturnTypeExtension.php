@@ -161,15 +161,17 @@ final class SchedulerClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('TaskCount'),
                         new \PHPStan\Type\Constant\ConstantStringType('TaskDefinitionArn'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('base'),
-                            new \PHPStan\Type\Constant\ConstantStringType('capacityProvider'),
-                            new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('base'),
+                                new \PHPStan\Type\Constant\ConstantStringType('capacityProvider'),
+                                new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                        ])),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\StringType(),
@@ -190,35 +192,45 @@ final class SchedulerClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                     new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                 ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('expression'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            ], [
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('distinctInstance'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('memberOf'),
+                                ]),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('field'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            ], [
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('random'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('spread'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('binpack'),
+                                ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('expression'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('distinctInstance'),
-                                new \PHPStan\Type\Constant\ConstantStringType('memberOf'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('field'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('random'),
-                                new \PHPStan\Type\Constant\ConstantStringType('spread'),
-                                new \PHPStan\Type\Constant\ConstantStringType('binpack'),
-                            ]),
-                        ]),
+                        ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantStringType('TASK_DEFINITION'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        ])),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                     ]),
@@ -246,13 +258,15 @@ final class SchedulerClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('PipelineParameterList'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('MessageGroupId'),
@@ -292,22 +306,24 @@ final class SchedulerClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('ScheduleGroups'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModificationDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModificationDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -319,30 +335,32 @@ final class SchedulerClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('Schedules'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GroupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModificationDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Target'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModificationDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Target'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -352,13 +370,15 @@ final class SchedulerClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }

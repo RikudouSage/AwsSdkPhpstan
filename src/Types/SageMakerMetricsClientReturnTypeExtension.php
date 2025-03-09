@@ -32,22 +32,28 @@ final class SageMakerMetricsClientReturnTypeExtension implements \PHPStan\Type\D
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('MetricQueryResults'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('XAxisValues'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MetricValues'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Complete'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Truncated'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ValidationError'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('XAxisValues'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MetricValues'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Complete'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Truncated'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ValidationError'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\IntegerType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\FloatType(),
+                        ])),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\FloatType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -57,18 +63,20 @@ final class SageMakerMetricsClientReturnTypeExtension implements \PHPStan\Type\D
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Errors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MetricIndex'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('METRIC_LIMIT_EXCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VALIDATION_ERROR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CONFLICT_ERROR'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MetricIndex'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('METRIC_LIMIT_EXCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VALIDATION_ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CONFLICT_ERROR'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                ])),
             ]),
         ]);
     }

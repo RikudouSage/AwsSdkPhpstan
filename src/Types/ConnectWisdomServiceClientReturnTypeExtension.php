@@ -280,7 +280,9 @@ final class ConnectWisdomServiceClientReturnTypeExtension implements \PHPStan\Ty
                             new \PHPStan\Type\Constant\ConstantStringType('objectFields'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -322,7 +324,9 @@ final class ConnectWisdomServiceClientReturnTypeExtension implements \PHPStan\Ty
                     new \PHPStan\Type\Constant\ConstantStringType('status'),
                     new \PHPStan\Type\Constant\ConstantStringType('tags'),
                 ], [
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('markdown'),
@@ -346,7 +350,9 @@ final class ConnectWisdomServiceClientReturnTypeExtension implements \PHPStan\Ty
                         new \PHPStan\Type\Constant\ConstantStringType('values'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
@@ -714,7 +720,9 @@ final class ConnectWisdomServiceClientReturnTypeExtension implements \PHPStan\Ty
                             new \PHPStan\Type\Constant\ConstantStringType('objectFields'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -756,7 +764,9 @@ final class ConnectWisdomServiceClientReturnTypeExtension implements \PHPStan\Ty
                     new \PHPStan\Type\Constant\ConstantStringType('status'),
                     new \PHPStan\Type\Constant\ConstantStringType('tags'),
                 ], [
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('markdown'),
@@ -780,7 +790,9 @@ final class ConnectWisdomServiceClientReturnTypeExtension implements \PHPStan\Ty
                         new \PHPStan\Type\Constant\ConstantStringType('values'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
@@ -814,90 +826,100 @@ final class ConnectWisdomServiceClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('recommendations'),
                 new \PHPStan\Type\Constant\ConstantStringType('triggers'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('document'),
-                    new \PHPStan\Type\Constant\ConstantStringType('recommendationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('relevanceLevel'),
-                    new \PHPStan\Type\Constant\ConstantStringType('relevanceScore'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('contentReference'),
-                        new \PHPStan\Type\Constant\ConstantStringType('excerpt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('document'),
+                        new \PHPStan\Type\Constant\ConstantStringType('recommendationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('relevanceLevel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('relevanceScore'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('contentArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('contentId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('highlights'),
-                            new \PHPStan\Type\Constant\ConstantStringType('text'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contentReference'),
+                            new \PHPStan\Type\Constant\ConstantStringType('excerpt'),
+                            new \PHPStan\Type\Constant\ConstantStringType('title'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
+                                new \PHPStan\Type\Constant\ConstantStringType('contentArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('contentId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
                             ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('highlights'),
-                            new \PHPStan\Type\Constant\ConstantStringType('text'),
-                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
+                                new \PHPStan\Type\Constant\ConstantStringType('highlights'),
+                                new \PHPStan\Type\Constant\ConstantStringType('text'),
                             ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\StringType(),
                             ]),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('highlights'),
+                                new \PHPStan\Type\Constant\ConstantStringType('text'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                        ]),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_CONTENT'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                    ]),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_CONTENT'),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('data'),
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('recommendationIds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('source'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                ], [
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('query'),
+                        new \PHPStan\Type\Constant\ConstantStringType('data'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('recommendationIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('source'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('text'),
+                            new \PHPStan\Type\Constant\ConstantStringType('query'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('text'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ISSUE_DETECTION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RULE_EVALUATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('QUERY'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ISSUE_DETECTION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RULE_EVALUATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('QUERY'),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -936,33 +958,35 @@ final class ConnectWisdomServiceClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('assistantAssociationSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('assistantArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('assistantAssociationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('assistantAssociationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('assistantId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('associationData'),
-                    new \PHPStan\Type\Constant\ConstantStringType('associationType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('assistantArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('assistantAssociationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('assistantAssociationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('assistantId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('associationData'),
+                        new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociation'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -974,42 +998,44 @@ final class ConnectWisdomServiceClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('assistantSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('assistantArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('assistantId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('integrationConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('serverSideEncryptionConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('topicIntegrationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('assistantArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('assistantId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('integrationConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('serverSideEncryptionConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('kmsKeyId'),
-                    ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('topicIntegrationArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('kmsKeyId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\Constant\ConstantStringType('AGENT'),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\Constant\ConstantStringType('AGENT'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1021,39 +1047,41 @@ final class ConnectWisdomServiceClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('contentSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('contentArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('contentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('metadata'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('revisionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('title'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('contentArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('contentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('revisionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('title'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1065,50 +1093,52 @@ final class ConnectWisdomServiceClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('importJobSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('externalSourceConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('importJobId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('importJobType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('metadata'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('uploadId'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('configuration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('source'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('externalSourceConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('importJobId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('importJobType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('uploadId'),
                     ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('connectConfiguration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('configuration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('source'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('instanceId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('connectConfiguration'),
                             ], [
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('instanceId'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_CONNECT'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_CONNECT'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('QUICK_RESPONSES'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('START_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('QUICK_RESPONSES'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('START_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1120,58 +1150,62 @@ final class ConnectWisdomServiceClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('renderingConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('serverSideEncryptionConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('sourceConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('QUICK_RESPONSES'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('templateUri'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('renderingConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('serverSideEncryptionConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('kmsKeyId'),
-                    ], [
                         new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('appIntegrations'),
-                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('QUICK_RESPONSES'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('appIntegrationArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('objectFields'),
+                            new \PHPStan\Type\Constant\ConstantStringType('templateUri'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('kmsKeyId'),
+                        ], [
                             new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('appIntegrations'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('appIntegrationArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('objectFields'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1184,46 +1218,50 @@ final class ConnectWisdomServiceClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('quickResponseSummaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('channels'),
-                    new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('isActive'),
-                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedBy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('quickResponseArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('quickResponseId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('channels'),
+                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('isActive'),
+                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('quickResponseArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('quickResponseId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1244,14 +1282,18 @@ final class ConnectWisdomServiceClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('errors'),
                 new \PHPStan\Type\Constant\ConstantStringType('recommendationIds'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('recommendationId'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('recommendationId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -1263,57 +1305,63 @@ final class ConnectWisdomServiceClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('results'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('document'),
-                    new \PHPStan\Type\Constant\ConstantStringType('relevanceScore'),
-                    new \PHPStan\Type\Constant\ConstantStringType('resultId'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('contentReference'),
-                        new \PHPStan\Type\Constant\ConstantStringType('excerpt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('document'),
+                        new \PHPStan\Type\Constant\ConstantStringType('relevanceScore'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resultId'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('contentArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('contentId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('highlights'),
-                            new \PHPStan\Type\Constant\ConstantStringType('text'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contentReference'),
+                            new \PHPStan\Type\Constant\ConstantStringType('excerpt'),
+                            new \PHPStan\Type\Constant\ConstantStringType('title'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
+                                new \PHPStan\Type\Constant\ConstantStringType('contentArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('contentId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
                             ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('highlights'),
-                            new \PHPStan\Type\Constant\ConstantStringType('text'),
-                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
+                                new \PHPStan\Type\Constant\ConstantStringType('highlights'),
+                                new \PHPStan\Type\Constant\ConstantStringType('text'),
                             ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\StringType(),
                             ]),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('highlights'),
+                                new \PHPStan\Type\Constant\ConstantStringType('text'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1330,39 +1378,41 @@ final class ConnectWisdomServiceClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('contentSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('contentArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('contentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('metadata'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('revisionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('title'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('contentArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('contentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('revisionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('title'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1375,78 +1425,88 @@ final class ConnectWisdomServiceClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('results'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('attributesInterpolated'),
-                    new \PHPStan\Type\Constant\ConstantStringType('attributesNotInterpolated'),
-                    new \PHPStan\Type\Constant\ConstantStringType('channels'),
-                    new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('contents'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('groupingConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('isActive'),
-                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('language'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedBy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('quickResponseArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('quickResponseId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('shortcutKey'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('markdown'),
-                        new \PHPStan\Type\Constant\ConstantStringType('plainText'),
+                        new \PHPStan\Type\Constant\ConstantStringType('attributesInterpolated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('attributesNotInterpolated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('channels'),
+                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('contents'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('groupingConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('isActive'),
+                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('language'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('quickResponseArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('quickResponseId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('shortcutKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
                     ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('markdown'),
+                            new \PHPStan\Type\Constant\ConstantStringType('plainText'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('criteria'),
+                            new \PHPStan\Type\Constant\ConstantStringType('values'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('content'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('criteria'),
-                        new \PHPStan\Type\Constant\ConstantStringType('values'),
-                    ], [
+                        new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1458,17 +1518,19 @@ final class ConnectWisdomServiceClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('sessionSummaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('assistantArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('assistantId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('sessionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('sessionId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('assistantArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('assistantId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sessionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sessionId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1654,7 +1716,9 @@ final class ConnectWisdomServiceClientReturnTypeExtension implements \PHPStan\Ty
                             new \PHPStan\Type\Constant\ConstantStringType('objectFields'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -1696,7 +1760,9 @@ final class ConnectWisdomServiceClientReturnTypeExtension implements \PHPStan\Ty
                     new \PHPStan\Type\Constant\ConstantStringType('status'),
                     new \PHPStan\Type\Constant\ConstantStringType('tags'),
                 ], [
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('markdown'),
@@ -1720,7 +1786,9 @@ final class ConnectWisdomServiceClientReturnTypeExtension implements \PHPStan\Ty
                         new \PHPStan\Type\Constant\ConstantStringType('values'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),

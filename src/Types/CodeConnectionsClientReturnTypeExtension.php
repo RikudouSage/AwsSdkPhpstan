@@ -84,13 +84,15 @@ final class CodeConnectionsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -102,13 +104,15 @@ final class CodeConnectionsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -280,8 +284,12 @@ final class CodeConnectionsClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('TlsCertificate'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -338,17 +346,19 @@ final class CodeConnectionsClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
                         new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Event'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExternalId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Time'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Event'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExternalId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Time'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -390,17 +400,19 @@ final class CodeConnectionsClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('TargetRevision'),
                     new \PHPStan\Type\Constant\ConstantStringType('Target'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Event'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExternalId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Time'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Event'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExternalId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Time'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Branch'),
                         new \PHPStan\Type\Constant\ConstantStringType('Directory'),
@@ -460,17 +472,19 @@ final class CodeConnectionsClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('TargetRevision'),
                     new \PHPStan\Type\Constant\ConstantStringType('Target'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Event'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExternalId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Time'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Event'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExternalId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Time'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Branch'),
                         new \PHPStan\Type\Constant\ConstantStringType('Directory'),
@@ -538,34 +552,38 @@ final class CodeConnectionsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedReason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Contexts'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResolvedReason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResolvedAt'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('AUTOMATED'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CreatedReason'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Contexts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResolvedReason'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResolvedAt'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantStringType('AUTOMATED'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
+                            ]),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -628,31 +646,33 @@ final class CodeConnectionsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Connections'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ConnectionName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ConnectionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProviderType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OwnerAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ConnectionStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HostArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Bitbucket'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GitHub'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GitHubEnterpriseServer'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GitLab'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GitLabSelfManaged'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProviderType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OwnerAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HostArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Bitbucket'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GitHub'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GitHubEnterpriseServer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GitLab'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GitLabSelfManaged'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -664,39 +684,45 @@ final class CodeConnectionsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Hosts'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HostArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProviderType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProviderEndpoint'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VpcConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Bitbucket'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GitHub'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GitHubEnterpriseServer'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GitLab'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GitLabSelfManaged'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TlsCertificate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HostArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProviderType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProviderEndpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VpcConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Bitbucket'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GitHub'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GitHubEnterpriseServer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GitLab'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GitLabSelfManaged'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TlsCertificate'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -708,29 +734,31 @@ final class CodeConnectionsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('RepositoryLinks'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ConnectionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EncryptionKeyArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProviderType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RepositoryLinkArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RepositoryLinkId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RepositoryName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Bitbucket'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GitHub'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GitHubEnterpriseServer'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GitLab'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GitLabSelfManaged'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EncryptionKeyArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProviderType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RepositoryLinkArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RepositoryLinkId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RepositoryName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Bitbucket'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GitHub'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GitHubEnterpriseServer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GitLab'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GitLabSelfManaged'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -742,17 +770,19 @@ final class CodeConnectionsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('RepositorySyncDefinitions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Branch'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Directory'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Parent'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Target'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Branch'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Directory'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Parent'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Target'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -764,48 +794,50 @@ final class CodeConnectionsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('SyncConfigurations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Branch'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ConfigFile'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProviderType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RepositoryLinkId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RepositoryName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SyncType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PublishDeploymentStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TriggerResourceUpdateOn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PullRequestComment'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Bitbucket'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GitHub'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GitHubEnterpriseServer'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GitLab'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GitLabSelfManaged'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Branch'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConfigFile'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProviderType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RepositoryLinkId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RepositoryName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SyncType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PublishDeploymentStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TriggerResourceUpdateOn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PullRequestComment'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Bitbucket'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GitHub'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GitHubEnterpriseServer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GitLab'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GitLabSelfManaged'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('CFN_STACK_SYNC'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ANY_CHANGE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FILE_CHANGE'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('CFN_STACK_SYNC'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ANY_CHANGE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FILE_CHANGE'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -816,13 +848,15 @@ final class CodeConnectionsClientReturnTypeExtension implements \PHPStan\Type\Dy
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -904,13 +938,15 @@ final class CodeConnectionsClientReturnTypeExtension implements \PHPStan\Type\Dy
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),

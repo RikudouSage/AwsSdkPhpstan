@@ -150,17 +150,19 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('REQUESTED'),
                         new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
@@ -177,24 +179,26 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('APPROVE_ALL_FEATURES'),
                         new \PHPStan\Type\Constant\ConstantStringType('ADD_ORGANIZATIONS_SERVICE_LINKED_ROLE'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Resources'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION_FEATURE_SET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MASTER_EMAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MASTER_NAME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOTES'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PARENT_HANDSHAKE'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Resources'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION_FEATURE_SET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MASTER_EMAIL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MASTER_NAME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NOTES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PARENT_HANDSHAKE'),
+                            ]),
+                            new \PHPStan\Type\MixedType(),
                         ]),
-                        new \PHPStan\Type\MixedType(),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -223,17 +227,19 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('REQUESTED'),
                         new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
@@ -250,24 +256,26 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('APPROVE_ALL_FEATURES'),
                         new \PHPStan\Type\Constant\ConstantStringType('ADD_ORGANIZATIONS_SERVICE_LINKED_ROLE'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Resources'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION_FEATURE_SET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MASTER_EMAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MASTER_NAME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOTES'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PARENT_HANDSHAKE'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Resources'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION_FEATURE_SET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MASTER_EMAIL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MASTER_NAME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NOTES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PARENT_HANDSHAKE'),
+                            ]),
+                            new \PHPStan\Type\MixedType(),
                         ]),
-                        new \PHPStan\Type\MixedType(),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -398,25 +406,27 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SERVICE_CONTROL_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_CONTROL_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TAG_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BACKUP_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AISERVICES_OPT_OUT_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CHATBOT_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DECLARATIVE_POLICY_EC2'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SERVICE_CONTROL_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_CONTROL_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TAG_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BACKUP_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AISERVICES_OPT_OUT_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CHATBOT_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DECLARATIVE_POLICY_EC2'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PENDING_ENABLE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PENDING_DISABLE'),
+                            ]),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_ENABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_DISABLE'),
-                        ]),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -495,17 +505,19 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('REQUESTED'),
                         new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
@@ -522,24 +534,26 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('APPROVE_ALL_FEATURES'),
                         new \PHPStan\Type\Constant\ConstantStringType('ADD_ORGANIZATIONS_SERVICE_LINKED_ROLE'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Resources'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION_FEATURE_SET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MASTER_EMAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MASTER_NAME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOTES'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PARENT_HANDSHAKE'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Resources'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION_FEATURE_SET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MASTER_EMAIL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MASTER_NAME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NOTES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PARENT_HANDSHAKE'),
+                            ]),
+                            new \PHPStan\Type\MixedType(),
                         ]),
-                        new \PHPStan\Type\MixedType(),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -699,17 +713,19 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('REQUESTED'),
                         new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
@@ -726,24 +742,26 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('APPROVE_ALL_FEATURES'),
                         new \PHPStan\Type\Constant\ConstantStringType('ADD_ORGANIZATIONS_SERVICE_LINKED_ROLE'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Resources'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION_FEATURE_SET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MASTER_EMAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MASTER_NAME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOTES'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PARENT_HANDSHAKE'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Resources'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION_FEATURE_SET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MASTER_EMAIL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MASTER_NAME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NOTES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PARENT_HANDSHAKE'),
+                            ]),
+                            new \PHPStan\Type\MixedType(),
                         ]),
-                        new \PHPStan\Type\MixedType(),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -772,25 +790,27 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SERVICE_CONTROL_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_CONTROL_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TAG_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BACKUP_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AISERVICES_OPT_OUT_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CHATBOT_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DECLARATIVE_POLICY_EC2'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SERVICE_CONTROL_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_CONTROL_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TAG_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BACKUP_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AISERVICES_OPT_OUT_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CHATBOT_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DECLARATIVE_POLICY_EC2'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PENDING_ENABLE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PENDING_DISABLE'),
+                            ]),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_ENABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_DISABLE'),
-                        ]),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -900,25 +920,27 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SERVICE_CONTROL_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_CONTROL_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TAG_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BACKUP_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AISERVICES_OPT_OUT_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CHATBOT_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DECLARATIVE_POLICY_EC2'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SERVICE_CONTROL_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_CONTROL_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TAG_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BACKUP_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AISERVICES_OPT_OUT_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CHATBOT_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DECLARATIVE_POLICY_EC2'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PENDING_ENABLE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PENDING_DISABLE'),
+                            ]),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_ENABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_DISABLE'),
-                        ]),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -947,17 +969,19 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('REQUESTED'),
                         new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
@@ -974,24 +998,26 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('APPROVE_ALL_FEATURES'),
                         new \PHPStan\Type\Constant\ConstantStringType('ADD_ORGANIZATIONS_SERVICE_LINKED_ROLE'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Resources'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION_FEATURE_SET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MASTER_EMAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MASTER_NAME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOTES'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PARENT_HANDSHAKE'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Resources'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION_FEATURE_SET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MASTER_EMAIL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MASTER_NAME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NOTES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PARENT_HANDSHAKE'),
+                            ]),
+                            new \PHPStan\Type\MixedType(),
                         ]),
-                        new \PHPStan\Type\MixedType(),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1011,25 +1037,27 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SERVICE_CONTROL_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_CONTROL_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TAG_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BACKUP_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AISERVICES_OPT_OUT_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CHATBOT_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DECLARATIVE_POLICY_EC2'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SERVICE_CONTROL_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_CONTROL_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TAG_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BACKUP_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AISERVICES_OPT_OUT_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CHATBOT_POLICY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DECLARATIVE_POLICY_EC2'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PENDING_ENABLE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PENDING_DISABLE'),
+                            ]),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_ENABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_DISABLE'),
-                        ]),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1052,17 +1080,19 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('REQUESTED'),
                         new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
@@ -1079,24 +1109,26 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('APPROVE_ALL_FEATURES'),
                         new \PHPStan\Type\Constant\ConstantStringType('ADD_ORGANIZATIONS_SERVICE_LINKED_ROLE'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Resources'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION_FEATURE_SET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MASTER_EMAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MASTER_NAME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOTES'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PARENT_HANDSHAKE'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Resources'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION_FEATURE_SET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MASTER_EMAIL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MASTER_NAME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NOTES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PARENT_HANDSHAKE'),
+                            ]),
+                            new \PHPStan\Type\MixedType(),
                         ]),
-                        new \PHPStan\Type\MixedType(),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1114,13 +1146,15 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('EnabledServicePrincipals'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ServicePrincipal'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DateEnabled'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ServicePrincipal'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DateEnabled'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1132,30 +1166,32 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Email'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JoinedMethod'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JoinedTimestamp'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_CLOSURE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Email'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JoinedMethod'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JoinedTimestamp'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_CLOSURE'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INVITED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('INVITED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1167,30 +1203,32 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Email'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JoinedMethod'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JoinedTimestamp'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_CLOSURE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Email'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JoinedMethod'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JoinedTimestamp'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_CLOSURE'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INVITED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('INVITED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1202,16 +1240,18 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('Children'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATIONAL_UNIT'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATIONAL_UNIT'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1223,45 +1263,47 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('CreateAccountStatuses'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AccountName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RequestedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CompletedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GovCloudAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FailureReason'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccountName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CompletedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GovCloudAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FailureReason'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_LIMIT_EXCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL_ALREADY_EXISTS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_ADDRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_EMAIL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CONCURRENT_ACCOUNT_MODIFICATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_FAILURE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GOVCLOUD_ACCOUNT_ALREADY_EXISTS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MISSING_BUSINESS_VALIDATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED_BUSINESS_VALIDATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_BUSINESS_VALIDATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_IDENTITY_FOR_BUSINESS_VALIDATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN_BUSINESS_VALIDATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MISSING_PAYMENT_INSTRUMENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_PAYMENT_INSTRUMENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_EXISTING_RESOURCE_POLICY_WITH_TAGS_NOT_SUPPORTED'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_LIMIT_EXCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EMAIL_ALREADY_EXISTS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INVALID_ADDRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INVALID_EMAIL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CONCURRENT_ACCOUNT_MODIFICATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_FAILURE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GOVCLOUD_ACCOUNT_ALREADY_EXISTS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MISSING_BUSINESS_VALIDATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED_BUSINESS_VALIDATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_BUSINESS_VALIDATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INVALID_IDENTITY_FOR_BUSINESS_VALIDATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN_BUSINESS_VALIDATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MISSING_PAYMENT_INSTRUMENT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INVALID_PAYMENT_INSTRUMENT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_EXISTING_RESOURCE_POLICY_WITH_TAGS_NOT_SUPPORTED'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1273,32 +1315,34 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('DelegatedAdministrators'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Email'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JoinedMethod'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JoinedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DelegationEnabledDate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_CLOSURE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Email'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JoinedMethod'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JoinedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DelegationEnabledDate'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_CLOSURE'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INVITED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('INVITED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1310,13 +1354,15 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('DelegatedServices'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ServicePrincipal'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DelegationEnabledDate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ServicePrincipal'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DelegationEnabledDate'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1328,64 +1374,70 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('Handshakes'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Parties'),
-                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RequestedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExpirationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Action'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Resources'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('REQUESTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACCEPTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DECLINED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('INVITE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLE_ALL_FEATURES'),
-                        new \PHPStan\Type\Constant\ConstantStringType('APPROVE_ALL_FEATURES'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ADD_ORGANIZATIONS_SERVICE_LINKED_ROLE'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Parties'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExpirationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Action'),
                         new \PHPStan\Type\Constant\ConstantStringType('Resources'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                                ]),
+                            ]),
+                        ])),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION_FEATURE_SET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MASTER_EMAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MASTER_NAME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOTES'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PARENT_HANDSHAKE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REQUESTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACCEPTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DECLINED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
                         ]),
-                        new \PHPStan\Type\MixedType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INVITE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLE_ALL_FEATURES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('APPROVE_ALL_FEATURES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ADD_ORGANIZATIONS_SERVICE_LINKED_ROLE'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Resources'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION_FEATURE_SET'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MASTER_EMAIL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MASTER_NAME'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NOTES'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PARENT_HANDSHAKE'),
+                                ]),
+                                new \PHPStan\Type\MixedType(),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1397,64 +1449,70 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('Handshakes'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Parties'),
-                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RequestedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExpirationTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Action'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Resources'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('REQUESTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACCEPTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DECLINED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('INVITE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLE_ALL_FEATURES'),
-                        new \PHPStan\Type\Constant\ConstantStringType('APPROVE_ALL_FEATURES'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ADD_ORGANIZATIONS_SERVICE_LINKED_ROLE'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Parties'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExpirationTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Action'),
                         new \PHPStan\Type\Constant\ConstantStringType('Resources'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                                ]),
+                            ]),
+                        ])),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION_FEATURE_SET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MASTER_EMAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MASTER_NAME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOTES'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PARENT_HANDSHAKE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REQUESTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACCEPTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DECLINED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
                         ]),
-                        new \PHPStan\Type\MixedType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INVITE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLE_ALL_FEATURES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('APPROVE_ALL_FEATURES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ADD_ORGANIZATIONS_SERVICE_LINKED_ROLE'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Resources'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION_FEATURE_SET'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MASTER_EMAIL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MASTER_NAME'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NOTES'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PARENT_HANDSHAKE'),
+                                ]),
+                                new \PHPStan\Type\MixedType(),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1466,15 +1524,17 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('OrganizationalUnits'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1486,16 +1546,18 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('Parents'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ROOT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATIONAL_UNIT'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ROOT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATIONAL_UNIT'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1507,29 +1569,31 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('Policies'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AwsManaged'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SERVICE_CONTROL_POLICY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_CONTROL_POLICY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TAG_POLICY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BACKUP_POLICY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AISERVICES_OPT_OUT_POLICY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CHATBOT_POLICY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DECLARATIVE_POLICY_EC2'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AwsManaged'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SERVICE_CONTROL_POLICY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_CONTROL_POLICY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TAG_POLICY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BACKUP_POLICY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AISERVICES_OPT_OUT_POLICY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CHATBOT_POLICY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DECLARATIVE_POLICY_EC2'),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
                     ]),
-                    new \PHPStan\Type\BooleanType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1541,29 +1605,31 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('Policies'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AwsManaged'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SERVICE_CONTROL_POLICY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_CONTROL_POLICY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TAG_POLICY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BACKUP_POLICY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AISERVICES_OPT_OUT_POLICY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CHATBOT_POLICY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DECLARATIVE_POLICY_EC2'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AwsManaged'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SERVICE_CONTROL_POLICY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_CONTROL_POLICY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TAG_POLICY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BACKUP_POLICY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AISERVICES_OPT_OUT_POLICY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CHATBOT_POLICY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DECLARATIVE_POLICY_EC2'),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
                     ]),
-                    new \PHPStan\Type\BooleanType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1575,35 +1641,39 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('Roots'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PolicyTypes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyTypes'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SERVICE_CONTROL_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_CONTROL_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TAG_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BACKUP_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AISERVICES_OPT_OUT_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CHATBOT_POLICY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DECLARATIVE_POLICY_EC2'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_ENABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_DISABLE'),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SERVICE_CONTROL_POLICY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_CONTROL_POLICY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TAG_POLICY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BACKUP_POLICY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AISERVICES_OPT_OUT_POLICY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CHATBOT_POLICY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DECLARATIVE_POLICY_EC2'),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PENDING_ENABLE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PENDING_DISABLE'),
+                                ]),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1615,13 +1685,15 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1633,21 +1705,23 @@ final class OrganizationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('Targets'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('TargetId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATIONAL_UNIT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ROOT'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATIONAL_UNIT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROOT'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

@@ -254,13 +254,15 @@ final class BedrockDataAutomationClientReturnTypeExtension implements \PHPStan\T
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('types'),
                                 ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DOCUMENT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('PAGE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ELEMENT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('WORD'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('LINE'),
-                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DOCUMENT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PAGE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ELEMENT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('WORD'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('LINE'),
+                                        ]),
+                                    ])),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('state'),
@@ -286,12 +288,14 @@ final class BedrockDataAutomationClientReturnTypeExtension implements \PHPStan\T
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('types'),
                                 ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('PLAIN_TEXT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('MARKDOWN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('HTML'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CSV'),
-                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('PLAIN_TEXT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MARKDOWN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('HTML'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CSV'),
+                                        ]),
+                                    ])),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('state'),
@@ -319,11 +323,13 @@ final class BedrockDataAutomationClientReturnTypeExtension implements \PHPStan\T
                                         new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                                         new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                     ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('CONTENT_MODERATION'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('TEXT_DETECTION'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('LOGOS'),
-                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('CONTENT_MODERATION'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TEXT_DETECTION'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('LOGOS'),
+                                        ]),
+                                    ])),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('state'),
@@ -342,10 +348,12 @@ final class BedrockDataAutomationClientReturnTypeExtension implements \PHPStan\T
                                     new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                 ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('IMAGE_SUMMARY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IAB'),
-                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('IMAGE_SUMMARY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('IAB'),
+                                    ]),
+                                ])),
                             ]),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -364,12 +372,14 @@ final class BedrockDataAutomationClientReturnTypeExtension implements \PHPStan\T
                                         new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                                         new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                     ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('CONTENT_MODERATION'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('TEXT_DETECTION'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('TRANSCRIPT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('LOGOS'),
-                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('CONTENT_MODERATION'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TEXT_DETECTION'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TRANSCRIPT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('LOGOS'),
+                                        ]),
+                                    ])),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('state'),
@@ -388,11 +398,13 @@ final class BedrockDataAutomationClientReturnTypeExtension implements \PHPStan\T
                                     new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                 ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('VIDEO_SUMMARY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IAB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CHAPTER_SUMMARY'),
-                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('VIDEO_SUMMARY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('IAB'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CHAPTER_SUMMARY'),
+                                    ]),
+                                ])),
                             ]),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -410,11 +422,13 @@ final class BedrockDataAutomationClientReturnTypeExtension implements \PHPStan\T
                                         new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                                         new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                     ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('AUDIO_CONTENT_MODERATION'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('TRANSCRIPT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('TOPIC_CONTENT_MODERATION'),
-                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('AUDIO_CONTENT_MODERATION'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TRANSCRIPT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TOPIC_CONTENT_MODERATION'),
+                                        ]),
+                                    ])),
                                 ]),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -425,29 +439,33 @@ final class BedrockDataAutomationClientReturnTypeExtension implements \PHPStan\T
                                     new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                 ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AUDIO_SUMMARY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IAB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TOPIC_SUMMARY'),
-                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('AUDIO_SUMMARY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('IAB'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TOPIC_SUMMARY'),
+                                    ]),
+                                ])),
                             ]),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('blueprints'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('blueprintArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('blueprintVersion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('blueprintStage'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DEVELOPMENT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LIVE'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('blueprintArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('blueprintVersion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('blueprintStage'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DEVELOPMENT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LIVE'),
+                                ]),
                             ]),
-                        ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('document'),
@@ -483,24 +501,26 @@ final class BedrockDataAutomationClientReturnTypeExtension implements \PHPStan\T
                 new \PHPStan\Type\Constant\ConstantStringType('blueprints'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('blueprintArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('blueprintVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('blueprintStage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('blueprintName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DEVELOPMENT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LIVE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('blueprintArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('blueprintVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('blueprintStage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('blueprintName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DEVELOPMENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LIVE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -512,20 +532,22 @@ final class BedrockDataAutomationClientReturnTypeExtension implements \PHPStan\T
                 new \PHPStan\Type\Constant\ConstantStringType('projects'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('projectArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('projectStage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('projectName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DEVELOPMENT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LIVE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('projectArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('projectStage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('projectName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DEVELOPMENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LIVE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -536,13 +558,15 @@ final class BedrockDataAutomationClientReturnTypeExtension implements \PHPStan\T
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }

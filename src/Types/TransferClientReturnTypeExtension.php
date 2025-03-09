@@ -334,18 +334,20 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('ExternalId'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Entry'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Target'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FILE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DIRECTORY'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Entry'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Target'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('FILE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECTORY'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('PATH'),
                         new \PHPStan\Type\Constant\ConstantStringType('LOGICAL'),
@@ -358,7 +360,9 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\IntegerType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -399,13 +403,15 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
@@ -477,13 +483,15 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('CERTIFICATE_WITH_PRIVATE_KEY'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -562,21 +570,27 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('UserSecretId'),
                         new \PHPStan\Type\Constant\ConstantStringType('TrustedHostKeys'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -652,7 +666,9 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\IntegerType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
@@ -664,66 +680,70 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('Steps'),
                         new \PHPStan\Type\Constant\ConstantStringType('OnExceptionSteps'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StepType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Outputs'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('COPY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TAG'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DECRYPT'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                                new \PHPStan\Type\Constant\ConstantStringType('StepType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Outputs'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Error'),
                             ], [
                                 new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('PERMISSION_DENIED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_STEP_FAILED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('THROTTLED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ALREADY_EXISTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BAD_REQUEST'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TIMEOUT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_SERVER_ERROR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('COPY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TAG'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DECRYPT'),
                                 ]),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PERMISSION_DENIED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_STEP_FAILED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('THROTTLED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ALREADY_EXISTS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NOT_FOUND'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('BAD_REQUEST'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TIMEOUT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_SERVER_ERROR'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StepType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Outputs'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('COPY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TAG'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DECRYPT'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                                new \PHPStan\Type\Constant\ConstantStringType('StepType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Outputs'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Error'),
                             ], [
                                 new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('PERMISSION_DENIED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_STEP_FAILED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('THROTTLED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ALREADY_EXISTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BAD_REQUEST'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TIMEOUT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_SERVER_ERROR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('COPY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TAG'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DECRYPT'),
                                 ]),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PERMISSION_DENIED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_STEP_FAILED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('THROTTLED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ALREADY_EXISTS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NOT_FOUND'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('BAD_REQUEST'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TIMEOUT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_SERVER_ERROR'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
                             ]),
-                        ]),
+                        ])),
                     ]),
                 ]),
             ]),
@@ -750,13 +770,15 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -782,14 +804,18 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('PARTNER'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -813,19 +839,31 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 ], [
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('SERVER'),
                         new \PHPStan\Type\Constant\ConstantStringType('CONNECTOR'),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SFTP'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FTPS'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SFTP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FTPS'),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -878,7 +916,9 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\Constant\ConstantStringType('DEFAULT'),
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLE_NO_OP'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantStringType('HTTP'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('HTTP'),
+                        ])),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('S3'),
@@ -891,11 +931,17 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
                         new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
                     ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
@@ -930,12 +976,14 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SFTP'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FTP'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FTPS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AS2'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SFTP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FTP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FTPS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AS2'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
@@ -946,34 +994,42 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('START_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('STOP_FAILED'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('OnUpload'),
                         new \PHPStan\Type\Constant\ConstantStringType('OnPartialUpload'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('WorkflowId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionRole'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('WorkflowId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionRole'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('WorkflowId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ExecutionRole'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('WorkflowId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ExecutionRole'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('DirectoryListingOptimization'),
                     ], [
@@ -982,7 +1038,9 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
                     ]),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1009,18 +1067,20 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Entry'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Target'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FILE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DIRECTORY'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Entry'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Target'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('FILE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECTORY'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('PATH'),
                         new \PHPStan\Type\Constant\ConstantStringType('LOGICAL'),
@@ -1033,25 +1093,31 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\IntegerType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DateImported'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SshPublicKeyBody'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SshPublicKeyId'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DateImported'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SshPublicKeyBody'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SshPublicKeyId'),
+                        ], [
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -1094,13 +1160,15 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     ], [
                         new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1151,244 +1219,254 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CopyStepDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CustomStepDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeleteStepDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TagStepDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DecryptStepDetails'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('COPY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TAG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DECRYPT'),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DestinationFileLocation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OverwriteExisting'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceFileLocation'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('S3FileLocation'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EfsFileLocation'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('FileSystemId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('TRUE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FALSE'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Target'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TimeoutSeconds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceFileLocation'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceFileLocation'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceFileLocation'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
                             new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceFileLocation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OverwriteExisting'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DestinationFileLocation'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CopyStepDetails'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CustomStepDetails'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeleteStepDetails'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagStepDetails'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DecryptStepDetails'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantStringType('PGP'),
-                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('TRUE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FALSE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('COPY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TAG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DECRYPT'),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('S3FileLocation'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EfsFileLocation'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DestinationFileLocation'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OverwriteExisting'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SourceFileLocation'),
                             ], [
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('S3FileLocation'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EfsFileLocation'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FileSystemId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
                                 ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('FileSystemId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('TRUE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FALSE'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
                             ]),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CopyStepDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CustomStepDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeleteStepDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TagStepDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DecryptStepDetails'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('COPY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TAG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DECRYPT'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DestinationFileLocation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OverwriteExisting'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceFileLocation'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('S3FileLocation'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EfsFileLocation'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Target'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TimeoutSeconds'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SourceFileLocation'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('FileSystemId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
                             ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('TRUE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FALSE'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Target'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TimeoutSeconds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceFileLocation'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceFileLocation'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceFileLocation'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SourceFileLocation'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SourceFileLocation'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SourceFileLocation'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OverwriteExisting'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DestinationFileLocation'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('PGP'),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('TRUE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FALSE'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('S3FileLocation'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EfsFileLocation'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FileSystemId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ]),
+                            ]),
                         ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
                             new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceFileLocation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OverwriteExisting'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DestinationFileLocation'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CopyStepDetails'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CustomStepDetails'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeleteStepDetails'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagStepDetails'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DecryptStepDetails'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantStringType('PGP'),
-                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('TRUE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FALSE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('COPY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TAG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DECRYPT'),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('S3FileLocation'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EfsFileLocation'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DestinationFileLocation'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OverwriteExisting'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SourceFileLocation'),
                             ], [
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('S3FileLocation'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EfsFileLocation'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FileSystemId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('TRUE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FALSE'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Target'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TimeoutSeconds'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SourceFileLocation'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SourceFileLocation'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SourceFileLocation'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SourceFileLocation'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OverwriteExisting'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DestinationFileLocation'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('PGP'),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('TRUE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FALSE'),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('FileSystemId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('S3FileLocation'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EfsFileLocation'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FileSystemId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
                                 ]),
                             ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1439,20 +1517,22 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('HomeDirectory'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HomeDirectoryType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Role'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExternalId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PATH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LOGICAL'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('HomeDirectory'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HomeDirectoryType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Role'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExternalId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PATH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LOGICAL'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1464,26 +1544,28 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Agreements'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AgreementId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ServerId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LocalProfileId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PartnerProfileId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AgreementId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServerId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LocalProfileId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PartnerProfileId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1495,36 +1577,38 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Certificates'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CertificateId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Usage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ActiveDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('InactiveDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SIGNING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ENCRYPTION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TLS'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CertificateId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Usage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ActiveDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InactiveDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SIGNING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENCRYPTION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TLS'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_ROTATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CERTIFICATE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CERTIFICATE_WITH_PRIVATE_KEY'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_ROTATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CERTIFICATE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CERTIFICATE_WITH_PRIVATE_KEY'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1536,15 +1620,17 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Connectors'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ConnectorId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectorId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1558,56 +1644,58 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('InitialFileLocation'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ServiceMetadata'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3FileLocation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EfsFileLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InitialFileLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceMetadata'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
                     ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VersionId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Etag'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3FileLocation'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EfsFileLocation'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VersionId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Etag'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('FileSystemId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FileSystemId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UserDetails'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('UserName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ServerId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SessionId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EXCEPTION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HANDLING_EXCEPTION'),
                         ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UserDetails'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('UserName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ServerId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SessionId'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EXCEPTION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HANDLING_EXCEPTION'),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1618,22 +1706,24 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('FileTransferResults'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('FilePath'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FailureCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FailureMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FilePath'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FailureCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FailureMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1648,21 +1738,23 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HostKeyId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Fingerprint'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DateImported'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HostKeyId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Fingerprint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DateImported'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1674,20 +1766,22 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Profiles'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProfileId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('As2Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProfileType'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LOCAL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PARTNER'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('As2Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileType'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('LOCAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PARTNER'),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1699,7 +1793,9 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('SecurityPolicyNames'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -1711,44 +1807,46 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Servers'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Domain'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EndpointType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LoggingRole'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ServerId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserCount'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EFS'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Domain'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndpointType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LoggingRole'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServerId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserCount'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EFS'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SERVICE_MANAGED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AWS_DIRECTORY_SERVICE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VPC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VPC_ENDPOINT'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('OFFLINE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ONLINE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('START_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STOP_FAILED'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SERVICE_MANAGED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AWS_DIRECTORY_SERVICE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VPC'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VPC_ENDPOINT'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('OFFLINE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ONLINE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('START_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STOP_FAILED'),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1762,13 +1860,15 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1782,24 +1882,26 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HomeDirectory'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HomeDirectoryType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Role'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SshPublicKeyCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PATH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LOGICAL'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HomeDirectory'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HomeDirectoryType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Role'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SshPublicKeyCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PATH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LOGICAL'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1811,17 +1913,19 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('WebApps'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WebAppId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AccessEndpoint'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WebAppEndpoint'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WebAppId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccessEndpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WebAppEndpoint'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1833,15 +1937,17 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Workflows'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('WorkflowId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('WorkflowId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }

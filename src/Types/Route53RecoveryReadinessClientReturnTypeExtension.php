@@ -98,8 +98,12 @@ final class Route53RecoveryReadinessClientReturnTypeExtension implements \PHPSta
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
@@ -139,7 +143,9 @@ final class Route53RecoveryReadinessClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\Constant\ConstantStringType('RecoveryGroupName'),
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -159,45 +165,49 @@ final class Route53RecoveryReadinessClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ComponentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DnsTargetResource'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReadinessScopes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HostedZoneArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RecordSetId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RecordType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetResource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ComponentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DnsTargetResource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReadinessScopes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NLBResource'),
-                            new \PHPStan\Type\Constant\ConstantStringType('R53Resource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HostedZoneArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RecordSetId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RecordType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TargetResource'),
                         ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NLBResource'),
+                                new \PHPStan\Type\Constant\ConstantStringType('R53Resource'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RecordSetId'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordSetId'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
                             ]),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
@@ -242,11 +252,13 @@ final class Route53RecoveryReadinessClientReturnTypeExtension implements \PHPSta
             ], [
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('RecommendationText'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RecommendationText'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -262,8 +274,12 @@ final class Route53RecoveryReadinessClientReturnTypeExtension implements \PHPSta
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
@@ -283,18 +299,20 @@ final class Route53RecoveryReadinessClientReturnTypeExtension implements \PHPSta
                     new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
                     new \PHPStan\Type\Constant\ConstantStringType('NOT_AUTHORIZED'),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Readiness'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReadinessCheckName'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('READY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NOT_READY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NOT_AUTHORIZED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Readiness'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReadinessCheckName'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_READY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_AUTHORIZED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -329,26 +347,30 @@ final class Route53RecoveryReadinessClientReturnTypeExtension implements \PHPSta
                     new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
                     new \PHPStan\Type\Constant\ConstantStringType('NOT_AUTHORIZED'),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('LastCheckedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Messages'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Readiness'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RuleId'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MessageText'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastCheckedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Messages'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Readiness'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RuleId'),
                     ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MessageText'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_READY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_AUTHORIZED'),
+                        ]),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('READY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NOT_READY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NOT_AUTHORIZED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -361,11 +383,13 @@ final class Route53RecoveryReadinessClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\Constant\ConstantStringType('Readiness'),
                 new \PHPStan\Type\Constant\ConstantStringType('Resources'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('MessageText'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MessageText'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('READY'),
@@ -373,22 +397,24 @@ final class Route53RecoveryReadinessClientReturnTypeExtension implements \PHPSta
                     new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
                     new \PHPStan\Type\Constant\ConstantStringType('NOT_AUTHORIZED'),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ComponentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastCheckedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Readiness'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('READY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NOT_READY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NOT_AUTHORIZED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ComponentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastCheckedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Readiness'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_READY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_AUTHORIZED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -401,7 +427,9 @@ final class Route53RecoveryReadinessClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\Constant\ConstantStringType('RecoveryGroupName'),
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -423,18 +451,20 @@ final class Route53RecoveryReadinessClientReturnTypeExtension implements \PHPSta
                     new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
                     new \PHPStan\Type\Constant\ConstantStringType('NOT_AUTHORIZED'),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Readiness'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReadinessCheckName'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('READY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NOT_READY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NOT_AUTHORIZED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Readiness'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReadinessCheckName'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_READY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_AUTHORIZED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -451,147 +481,7 @@ final class Route53RecoveryReadinessClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ComponentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DnsTargetResource'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReadinessScopes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HostedZoneArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RecordSetId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RecordType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetResource'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NLBResource'),
-                            new \PHPStan\Type\Constant\ConstantStringType('R53Resource'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RecordSetId'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-            ]),
-        ]);
-    }
-    private function listCells(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Cells'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CellArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CellName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Cells'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ParentReadinessScopes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listCrossAccountAuthorizations(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('CrossAccountAuthorizations'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listReadinessChecks(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-                new \PHPStan\Type\Constant\ConstantStringType('ReadinessChecks'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ReadinessCheckArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReadinessCheckName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceSet'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
-            ]),
-        ]);
-    }
-    private function listRecoveryGroups(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-                new \PHPStan\Type\Constant\ConstantStringType('RecoveryGroups'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Cells'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RecoveryGroupArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RecoveryGroupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
-            ]),
-        ]);
-    }
-    private function listResourceSets(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-                new \PHPStan\Type\Constant\ConstantStringType('ResourceSets'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceSetArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceSetName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceSetType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Resources'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ComponentId'),
                         new \PHPStan\Type\Constant\ConstantStringType('DnsTargetResource'),
@@ -628,11 +518,175 @@ final class Route53RecoveryReadinessClientReturnTypeExtension implements \PHPSta
                                 ]),
                             ]),
                         ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+            ]),
+        ]);
+    }
+    private function listCells(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Cells'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CellArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CellName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Cells'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ParentReadinessScopes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listCrossAccountAuthorizations(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('CrossAccountAuthorizations'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listReadinessChecks(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('ReadinessChecks'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ReadinessCheckArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReadinessCheckName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceSet'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function listRecoveryGroups(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('RecoveryGroups'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Cells'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RecoveryGroupArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RecoveryGroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function listResourceSets(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('ResourceSets'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceSetArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceSetName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceSetType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Resources'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ComponentId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DnsTargetResource'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ReadinessScopes'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('HostedZoneArn'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordSetId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TargetResource'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('NLBResource'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('R53Resource'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('RecordSetId'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -644,15 +698,17 @@ final class Route53RecoveryReadinessClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\Constant\ConstantStringType('Rules'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RuleDescription'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RuleId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RuleDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RuleId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -690,8 +746,12 @@ final class Route53RecoveryReadinessClientReturnTypeExtension implements \PHPSta
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
@@ -721,7 +781,9 @@ final class Route53RecoveryReadinessClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\Constant\ConstantStringType('RecoveryGroupName'),
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -741,45 +803,49 @@ final class Route53RecoveryReadinessClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ComponentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DnsTargetResource'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReadinessScopes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HostedZoneArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RecordSetId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RecordType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetResource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ComponentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DnsTargetResource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReadinessScopes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NLBResource'),
-                            new \PHPStan\Type\Constant\ConstantStringType('R53Resource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HostedZoneArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RecordSetId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RecordType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TargetResource'),
                         ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NLBResource'),
+                                new \PHPStan\Type\Constant\ConstantStringType('R53Resource'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RecordSetId'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordSetId'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
                             ]),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
             ]),
         ]);

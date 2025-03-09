@@ -69,23 +69,25 @@ final class MigrationHubConfigClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('HomeRegionControls'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ControlId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HomeRegion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Target'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RequestedTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ControlId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HomeRegion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Target'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestedTime'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

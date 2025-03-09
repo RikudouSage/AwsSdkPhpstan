@@ -47,83 +47,87 @@ final class ManagedBlockchainQueryClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('tokenBalances'),
                 new \PHPStan\Type\Constant\ConstantStringType('errors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ownerIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tokenIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('balance'),
-                    new \PHPStan\Type\Constant\ConstantStringType('atBlockchainInstant'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('address'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ownerIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tokenIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('balance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('atBlockchainInstant'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
                     ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('address'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('network'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contractAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tokenId'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_MAINNET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_SEPOLIA_TESTNET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_MAINNET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_TESTNET'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('time'),
+                        ], [
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('time'),
+                        ], [
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
                     ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('network'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contractAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tokenId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tokenIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ownerIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('atBlockchainInstant'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorType'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_MAINNET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_SEPOLIA_TESTNET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_MAINNET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_TESTNET'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('network'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contractAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tokenId'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_MAINNET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_SEPOLIA_TESTNET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_MAINNET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_TESTNET'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('address'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('time'),
+                        ], [
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('time'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('time'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('tokenIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ownerIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('atBlockchainInstant'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorType'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('network'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contractAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tokenId'),
-                    ], [
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_MAINNET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_SEPOLIA_TESTNET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_MAINNET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_TESTNET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VALIDATION_EXCEPTION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_NOT_FOUND_EXCEPTION'),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('address'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('time'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('VALIDATION_EXCEPTION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_NOT_FOUND_EXCEPTION'),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -279,30 +283,32 @@ final class ManagedBlockchainQueryClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('contracts'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('contractIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tokenStandard'),
-                    new \PHPStan\Type\Constant\ConstantStringType('deployerAddress'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('network'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contractAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('contractIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tokenStandard'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deployerAddress'),
                     ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('network'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contractAddress'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_MAINNET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_SEPOLIA_TESTNET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_MAINNET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_TESTNET'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_MAINNET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_SEPOLIA_TESTNET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_MAINNET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_TESTNET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERC20'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERC721'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERC1155'),
                         ]),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ERC20'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ERC721'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ERC1155'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -314,65 +320,67 @@ final class ManagedBlockchainQueryClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('events'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('network'),
-                    new \PHPStan\Type\Constant\ConstantStringType('transactionHash'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('from'),
-                    new \PHPStan\Type\Constant\ConstantStringType('to'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                    new \PHPStan\Type\Constant\ConstantStringType('contractAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tokenId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('transactionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('voutIndex'),
-                    new \PHPStan\Type\Constant\ConstantStringType('voutSpent'),
-                    new \PHPStan\Type\Constant\ConstantStringType('spentVoutTransactionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('spentVoutTransactionHash'),
-                    new \PHPStan\Type\Constant\ConstantStringType('spentVoutIndex'),
-                    new \PHPStan\Type\Constant\ConstantStringType('blockchainInstant'),
-                    new \PHPStan\Type\Constant\ConstantStringType('confirmationStatus'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_MAINNET'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_SEPOLIA_TESTNET'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_MAINNET'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_TESTNET'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ERC20_TRANSFER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ERC20_MINT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ERC20_BURN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ERC20_DEPOSIT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ERC20_WITHDRAWAL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ERC721_TRANSFER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ERC1155_TRANSFER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_VIN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_VOUT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ETH_TRANSFER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ETH_TRANSFER'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('time'),
+                        new \PHPStan\Type\Constant\ConstantStringType('network'),
+                        new \PHPStan\Type\Constant\ConstantStringType('transactionHash'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('from'),
+                        new \PHPStan\Type\Constant\ConstantStringType('to'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('contractAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tokenId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('transactionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('voutIndex'),
+                        new \PHPStan\Type\Constant\ConstantStringType('voutSpent'),
+                        new \PHPStan\Type\Constant\ConstantStringType('spentVoutTransactionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('spentVoutTransactionHash'),
+                        new \PHPStan\Type\Constant\ConstantStringType('spentVoutIndex'),
+                        new \PHPStan\Type\Constant\ConstantStringType('blockchainInstant'),
+                        new \PHPStan\Type\Constant\ConstantStringType('confirmationStatus'),
                     ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_MAINNET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_SEPOLIA_TESTNET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_MAINNET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_TESTNET'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ERC20_TRANSFER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERC20_MINT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERC20_BURN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERC20_DEPOSIT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERC20_WITHDRAWAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERC721_TRANSFER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERC1155_TRANSFER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_VIN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_VOUT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ETH_TRANSFER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ETH_TRANSFER'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('time'),
+                        ], [
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FINAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONFINAL'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FINAL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NONFINAL'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -384,44 +392,46 @@ final class ManagedBlockchainQueryClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('tokenBalances'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ownerIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tokenIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('balance'),
-                    new \PHPStan\Type\Constant\ConstantStringType('atBlockchainInstant'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('address'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ownerIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tokenIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('balance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('atBlockchainInstant'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('network'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contractAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tokenId'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_MAINNET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_SEPOLIA_TESTNET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_MAINNET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_TESTNET'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('address'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('network'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contractAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tokenId'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_MAINNET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_SEPOLIA_TESTNET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_MAINNET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_TESTNET'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('time'),
+                        ], [
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('time'),
+                        ], [
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('time'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('time'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -433,65 +443,67 @@ final class ManagedBlockchainQueryClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('events'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('network'),
-                    new \PHPStan\Type\Constant\ConstantStringType('transactionHash'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('from'),
-                    new \PHPStan\Type\Constant\ConstantStringType('to'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                    new \PHPStan\Type\Constant\ConstantStringType('contractAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tokenId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('transactionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('voutIndex'),
-                    new \PHPStan\Type\Constant\ConstantStringType('voutSpent'),
-                    new \PHPStan\Type\Constant\ConstantStringType('spentVoutTransactionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('spentVoutTransactionHash'),
-                    new \PHPStan\Type\Constant\ConstantStringType('spentVoutIndex'),
-                    new \PHPStan\Type\Constant\ConstantStringType('blockchainInstant'),
-                    new \PHPStan\Type\Constant\ConstantStringType('confirmationStatus'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_MAINNET'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_SEPOLIA_TESTNET'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_MAINNET'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_TESTNET'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ERC20_TRANSFER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ERC20_MINT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ERC20_BURN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ERC20_DEPOSIT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ERC20_WITHDRAWAL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ERC721_TRANSFER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ERC1155_TRANSFER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_VIN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_VOUT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ETH_TRANSFER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ETH_TRANSFER'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('time'),
+                        new \PHPStan\Type\Constant\ConstantStringType('network'),
+                        new \PHPStan\Type\Constant\ConstantStringType('transactionHash'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('from'),
+                        new \PHPStan\Type\Constant\ConstantStringType('to'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('contractAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tokenId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('transactionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('voutIndex'),
+                        new \PHPStan\Type\Constant\ConstantStringType('voutSpent'),
+                        new \PHPStan\Type\Constant\ConstantStringType('spentVoutTransactionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('spentVoutTransactionHash'),
+                        new \PHPStan\Type\Constant\ConstantStringType('spentVoutIndex'),
+                        new \PHPStan\Type\Constant\ConstantStringType('blockchainInstant'),
+                        new \PHPStan\Type\Constant\ConstantStringType('confirmationStatus'),
                     ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_MAINNET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_SEPOLIA_TESTNET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_MAINNET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_TESTNET'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ERC20_TRANSFER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERC20_MINT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERC20_BURN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERC20_DEPOSIT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERC20_WITHDRAWAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERC721_TRANSFER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERC1155_TRANSFER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_VIN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_VOUT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ETH_TRANSFER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ETH_TRANSFER'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('time'),
+                        ], [
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FINAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONFINAL'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FINAL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NONFINAL'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -503,27 +515,29 @@ final class ManagedBlockchainQueryClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('transactions'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('transactionHash'),
-                    new \PHPStan\Type\Constant\ConstantStringType('transactionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('network'),
-                    new \PHPStan\Type\Constant\ConstantStringType('transactionTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('confirmationStatus'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_MAINNET'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_SEPOLIA_TESTNET'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_MAINNET'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_TESTNET'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('transactionHash'),
+                        new \PHPStan\Type\Constant\ConstantStringType('transactionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('network'),
+                        new \PHPStan\Type\Constant\ConstantStringType('transactionTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('confirmationStatus'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_MAINNET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_SEPOLIA_TESTNET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_MAINNET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BITCOIN_TESTNET'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FINAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONFINAL'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FINAL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NONFINAL'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

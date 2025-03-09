@@ -189,107 +189,119 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('collaborationAnalysisTemplates'),
                 new \PHPStan\Type\Constant\ConstantStringType('errors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('schema'),
-                    new \PHPStan\Type\Constant\ConstantStringType('format'),
-                    new \PHPStan\Type\Constant\ConstantStringType('source'),
-                    new \PHPStan\Type\Constant\ConstantStringType('analysisParameters'),
-                    new \PHPStan\Type\Constant\ConstantStringType('validations'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('referencedTables'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('SQL'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('text'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
                         new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('schema'),
+                        new \PHPStan\Type\Constant\ConstantStringType('format'),
+                        new \PHPStan\Type\Constant\ConstantStringType('source'),
+                        new \PHPStan\Type\Constant\ConstantStringType('analysisParameters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('validations'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SMALLINT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTEGER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BIGINT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DECIMAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DOUBLE_PRECISION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CHAR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VARCHAR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMPTZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMETZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VARBYTE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BINARY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BYTE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CHARACTER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DOUBLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLOAT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LONG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NUMERIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SHORT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STRING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP_LTZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP_NTZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TINYINT'),
-                        ]),
                         new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('reasons'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('VALID'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INVALID'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNABLE_TO_VALIDATE'),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('referencedTables'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('SQL'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('text'),
                         ], [
                             new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SMALLINT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INTEGER'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BIGINT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DECIMAL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('REAL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DOUBLE_PRECISION'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CHAR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('VARCHAR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DATE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMPTZ'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TIME'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TIMETZ'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('VARBYTE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BINARY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BYTE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CHARACTER'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DOUBLE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FLOAT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LONG'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NUMERIC'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SHORT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STRING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP_LTZ'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP_NTZ'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TINYINT'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('reasons'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('VALID'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('INVALID'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UNABLE_TO_VALIDATE'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
+                            ]),
+                        ])),
                     ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('code'),
-                    new \PHPStan\Type\Constant\ConstantStringType('message'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -300,124 +312,142 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('schemas'),
                 new \PHPStan\Type\Constant\ConstantStringType('errors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('columns'),
-                    new \PHPStan\Type\Constant\ConstantStringType('partitionKeys'),
-                    new \PHPStan\Type\Constant\ConstantStringType('analysisRuleTypes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('analysisMethod'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('schemaStatusDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('schemaTypeProperties'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('columns'),
+                        new \PHPStan\Type\Constant\ConstantStringType('partitionKeys'),
+                        new \PHPStan\Type\Constant\ConstantStringType('analysisRuleTypes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('analysisMethod'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
                         new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('schemaStatusDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('schemaTypeProperties'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LIST'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TABLE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('reasons'),
-                        new \PHPStan\Type\Constant\ConstantStringType('analysisRuleType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('configurations'),
-                        new \PHPStan\Type\Constant\ConstantStringType('analysisType'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('READY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_READY'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('message'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ANALYSIS_RULE_MISSING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ANALYSIS_TEMPLATES_NOT_CONFIGURED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ANALYSIS_PROVIDERS_NOT_CONFIGURED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY_POLICY_NOT_CONFIGURED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE_NOT_POPULATED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('COLLABORATION_ANALYSIS_RULE_NOT_CONFIGURED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ADDITIONAL_ANALYSES_NOT_CONFIGURED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RESULT_RECEIVERS_NOT_CONFIGURED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ADDITIONAL_ANALYSES_NOT_ALLOWED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RESULT_RECEIVERS_NOT_ALLOWED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ANALYSIS_RULE_TYPES_NOT_COMPATIBLE'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LIST'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DIRECT_ANALYSIS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ADDITIONAL_ANALYSIS'),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('idMappingTable'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('idMappingTableInputSource'),
-                        ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('idNamespaceAssociationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
                                 new \PHPStan\Type\Constant\ConstantStringType('type'),
                             ], [
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LIST'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('reasons'),
+                                new \PHPStan\Type\Constant\ConstantStringType('analysisRuleType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('configurations'),
+                                new \PHPStan\Type\Constant\ConstantStringType('analysisType'),
+                            ], [
                                 new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_READY'),
                                 ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('code'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('ANALYSIS_RULE_MISSING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ANALYSIS_TEMPLATES_NOT_CONFIGURED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ANALYSIS_PROVIDERS_NOT_CONFIGURED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY_POLICY_NOT_CONFIGURED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE_NOT_POPULATED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('COLLABORATION_ANALYSIS_RULE_NOT_CONFIGURED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ADDITIONAL_ANALYSES_NOT_CONFIGURED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('RESULT_RECEIVERS_NOT_CONFIGURED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ADDITIONAL_ANALYSES_NOT_ALLOWED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('RESULT_RECEIVERS_NOT_ALLOWED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ANALYSIS_RULE_TYPES_NOT_COMPATIBLE'),
+                                        ]),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LIST'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
+                                ])),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_ANALYSIS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ADDITIONAL_ANALYSIS'),
+                                ]),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('idMappingTable'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('idMappingTableInputSource'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('idNamespaceAssociationId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
+                                        ]),
+                                    ]),
+                                ])),
                             ]),
                         ]),
                     ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('code'),
-                    new \PHPStan\Type\Constant\ConstantStringType('message'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -428,183 +458,223 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('analysisRules'),
                 new \PHPStan\Type\Constant\ConstantStringType('errors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('policy'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LIST'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('v1'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('policy'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LIST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('list'),
-                            new \PHPStan\Type\Constant\ConstantStringType('aggregation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('custom'),
-                            new \PHPStan\Type\Constant\ConstantStringType('idMappingTable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('v1'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('joinColumns'),
-                                new \PHPStan\Type\Constant\ConstantStringType('allowedJoinOperators'),
-                                new \PHPStan\Type\Constant\ConstantStringType('listColumns'),
-                                new \PHPStan\Type\Constant\ConstantStringType('additionalAnalyses'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AND'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_ALLOWED'),
-                                ]),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('aggregateColumns'),
-                                new \PHPStan\Type\Constant\ConstantStringType('joinColumns'),
-                                new \PHPStan\Type\Constant\ConstantStringType('joinRequired'),
-                                new \PHPStan\Type\Constant\ConstantStringType('allowedJoinOperators'),
-                                new \PHPStan\Type\Constant\ConstantStringType('dimensionColumns'),
-                                new \PHPStan\Type\Constant\ConstantStringType('scalarFunctions'),
-                                new \PHPStan\Type\Constant\ConstantStringType('outputConstraints'),
-                                new \PHPStan\Type\Constant\ConstantStringType('additionalAnalyses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('list'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aggregation'),
+                                new \PHPStan\Type\Constant\ConstantStringType('custom'),
+                                new \PHPStan\Type\Constant\ConstantStringType('idMappingTable'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('columnNames'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('function'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('joinColumns'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('allowedJoinOperators'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('listColumns'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('additionalAnalyses'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('SUM'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('SUM_DISTINCT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('AVG'),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantStringType('QUERY_RUNNER'),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AND'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ABS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CAST'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CEILING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COALESCE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CONVERT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CURRENT_DATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DATEADD'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EXTRACT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FLOOR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GETDATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LOG'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LOWER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ROUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RTRIM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SQRT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBSTRING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TO_CHAR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TO_DATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TO_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TO_TIMESTAMP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TRIM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TRUNC'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UPPER'),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('columnName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('minimum'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_ALLOWED'),
-                                ]),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('allowedAnalyses'),
-                                new \PHPStan\Type\Constant\ConstantStringType('allowedAnalysisProviders'),
-                                new \PHPStan\Type\Constant\ConstantStringType('additionalAnalyses'),
-                                new \PHPStan\Type\Constant\ConstantStringType('disallowedOutputColumns'),
-                                new \PHPStan\Type\Constant\ConstantStringType('differentialPrivacy'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_ALLOWED'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('columns'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NOT_ALLOWED'),
                                     ]),
                                 ]),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('joinColumns'),
-                                new \PHPStan\Type\Constant\ConstantStringType('queryConstraints'),
-                                new \PHPStan\Type\Constant\ConstantStringType('dimensionColumns'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('requireOverlap'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('aggregateColumns'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('joinColumns'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('joinRequired'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('allowedJoinOperators'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('dimensionColumns'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('scalarFunctions'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('outputConstraints'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('additionalAnalyses'),
                                 ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('columnNames'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('function'),
+                                        ], [
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('SUM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SUM_DISTINCT'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('AVG'),
+                                            ]),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\Constant\ConstantStringType('QUERY_RUNNER'),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('ABS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CAST'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CEILING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('COALESCE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CONVERT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CURRENT_DATE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DATEADD'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('EXTRACT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('FLOOR'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('GETDATE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('LN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('LOG'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('LOWER'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ROUND'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('RTRIM'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SQRT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SUBSTRING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TO_CHAR'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TO_DATE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TO_NUMBER'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TO_TIMESTAMP'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TRIM'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TRUNC'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UPPER'),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('columnName'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('minimum'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NOT_ALLOWED'),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('allowedAnalyses'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('allowedAnalysisProviders'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('additionalAnalyses'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('disallowedOutputColumns'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('differentialPrivacy'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NOT_ALLOWED'),
+                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('columns'),
                                     ], [
-                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                        ])),
                                     ]),
                                 ]),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('joinColumns'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('queryConstraints'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('dimensionColumns'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('requireOverlap'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('columns'),
+                                            ], [
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                ]),
                             ]),
                         ]),
                     ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('code'),
-                    new \PHPStan\Type\Constant\ConstantStringType('message'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LIST'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LIST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -644,7 +714,9 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('referencedTables'),
                     ], [
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantStringType('SQL'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -652,61 +724,67 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ], [
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SMALLINT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTEGER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BIGINT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DECIMAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DOUBLE_PRECISION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CHAR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VARCHAR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMPTZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMETZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VARBYTE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BINARY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BYTE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CHARACTER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DOUBLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLOAT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LONG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NUMERIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SHORT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STRING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP_LTZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP_NTZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TINYINT'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('reasons'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('VALID'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INVALID'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNABLE_TO_VALIDATE'),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SMALLINT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INTEGER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BIGINT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DECIMAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('REAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DOUBLE_PRECISION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CHAR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VARCHAR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMPTZ'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMETZ'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VARBYTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BINARY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BYTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CHARACTER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DOUBLE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FLOAT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LONG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NUMERIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SHORT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STRING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP_LTZ'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP_NTZ'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TINYINT'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('reasons'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VALID'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INVALID'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UNABLE_TO_VALIDATE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('message'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -858,13 +936,15 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('v1'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('columnName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('columnType'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('columnName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('columnType'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
                             ]),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -881,13 +961,17 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LIST'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LIST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
             ]),
         ]);
@@ -922,12 +1006,18 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\Constant\ConstantStringType('listColumns'),
                                 new \PHPStan\Type\Constant\ConstantStringType('additionalAnalyses'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AND'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
@@ -944,61 +1034,75 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\Constant\ConstantStringType('outputConstraints'),
                                 new \PHPStan\Type\Constant\ConstantStringType('additionalAnalyses'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('columnNames'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('function'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('SUM'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('SUM_DISTINCT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('AVG'),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('columnNames'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('function'),
+                                    ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\StringType(),
+                                        ])),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('SUM'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SUM_DISTINCT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('AVG'),
+                                        ]),
                                     ]),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantStringType('QUERY_RUNNER'),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AND'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ABS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CAST'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CEILING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COALESCE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CONVERT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CURRENT_DATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DATEADD'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EXTRACT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FLOOR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GETDATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LOG'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LOWER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ROUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RTRIM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SQRT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBSTRING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TO_CHAR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TO_DATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TO_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TO_TIMESTAMP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TRIM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TRUNC'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UPPER'),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('columnName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('minimum'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                                ], [
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
-                                ]),
+                                ])),
+                                new \PHPStan\Type\Constant\ConstantStringType('QUERY_RUNNER'),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ABS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CAST'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CEILING'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('COALESCE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CONVERT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CURRENT_DATE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DATEADD'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EXTRACT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('FLOOR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('GETDATE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LN'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LOG'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LOWER'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ROUND'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RTRIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SQRT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SUBSTRING'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TO_CHAR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TO_DATE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TO_NUMBER'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TO_TIMESTAMP'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TRIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TRUNC'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UPPER'),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('columnName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('minimum'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
+                                    ]),
+                                ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
@@ -1012,22 +1116,30 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\Constant\ConstantStringType('disallowedOutputColumns'),
                                 new \PHPStan\Type\Constant\ConstantStringType('differentialPrivacy'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('NOT_ALLOWED'),
                                 ]),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('columns'),
                                 ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                    ])),
                                 ]),
                             ]),
                         ]),
@@ -1072,11 +1184,13 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LIST'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LIST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -1113,22 +1227,34 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\Constant\ConstantStringType('allowedResultReceivers'),
                                 new \PHPStan\Type\Constant\ConstantStringType('allowedAdditionalAnalyses'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('allowedResultReceivers'),
                                 new \PHPStan\Type\Constant\ConstantStringType('allowedAdditionalAnalyses'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('allowedResultReceivers'),
                                 new \PHPStan\Type\Constant\ConstantStringType('allowedAdditionalAnalyses'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
                         ]),
                     ]),
@@ -1184,16 +1310,18 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('idMappingTableInputSource'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('idNamespaceAssociationId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('idNamespaceAssociationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
+                                ]),
                             ]),
-                        ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -1246,7 +1374,9 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
                             new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('allowUseAsDimensionColumn'),
@@ -1294,17 +1424,21 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('REMOVED'),
                         new \PHPStan\Type\Constant\ConstantStringType('COLLABORATION_DELETED'),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CAN_QUERY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_RESULTS'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CAN_QUERY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_RESULTS'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('customMLMemberAbilities'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_MODEL_OUTPUT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_INFERENCE_OUTPUT'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_MODEL_OUTPUT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_INFERENCE_OUTPUT'),
+                            ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -1518,7 +1652,9 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('referencedTables'),
                     ], [
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantStringType('SQL'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1526,61 +1662,67 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ], [
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SMALLINT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTEGER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BIGINT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DECIMAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DOUBLE_PRECISION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CHAR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VARCHAR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMPTZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMETZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VARBYTE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BINARY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BYTE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CHARACTER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DOUBLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLOAT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LONG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NUMERIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SHORT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STRING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP_LTZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP_NTZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TINYINT'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('reasons'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('VALID'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INVALID'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNABLE_TO_VALIDATE'),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SMALLINT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INTEGER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BIGINT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DECIMAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('REAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DOUBLE_PRECISION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CHAR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VARCHAR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMPTZ'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMETZ'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VARBYTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BINARY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BYTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CHARACTER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DOUBLE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FLOAT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LONG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NUMERIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SHORT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STRING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP_LTZ'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP_NTZ'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TINYINT'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('reasons'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VALID'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INVALID'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UNABLE_TO_VALIDATE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('message'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1680,7 +1822,9 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('referencedTables'),
                     ], [
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantStringType('SQL'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1688,61 +1832,67 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ], [
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SMALLINT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTEGER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BIGINT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DECIMAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DOUBLE_PRECISION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CHAR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VARCHAR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMPTZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMETZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VARBYTE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BINARY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BYTE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CHARACTER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DOUBLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLOAT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LONG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NUMERIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SHORT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STRING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP_LTZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP_NTZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TINYINT'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('reasons'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('VALID'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INVALID'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNABLE_TO_VALIDATE'),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SMALLINT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INTEGER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BIGINT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DECIMAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('REAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DOUBLE_PRECISION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CHAR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VARCHAR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMPTZ'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMETZ'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VARBYTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BINARY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BYTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CHARACTER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DOUBLE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FLOAT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LONG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NUMERIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SHORT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STRING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP_LTZ'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP_NTZ'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TINYINT'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('reasons'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VALID'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INVALID'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UNABLE_TO_VALIDATE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('message'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1823,7 +1973,9 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
                             new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('allowUseAsDimensionColumn'),
@@ -1965,13 +2117,15 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('v1'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('columnName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('columnType'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('columnName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('columnType'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
                             ]),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1988,13 +2142,17 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LIST'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LIST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
             ]),
         ]);
@@ -2029,12 +2187,18 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\Constant\ConstantStringType('listColumns'),
                                 new \PHPStan\Type\Constant\ConstantStringType('additionalAnalyses'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AND'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
@@ -2051,61 +2215,75 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\Constant\ConstantStringType('outputConstraints'),
                                 new \PHPStan\Type\Constant\ConstantStringType('additionalAnalyses'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('columnNames'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('function'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('SUM'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('SUM_DISTINCT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('AVG'),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('columnNames'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('function'),
+                                    ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\StringType(),
+                                        ])),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('SUM'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SUM_DISTINCT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('AVG'),
+                                        ]),
                                     ]),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantStringType('QUERY_RUNNER'),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AND'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ABS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CAST'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CEILING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COALESCE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CONVERT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CURRENT_DATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DATEADD'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EXTRACT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FLOOR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GETDATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LOG'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LOWER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ROUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RTRIM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SQRT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBSTRING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TO_CHAR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TO_DATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TO_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TO_TIMESTAMP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TRIM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TRUNC'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UPPER'),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('columnName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('minimum'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                                ], [
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
-                                ]),
+                                ])),
+                                new \PHPStan\Type\Constant\ConstantStringType('QUERY_RUNNER'),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ABS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CAST'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CEILING'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('COALESCE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CONVERT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CURRENT_DATE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DATEADD'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EXTRACT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('FLOOR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('GETDATE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LN'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LOG'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LOWER'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ROUND'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RTRIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SQRT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SUBSTRING'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TO_CHAR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TO_DATE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TO_NUMBER'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TO_TIMESTAMP'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TRIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TRUNC'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UPPER'),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('columnName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('minimum'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
+                                    ]),
+                                ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
@@ -2119,22 +2297,30 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\Constant\ConstantStringType('disallowedOutputColumns'),
                                 new \PHPStan\Type\Constant\ConstantStringType('differentialPrivacy'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('NOT_ALLOWED'),
                                 ]),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('columns'),
                                 ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                    ])),
                                 ]),
                             ]),
                         ]),
@@ -2179,11 +2365,13 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LIST'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LIST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -2220,22 +2408,34 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\Constant\ConstantStringType('allowedResultReceivers'),
                                 new \PHPStan\Type\Constant\ConstantStringType('allowedAdditionalAnalyses'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('allowedResultReceivers'),
                                 new \PHPStan\Type\Constant\ConstantStringType('allowedAdditionalAnalyses'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('allowedResultReceivers'),
                                 new \PHPStan\Type\Constant\ConstantStringType('allowedAdditionalAnalyses'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
                         ]),
                     ]),
@@ -2291,16 +2491,18 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('idMappingTableInputSource'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('idNamespaceAssociationId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('idNamespaceAssociationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
+                                ]),
                             ]),
-                        ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -2353,7 +2555,9 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
                             new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('allowUseAsDimensionColumn'),
@@ -2401,17 +2605,21 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('REMOVED'),
                         new \PHPStan\Type\Constant\ConstantStringType('COLLABORATION_DELETED'),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CAN_QUERY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_RESULTS'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CAN_QUERY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_RESULTS'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('customMLMemberAbilities'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_MODEL_OUTPUT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_INFERENCE_OUTPUT'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_MODEL_OUTPUT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_INFERENCE_OUTPUT'),
+                            ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -2610,11 +2818,13 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             ], [
                                 new \PHPStan\Type\StringType(),
                             ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('accountId'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2627,25 +2837,27 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('sensitivityParameters'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('aggregationType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('aggregationExpression'),
-                            new \PHPStan\Type\Constant\ConstantStringType('userContributionLimit'),
-                            new \PHPStan\Type\Constant\ConstantStringType('minColumnValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('maxColumnValue'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AVG'),
-                                new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('STDDEV'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('aggregationType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aggregationExpression'),
+                                new \PHPStan\Type\Constant\ConstantStringType('userContributionLimit'),
+                                new \PHPStan\Type\Constant\ConstantStringType('minColumnValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maxColumnValue'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('AVG'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SUM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STDDEV'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
                             ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('worker'),
@@ -2687,26 +2899,32 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('schemaStatusDetails'),
                     new \PHPStan\Type\Constant\ConstantStringType('schemaTypeProperties'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LIST'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LIST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2719,64 +2937,72 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('TABLE'),
                         new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('reasons'),
-                        new \PHPStan\Type\Constant\ConstantStringType('analysisRuleType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('configurations'),
-                        new \PHPStan\Type\Constant\ConstantStringType('analysisType'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('READY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_READY'),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('reasons'),
+                            new \PHPStan\Type\Constant\ConstantStringType('analysisRuleType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('configurations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('analysisType'),
                         ], [
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ANALYSIS_RULE_MISSING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ANALYSIS_TEMPLATES_NOT_CONFIGURED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ANALYSIS_PROVIDERS_NOT_CONFIGURED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY_POLICY_NOT_CONFIGURED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE_NOT_POPULATED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('COLLABORATION_ANALYSIS_RULE_NOT_CONFIGURED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ADDITIONAL_ANALYSES_NOT_CONFIGURED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RESULT_RECEIVERS_NOT_CONFIGURED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ADDITIONAL_ANALYSES_NOT_ALLOWED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RESULT_RECEIVERS_NOT_ALLOWED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ANALYSIS_RULE_TYPES_NOT_COMPATIBLE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NOT_READY'),
                             ]),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('code'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('message'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ANALYSIS_RULE_MISSING'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ANALYSIS_TEMPLATES_NOT_CONFIGURED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ANALYSIS_PROVIDERS_NOT_CONFIGURED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY_POLICY_NOT_CONFIGURED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE_NOT_POPULATED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('COLLABORATION_ANALYSIS_RULE_NOT_CONFIGURED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ADDITIONAL_ANALYSES_NOT_CONFIGURED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RESULT_RECEIVERS_NOT_CONFIGURED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ADDITIONAL_ANALYSES_NOT_ALLOWED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RESULT_RECEIVERS_NOT_ALLOWED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ANALYSIS_RULE_TYPES_NOT_COMPATIBLE'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LIST'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
+                            ])),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_ANALYSIS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ADDITIONAL_ANALYSIS'),
+                            ]),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LIST'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DIRECT_ANALYSIS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ADDITIONAL_ANALYSIS'),
-                        ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('idMappingTable'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('idMappingTableInputSource'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('idNamespaceAssociationId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('idNamespaceAssociationId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
+                                    ]),
                                 ]),
-                            ]),
+                            ])),
                         ]),
                     ]),
                 ]),
@@ -2822,12 +3048,18 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\Constant\ConstantStringType('listColumns'),
                                 new \PHPStan\Type\Constant\ConstantStringType('additionalAnalyses'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AND'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
@@ -2844,61 +3076,75 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\Constant\ConstantStringType('outputConstraints'),
                                 new \PHPStan\Type\Constant\ConstantStringType('additionalAnalyses'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('columnNames'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('function'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('SUM'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('SUM_DISTINCT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('AVG'),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('columnNames'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('function'),
+                                    ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\StringType(),
+                                        ])),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('SUM'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SUM_DISTINCT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('AVG'),
+                                        ]),
                                     ]),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantStringType('QUERY_RUNNER'),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AND'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ABS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CAST'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CEILING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COALESCE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CONVERT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CURRENT_DATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DATEADD'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EXTRACT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FLOOR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GETDATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LOG'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LOWER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ROUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RTRIM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SQRT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBSTRING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TO_CHAR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TO_DATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TO_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TO_TIMESTAMP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TRIM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TRUNC'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UPPER'),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('columnName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('minimum'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                                ], [
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
-                                ]),
+                                ])),
+                                new \PHPStan\Type\Constant\ConstantStringType('QUERY_RUNNER'),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ABS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CAST'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CEILING'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('COALESCE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CONVERT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CURRENT_DATE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DATEADD'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EXTRACT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('FLOOR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('GETDATE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LN'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LOG'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LOWER'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ROUND'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RTRIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SQRT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SUBSTRING'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TO_CHAR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TO_DATE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TO_NUMBER'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TO_TIMESTAMP'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TRIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TRUNC'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UPPER'),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('columnName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('minimum'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
+                                    ]),
+                                ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
@@ -2912,22 +3158,30 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\Constant\ConstantStringType('disallowedOutputColumns'),
                                 new \PHPStan\Type\Constant\ConstantStringType('differentialPrivacy'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('NOT_ALLOWED'),
                                 ]),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('columns'),
                                 ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                    ])),
                                 ]),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2935,17 +3189,25 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\Constant\ConstantStringType('queryConstraints'),
                                 new \PHPStan\Type\Constant\ConstantStringType('dimensionColumns'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('requireOverlap'),
-                                ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('columns'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('requireOverlap'),
                                     ], [
-                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('columns'),
+                                        ], [
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                        ]),
                                     ]),
-                                ]),
-                                new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
                         ]),
                     ]),
@@ -2961,29 +3223,31 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('analysisTemplateSummaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -2995,27 +3259,29 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('collaborationAnalysisTemplateSummaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -3026,27 +3292,29 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('collaborationConfiguredAudienceModelAssociationSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3059,44 +3327,46 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('collaborationIdNamespaceAssociationSummaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('inputReferenceConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('inputReferenceProperties'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('inputReferenceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('manageResourcePolicies'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputReferenceConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputReferenceProperties'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('idNamespaceType'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('inputReferenceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('manageResourcePolicies'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('idNamespaceType'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
+                            ]),
                         ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -3108,25 +3378,27 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('collaborationPrivacyBudgetTemplateSummaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('privacyBudgetType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('privacyBudgetType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -3137,53 +3409,57 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('collaborationPrivacyBudgetSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('privacyBudgetTemplateId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('privacyBudgetTemplateArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('budget'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('differentialPrivacy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('privacyBudgetTemplateId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('privacyBudgetTemplateArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('budget'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('aggregations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('epsilon'),
+                            new \PHPStan\Type\Constant\ConstantStringType('differentialPrivacy'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('maxCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('remainingCount'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aggregations'),
+                                new \PHPStan\Type\Constant\ConstantStringType('epsilon'),
                             ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AVG'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('STDDEV'),
-                                ]),
-                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxCount'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('remainingCount'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('AVG'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SUM'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('STDDEV'),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                ])),
                                 new \PHPStan\Type\IntegerType(),
                             ]),
-                            new \PHPStan\Type\IntegerType(),
                         ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3196,39 +3472,41 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('collaborationList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creatorDisplayName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('memberStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('analyticsEngine'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('INVITED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LEFT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REMOVED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creatorDisplayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('memberStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('analyticsEngine'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INVITED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LEFT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REMOVED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SPARK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLEAN_ROOMS_SQL'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SPARK'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CLEAN_ROOMS_SQL'),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -3239,31 +3517,33 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('configuredAudienceModelAssociationSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('configuredAudienceModelArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredAudienceModelArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3275,25 +3555,27 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('configuredTableAssociationSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('configuredTableId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredTableId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3305,27 +3587,31 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('configuredTableSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('analysisRuleTypes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('analysisMethod'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LIST'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('analysisRuleTypes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('analysisMethod'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LIST'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3337,37 +3623,39 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('idMappingTableSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('inputReferenceConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('inputReferenceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('manageResourcePolicies'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputReferenceConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('inputReferenceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('manageResourcePolicies'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3380,46 +3668,48 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('idNamespaceAssociationSummaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('inputReferenceConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('inputReferenceProperties'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('inputReferenceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('manageResourcePolicies'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputReferenceConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputReferenceProperties'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('idNamespaceType'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('inputReferenceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('manageResourcePolicies'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('idNamespaceType'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
+                            ]),
                         ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -3431,54 +3721,50 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('memberSummaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('accountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('displayName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('abilities'),
-                    new \PHPStan\Type\Constant\ConstantStringType('mlAbilities'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('paymentConfiguration'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('INVITED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LEFT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REMOVED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CAN_QUERY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_RESULTS'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('customMLMemberAbilities'),
+                        new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('displayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('abilities'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mlAbilities'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('paymentConfiguration'),
                     ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_MODEL_OUTPUT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_INFERENCE_OUTPUT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVITED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LEFT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REMOVED'),
                         ]),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('queryCompute'),
-                        new \PHPStan\Type\Constant\ConstantStringType('machineLearning'),
-                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CAN_QUERY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_RESULTS'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('isResponsible'),
+                            new \PHPStan\Type\Constant\ConstantStringType('customMLMemberAbilities'),
                         ], [
-                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_MODEL_OUTPUT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_INFERENCE_OUTPUT'),
+                                ]),
+                            ])),
                         ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('modelTraining'),
-                            new \PHPStan\Type\Constant\ConstantStringType('modelInference'),
+                            new \PHPStan\Type\Constant\ConstantStringType('queryCompute'),
+                            new \PHPStan\Type\Constant\ConstantStringType('machineLearning'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('isResponsible'),
@@ -3486,13 +3772,23 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\BooleanType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('isResponsible'),
+                                new \PHPStan\Type\Constant\ConstantStringType('modelTraining'),
+                                new \PHPStan\Type\Constant\ConstantStringType('modelInference'),
                             ], [
-                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('isResponsible'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('isResponsible'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                ]),
                             ]),
                         ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -3504,59 +3800,55 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('membershipSummaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationCreatorAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationCreatorDisplayName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('memberAbilities'),
-                    new \PHPStan\Type\Constant\ConstantStringType('mlMemberAbilities'),
-                    new \PHPStan\Type\Constant\ConstantStringType('paymentConfiguration'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REMOVED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COLLABORATION_DELETED'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CAN_QUERY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_RESULTS'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('customMLMemberAbilities'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationCreatorAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationCreatorDisplayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('memberAbilities'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mlMemberAbilities'),
+                        new \PHPStan\Type\Constant\ConstantStringType('paymentConfiguration'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_MODEL_OUTPUT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_INFERENCE_OUTPUT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REMOVED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COLLABORATION_DELETED'),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('queryCompute'),
-                        new \PHPStan\Type\Constant\ConstantStringType('machineLearning'),
-                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CAN_QUERY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_RESULTS'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('isResponsible'),
+                            new \PHPStan\Type\Constant\ConstantStringType('customMLMemberAbilities'),
                         ], [
-                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_MODEL_OUTPUT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_INFERENCE_OUTPUT'),
+                                ]),
+                            ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('modelTraining'),
-                            new \PHPStan\Type\Constant\ConstantStringType('modelInference'),
+                            new \PHPStan\Type\Constant\ConstantStringType('queryCompute'),
+                            new \PHPStan\Type\Constant\ConstantStringType('machineLearning'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('isResponsible'),
@@ -3564,13 +3856,23 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\BooleanType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('isResponsible'),
+                                new \PHPStan\Type\Constant\ConstantStringType('modelTraining'),
+                                new \PHPStan\Type\Constant\ConstantStringType('modelInference'),
                             ], [
-                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('isResponsible'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('isResponsible'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                ]),
                             ]),
                         ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -3582,27 +3884,29 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('privacyBudgetTemplateSummaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('privacyBudgetType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('privacyBudgetType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -3613,55 +3917,59 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('privacyBudgetSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('privacyBudgetTemplateId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('privacyBudgetTemplateArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('budget'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('differentialPrivacy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('privacyBudgetTemplateId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('privacyBudgetTemplateArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('budget'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('aggregations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('epsilon'),
+                            new \PHPStan\Type\Constant\ConstantStringType('differentialPrivacy'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('maxCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('remainingCount'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aggregations'),
+                                new \PHPStan\Type\Constant\ConstantStringType('epsilon'),
                             ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AVG'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('STDDEV'),
-                                ]),
-                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxCount'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('remainingCount'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('AVG'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SUM'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('STDDEV'),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                ])),
                                 new \PHPStan\Type\IntegerType(),
                             ]),
-                            new \PHPStan\Type\IntegerType(),
                         ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3674,46 +3982,52 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('protectedQueries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('receiverConfigurations'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SUBMITTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STARTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TIMED_OUT'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('analysisType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('configurationDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('receiverConfigurations'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DIRECT_ANALYSIS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ADDITIONAL_ANALYSIS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBMITTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STARTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TIMED_OUT'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('directAnalysisConfigurationDetails'),
-                        ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('receiverAccountIds'),
+                                new \PHPStan\Type\Constant\ConstantStringType('analysisType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('configurationDetails'),
                             ], [
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_ANALYSIS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ADDITIONAL_ANALYSIS'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('directAnalysisConfigurationDetails'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('receiverAccountIds'),
+                                    ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\StringType(),
+                                        ])),
+                                    ]),
+                                ]),
                             ]),
-                        ]),
+                        ])),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -3724,35 +4038,39 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('schemaSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('analysisRuleTypes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('analysisMethod'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TABLE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('analysisRuleTypes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('analysisMethod'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LIST'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LIST'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3789,19 +4107,21 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('aggregations'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('maxCount'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AVG'),
-                                new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('STDDEV'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maxCount'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('AVG'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SUM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STDDEV'),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
                             ]),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                        ])),
                     ]),
                 ]),
             ]),
@@ -3900,11 +4220,13 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             ], [
                                 new \PHPStan\Type\StringType(),
                             ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('accountId'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3917,25 +4239,27 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('sensitivityParameters'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('aggregationType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('aggregationExpression'),
-                            new \PHPStan\Type\Constant\ConstantStringType('userContributionLimit'),
-                            new \PHPStan\Type\Constant\ConstantStringType('minColumnValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('maxColumnValue'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AVG'),
-                                new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('STDDEV'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('aggregationType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aggregationExpression'),
+                                new \PHPStan\Type\Constant\ConstantStringType('userContributionLimit'),
+                                new \PHPStan\Type\Constant\ConstantStringType('minColumnValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maxColumnValue'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('AVG'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SUM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STDDEV'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
                             ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('worker'),
@@ -4003,7 +4327,9 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('referencedTables'),
                     ], [
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantStringType('SQL'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4011,61 +4337,67 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ], [
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SMALLINT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTEGER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BIGINT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DECIMAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DOUBLE_PRECISION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CHAR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VARCHAR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMPTZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMETZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VARBYTE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BINARY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BYTE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CHARACTER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DOUBLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLOAT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LONG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NUMERIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SHORT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STRING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP_LTZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP_NTZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TINYINT'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('reasons'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('VALID'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INVALID'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNABLE_TO_VALIDATE'),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SMALLINT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INTEGER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BIGINT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DECIMAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('REAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DOUBLE_PRECISION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CHAR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VARCHAR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMPTZ'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMETZ'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VARBYTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BINARY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BYTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CHARACTER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DOUBLE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FLOAT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LONG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NUMERIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SHORT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STRING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP_LTZ'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP_NTZ'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TINYINT'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('reasons'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('DIFFERENTIAL_PRIVACY'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VALID'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INVALID'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UNABLE_TO_VALIDATE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('message'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -4217,13 +4549,15 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('v1'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('columnName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('columnType'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('columnName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('columnType'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
                             ]),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4240,13 +4574,17 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LIST'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LIST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
             ]),
         ]);
@@ -4281,12 +4619,18 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\Constant\ConstantStringType('listColumns'),
                                 new \PHPStan\Type\Constant\ConstantStringType('additionalAnalyses'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AND'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
@@ -4303,61 +4647,75 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\Constant\ConstantStringType('outputConstraints'),
                                 new \PHPStan\Type\Constant\ConstantStringType('additionalAnalyses'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('columnNames'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('function'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('SUM'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('SUM_DISTINCT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('AVG'),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('columnNames'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('function'),
+                                    ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\StringType(),
+                                        ])),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('SUM'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SUM_DISTINCT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('AVG'),
+                                        ]),
                                     ]),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantStringType('QUERY_RUNNER'),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AND'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ABS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CAST'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CEILING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COALESCE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CONVERT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CURRENT_DATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DATEADD'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EXTRACT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FLOOR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GETDATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LOG'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LOWER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ROUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RTRIM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SQRT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBSTRING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TO_CHAR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TO_DATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TO_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TO_TIMESTAMP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TRIM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TRUNC'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UPPER'),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('columnName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('minimum'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                                ], [
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
-                                ]),
+                                ])),
+                                new \PHPStan\Type\Constant\ConstantStringType('QUERY_RUNNER'),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ABS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CAST'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CEILING'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('COALESCE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CONVERT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CURRENT_DATE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DATEADD'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EXTRACT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('FLOOR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('GETDATE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LN'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LOG'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LOWER'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ROUND'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RTRIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SQRT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SUBSTRING'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TO_CHAR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TO_DATE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TO_NUMBER'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TO_TIMESTAMP'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TRIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TRUNC'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UPPER'),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('columnName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('minimum'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
+                                    ]),
+                                ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
@@ -4371,22 +4729,30 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\Constant\ConstantStringType('disallowedOutputColumns'),
                                 new \PHPStan\Type\Constant\ConstantStringType('differentialPrivacy'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('NOT_ALLOWED'),
                                 ]),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('columns'),
                                 ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                    ])),
                                 ]),
                             ]),
                         ]),
@@ -4431,11 +4797,13 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LIST'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LIST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -4472,22 +4840,34 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\Constant\ConstantStringType('allowedResultReceivers'),
                                 new \PHPStan\Type\Constant\ConstantStringType('allowedAdditionalAnalyses'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('allowedResultReceivers'),
                                 new \PHPStan\Type\Constant\ConstantStringType('allowedAdditionalAnalyses'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('allowedResultReceivers'),
                                 new \PHPStan\Type\Constant\ConstantStringType('allowedAdditionalAnalyses'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
                         ]),
                     ]),
@@ -4543,16 +4923,18 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('idMappingTableInputSource'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('idNamespaceAssociationId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('idNamespaceAssociationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
+                                ]),
                             ]),
-                        ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -4605,7 +4987,9 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
                             new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('allowUseAsDimensionColumn'),
@@ -4653,17 +5037,21 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('REMOVED'),
                         new \PHPStan\Type\Constant\ConstantStringType('COLLABORATION_DELETED'),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CAN_QUERY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_RESULTS'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CAN_QUERY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_RESULTS'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('customMLMemberAbilities'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_MODEL_OUTPUT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_INFERENCE_OUTPUT'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_MODEL_OUTPUT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_INFERENCE_OUTPUT'),
+                            ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -4862,11 +5250,13 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             ], [
                                 new \PHPStan\Type\StringType(),
                             ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('accountId'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4879,25 +5269,27 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('sensitivityParameters'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('aggregationType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('aggregationExpression'),
-                            new \PHPStan\Type\Constant\ConstantStringType('userContributionLimit'),
-                            new \PHPStan\Type\Constant\ConstantStringType('minColumnValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('maxColumnValue'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AVG'),
-                                new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('STDDEV'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('aggregationType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aggregationExpression'),
+                                new \PHPStan\Type\Constant\ConstantStringType('userContributionLimit'),
+                                new \PHPStan\Type\Constant\ConstantStringType('minColumnValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maxColumnValue'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('AVG'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SUM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STDDEV'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
                             ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('worker'),

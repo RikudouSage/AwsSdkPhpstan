@@ -136,7 +136,9 @@ final class DirectoryServiceDataClientReturnTypeExtension implements \PHPStan\Ty
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -174,7 +176,9 @@ final class DirectoryServiceDataClientReturnTypeExtension implements \PHPStan\Ty
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -202,19 +206,21 @@ final class DirectoryServiceDataClientReturnTypeExtension implements \PHPStan\Ty
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('MemberType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SAMAccountName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SID'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('USER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPUTER'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MemberType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SAMAccountName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SID'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('USER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPUTER'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -230,25 +236,27 @@ final class DirectoryServiceDataClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('Realm'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('GroupScope'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GroupType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SAMAccountName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SID'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DomainLocal'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Global'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Universal'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BuiltinLocal'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('GroupScope'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GroupType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SAMAccountName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SID'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DomainLocal'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Global'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Universal'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BuiltinLocal'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Distribution'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Security'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Distribution'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Security'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -265,25 +273,27 @@ final class DirectoryServiceDataClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('Realm'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('GroupScope'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GroupType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SAMAccountName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SID'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DomainLocal'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Global'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Universal'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BuiltinLocal'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('GroupScope'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GroupType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SAMAccountName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SID'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DomainLocal'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Global'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Universal'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BuiltinLocal'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Distribution'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Security'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Distribution'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Security'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -302,19 +312,21 @@ final class DirectoryServiceDataClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GivenName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SAMAccountName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SID'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Surname'),
-                ], [
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GivenName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SAMAccountName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SID'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Surname'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -334,39 +346,43 @@ final class DirectoryServiceDataClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('Realm'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DistinguishedName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GroupScope'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GroupType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OtherAttributes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SAMAccountName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SID'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DomainLocal'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Global'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Universal'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BuiltinLocal'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Distribution'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Security'),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('N'),
-                        new \PHPStan\Type\Constant\ConstantStringType('S'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SS'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DistinguishedName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GroupScope'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GroupType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OtherAttributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SAMAccountName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SID'),
                     ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DomainLocal'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Global'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Universal'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BuiltinLocal'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Distribution'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Security'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('N'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SS'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -384,37 +400,41 @@ final class DirectoryServiceDataClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DistinguishedName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GivenName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OtherAttributes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SAMAccountName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SID'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Surname'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserPrincipalName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('N'),
-                        new \PHPStan\Type\Constant\ConstantStringType('S'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SS'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DistinguishedName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GivenName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OtherAttributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SAMAccountName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SID'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Surname'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserPrincipalName'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BOOL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('N'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SS'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }

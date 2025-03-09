@@ -71,23 +71,25 @@ final class SocialMessagingClientReturnTypeExtension implements \PHPStan\Type\Dy
                             new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
                             new \PHPStan\Type\Constant\ConstantStringType('INCOMPLETE'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('phoneNumber'),
-                            new \PHPStan\Type\Constant\ConstantStringType('phoneNumberId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('metaPhoneNumberId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('displayPhoneNumberName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('displayPhoneNumber'),
-                            new \PHPStan\Type\Constant\ConstantStringType('qualityRating'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('phoneNumber'),
+                                new \PHPStan\Type\Constant\ConstantStringType('phoneNumberId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('metaPhoneNumberId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('displayPhoneNumberName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('displayPhoneNumber'),
+                                new \PHPStan\Type\Constant\ConstantStringType('qualityRating'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                         new \PHPStan\Type\StringType(),
                     ])),
                 ]),
@@ -136,30 +138,34 @@ final class SocialMessagingClientReturnTypeExtension implements \PHPStan\Type\Dy
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('eventDestinationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('phoneNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('phoneNumberId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('metaPhoneNumberId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('displayPhoneNumberName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('displayPhoneNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('qualityRating'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('eventDestinationArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('phoneNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('phoneNumberId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('metaPhoneNumberId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('displayPhoneNumberName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('displayPhoneNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('qualityRating'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -211,32 +217,36 @@ final class SocialMessagingClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('linkedAccounts'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('wabaId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('registrationStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('linkDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('wabaName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventDestinations'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INCOMPLETE'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('eventDestinationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('wabaId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('registrationStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('linkDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('wabaName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventDestinations'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INCOMPLETE'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('eventDestinationArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -249,13 +259,15 @@ final class SocialMessagingClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }

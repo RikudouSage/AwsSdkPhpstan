@@ -58,13 +58,15 @@ final class SSOClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('roleList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('roleName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('accountId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('roleName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -76,15 +78,17 @@ final class SSOClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('accountList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('accountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('accountName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('emailAddress'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('accountName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('emailAddress'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }

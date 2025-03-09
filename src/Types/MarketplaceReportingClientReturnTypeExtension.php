@@ -34,7 +34,9 @@ final class MarketplaceReportingClientReturnTypeExtension implements \PHPStan\Ty
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }

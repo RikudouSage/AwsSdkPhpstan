@@ -168,8 +168,12 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('status'),
                     new \PHPStan\Type\Constant\ConstantStringType('totalBackupSizeInMegaBytes'),
                 ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\FloatType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -241,35 +245,41 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('networkInterfaces'),
                         new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointId'),
                         new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
                     ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ipv6Address'),
+                                new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
+                                new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ipv6Address'),
-                            new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('vpcSecurityGroupId'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vpcSecurityGroupId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -302,13 +312,17 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('useractivitylog'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userlog'),
-                        new \PHPStan\Type\Constant\ConstantStringType('connectionlog'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('useractivitylog'),
+                            new \PHPStan\Type\Constant\ConstantStringType('userlog'),
+                            new \PHPStan\Type\Constant\ConstantStringType('connectionlog'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -342,7 +356,9 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                 ], [
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('at'),
@@ -371,13 +387,15 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                         ]),
                     ]),
                 ]),
@@ -414,8 +432,12 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('status'),
                     new \PHPStan\Type\Constant\ConstantStringType('totalBackupSizeInMegaBytes'),
                 ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\FloatType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -542,15 +564,19 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('workgroupVersion'),
                 ], [
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('parameterKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('parameterValue'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('parameterKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('parameterValue'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
@@ -561,27 +587,31 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('networkInterfaces'),
-                            new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
-                        ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ipv6Address'),
-                                new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('networkInterfaces'),
+                                new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ipv6Address'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
@@ -601,14 +631,18 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                         ]),
                     ]),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                         new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
                         new \PHPStan\Type\Constant\ConstantStringType('MODIFYING'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                     ]),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -648,35 +682,41 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('networkInterfaces'),
                         new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointId'),
                         new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
                     ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ipv6Address'),
+                                new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
+                                new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ipv6Address'),
-                            new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('vpcSecurityGroupId'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vpcSecurityGroupId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -709,13 +749,17 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('useractivitylog'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userlog'),
-                        new \PHPStan\Type\Constant\ConstantStringType('connectionlog'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('useractivitylog'),
+                            new \PHPStan\Type\Constant\ConstantStringType('userlog'),
+                            new \PHPStan\Type\Constant\ConstantStringType('connectionlog'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -755,7 +799,9 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                 ], [
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('at'),
@@ -784,13 +830,15 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                         ]),
                     ]),
                 ]),
@@ -827,8 +875,12 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('status'),
                     new \PHPStan\Type\Constant\ConstantStringType('totalBackupSizeInMegaBytes'),
                 ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\FloatType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -955,15 +1007,19 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('workgroupVersion'),
                 ], [
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('parameterKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('parameterValue'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('parameterKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('parameterValue'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
@@ -974,27 +1030,31 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('networkInterfaces'),
-                            new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
-                        ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ipv6Address'),
-                                new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('networkInterfaces'),
+                                new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ipv6Address'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
@@ -1014,14 +1074,18 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                         ]),
                     ]),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                         new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
                         new \PHPStan\Type\Constant\ConstantStringType('MODIFYING'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                     ]),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1087,35 +1151,41 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('networkInterfaces'),
                         new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointId'),
                         new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
                     ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ipv6Address'),
+                                new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
+                                new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ipv6Address'),
-                            new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('vpcSecurityGroupId'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vpcSecurityGroupId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -1148,13 +1218,17 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('useractivitylog'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userlog'),
-                        new \PHPStan\Type\Constant\ConstantStringType('connectionlog'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('useractivitylog'),
+                            new \PHPStan\Type\Constant\ConstantStringType('userlog'),
+                            new \PHPStan\Type\Constant\ConstantStringType('connectionlog'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1228,7 +1302,9 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                 ], [
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('at'),
@@ -1257,13 +1333,15 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                         ]),
                     ]),
                 ]),
@@ -1300,8 +1378,12 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('status'),
                     new \PHPStan\Type\Constant\ConstantStringType('totalBackupSizeInMegaBytes'),
                 ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\FloatType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1389,13 +1471,15 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('workgroupVersion'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('trackName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('workgroupVersion'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('trackName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('workgroupVersion'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -1472,15 +1556,19 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('workgroupVersion'),
                 ], [
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('parameterKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('parameterValue'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('parameterKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('parameterValue'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
@@ -1491,27 +1579,31 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('networkInterfaces'),
-                            new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
-                        ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ipv6Address'),
-                                new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('networkInterfaces'),
+                                new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ipv6Address'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
@@ -1531,14 +1623,18 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                         ]),
                     ]),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                         new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
                         new \PHPStan\Type\Constant\ConstantStringType('MODIFYING'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                     ]),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1555,17 +1651,19 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('associations'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('customDomainCertificateArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('customDomainCertificateExpiryTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('customDomainName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('workgroupName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('customDomainCertificateArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('customDomainCertificateExpiryTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('customDomainName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('workgroupName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1577,55 +1675,63 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('endpoints'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('address'),
-                    new \PHPStan\Type\Constant\ConstantStringType('endpointArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('endpointCreateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('endpointName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('endpointStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                    new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('vpcEndpoint'),
-                    new \PHPStan\Type\Constant\ConstantStringType('vpcSecurityGroups'),
-                    new \PHPStan\Type\Constant\ConstantStringType('workgroupName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('networkInterfaces'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('address'),
+                        new \PHPStan\Type\Constant\ConstantStringType('endpointArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('endpointCreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('endpointName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('endpointStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('port'),
+                        new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('vpcEndpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('vpcSecurityGroups'),
+                        new \PHPStan\Type\Constant\ConstantStringType('workgroupName'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ipv6Address'),
-                            new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('networkInterfaces'),
+                            new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ipv6Address'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('vpcSecurityGroupId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vpcSecurityGroupId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1637,25 +1743,27 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('managedWorkgroups'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('creationDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('managedWorkgroupId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('managedWorkgroupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('sourceArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MODIFYING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NOT_AVAILABLE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('creationDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('managedWorkgroupId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('managedWorkgroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MODIFYING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_AVAILABLE'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1667,43 +1775,49 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('namespaces'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('adminPasswordSecretArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('adminPasswordSecretKmsKeyId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('adminUsername'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creationDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('dbName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('defaultIamRoleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('iamRoles'),
-                    new \PHPStan\Type\Constant\ConstantStringType('kmsKeyId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('logExports'),
-                    new \PHPStan\Type\Constant\ConstantStringType('namespaceArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('namespaceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('namespaceName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('useractivitylog'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userlog'),
-                        new \PHPStan\Type\Constant\ConstantStringType('connectionlog'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('adminPasswordSecretArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('adminPasswordSecretKmsKeyId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('adminUsername'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dbName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('defaultIamRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('iamRoles'),
+                        new \PHPStan\Type\Constant\ConstantStringType('kmsKeyId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('logExports'),
+                        new \PHPStan\Type\Constant\ConstantStringType('namespaceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('namespaceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('namespaceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('useractivitylog'),
+                                new \PHPStan\Type\Constant\ConstantStringType('userlog'),
+                                new \PHPStan\Type\Constant\ConstantStringType('connectionlog'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MODIFYING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MODIFYING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1716,21 +1830,23 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('recoveryPoints'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('namespaceArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('namespaceName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('recoveryPointCreateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('recoveryPointId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('totalSizeInMegaBytes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('workgroupName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('namespaceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('namespaceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('recoveryPointCreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('recoveryPointId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('totalSizeInMegaBytes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('workgroupName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1742,13 +1858,15 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('scheduledActions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('namespaceName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('scheduledActionName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('namespaceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('scheduledActionName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1760,21 +1878,23 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('snapshotCopyConfigurations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('destinationKmsKeyId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('destinationRegion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('namespaceName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('snapshotCopyConfigurationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('snapshotCopyConfigurationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('snapshotRetentionPeriod'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('destinationKmsKeyId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('destinationRegion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('namespaceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('snapshotCopyConfigurationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('snapshotCopyConfigurationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('snapshotRetentionPeriod'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1786,60 +1906,66 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('snapshots'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('accountsWithProvisionedRestoreAccess'),
-                    new \PHPStan\Type\Constant\ConstantStringType('accountsWithRestoreAccess'),
-                    new \PHPStan\Type\Constant\ConstantStringType('actualIncrementalBackupSizeInMegaBytes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('adminPasswordSecretArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('adminPasswordSecretKmsKeyId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('adminUsername'),
-                    new \PHPStan\Type\Constant\ConstantStringType('backupProgressInMegaBytes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('currentBackupRateInMegaBytesPerSecond'),
-                    new \PHPStan\Type\Constant\ConstantStringType('elapsedTimeInSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('estimatedSecondsToCompletion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('kmsKeyId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('namespaceArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('namespaceName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ownerAccount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('snapshotArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('snapshotCreateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('snapshotName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('snapshotRemainingDays'),
-                    new \PHPStan\Type\Constant\ConstantStringType('snapshotRetentionPeriod'),
-                    new \PHPStan\Type\Constant\ConstantStringType('snapshotRetentionStartTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('totalBackupSizeInMegaBytes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COPYING'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('accountsWithProvisionedRestoreAccess'),
+                        new \PHPStan\Type\Constant\ConstantStringType('accountsWithRestoreAccess'),
+                        new \PHPStan\Type\Constant\ConstantStringType('actualIncrementalBackupSizeInMegaBytes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('adminPasswordSecretArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('adminPasswordSecretKmsKeyId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('adminUsername'),
+                        new \PHPStan\Type\Constant\ConstantStringType('backupProgressInMegaBytes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('currentBackupRateInMegaBytesPerSecond'),
+                        new \PHPStan\Type\Constant\ConstantStringType('elapsedTimeInSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('estimatedSecondsToCompletion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('kmsKeyId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('namespaceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('namespaceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ownerAccount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('snapshotArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('snapshotCreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('snapshotName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('snapshotRemainingDays'),
+                        new \PHPStan\Type\Constant\ConstantStringType('snapshotRetentionPeriod'),
+                        new \PHPStan\Type\Constant\ConstantStringType('snapshotRetentionStartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('totalBackupSizeInMegaBytes'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COPYING'),
+                        ]),
+                        new \PHPStan\Type\FloatType(),
                     ]),
-                    new \PHPStan\Type\FloatType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1851,41 +1977,43 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('tableRestoreStatuses'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('namespaceName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('newTableName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('progressInMegaBytes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('recoveryPointId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('requestTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('snapshotName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('sourceDatabaseName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('sourceSchemaName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('sourceTableName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tableRestoreRequestId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('targetDatabaseName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('targetSchemaName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('totalDataInMegaBytes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('workgroupName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('namespaceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('newTableName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('progressInMegaBytes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('recoveryPointId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('requestTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('snapshotName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceDatabaseName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceSchemaName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceTableName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tableRestoreRequestId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('targetDatabaseName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('targetSchemaName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('totalDataInMegaBytes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('workgroupName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1895,13 +2023,15 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1913,21 +2043,25 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('tracks'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('trackName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTargets'),
-                    new \PHPStan\Type\Constant\ConstantStringType('workgroupVersion'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('trackName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTargets'),
                         new \PHPStan\Type\Constant\ConstantStringType('workgroupVersion'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('trackName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('workgroupVersion'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1939,34 +2073,36 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('usageLimits'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('amount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('breachAction'),
-                    new \PHPStan\Type\Constant\ConstantStringType('period'),
-                    new \PHPStan\Type\Constant\ConstantStringType('resourceArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('usageLimitArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('usageLimitId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('usageType'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('log'),
-                        new \PHPStan\Type\Constant\ConstantStringType('emit-metric'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deactivate'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('amount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('breachAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('period'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('usageLimitArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('usageLimitId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('usageType'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('log'),
+                            new \PHPStan\Type\Constant\ConstantStringType('emit-metric'),
+                            new \PHPStan\Type\Constant\ConstantStringType('deactivate'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('daily'),
+                            new \PHPStan\Type\Constant\ConstantStringType('weekly'),
+                            new \PHPStan\Type\Constant\ConstantStringType('monthly'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('serverless-compute'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cross-region-datasharing'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('daily'),
-                        new \PHPStan\Type\Constant\ConstantStringType('weekly'),
-                        new \PHPStan\Type\Constant\ConstantStringType('monthly'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('serverless-compute'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cross-region-datasharing'),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1978,107 +2114,121 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('workgroups'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('baseCapacity'),
-                    new \PHPStan\Type\Constant\ConstantStringType('configParameters'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creationDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('crossAccountVpcs'),
-                    new \PHPStan\Type\Constant\ConstantStringType('customDomainCertificateArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('customDomainCertificateExpiryTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('customDomainName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('endpoint'),
-                    new \PHPStan\Type\Constant\ConstantStringType('enhancedVpcRouting'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ipAddressType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('maxCapacity'),
-                    new \PHPStan\Type\Constant\ConstantStringType('namespaceName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('patchVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('pendingTrackName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                    new \PHPStan\Type\Constant\ConstantStringType('pricePerformanceTarget'),
-                    new \PHPStan\Type\Constant\ConstantStringType('publiclyAccessible'),
-                    new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('trackName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('workgroupArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('workgroupId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('workgroupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('workgroupVersion'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('parameterKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('parameterValue'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('address'),
+                        new \PHPStan\Type\Constant\ConstantStringType('baseCapacity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configParameters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('crossAccountVpcs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('customDomainCertificateArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('customDomainCertificateExpiryTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('customDomainName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('endpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('enhancedVpcRouting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipAddressType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('maxCapacity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('namespaceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('patchVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('pendingTrackName'),
                         new \PHPStan\Type\Constant\ConstantStringType('port'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vpcEndpoints'),
+                        new \PHPStan\Type\Constant\ConstantStringType('pricePerformanceTarget'),
+                        new \PHPStan\Type\Constant\ConstantStringType('publiclyAccessible'),
+                        new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('trackName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('workgroupArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('workgroupId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('workgroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('workgroupVersion'),
                     ], [
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('networkInterfaces'),
-                            new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
-                        ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ipv6Address'),
-                                new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('parameterKey'),
+                                new \PHPStan\Type\Constant\ConstantStringType('parameterValue'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
                             ]),
+                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('address'),
+                            new \PHPStan\Type\Constant\ConstantStringType('port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('vpcEndpoints'),
+                        ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('networkInterfaces'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ipv6Address'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                         ]),
-                    ]),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('level'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('level'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            ]),
                         ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MODIFYING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MODIFYING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -2126,13 +2276,17 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('useractivitylog'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userlog'),
-                        new \PHPStan\Type\Constant\ConstantStringType('connectionlog'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('useractivitylog'),
+                            new \PHPStan\Type\Constant\ConstantStringType('userlog'),
+                            new \PHPStan\Type\Constant\ConstantStringType('connectionlog'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2175,13 +2329,17 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('useractivitylog'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userlog'),
-                        new \PHPStan\Type\Constant\ConstantStringType('connectionlog'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('useractivitylog'),
+                            new \PHPStan\Type\Constant\ConstantStringType('userlog'),
+                            new \PHPStan\Type\Constant\ConstantStringType('connectionlog'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2336,35 +2494,41 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('networkInterfaces'),
                         new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointId'),
                         new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
                     ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ipv6Address'),
+                                new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
+                                new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ipv6Address'),
-                            new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('vpcSecurityGroupId'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vpcSecurityGroupId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -2397,13 +2561,17 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('useractivitylog'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userlog'),
-                        new \PHPStan\Type\Constant\ConstantStringType('connectionlog'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('useractivitylog'),
+                            new \PHPStan\Type\Constant\ConstantStringType('userlog'),
+                            new \PHPStan\Type\Constant\ConstantStringType('connectionlog'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2437,7 +2605,9 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                 ], [
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('at'),
@@ -2466,13 +2636,15 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                         ]),
                     ]),
                 ]),
@@ -2509,8 +2681,12 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('status'),
                     new \PHPStan\Type\Constant\ConstantStringType('totalBackupSizeInMegaBytes'),
                 ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\FloatType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2637,15 +2813,19 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('workgroupVersion'),
                 ], [
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('parameterKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('parameterValue'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('parameterKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('parameterValue'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
@@ -2656,27 +2836,31 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('networkInterfaces'),
-                            new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
-                        ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ipv6Address'),
-                                new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('networkInterfaces'),
+                                new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ipv6Address'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
@@ -2696,14 +2880,18 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                         ]),
                     ]),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                         new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
                         new \PHPStan\Type\Constant\ConstantStringType('MODIFYING'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                     ]),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),

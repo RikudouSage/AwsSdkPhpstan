@@ -154,26 +154,28 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Errors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Error'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AccessDeniedError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ConflictError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InternalServerError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ThrottlingError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ValidationError'),
-                        ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessDeniedError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ConflictError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternalServerError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThrottlingError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ValidationError'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -183,26 +185,28 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Errors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('GeofenceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GeofenceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Error'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AccessDeniedError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ConflictError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InternalServerError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ThrottlingError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ValidationError'),
-                        ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessDeniedError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ConflictError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternalServerError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThrottlingError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ValidationError'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -212,28 +216,30 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Errors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SampleTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SampleTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Error'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AccessDeniedError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ConflictError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InternalServerError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ThrottlingError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ValidationError'),
-                        ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessDeniedError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ConflictError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternalServerError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThrottlingError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ValidationError'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -244,45 +250,51 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Errors'),
                 new \PHPStan\Type\Constant\ConstantStringType('DevicePositions'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Error'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AccessDeniedError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ConflictError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InternalServerError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ThrottlingError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ValidationError'),
-                        ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessDeniedError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ConflictError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternalServerError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThrottlingError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ValidationError'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SampleTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReceivedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Position'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Accuracy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PositionProperties'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\FloatType(),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Horizontal'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SampleTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReceivedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Position'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Accuracy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PositionProperties'),
                     ], [
-                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\FloatType(),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Horizontal'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -293,35 +305,39 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Successes'),
                 new \PHPStan\Type\Constant\ConstantStringType('Errors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('GeofenceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdateTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('GeofenceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GeofenceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdateTime'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AccessDeniedError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ConflictError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InternalServerError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ThrottlingError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ValidationError'),
-                        ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('GeofenceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Error'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessDeniedError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ConflictError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternalServerError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThrottlingError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ValidationError'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -331,28 +347,30 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Errors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SampleTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SampleTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Error'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AccessDeniedError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ConflictError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InternalServerError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ThrottlingError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ValidationError'),
-                        ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessDeniedError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ConflictError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternalServerError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThrottlingError'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ValidationError'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -363,37 +381,53 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Legs'),
                 new \PHPStan\Type\Constant\ConstantStringType('Summary'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('StartPosition'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EndPosition'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Distance'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DurationSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Geometry'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Steps'),
-                ], [
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LineString'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('StartPosition'),
                         new \PHPStan\Type\Constant\ConstantStringType('EndPosition'),
                         new \PHPStan\Type\Constant\ConstantStringType('Distance'),
                         new \PHPStan\Type\Constant\ConstantStringType('DurationSeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GeometryOffset'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Geometry'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Steps'),
                     ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\FloatType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\FloatType(),
+                        ])),
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('LineString'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\FloatType(),
+                                ])),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('StartPosition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EndPosition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Distance'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DurationSeconds'),
+                                new \PHPStan\Type\Constant\ConstantStringType('GeometryOffset'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\FloatType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\FloatType(),
+                                ])),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('RouteBBox'),
                     new \PHPStan\Type\Constant\ConstantStringType('DataSource'),
@@ -401,7 +435,9 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('DurationSeconds'),
                     new \PHPStan\Type\Constant\ConstantStringType('DistanceUnit'),
                 ], [
-                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\FloatType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\FloatType(),
                     new \PHPStan\Type\FloatType(),
@@ -422,30 +458,42 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('SnappedDestinationPositions'),
                 new \PHPStan\Type\Constant\ConstantStringType('Summary'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Distance'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DurationSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                ], [
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RouteNotFound'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RouteTooLong'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PositionsNotFound'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DestinationPositionNotFound'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeparturePositionNotFound'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OtherValidationError'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Distance'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DurationSeconds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Error'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RouteNotFound'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RouteTooLong'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PositionsNotFound'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DestinationPositionNotFound'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DeparturePositionNotFound'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OtherValidationError'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\FloatType(),
-                new \PHPStan\Type\FloatType(),
+                    ])),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\FloatType(),
+                    ])),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\FloatType(),
+                    ])),
+                ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('DataSource'),
                     new \PHPStan\Type\Constant\ConstantStringType('RouteCount'),
@@ -639,9 +687,15 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('AllowResources'),
                     new \PHPStan\Type\Constant\ConstantStringType('AllowReferers'),
                 ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -680,7 +734,9 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -809,27 +865,29 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('DistanceUnit'),
                 new \PHPStan\Type\Constant\ConstantStringType('SpeedUnit'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('EventId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GeofenceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IsDeviceInGeofence'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NearestDistance'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ForecastedBreachTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GeofenceProperties'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENTER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EXIT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IDLE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EventId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GeofenceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IsDeviceInGeofence'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NearestDistance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ForecastedBreachTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GeofenceProperties'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENTER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EXIT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IDLE'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('Kilometers'),
@@ -856,7 +914,9 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\FloatType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\FloatType(),
+                ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Horizontal'),
                 ], [
@@ -873,25 +933,29 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('DevicePositions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SampleTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReceivedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Position'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Accuracy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PositionProperties'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\FloatType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Horizontal'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SampleTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReceivedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Position'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Accuracy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PositionProperties'),
                     ], [
-                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\FloatType(),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Horizontal'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -913,12 +977,20 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('Circle'),
                     new \PHPStan\Type\Constant\ConstantStringType('Geobuf'),
                 ], [
-                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\FloatType(),
+                            ])),
+                        ])),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Center'),
                         new \PHPStan\Type\Constant\ConstantStringType('Radius'),
                     ], [
-                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\FloatType(),
+                        ])),
                         new \PHPStan\Type\FloatType(),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -1035,7 +1107,9 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Point'),
                     ], [
-                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\FloatType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1055,8 +1129,12 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -1069,23 +1147,27 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Entries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SampleTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Position'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Accuracy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PositionProperties'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\FloatType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Horizontal'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SampleTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Position'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Accuracy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PositionProperties'),
                     ], [
-                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\FloatType(),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Horizontal'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1097,25 +1179,27 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Entries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CollectionName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PricingPlan'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PricingPlanDataSource'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdateTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RequestBasedUsage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MobileAssetTracking'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MobileAssetManagement'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CollectionName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PricingPlan'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PricingPlanDataSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdateTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestBasedUsage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MobileAssetTracking'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MobileAssetManagement'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1127,39 +1211,49 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Entries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('GeofenceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Geometry'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GeofenceProperties'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Polygon'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Circle'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Geobuf'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GeofenceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Geometry'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GeofenceProperties'),
                     ], [
-                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Center'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Radius'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Polygon'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Circle'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Geobuf'),
                         ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\FloatType(),
+                                    ])),
+                                ])),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Center'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Radius'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\FloatType(),
+                                ])),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ResourceType(),
+                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                            ]),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1171,29 +1265,37 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Entries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('KeyName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExpireTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Restrictions'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdateTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AllowActions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AllowResources'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AllowReferers'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KeyName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExpireTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Restrictions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdateTime'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AllowActions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AllowResources'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AllowReferers'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1205,25 +1307,27 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Entries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('MapName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DataSource'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PricingPlan'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdateTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RequestBasedUsage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MobileAssetTracking'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MobileAssetManagement'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MapName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PricingPlan'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdateTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestBasedUsage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MobileAssetTracking'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MobileAssetManagement'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1235,25 +1339,27 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Entries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DataSource'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PricingPlan'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdateTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RequestBasedUsage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MobileAssetTracking'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MobileAssetManagement'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IndexName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PricingPlan'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdateTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestBasedUsage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MobileAssetTracking'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MobileAssetManagement'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1265,25 +1371,27 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Entries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CalculatorName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DataSource'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PricingPlan'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdateTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RequestBasedUsage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MobileAssetTracking'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MobileAssetManagement'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CalculatorName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PricingPlan'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdateTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestBasedUsage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MobileAssetTracking'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MobileAssetManagement'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1305,7 +1413,9 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('ConsumerArns'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1317,25 +1427,27 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Entries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('TrackerName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PricingPlan'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PricingPlanDataSource'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdateTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RequestBasedUsage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MobileAssetTracking'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MobileAssetManagement'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TrackerName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PricingPlan'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PricingPlanDataSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdateTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestBasedUsage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MobileAssetTracking'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MobileAssetManagement'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1367,66 +1479,76 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('DataSource'),
                     new \PHPStan\Type\Constant\ConstantStringType('Language'),
                 ], [
-                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\FloatType(),
+                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Place'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Distance'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PlaceId'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Label'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Geometry'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AddressNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Street'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Neighborhood'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Municipality'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SubRegion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Interpolated'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeZone'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UnitType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UnitNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Categories'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SupplementalCategories'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SubMunicipality'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Place'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Distance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PlaceId'),
                     ], [
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Point'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Offset'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Label'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Geometry'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AddressNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Street'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Neighborhood'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Municipality'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubRegion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Interpolated'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TimeZone'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnitType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnitNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Categories'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SupplementalCategories'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubMunicipality'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Point'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\FloatType(),
+                                ])),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Offset'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1448,25 +1570,39 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('FilterCategories'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\FloatType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\FloatType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Text'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PlaceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Categories'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SupplementalCategories'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Text'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PlaceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Categories'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SupplementalCategories'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1489,72 +1625,90 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('FilterCategories'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\FloatType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\FloatType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\FloatType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Place'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Distance'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Relevance'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PlaceId'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Label'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Geometry'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AddressNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Street'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Neighborhood'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Municipality'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SubRegion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Interpolated'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeZone'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UnitType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UnitNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Categories'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SupplementalCategories'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SubMunicipality'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Place'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Distance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Relevance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PlaceId'),
                     ], [
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Point'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Offset'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Label'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Geometry'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AddressNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Street'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Neighborhood'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Municipality'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubRegion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Interpolated'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TimeZone'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnitType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnitNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Categories'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SupplementalCategories'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubMunicipality'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Point'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\FloatType(),
+                                ])),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Offset'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1670,7 +1824,9 @@ final class LocationServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('DeviationDistance'),
                     new \PHPStan\Type\Constant\ConstantStringType('ProxyDetected'),
                 ], [
-                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\FloatType(),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Horizontal'),
                     ], [

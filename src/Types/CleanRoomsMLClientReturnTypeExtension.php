@@ -364,22 +364,24 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('relevanceMetrics'),
                     new \PHPStan\Type\Constant\ConstantStringType('recallMetric'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('audienceSize'),
-                        new \PHPStan\Type\Constant\ConstantStringType('score'),
-                    ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('audienceSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('score'),
                         ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ABSOLUTE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PERCENTAGE'),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ABSOLUTE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PERCENTAGE'),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
                             ]),
-                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\FloatType(),
                         ]),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\FloatType(),
                 ]),
                 new \PHPStan\Type\StringType(),
@@ -470,13 +472,17 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('containerLogs'),
                             new \PHPStan\Type\Constant\ConstantStringType('containerMetrics'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('allowedAccountIds'),
-                                new \PHPStan\Type\Constant\ConstantStringType('filterPattern'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('allowedAccountIds'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('filterPattern'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('noiseLevel'),
                             ], [
@@ -499,22 +505,28 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('GB'),
                                 new \PHPStan\Type\FloatType(),
                             ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MODEL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OUTPUT'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MODEL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OUTPUT'),
+                                ]),
+                            ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('containerLogs'),
                             new \PHPStan\Type\Constant\ConstantStringType('maxOutputSize'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('allowedAccountIds'),
-                                new \PHPStan\Type\Constant\ConstantStringType('filterPattern'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('allowedAccountIds'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('filterPattern'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('unit'),
                                 new \PHPStan\Type\Constant\ConstantStringType('value'),
@@ -553,7 +565,9 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
                     new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
@@ -787,10 +801,12 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                    ]),
+                ])),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('audienceSizeType'),
@@ -800,7 +816,9 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('ABSOLUTE'),
                         new \PHPStan\Type\Constant\ConstantStringType('PERCENTAGE'),
                     ]),
-                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\IntegerType(),
+                    ])),
                 ]),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
@@ -850,15 +868,21 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('metricDefinitions'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                    ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('imageUri'),
@@ -906,13 +930,17 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('containerLogs'),
                             new \PHPStan\Type\Constant\ConstantStringType('containerMetrics'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('allowedAccountIds'),
-                                new \PHPStan\Type\Constant\ConstantStringType('filterPattern'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('allowedAccountIds'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('filterPattern'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('noiseLevel'),
                             ], [
@@ -935,22 +963,28 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('GB'),
                                 new \PHPStan\Type\FloatType(),
                             ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MODEL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OUTPUT'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MODEL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OUTPUT'),
+                                ]),
+                            ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('containerLogs'),
                             new \PHPStan\Type\Constant\ConstantStringType('maxOutputSize'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('allowedAccountIds'),
-                                new \PHPStan\Type\Constant\ConstantStringType('filterPattern'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('allowedAccountIds'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('filterPattern'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('unit'),
                                 new \PHPStan\Type\Constant\ConstantStringType('value'),
@@ -1064,7 +1098,9 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
                     new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
@@ -1266,13 +1302,15 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('mlInputChannelArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('channelName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('mlInputChannelArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('channelName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1426,11 +1464,13 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('members'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('accountId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1486,43 +1526,49 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('inputConfig'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantStringType('INTERACTIONS'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('schema'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dataSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputConfig'),
                     ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('INTERACTIONS'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('columnName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('columnTypes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('schema'),
+                            new \PHPStan\Type\Constant\ConstantStringType('dataSource'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('USER_ID'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ITEM_ID'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CATEGORICAL_FEATURE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NUMERICAL_FEATURE'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('glueDataSource'),
-                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('columnName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('columnTypes'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('USER_ID'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ITEM_ID'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CATEGORICAL_FEATURE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NUMERICAL_FEATURE'),
+                                        ]),
+                                    ])),
+                                ]),
+                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('tableName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('databaseName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('catalogId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('glueDataSource'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('tableName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('databaseName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('catalogId'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
                             ]),
                         ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -1538,47 +1584,49 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('audienceExportJobs'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('audienceGenerationJobArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('audienceSize'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('statusDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('outputLocation'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('audienceGenerationJobArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('audienceSize'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('statusDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputLocation'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ABSOLUTE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PERCENTAGE'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ABSOLUTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PERCENTAGE'),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('message'),
-                    ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1590,35 +1638,37 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('audienceGenerationJobs'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('audienceGenerationJobArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('configuredAudienceModelArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('startedBy'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('audienceGenerationJobArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredAudienceModelArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startedBy'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1630,31 +1680,33 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('audienceModels'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('audienceModelArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('trainingDatasetArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('audienceModelArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('trainingDatasetArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1666,27 +1718,29 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('collaborationConfiguredModelAlgorithmAssociations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmAssociationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmAssociationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1698,38 +1752,42 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('collaborationMLInputChannelsList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmAssociations'),
-                    new \PHPStan\Type\Constant\ConstantStringType('mlInputChannelArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmAssociations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mlInputChannelArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1741,50 +1799,54 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('collaborationTrainedModelExportJobs'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('outputConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('statusDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('trainedModelArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationIdentifier'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('members'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('statusDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('trainedModelArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationIdentifier'),
                     ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('members'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('message'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('message'),
-                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1796,66 +1858,70 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('collaborationTrainedModelInferenceJobs'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('trainedModelInferenceJobArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmAssociationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('trainedModelArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('outputConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('metricsStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('metricsStatusDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('logsStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('logsStatusDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCEL_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCEL_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCEL_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('accept'),
-                        new \PHPStan\Type\Constant\ConstantStringType('members'),
+                        new \PHPStan\Type\Constant\ConstantStringType('trainedModelInferenceJobArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmAssociationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('trainedModelArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('metricsStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('metricsStatusDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('logsStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('logsStatusDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCEL_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCEL_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCEL_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                        ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('accept'),
+                            new \PHPStan\Type\Constant\ConstantStringType('members'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_SUCCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_FAILED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_SUCCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_FAILED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1867,41 +1933,43 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('collaborationTrainedModels'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('trainedModelArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmAssociationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCEL_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCEL_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCEL_FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('trainedModelArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmAssociationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCEL_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCEL_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCEL_FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1913,39 +1981,41 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('configuredAudienceModels'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('audienceModelArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('outputConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('configuredAudienceModelArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('destination'),
-                        new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('audienceModelArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredAudienceModelArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
                     ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('s3Destination'),
+                            new \PHPStan\Type\Constant\ConstantStringType('destination'),
+                            new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('s3Uri'),
+                                new \PHPStan\Type\Constant\ConstantStringType('s3Destination'),
                             ], [
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('s3Uri'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1957,25 +2027,27 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmAssociations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmAssociationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationIdentifier'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmAssociationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationIdentifier'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1987,19 +2059,21 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithms'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -2011,38 +2085,42 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('mlInputChannelsList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmAssociations'),
-                    new \PHPStan\Type\Constant\ConstantStringType('protectedQueryIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('mlInputChannelArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmAssociations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('protectedQueryIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mlInputChannelArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -2064,64 +2142,68 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('trainedModelInferenceJobs'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('trainedModelInferenceJobArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmAssociationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('trainedModelArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('outputConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('metricsStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('metricsStatusDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('logsStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('logsStatusDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCEL_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCEL_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCEL_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('accept'),
-                        new \PHPStan\Type\Constant\ConstantStringType('members'),
+                        new \PHPStan\Type\Constant\ConstantStringType('trainedModelInferenceJobArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmAssociationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('trainedModelArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('metricsStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('metricsStatusDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('logsStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('logsStatusDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCEL_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCEL_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCEL_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                        ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('accept'),
+                            new \PHPStan\Type\Constant\ConstantStringType('members'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_SUCCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_FAILED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_SUCCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_FAILED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -2133,39 +2215,41 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('trainedModels'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('trainedModelArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('membershipIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('collaborationIdentifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmAssociationArn'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCEL_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCEL_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCEL_FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('trainedModelArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('membershipIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaborationIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredModelAlgorithmAssociationArn'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCEL_PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCEL_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCEL_FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -2177,21 +2261,23 @@ final class CleanRoomsMLClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('trainingDatasets'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('trainingDatasetArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('trainingDatasetArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }

@@ -116,16 +116,20 @@ final class ChatbotClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
-                    ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -172,18 +176,24 @@ final class ChatbotClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -218,18 +228,24 @@ final class ChatbotClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -292,33 +308,39 @@ final class ChatbotClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('WebhookConfigurations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('WebhookDescription'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChatConfigurationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SnsTopicArns'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LoggingLevel'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WebhookDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChatConfigurationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SnsTopicArns'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConfigurationName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LoggingLevel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -330,43 +352,51 @@ final class ChatbotClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('SlackChannelConfigurations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('SlackTeamName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SlackTeamId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SlackChannelId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SlackChannelName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChatConfigurationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SnsTopicArns'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LoggingLevel'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GuardrailPolicyArns'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserAuthorizationRequired'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SlackTeamName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SlackTeamId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SlackChannelId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SlackChannelName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChatConfigurationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SnsTopicArns'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConfigurationName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LoggingLevel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GuardrailPolicyArns'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserAuthorizationRequired'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -377,19 +407,21 @@ final class ChatbotClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('SlackUserIdentities'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChatConfigurationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SlackTeamId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SlackUserId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AwsUserIdentity'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChatConfigurationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SlackTeamId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SlackUserId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AwsUserIdentity'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -401,17 +433,19 @@ final class ChatbotClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('SlackWorkspaces'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('SlackTeamId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SlackTeamName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SlackTeamId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SlackTeamName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -458,28 +492,32 @@ final class ChatbotClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NotificationType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ButtonText'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Criteria'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Variables'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Operator'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VariableName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NotificationType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ButtonText'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Criteria'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Variables'),
                         ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HAS_VALUE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EQUALS'),
-                            ]),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Operator'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('VariableName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HAS_VALUE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EQUALS'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -515,18 +553,24 @@ final class ChatbotClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -540,11 +584,13 @@ final class ChatbotClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('Associations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Resource'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Resource'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -556,7 +602,9 @@ final class ChatbotClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('CustomActions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -569,45 +617,53 @@ final class ChatbotClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('TeamChannelConfigurations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ChannelId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChannelName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TeamId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TeamName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TenantId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChatConfigurationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SnsTopicArns'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LoggingLevel'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GuardrailPolicyArns'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserAuthorizationRequired'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChannelId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChannelName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TeamId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TeamName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TenantId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChatConfigurationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SnsTopicArns'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConfigurationName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LoggingLevel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GuardrailPolicyArns'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserAuthorizationRequired'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -618,19 +674,21 @@ final class ChatbotClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('ConfiguredTeams'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('TenantId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TeamId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TeamName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TenantId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TeamId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TeamName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -642,23 +700,25 @@ final class ChatbotClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('TeamsUserIdentities'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChatConfigurationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TeamId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AwsUserIdentity'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TeamsChannelId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TeamsTenantId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChatConfigurationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TeamId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AwsUserIdentity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TeamsChannelId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TeamsTenantId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -669,13 +729,15 @@ final class ChatbotClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -727,16 +789,20 @@ final class ChatbotClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
-                    ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -783,18 +849,24 @@ final class ChatbotClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -829,18 +901,24 @@ final class ChatbotClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),

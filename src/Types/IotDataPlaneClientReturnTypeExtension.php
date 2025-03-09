@@ -98,7 +98,9 @@ final class IotDataPlaneClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
                 new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
             ]),
@@ -111,17 +113,19 @@ final class IotDataPlaneClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('retainedTopics'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('topic'),
-                    new \PHPStan\Type\Constant\ConstantStringType('payloadSize'),
-                    new \PHPStan\Type\Constant\ConstantStringType('qos'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('topic'),
+                        new \PHPStan\Type\Constant\ConstantStringType('payloadSize'),
+                        new \PHPStan\Type\Constant\ConstantStringType('qos'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

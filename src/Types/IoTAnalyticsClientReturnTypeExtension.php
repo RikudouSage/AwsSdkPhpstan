@@ -96,15 +96,17 @@ final class IoTAnalyticsClientReturnTypeExtension implements \PHPStan\Type\Dynam
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('batchPutMessageErrorEntries'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('messageId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('messageId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -311,120 +313,130 @@ final class IoTAnalyticsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('actionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('queryAction'),
-                        new \PHPStan\Type\Constant\ConstantStringType('containerAction'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('sqlQuery'),
-                            new \PHPStan\Type\Constant\ConstantStringType('filters'),
+                            new \PHPStan\Type\Constant\ConstantStringType('actionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('queryAction'),
+                            new \PHPStan\Type\Constant\ConstantStringType('containerAction'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('deltaTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('sqlQuery'),
+                                new \PHPStan\Type\Constant\ConstantStringType('filters'),
                             ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('deltaTime'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('offsetSeconds'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('timeExpression'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                    ]),
+                                ])),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('image'),
+                                new \PHPStan\Type\Constant\ConstantStringType('executionRoleArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('resourceConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('variables'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('offsetSeconds'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('timeExpression'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('computeType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('volumeSizeInGB'),
                                 ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ACU_1'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ACU_2'),
+                                    ]),
                                     new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\StringType(),
                                 ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('datasetContentVersionValue'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('outputFileUriValue'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('datasetName'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('fileName'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                    ]),
+                                ])),
                             ]),
                         ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('image'),
-                            new \PHPStan\Type\Constant\ConstantStringType('executionRoleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('resourceConfiguration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('variables'),
+                            new \PHPStan\Type\Constant\ConstantStringType('schedule'),
+                            new \PHPStan\Type\Constant\ConstantStringType('dataset'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('computeType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('volumeSizeInGB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('expression'),
                             ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ACU_1'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ACU_2'),
-                                ]),
-                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('datasetContentVersionValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('outputFileUriValue'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('datasetName'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('fileName'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
                             ]),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('schedule'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dataset'),
-                    ], [
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('expression'),
+                            new \PHPStan\Type\Constant\ConstantStringType('entryName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('destination'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('entryName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('destination'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('iotEventsDestinationConfiguration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3DestinationConfiguration'),
-                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('inputName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('iotEventsDestinationConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('s3DestinationConfiguration'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('bucket'),
-                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('glueConfiguration'),
-                                new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('tableName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('databaseName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('inputName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                 ]),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('glueConfiguration'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('tableName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('databaseName'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
                             ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                         new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
@@ -446,21 +458,23 @@ final class IoTAnalyticsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ruleName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ruleConfiguration'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('deltaTimeSessionWindowConfiguration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ruleName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ruleConfiguration'),
                         ], [
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('timeoutInMinutes'),
+                                new \PHPStan\Type\Constant\ConstantStringType('deltaTimeSessionWindowConfiguration'),
                             ], [
-                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('timeoutInMinutes'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
                             ]),
                         ]),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -539,36 +553,40 @@ final class IoTAnalyticsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('columns'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
                             ]),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('partitions'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('attributePartition'),
-                            new \PHPStan\Type\Constant\ConstantStringType('timestampPartition'),
-                        ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('attributeName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('attributePartition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('timestampPartition'),
                             ], [
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('attributeName'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('attributeName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('timestampFormat'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
                             ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('attributeName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('timestampFormat'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
+                        ])),
                     ]),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -619,133 +637,141 @@ final class IoTAnalyticsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('channel'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lambda'),
-                        new \PHPStan\Type\Constant\ConstantStringType('datastore'),
-                        new \PHPStan\Type\Constant\ConstantStringType('addAttributes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('removeAttributes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('selectAttributes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('filter'),
-                        new \PHPStan\Type\Constant\ConstantStringType('math'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deviceRegistryEnrich'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deviceShadowEnrich'),
-                    ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('channelName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('next'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('lambdaName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('batchSize'),
-                            new \PHPStan\Type\Constant\ConstantStringType('next'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('datastoreName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('attributes'),
-                            new \PHPStan\Type\Constant\ConstantStringType('next'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('attributes'),
-                            new \PHPStan\Type\Constant\ConstantStringType('next'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('attributes'),
-                            new \PHPStan\Type\Constant\ConstantStringType('next'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('channel'),
+                            new \PHPStan\Type\Constant\ConstantStringType('lambda'),
+                            new \PHPStan\Type\Constant\ConstantStringType('datastore'),
+                            new \PHPStan\Type\Constant\ConstantStringType('addAttributes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('removeAttributes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('selectAttributes'),
                             new \PHPStan\Type\Constant\ConstantStringType('filter'),
-                            new \PHPStan\Type\Constant\ConstantStringType('next'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('attribute'),
                             new \PHPStan\Type\Constant\ConstantStringType('math'),
-                            new \PHPStan\Type\Constant\ConstantStringType('next'),
+                            new \PHPStan\Type\Constant\ConstantStringType('deviceRegistryEnrich'),
+                            new \PHPStan\Type\Constant\ConstantStringType('deviceShadowEnrich'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('channelName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('next'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('lambdaName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('batchSize'),
+                                new \PHPStan\Type\Constant\ConstantStringType('next'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('datastoreName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('attributes'),
+                                new \PHPStan\Type\Constant\ConstantStringType('next'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('attributes'),
+                                new \PHPStan\Type\Constant\ConstantStringType('next'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('attributes'),
+                                new \PHPStan\Type\Constant\ConstantStringType('next'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('filter'),
+                                new \PHPStan\Type\Constant\ConstantStringType('next'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('attribute'),
+                                new \PHPStan\Type\Constant\ConstantStringType('math'),
+                                new \PHPStan\Type\Constant\ConstantStringType('next'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('attribute'),
+                                new \PHPStan\Type\Constant\ConstantStringType('thingName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('next'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('attribute'),
+                                new \PHPStan\Type\Constant\ConstantStringType('thingName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('next'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('attribute'),
-                            new \PHPStan\Type\Constant\ConstantStringType('thingName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('next'),
+                            new \PHPStan\Type\Constant\ConstantStringType('id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('attribute'),
-                            new \PHPStan\Type\Constant\ConstantStringType('thingName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('next'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -760,13 +786,15 @@ final class IoTAnalyticsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
                 new \PHPStan\Type\Constant\ConstantStringType('status'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('entryName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('dataURI'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('entryName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dataURI'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('state'),
@@ -789,39 +817,41 @@ final class IoTAnalyticsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('channelSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('channelName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('channelStorage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastMessageArrivalTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceManagedS3'),
-                        new \PHPStan\Type\Constant\ConstantStringType('customerManagedS3'),
+                        new \PHPStan\Type\Constant\ConstantStringType('channelName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('channelStorage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastMessageArrivalTime'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('bucket'),
-                            new \PHPStan\Type\Constant\ConstantStringType('keyPrefix'),
-                            new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('serviceManagedS3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('customerManagedS3'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                new \PHPStan\Type\Constant\ConstantStringType('keyPrefix'),
+                                new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -833,29 +863,31 @@ final class IoTAnalyticsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('datasetContentSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('version'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('scheduleTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('completionTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('state'),
-                        new \PHPStan\Type\Constant\ConstantStringType('reason'),
+                        new \PHPStan\Type\Constant\ConstantStringType('version'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('scheduleTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('completionTime'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('state'),
+                            new \PHPStan\Type\Constant\ConstantStringType('reason'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -867,48 +899,54 @@ final class IoTAnalyticsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('datasetSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('datasetName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('triggers'),
-                    new \PHPStan\Type\Constant\ConstantStringType('actions'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('schedule'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dataset'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('expression'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('actionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('actionType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('datasetName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('triggers'),
+                        new \PHPStan\Type\Constant\ConstantStringType('actions'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('QUERY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('schedule'),
+                                new \PHPStan\Type\Constant\ConstantStringType('dataset'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('expression'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('actionName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('actionType'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('QUERY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINER'),
+                                ]),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -920,78 +958,82 @@ final class IoTAnalyticsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('datastoreSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('datastoreName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('datastoreStorage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastMessageArrivalTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('fileFormatType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('datastorePartitions'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceManagedS3'),
-                        new \PHPStan\Type\Constant\ConstantStringType('customerManagedS3'),
-                        new \PHPStan\Type\Constant\ConstantStringType('iotSiteWiseMultiLayerStorage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('datastoreName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('datastoreStorage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastMessageArrivalTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('fileFormatType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('datastorePartitions'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('bucket'),
-                            new \PHPStan\Type\Constant\ConstantStringType('keyPrefix'),
-                            new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('serviceManagedS3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('customerManagedS3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('iotSiteWiseMultiLayerStorage'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('customerManagedS3Storage'),
-                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('bucket'),
                                 new \PHPStan\Type\Constant\ConstantStringType('keyPrefix'),
+                                new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('customerManagedS3Storage'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('keyPrefix'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
                             ]),
                         ]),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PARQUET'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('partitions'),
-                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PARQUET'),
+                        ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('attributePartition'),
-                            new \PHPStan\Type\Constant\ConstantStringType('timestampPartition'),
+                            new \PHPStan\Type\Constant\ConstantStringType('partitions'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('attributeName'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('attributeName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('timestampFormat'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('attributePartition'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('timestampPartition'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('attributeName'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('attributeName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('timestampFormat'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ]),
+                            ])),
                         ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1003,30 +1045,34 @@ final class IoTAnalyticsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('pipelineSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('pipelineName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('reprocessingSummaries'),
-                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdateTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('pipelineName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('reprocessingSummaries'),
                         new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdateTime'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                                ]),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1037,13 +1083,15 @@ final class IoTAnalyticsClientReturnTypeExtension implements \PHPStan\Type\Dynam
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1060,11 +1108,13 @@ final class IoTAnalyticsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('payloads'),
                 new \PHPStan\Type\Constant\ConstantStringType('logResult'),
             ], [
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ResourceType(),
-                    new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ResourceType(),
+                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1075,11 +1125,13 @@ final class IoTAnalyticsClientReturnTypeExtension implements \PHPStan\Type\Dynam
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('payloads'),
             ], [
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ResourceType(),
-                    new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ResourceType(),
+                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                    ]),
+                ])),
             ]),
         ]);
     }

@@ -176,38 +176,65 @@ final class ShieldClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttackVectors'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Counters'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('URL'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('VectorType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VectorCounters'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AttackVectors'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Counters'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Max'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Average'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Sum'),
-                                new \PHPStan\Type\Constant\ConstantStringType('N'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Unit'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('IP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('URL'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('VectorType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('VectorCounters'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Max'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Average'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Sum'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('N'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                    ])),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Max'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Average'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Sum'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('N'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                         ]),
+                    ])),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Name'),
                             new \PHPStan\Type\Constant\ConstantStringType('Max'),
@@ -223,65 +250,54 @@ final class ShieldClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Max'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Average'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Sum'),
-                        new \PHPStan\Type\Constant\ConstantStringType('N'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unit'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttackLayer'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttackPropertyIdentifier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TopContributors'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unit'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Total'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NETWORK'),
-                            new \PHPStan\Type\Constant\ConstantStringType('APPLICATION'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DESTINATION_URL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REFERRER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE_ASN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE_COUNTRY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE_IP_ADDRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE_USER_AGENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WORDPRESS_PINGBACK_REFLECTOR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WORDPRESS_PINGBACK_SOURCE'),
-                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AttackLayer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AttackPropertyIdentifier'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TopContributors'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Total'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NETWORK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('APPLICATION'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DESTINATION_URL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('REFERRER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SOURCE_ASN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SOURCE_COUNTRY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SOURCE_IP_ADDRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SOURCE_USER_AGENT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WORDPRESS_PINGBACK_REFLECTOR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WORDPRESS_PINGBACK_SOURCE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BITS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BYTES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PACKETS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('REQUESTS'),
+                            ]),
                             new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BITS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BYTES'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PACKETS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REQUESTS'),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MitigationName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MitigationName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -300,33 +316,35 @@ final class ShieldClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('AttackVolume'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AttackCount'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BitsPerSecond'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PacketsPerSecond'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RequestsPerSecond'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AttackVolume'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AttackCount'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Max'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BitsPerSecond'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PacketsPerSecond'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestsPerSecond'),
                         ], [
-                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Max'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Max'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Max'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                            ]),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Max'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Max'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                        ]),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -338,7 +356,9 @@ final class ShieldClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('LogBucketList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -348,15 +368,17 @@ final class ShieldClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('EmergencyContactList'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PhoneNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ContactNotes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ContactNotes'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -377,7 +399,9 @@ final class ShieldClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Status'),
@@ -432,7 +456,9 @@ final class ShieldClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_LOAD_BALANCER'),
                         new \PHPStan\Type\Constant\ConstantStringType('GLOBAL_ACCELERATOR'),
                     ]),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -461,13 +487,15 @@ final class ShieldClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Max'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Max'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
@@ -480,13 +508,15 @@ final class ShieldClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('ProtectedResourceTypeLimits'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Max'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Max'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                            ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('MaxProtectionGroups'),
@@ -571,23 +601,27 @@ final class ShieldClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('AttackSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('AttackId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AttackVectors'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('VectorType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AttackId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AttackVectors'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VectorType'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -599,36 +633,40 @@ final class ShieldClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('ProtectionGroups'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ProtectionGroupId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Aggregation'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Pattern'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Members'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProtectionGroupArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SUM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MEAN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MAX'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ProtectionGroupId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Aggregation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Pattern'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Members'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProtectionGroupArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SUM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MEAN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MAX'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ARBITRARY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BY_RESOURCE_TYPE'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDFRONT_DISTRIBUTION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53_HOSTED_ZONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_IP_ALLOCATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLASSIC_LOAD_BALANCER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_LOAD_BALANCER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GLOBAL_ACCELERATOR'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ARBITRARY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BY_RESOURCE_TYPE'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDFRONT_DISTRIBUTION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53_HOSTED_ZONE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_IP_ALLOCATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CLASSIC_LOAD_BALANCER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_LOAD_BALANCER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GLOBAL_ACCELERATOR'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -640,36 +678,40 @@ final class ShieldClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('Protections'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HealthCheckIds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProtectionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationLayerAutomaticResponseConfiguration'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HealthCheckIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProtectionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationLayerAutomaticResponseConfiguration'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Block'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Action'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Block'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                                new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                            ]),
                         ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -681,7 +723,9 @@ final class ShieldClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('ResourceArns'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -692,13 +736,15 @@ final class ShieldClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }

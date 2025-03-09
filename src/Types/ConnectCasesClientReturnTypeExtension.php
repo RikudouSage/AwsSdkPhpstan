@@ -107,96 +107,102 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('caseRules'),
                 new \PHPStan\Type\Constant\ConstantStringType('errors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('caseRuleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('caseRuleId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('deleted'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('rule'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('required'),
+                        new \PHPStan\Type\Constant\ConstantStringType('caseRuleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('caseRuleId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('rule'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('conditions'),
-                            new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('required'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('equalTo'),
-                                new \PHPStan\Type\Constant\ConstantStringType('notEqualTo'),
+                                new \PHPStan\Type\Constant\ConstantStringType('conditions'),
+                                new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('operandOne'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('operandTwo'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('result'),
-                                ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('fieldId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('equalTo'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('notEqualTo'),
                                     ], [
-                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('operandOne'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operandTwo'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('result'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('fieldId'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('booleanValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('emptyValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                            ], [
+                                                new \PHPStan\Type\BooleanType(),
+                                                new \PHPStan\Type\FloatType(),
+                                                new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                            new \PHPStan\Type\BooleanType(),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('operandOne'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operandTwo'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('result'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('fieldId'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('booleanValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('emptyValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                            ], [
+                                                new \PHPStan\Type\BooleanType(),
+                                                new \PHPStan\Type\FloatType(),
+                                                new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                            new \PHPStan\Type\BooleanType(),
+                                        ]),
                                     ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('booleanValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('emptyValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                                    ], [
-                                        new \PHPStan\Type\BooleanType(),
-                                        new \PHPStan\Type\FloatType(),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\BooleanType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('operandOne'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('operandTwo'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('result'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('fieldId'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('booleanValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('emptyValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                                    ], [
-                                        new \PHPStan\Type\BooleanType(),
-                                        new \PHPStan\Type\FloatType(),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\BooleanType(),
-                                ]),
+                                ])),
+                                new \PHPStan\Type\BooleanType(),
                             ]),
-                            new \PHPStan\Type\BooleanType(),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('message'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -207,49 +213,53 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('errors'),
                 new \PHPStan\Type\Constant\ConstantStringType('fields'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('message'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('deleted'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('fieldArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('fieldId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('namespace'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('System'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Custom'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Text'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Number'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Boolean'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SingleSelect'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                        new \PHPStan\Type\Constant\ConstantStringType('User'),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('fieldArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('fieldId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('namespace'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('System'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Custom'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Text'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Number'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Boolean'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DateTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SingleSelect'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                            new \PHPStan\Type\Constant\ConstantStringType('User'),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -259,15 +269,17 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('errors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -400,25 +412,27 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
                 new \PHPStan\Type\Constant\ConstantStringType('templateId'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('booleanValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('emptyValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userArnValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                     ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('booleanValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('emptyValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('userArnValue'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
@@ -432,71 +446,75 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('auditEvents'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('eventId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('fields'),
-                    new \PHPStan\Type\Constant\ConstantStringType('performedBy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('performedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('relatedItemType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('eventFieldId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('newValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('oldValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('fields'),
+                        new \PHPStan\Type\Constant\ConstantStringType('performedBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('performedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('relatedItemType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('eventFieldId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('newValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('oldValue'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('booleanValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('emptyValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('userArnValue'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('booleanValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('emptyValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('userArnValue'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ]),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('booleanValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('emptyValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('userArnValue'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('booleanValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('emptyValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('userArnValue'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('iamPrincipalArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('user'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('userArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('iamPrincipalArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('user'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('userArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Contact'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Comment'),
+                            new \PHPStan\Type\Constant\ConstantStringType('File'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Case.Created'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Case.Updated'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RelatedItem.Created'),
                         ]),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Contact'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Comment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('File'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Case.Created'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Case.Updated'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RelatedItem.Created'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -519,11 +537,13 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('fields'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('id'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('includeContent'),
@@ -582,40 +602,48 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('sections'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('fieldGroup'),
-                            ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('fields'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('fieldGroup'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('fields'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
                                     ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                        ])),
                                         new \PHPStan\Type\StringType(),
                                     ]),
-                                    new \PHPStan\Type\StringType(),
                                 ]),
-                            ]),
+                            ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('sections'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('fieldGroup'),
-                            ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('fields'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('fieldGroup'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('fields'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
                                     ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                        ])),
                                         new \PHPStan\Type\StringType(),
                                     ]),
-                                    new \PHPStan\Type\StringType(),
                                 ]),
-                            ]),
+                            ])),
                         ]),
                     ]),
                 ]),
@@ -656,18 +684,22 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('fieldId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('caseRuleId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('fieldId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('fieldId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('caseRuleId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('fieldId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('Active'),
                     new \PHPStan\Type\Constant\ConstantStringType('Inactive'),
@@ -685,19 +717,21 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('caseRules'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('caseRuleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('caseRuleId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ruleType'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('Required'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('caseRuleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('caseRuleId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ruleType'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('Required'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -709,13 +743,15 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('cases'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('caseId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('templateId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('caseId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('templateId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -727,15 +763,17 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('domains'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('domainArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('domainId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('domainArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('domainId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -748,15 +786,17 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('options'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('active'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                ], [
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('active'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -767,30 +807,32 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('fields'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('fieldArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('fieldId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('namespace'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('System'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Custom'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('fieldArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('fieldId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('namespace'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('System'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Custom'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Text'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Number'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Boolean'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DateTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SingleSelect'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                            new \PHPStan\Type\Constant\ConstantStringType('User'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Text'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Number'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Boolean'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SingleSelect'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                        new \PHPStan\Type\Constant\ConstantStringType('User'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -802,15 +844,17 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('layouts'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('layoutArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('layoutId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('layoutArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('layoutId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -833,20 +877,22 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('templates'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('templateArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('templateId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Active'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Inactive'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('templateArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('templateId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Active'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Inactive'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -863,35 +909,39 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('cases'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('caseId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('fields'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('templateId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('caseId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('fields'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('templateId'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('booleanValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('emptyValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('userArnValue'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('booleanValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('emptyValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('userArnValue'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -904,55 +954,57 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('relatedItems'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('associationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('content'),
-                    new \PHPStan\Type\Constant\ConstantStringType('performedBy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('relatedItemId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('comment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contact'),
-                        new \PHPStan\Type\Constant\ConstantStringType('file'),
+                        new \PHPStan\Type\Constant\ConstantStringType('associationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('content'),
+                        new \PHPStan\Type\Constant\ConstantStringType('performedBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('relatedItemId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
                     ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('body'),
-                            new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('comment'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contact'),
+                            new \PHPStan\Type\Constant\ConstantStringType('file'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantStringType('Text/Plain'),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('body'),
+                                new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('Text/Plain'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('channel'),
+                                new \PHPStan\Type\Constant\ConstantStringType('connectedToSystemTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('contactArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('fileArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('channel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('connectedToSystemTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('contactArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('fileArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('userArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('userArn'),
-                    ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Contact'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Comment'),
+                            new \PHPStan\Type\Constant\ConstantStringType('File'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Contact'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Comment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('File'),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }

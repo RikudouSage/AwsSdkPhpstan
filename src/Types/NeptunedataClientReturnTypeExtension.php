@@ -530,13 +530,15 @@ final class NeptunedataClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -582,13 +584,15 @@ final class NeptunedataClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -663,33 +667,35 @@ final class NeptunedataClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('commitTimestampInMillis'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('data'),
-                    new \PHPStan\Type\Constant\ConstantStringType('op'),
-                    new \PHPStan\Type\Constant\ConstantStringType('isLastOp'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('from'),
-                        new \PHPStan\Type\Constant\ConstantStringType('to'),
+                        new \PHPStan\Type\Constant\ConstantStringType('commitTimestampInMillis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('data'),
+                        new \PHPStan\Type\Constant\ConstantStringType('op'),
+                        new \PHPStan\Type\Constant\ConstantStringType('isLastOp'),
                     ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('from'),
+                            new \PHPStan\Type\Constant\ConstantStringType('to'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                ]),
+                ])),
                 new \PHPStan\Type\IntegerType(),
             ]),
         ]);
@@ -729,30 +735,48 @@ final class NeptunedataClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('count'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodeProperties'),
-                            new \PHPStan\Type\Constant\ConstantStringType('distinctOutgoingEdgeLabels'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('count'),
-                            new \PHPStan\Type\Constant\ConstantStringType('edgeProperties'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        ])),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                        ])),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('count'),
+                                new \PHPStan\Type\Constant\ConstantStringType('nodeProperties'),
+                                new \PHPStan\Type\Constant\ConstantStringType('distinctOutgoingEdgeLabels'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('count'),
+                                new \PHPStan\Type\Constant\ConstantStringType('edgeProperties'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
+                        ])),
                     ]),
                 ]),
             ]),
@@ -786,15 +810,23 @@ final class NeptunedataClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('count'),
-                            new \PHPStan\Type\Constant\ConstantStringType('predicates'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
-                        ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('count'),
+                                new \PHPStan\Type\Constant\ConstantStringType('predicates'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
+                        ])),
                     ]),
                 ]),
             ]),
@@ -847,23 +879,25 @@ final class NeptunedataClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('commitTimestampInMillis'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('data'),
-                    new \PHPStan\Type\Constant\ConstantStringType('op'),
-                    new \PHPStan\Type\Constant\ConstantStringType('isLastOp'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('stmt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('commitTimestampInMillis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('data'),
+                        new \PHPStan\Type\Constant\ConstantStringType('op'),
+                        new \PHPStan\Type\Constant\ConstantStringType('isLastOp'),
                     ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('stmt'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                ]),
+                ])),
                 new \PHPStan\Type\IntegerType(),
             ]),
         ]);
@@ -878,25 +912,27 @@ final class NeptunedataClientReturnTypeExtension implements \PHPStan\Type\Dynami
             ], [
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('queryId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('queryString'),
-                    new \PHPStan\Type\Constant\ConstantStringType('queryEvalStats'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('waited'),
-                        new \PHPStan\Type\Constant\ConstantStringType('elapsed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cancelled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('subqueries'),
+                        new \PHPStan\Type\Constant\ConstantStringType('queryId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('queryString'),
+                        new \PHPStan\Type\Constant\ConstantStringType('queryEvalStats'),
                     ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('waited'),
+                            new \PHPStan\Type\Constant\ConstantStringType('elapsed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cancelled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('subqueries'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -911,7 +947,9 @@ final class NeptunedataClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('loadIds'),
                 ], [
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
             ]),
         ]);
@@ -922,7 +960,9 @@ final class NeptunedataClientReturnTypeExtension implements \PHPStan\Type\Dynami
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('ids'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -932,7 +972,9 @@ final class NeptunedataClientReturnTypeExtension implements \PHPStan\Type\Dynami
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('ids'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -942,7 +984,9 @@ final class NeptunedataClientReturnTypeExtension implements \PHPStan\Type\Dynami
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('ids'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -952,7 +996,9 @@ final class NeptunedataClientReturnTypeExtension implements \PHPStan\Type\Dynami
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('ids'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -966,25 +1012,27 @@ final class NeptunedataClientReturnTypeExtension implements \PHPStan\Type\Dynami
             ], [
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('queryId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('queryString'),
-                    new \PHPStan\Type\Constant\ConstantStringType('queryEvalStats'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('waited'),
-                        new \PHPStan\Type\Constant\ConstantStringType('elapsed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cancelled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('subqueries'),
+                        new \PHPStan\Type\Constant\ConstantStringType('queryId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('queryString'),
+                        new \PHPStan\Type\Constant\ConstantStringType('queryEvalStats'),
                     ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('waited'),
+                            new \PHPStan\Type\Constant\ConstantStringType('elapsed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cancelled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('subqueries'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }

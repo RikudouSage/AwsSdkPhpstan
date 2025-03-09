@@ -104,33 +104,35 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('results'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('details'),
-                    new \PHPStan\Type\Constant\ConstantStringType('entityId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('feature'),
-                    new \PHPStan\Type\Constant\ConstantStringType('project'),
-                    new \PHPStan\Type\Constant\ConstantStringType('reason'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                    new \PHPStan\Type\Constant\ConstantStringType('variation'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('boolValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('longValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('details'),
+                        new \PHPStan\Type\Constant\ConstantStringType('entityId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('feature'),
+                        new \PHPStan\Type\Constant\ConstantStringType('project'),
+                        new \PHPStan\Type\Constant\ConstantStringType('reason'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('variation'),
                     ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('boolValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('longValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -171,28 +173,30 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('desiredChange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('metricDefinition'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('INCREASE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DECREASE'),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('entityIdKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('eventPattern'),
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('unitLabel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('valueKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('desiredChange'),
+                            new \PHPStan\Type\Constant\ConstantStringType('metricDefinition'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('INCREASE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DECREASE'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('entityIdKey'),
+                                new \PHPStan\Type\Constant\ConstantStringType('eventPattern'),
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('unitLabel'),
+                                new \PHPStan\Type\Constant\ConstantStringType('valueKey'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('controlTreatmentName'),
@@ -219,15 +223,17 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('featureVariations'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('description'),
+                            new \PHPStan\Type\Constant\ConstantStringType('featureVariations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantStringType('aws.evidently.onlineab'),
                 ]),
             ]),
@@ -260,13 +266,15 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('ALL_RULES'),
                         new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_VARIATION'),
@@ -285,23 +293,25 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                         new \PHPStan\Type\Constant\ConstantStringType('DOUBLE'),
                         new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('boolValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('longValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
                         ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('boolValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('longValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -339,56 +349,64 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('featureVariations'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('metricDefinition'),
-                    ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('entityIdKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('eventPattern'),
+                            new \PHPStan\Type\Constant\ConstantStringType('description'),
+                            new \PHPStan\Type\Constant\ConstantStringType('featureVariations'),
                             new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('unitLabel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('valueKey'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('metricDefinition'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('entityIdKey'),
+                                new \PHPStan\Type\Constant\ConstantStringType('eventPattern'),
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('unitLabel'),
+                                new \PHPStan\Type\Constant\ConstantStringType('valueKey'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('steps'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('groupWeights'),
-                            new \PHPStan\Type\Constant\ConstantStringType('segmentOverrides'),
-                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('evaluationOrder'),
-                                new \PHPStan\Type\Constant\ConstantStringType('segment'),
-                                new \PHPStan\Type\Constant\ConstantStringType('weights'),
+                                new \PHPStan\Type\Constant\ConstantStringType('groupWeights'),
+                                new \PHPStan\Type\Constant\ConstantStringType('segmentOverrides'),
+                                new \PHPStan\Type\Constant\ConstantStringType('startTime'),
                             ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('evaluationOrder'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('segment'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('weights'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             ]),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
@@ -594,28 +612,30 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('desiredChange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('metricDefinition'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('INCREASE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DECREASE'),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('entityIdKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('eventPattern'),
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('unitLabel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('valueKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('desiredChange'),
+                            new \PHPStan\Type\Constant\ConstantStringType('metricDefinition'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('INCREASE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DECREASE'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('entityIdKey'),
+                                new \PHPStan\Type\Constant\ConstantStringType('eventPattern'),
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('unitLabel'),
+                                new \PHPStan\Type\Constant\ConstantStringType('valueKey'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('controlTreatmentName'),
@@ -642,15 +662,17 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('featureVariations'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('description'),
+                            new \PHPStan\Type\Constant\ConstantStringType('featureVariations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantStringType('aws.evidently.onlineab'),
                 ]),
             ]),
@@ -666,35 +688,43 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\Constant\ConstantStringType('timestamps'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('content'),
-                    new \PHPStan\Type\Constant\ConstantStringType('metricName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('reportName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('treatmentName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('BayesianInference'),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('metricName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('resultStat'),
-                    new \PHPStan\Type\Constant\ConstantStringType('treatmentName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('values'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Mean'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TreatmentEffect'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ConfidenceIntervalUpperBound'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ConfidenceIntervalLowerBound'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PValue'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('content'),
+                        new \PHPStan\Type\Constant\ConstantStringType('metricName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('reportName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('treatmentName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('BayesianInference'),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                ]),
-                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('metricName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resultStat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('treatmentName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('values'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Mean'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TreatmentEffect'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConfidenceIntervalUpperBound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConfidenceIntervalLowerBound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PValue'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\FloatType(),
+                        ])),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                ])),
             ]),
         ]);
     }
@@ -725,13 +755,15 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('ALL_RULES'),
                         new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_VARIATION'),
@@ -750,23 +782,25 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                         new \PHPStan\Type\Constant\ConstantStringType('DOUBLE'),
                         new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('boolValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('longValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
                         ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('boolValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('longValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -804,56 +838,64 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('featureVariations'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('metricDefinition'),
-                    ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('entityIdKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('eventPattern'),
+                            new \PHPStan\Type\Constant\ConstantStringType('description'),
+                            new \PHPStan\Type\Constant\ConstantStringType('featureVariations'),
                             new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('unitLabel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('valueKey'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('metricDefinition'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('entityIdKey'),
+                                new \PHPStan\Type\Constant\ConstantStringType('eventPattern'),
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('unitLabel'),
+                                new \PHPStan\Type\Constant\ConstantStringType('valueKey'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('steps'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('groupWeights'),
-                            new \PHPStan\Type\Constant\ConstantStringType('segmentOverrides'),
-                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('evaluationOrder'),
-                                new \PHPStan\Type\Constant\ConstantStringType('segment'),
-                                new \PHPStan\Type\Constant\ConstantStringType('weights'),
+                                new \PHPStan\Type\Constant\ConstantStringType('groupWeights'),
+                                new \PHPStan\Type\Constant\ConstantStringType('segmentOverrides'),
+                                new \PHPStan\Type\Constant\ConstantStringType('startTime'),
                             ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('evaluationOrder'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('segment'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('weights'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             ]),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
@@ -973,96 +1015,102 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\Constant\ConstantStringType('experiments'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('execution'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('metricGoals'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('onlineAbDefinition'),
-                    new \PHPStan\Type\Constant\ConstantStringType('project'),
-                    new \PHPStan\Type\Constant\ConstantStringType('randomizationSalt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('samplingRate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('schedule'),
-                    new \PHPStan\Type\Constant\ConstantStringType('segment'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('treatments'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('endedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('startedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('execution'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('metricGoals'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('onlineAbDefinition'),
+                        new \PHPStan\Type\Constant\ConstantStringType('project'),
+                        new \PHPStan\Type\Constant\ConstantStringType('randomizationSalt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('samplingRate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('schedule'),
+                        new \PHPStan\Type\Constant\ConstantStringType('segment'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('treatments'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
                     ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('desiredChange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('metricDefinition'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('INCREASE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DECREASE'),
-                        ]),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('entityIdKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('eventPattern'),
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('unitLabel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('valueKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('endedTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('startedTime'),
+                        ], [
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('desiredChange'),
+                                new \PHPStan\Type\Constant\ConstantStringType('metricDefinition'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('INCREASE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DECREASE'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('entityIdKey'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('eventPattern'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('unitLabel'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('valueKey'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('controlTreatmentName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('treatmentWeights'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
                         ]),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('controlTreatmentName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('treatmentWeights'),
-                    ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('analysisCompleteTime'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('featureVariations'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('analysisCompleteTime'),
+                        ], [
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                        ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('description'),
+                                new \PHPStan\Type\Constant\ConstantStringType('featureVariations'),
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantStringType('aws.evidently.onlineab'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('aws.evidently.onlineab'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1074,41 +1122,45 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\Constant\ConstantStringType('features'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('defaultVariation'),
-                    new \PHPStan\Type\Constant\ConstantStringType('evaluationRules'),
-                    new \PHPStan\Type\Constant\ConstantStringType('evaluationStrategy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('project'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('defaultVariation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('evaluationRules'),
+                        new \PHPStan\Type\Constant\ConstantStringType('evaluationStrategy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
                         new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('project'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ALL_RULES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_VARIATION'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ALL_RULES'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_VARIATION'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1120,95 +1172,105 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\Constant\ConstantStringType('launches'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('execution'),
-                    new \PHPStan\Type\Constant\ConstantStringType('groups'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('metricMonitors'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('project'),
-                    new \PHPStan\Type\Constant\ConstantStringType('randomizationSalt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('scheduledSplitsDefinition'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('endedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('startedTime'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
                         new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('featureVariations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('execution'),
+                        new \PHPStan\Type\Constant\ConstantStringType('groups'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('metricMonitors'),
                         new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('project'),
+                        new \PHPStan\Type\Constant\ConstantStringType('randomizationSalt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('scheduledSplitsDefinition'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('metricDefinition'),
-                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('entityIdKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('eventPattern'),
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('unitLabel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('valueKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('endedTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('startedTime'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('steps'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('groupWeights'),
-                            new \PHPStan\Type\Constant\ConstantStringType('segmentOverrides'),
-                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('evaluationOrder'),
-                                new \PHPStan\Type\Constant\ConstantStringType('segment'),
-                                new \PHPStan\Type\Constant\ConstantStringType('weights'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
-                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('description'),
+                                new \PHPStan\Type\Constant\ConstantStringType('featureVariations'),
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('metricDefinition'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('entityIdKey'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('eventPattern'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('unitLabel'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('valueKey'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('steps'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('groupWeights'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('segmentOverrides'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('evaluationOrder'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('segment'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('weights'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                ]),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\Constant\ConstantStringType('aws.evidently.splits'),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\Constant\ConstantStringType('aws.evidently.splits'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1221,36 +1283,38 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\Constant\ConstantStringType('projects'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('activeExperimentCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('activeLaunchCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('experimentCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('featureCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('launchCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('activeExperimentCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('activeLaunchCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('experimentCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('featureCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('launchCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1262,23 +1326,25 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\Constant\ConstantStringType('referencedBy'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedOn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedOn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1290,27 +1356,29 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\Constant\ConstantStringType('segments'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('experimentCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('launchCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('pattern'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('experimentCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('launchCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('pattern'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1331,15 +1399,17 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\Constant\ConstantStringType('eventResults'),
                 new \PHPStan\Type\Constant\ConstantStringType('failedEventCount'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\IntegerType(),
             ]),
         ]);
@@ -1387,56 +1457,64 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('featureVariations'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('metricDefinition'),
-                    ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('entityIdKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('eventPattern'),
+                            new \PHPStan\Type\Constant\ConstantStringType('description'),
+                            new \PHPStan\Type\Constant\ConstantStringType('featureVariations'),
                             new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('unitLabel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('valueKey'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('metricDefinition'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('entityIdKey'),
+                                new \PHPStan\Type\Constant\ConstantStringType('eventPattern'),
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('unitLabel'),
+                                new \PHPStan\Type\Constant\ConstantStringType('valueKey'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('steps'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('groupWeights'),
-                            new \PHPStan\Type\Constant\ConstantStringType('segmentOverrides'),
-                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('evaluationOrder'),
-                                new \PHPStan\Type\Constant\ConstantStringType('segment'),
-                                new \PHPStan\Type\Constant\ConstantStringType('weights'),
+                                new \PHPStan\Type\Constant\ConstantStringType('groupWeights'),
+                                new \PHPStan\Type\Constant\ConstantStringType('segmentOverrides'),
+                                new \PHPStan\Type\Constant\ConstantStringType('startTime'),
                             ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('evaluationOrder'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('segment'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('weights'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             ]),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
@@ -1531,28 +1609,30 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('desiredChange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('metricDefinition'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('INCREASE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DECREASE'),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('entityIdKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('eventPattern'),
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('unitLabel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('valueKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('desiredChange'),
+                            new \PHPStan\Type\Constant\ConstantStringType('metricDefinition'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('INCREASE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DECREASE'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('entityIdKey'),
+                                new \PHPStan\Type\Constant\ConstantStringType('eventPattern'),
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('unitLabel'),
+                                new \PHPStan\Type\Constant\ConstantStringType('valueKey'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('controlTreatmentName'),
@@ -1579,15 +1659,17 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('featureVariations'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('description'),
+                            new \PHPStan\Type\Constant\ConstantStringType('featureVariations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantStringType('aws.evidently.onlineab'),
                 ]),
             ]),
@@ -1620,13 +1702,15 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('ALL_RULES'),
                         new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_VARIATION'),
@@ -1645,23 +1729,25 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                         new \PHPStan\Type\Constant\ConstantStringType('DOUBLE'),
                         new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('boolValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('longValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
                         ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('boolValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('longValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1699,56 +1785,64 @@ final class CloudWatchEvidentlyClientReturnTypeExtension implements \PHPStan\Typ
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('featureVariations'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('metricDefinition'),
-                    ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('entityIdKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('eventPattern'),
+                            new \PHPStan\Type\Constant\ConstantStringType('description'),
+                            new \PHPStan\Type\Constant\ConstantStringType('featureVariations'),
                             new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('unitLabel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('valueKey'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
                         ]),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('metricDefinition'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('entityIdKey'),
+                                new \PHPStan\Type\Constant\ConstantStringType('eventPattern'),
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('unitLabel'),
+                                new \PHPStan\Type\Constant\ConstantStringType('valueKey'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('steps'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('groupWeights'),
-                            new \PHPStan\Type\Constant\ConstantStringType('segmentOverrides'),
-                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('evaluationOrder'),
-                                new \PHPStan\Type\Constant\ConstantStringType('segment'),
-                                new \PHPStan\Type\Constant\ConstantStringType('weights'),
+                                new \PHPStan\Type\Constant\ConstantStringType('groupWeights'),
+                                new \PHPStan\Type\Constant\ConstantStringType('segmentOverrides'),
+                                new \PHPStan\Type\Constant\ConstantStringType('startTime'),
                             ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('evaluationOrder'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('segment'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('weights'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             ]),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATED'),

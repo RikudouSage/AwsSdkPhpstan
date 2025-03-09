@@ -187,29 +187,33 @@ final class ConnectCampaignServiceClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('successfulRequests'),
                 new \PHPStan\Type\Constant\ConstantStringType('failedRequests'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('campaignId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('state'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Initialized'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Running'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Paused'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('campaignId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('state'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Initialized'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Running'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Paused'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        ]),
                     ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('campaignId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFound'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('campaignId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -276,17 +280,19 @@ final class ConnectCampaignServiceClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('campaignSummaryList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('connectInstanceId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('connectInstanceId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -313,26 +319,30 @@ final class ConnectCampaignServiceClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('successfulRequests'),
                 new \PHPStan\Type\Constant\ConstantStringType('failedRequests'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('clientToken'),
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('clientToken'),
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InvalidInput'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RequestThrottled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('clientToken'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('clientToken'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InvalidInput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestThrottled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
+                        ]),
+                    ]),
+                ])),
             ]),
         ]);
     }

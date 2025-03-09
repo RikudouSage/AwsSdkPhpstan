@@ -160,13 +160,15 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('FailedEntityList'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('EntityId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EntityId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -176,13 +178,15 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('FailedEntityList'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('EntityId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EntityId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -192,20 +196,22 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('FailedDocuments'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DataSourceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InvalidRequest'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataSourceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InvalidRequest'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -215,18 +221,20 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Errors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InvalidRequest'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InvalidRequest'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -237,38 +245,42 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('Errors'),
                 new \PHPStan\Type\Constant\ConstantStringType('DocumentStatusList'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DocumentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DataSourceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InvalidRequest'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataSourceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InvalidRequest'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DocumentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DocumentStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FailureCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FailureReason'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NOT_FOUND'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PROCESSING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INDEXED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FailureCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FailureReason'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PROCESSING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INDEXED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -278,20 +290,22 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('FailedDocuments'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DataSourceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InvalidRequest'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataSourceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InvalidRequest'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -364,12 +378,16 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                         new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                 ]),
@@ -467,26 +485,7 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Access'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DataSourceId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('USER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DENY'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('PrincipalList'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
                         new \PHPStan\Type\Constant\ConstantStringType('Type'),
@@ -504,7 +503,32 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         ]),
                         new \PHPStan\Type\StringType(),
                     ]),
-                ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PrincipalList'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Access'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('USER'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DENY'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -581,9 +605,15 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('AccessControlListConfiguration'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('S3Prefix'),
                         ], [
@@ -617,28 +647,40 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                             new \PHPStan\Type\Constant\ConstantStringType('SHAREPOINT_ONLINE'),
                             new \PHPStan\Type\Constant\ConstantStringType('SHAREPOINT_2019'),
                         ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
                             new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -693,8 +735,12 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                             new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
                             new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('DocumentIdColumnName'),
@@ -706,16 +752,20 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                            ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('AllowedGroupsColumnName'),
@@ -744,89 +794,101 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DocumentDataFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DocumentTitleFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FieldMappings'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CAMPAIGN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CASE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CONTACT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CONTRACT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DOCUMENT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IDEA'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LEAD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OPPORTUNITY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PARTNER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PRICEBOOK'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PRODUCT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PROFILE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SOLUTION'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TASK'),
-                                new \PHPStan\Type\Constant\ConstantStringType('USER'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IncludedStates'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StandardKnowledgeArticleTypeConfiguration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CustomKnowledgeArticleTypeConfigurations'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DRAFT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PUBLISHED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DocumentDataFieldName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DocumentTitleFieldName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FieldMappings'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DocumentDataFieldName'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DocumentTitleFieldName'),
                                 new \PHPStan\Type\Constant\ConstantStringType('FieldMappings'),
                             ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CAMPAIGN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CASE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CONTACT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CONTRACT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DOCUMENT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('IDEA'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LEAD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OPPORTUNITY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PARTNER'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PRICEBOOK'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PRODUCT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PROFILE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SOLUTION'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TASK'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('USER'),
+                                ]),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IncludedStates'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StandardKnowledgeArticleTypeConfiguration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CustomKnowledgeArticleTypeConfigurations'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DRAFT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PUBLISHED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DocumentDataFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DocumentTitleFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FieldMappings'),
+                            ], [
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DocumentDataFieldName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DocumentTitleFieldName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FieldMappings'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                    ])),
                                 ]),
-                            ]),
+                            ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('DocumentDataFieldName'),
@@ -836,19 +898,23 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE_USER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD_USER'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ACTIVE_USER'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD_USER'),
+                                ]),
+                            ])),
                         ]),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -856,18 +922,24 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                             new \PHPStan\Type\Constant\ConstantStringType('FieldMappings'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('TenantDomain'),
@@ -884,7 +956,9 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                             new \PHPStan\Type\Constant\ConstantStringType('OneDriveUserList'),
                             new \PHPStan\Type\Constant\ConstantStringType('OneDriveUserS3Path'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Key'),
@@ -893,17 +967,23 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                                 new \PHPStan\Type\StringType(),
                             ]),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                         new \PHPStan\Type\BooleanType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -930,19 +1010,25 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                             new \PHPStan\Type\Constant\ConstantStringType('FilterQuery'),
                         ], [
                             new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                            ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -954,19 +1040,25 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                             new \PHPStan\Type\Constant\ConstantStringType('FieldMappings'),
                         ], [
                             new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                            ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                         ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('HTTP_BASIC'),
@@ -1002,108 +1094,128 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         ], [
                             new \PHPStan\Type\BooleanType(),
                             new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DISPLAY_URL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ITEM_TYPE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SPACE_KEY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('URL'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('DISPLAY_URL'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ITEM_TYPE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SPACE_KEY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('URL'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('PageFieldMappings'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AUTHOR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CONTENT_STATUS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CREATED_DATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DISPLAY_URL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ITEM_TYPE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LABELS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MODIFIED_DATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PARENT_ID'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SPACE_KEY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SPACE_NAME'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('URL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VERSION'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('AUTHOR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CONTENT_STATUS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CREATED_DATE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DISPLAY_URL'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ITEM_TYPE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LABELS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MODIFIED_DATE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PARENT_ID'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SPACE_KEY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SPACE_NAME'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('URL'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VERSION'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('BlogFieldMappings'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AUTHOR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DISPLAY_URL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ITEM_TYPE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LABELS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_DATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SPACE_KEY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SPACE_NAME'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('URL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VERSION'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('AUTHOR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DISPLAY_URL'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ITEM_TYPE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LABELS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_DATE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SPACE_KEY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SPACE_NAME'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('URL'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VERSION'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('CrawlAttachments'),
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentFieldMappings'),
                         ], [
                             new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AUTHOR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CONTENT_TYPE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CREATED_DATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DISPLAY_URL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FILE_SIZE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ITEM_TYPE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PARENT_ID'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SPACE_KEY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SPACE_NAME'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('URL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VERSION'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('AUTHOR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CONTENT_TYPE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CREATED_DATE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DISPLAY_URL'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('FILE_SIZE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ITEM_TYPE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PARENT_ID'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SPACE_KEY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SPACE_NAME'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('URL'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VERSION'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
                             new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Host'),
                             new \PHPStan\Type\Constant\ConstantStringType('Port'),
@@ -1128,20 +1240,32 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('ExcludeSharedDrives'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Urls'),
@@ -1162,7 +1286,9 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                                 new \PHPStan\Type\Constant\ConstantStringType('SeedUrls'),
                                 new \PHPStan\Type\Constant\ConstantStringType('WebCrawlerMode'),
                             ], [
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('HOST_ONLY'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SUBDOMAINS'),
@@ -1172,15 +1298,21 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('SiteMaps'),
                             ], [
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
                         ]),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Host'),
                             new \PHPStan\Type\Constant\ConstantStringType('Port'),
@@ -1193,15 +1325,17 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('BasicAuthentication'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Host'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Credentials'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Host'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Credentials'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1215,17 +1349,23 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('FileSystemId'),
@@ -1242,21 +1382,31 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                             new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
                             new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('TeamId'),
@@ -1280,33 +1430,49 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                             new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
                             new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PUBLIC_CHANNEL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PRIVATE_CHANNEL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GROUP_MESSAGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DIRECT_MESSAGE'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PUBLIC_CHANNEL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PRIVATE_CHANNEL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('GROUP_MESSAGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_MESSAGE'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
-                        ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('EnterpriseId'),
@@ -1329,50 +1495,66 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
                             new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1394,42 +1576,58 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
                             new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1452,67 +1650,93 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('COMMENTS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENTS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WORKLOGS'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('COMMENTS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENTS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WORKLOGS'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
                             new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1584,92 +1808,126 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                             new \PHPStan\Type\BooleanType(),
                             new \PHPStan\Type\BooleanType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
                             new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('SiteUrl'),
@@ -1698,46 +1956,62 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         ]),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('wiki'),
-                            new \PHPStan\Type\Constant\ConstantStringType('blog'),
-                            new \PHPStan\Type\Constant\ConstantStringType('documentLibrary'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('wiki'),
+                                new \PHPStan\Type\Constant\ConstantStringType('blog'),
+                                new \PHPStan\Type\Constant\ConstantStringType('documentLibrary'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataSourceFieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateFieldFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IndexFieldName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
                             new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1750,8 +2024,12 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
                     new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
                 ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -1773,63 +2051,69 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('PostExtractionHookConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Condition'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Target'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentContentDeletion'),
-                    ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ConditionDocumentAttributeKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Operator'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ConditionOnValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Condition'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Target'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DocumentContentDeletion'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('GreaterThan'),
-                                new \PHPStan\Type\Constant\ConstantStringType('GreaterThanOrEquals'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LessThan'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LessThanOrEquals'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Equals'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NotEquals'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Contains'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NotContains'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Exists'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NotExists'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BeginsWith'),
-                            ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('StringValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StringListValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LongValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DateValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ConditionDocumentAttributeKey'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Operator'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ConditionOnValue'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('GreaterThan'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('GreaterThanOrEquals'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LessThan'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LessThanOrEquals'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Equals'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NotEquals'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Contains'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NotContains'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Exists'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NotExists'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BeginsWith'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('StringValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('StringListValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LongValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DateValue'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetDocumentAttributeKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetDocumentAttributeValueDeletion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetDocumentAttributeValue'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TargetDocumentAttributeKey'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TargetDocumentAttributeValueDeletion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TargetDocumentAttributeValue'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('StringValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('StringListValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LongValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DateValue'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                ]),
+                            ]),
                             new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('StringValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StringListValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LongValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DateValue'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            ]),
                         ]),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('InvocationCondition'),
                         new \PHPStan\Type\Constant\ConstantStringType('LambdaArn'),
@@ -1861,7 +2145,9 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                                 new \PHPStan\Type\Constant\ConstantStringType('DateValue'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             ]),
@@ -1900,7 +2186,9 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                                 new \PHPStan\Type\Constant\ConstantStringType('DateValue'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             ]),
@@ -1932,13 +2220,15 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('EndpointType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantStringType('HOME'),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EndpointType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('HOME'),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ContentSourceConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('UserIdentityConfiguration'),
@@ -1948,8 +2238,12 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('FaqIds'),
                         new \PHPStan\Type\Constant\ConstantStringType('DirectPutContent'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\BooleanType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2041,21 +2335,27 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                     new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
                 ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Title'),
-                    new \PHPStan\Type\Constant\ConstantStringType('URI'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('URI'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
             ]),
@@ -2106,47 +2406,49 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Relevance'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Search'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('STRING_VALUE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STRING_LIST_VALUE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LONG_VALUE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DATE_VALUE'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Freshness'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Importance'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Duration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RankOrder'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ValueImportanceMap'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Relevance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Search'),
                     ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ASCENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DESCENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STRING_VALUE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STRING_LIST_VALUE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LONG_VALUE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DATE_VALUE'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Freshness'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Importance'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Duration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RankOrder'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ValueImportanceMap'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ASCENDING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DESCENDING'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Facetable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Searchable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Displayable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Sortable'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Facetable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Searchable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Displayable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Sortable'),
-                    ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('FaqStatistics'),
                     new \PHPStan\Type\Constant\ConstantStringType('TextDocumentStatistics'),
@@ -2172,38 +2474,40 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('JwtTokenTypeConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JsonTokenTypeConfiguration'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('KeyLocation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('URL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SecretManagerArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UserNameAttributeField'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GroupAttributeField'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Issuer'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ClaimRegex'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JwtTokenTypeConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JsonTokenTypeConfiguration'),
                     ], [
-                        new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('KeyLocation'),
                             new \PHPStan\Type\Constant\ConstantStringType('URL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SECRET_MANAGER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecretManagerArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UserNameAttributeField'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GroupAttributeField'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Issuer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClaimRegex'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('URL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SECRET_MANAGER'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UserNameAttributeField'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GroupAttributeField'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UserNameAttributeField'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GroupAttributeField'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_FILTER'),
                     new \PHPStan\Type\Constant\ConstantStringType('USER_TOKEN'),
@@ -2231,25 +2535,27 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReceivedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OrderingId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FailureReason'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PROCESSING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReceivedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OrderingId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FailureReason'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PROCESSING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -2332,13 +2638,15 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('SuggestableConfigList'),
                     new \PHPStan\Type\Constant\ConstantStringType('AttributeSuggestionsMode'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Suggestable'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Suggestable'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                         new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
@@ -2400,13 +2708,15 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('FailedEntityList'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('EntityId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EntityId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -2416,13 +2726,15 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('FailedEntityList'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('EntityId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EntityId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -2434,55 +2746,67 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('Suggestions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SourceDocuments'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Text'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceDocuments'),
                     ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Text'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Highlights'),
                         ], [
-                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('BeginOffset'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndOffset'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SuggestionAttributes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AdditionalAttributes'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('StringValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StringListValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LongValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DateValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Text'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Highlights'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('BeginOffset'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EndOffset'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                ])),
                             ]),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DocumentId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SuggestionAttributes'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AdditionalAttributes'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('StringValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('StringListValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('LongValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DateValue'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        ]),
+                                    ]),
+                                ])),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -2502,8 +2826,14 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2516,11 +2846,13 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('AccessControlConfigurations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -2531,48 +2863,50 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('History'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DataSourceErrorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Metrics'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SYNCING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INCOMPLETE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ABORTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SYNCING_INDEXING'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InvalidRequest'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentsAdded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentsModified'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentsDeleted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentsFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentsScanned'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataSourceErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Metrics'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SYNCING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INCOMPLETE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ABORTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SYNCING_INDEXING'),
+                        ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InvalidRequest'),
+                        ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DocumentsAdded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DocumentsModified'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DocumentsDeleted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DocumentsFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DocumentsScanned'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2584,49 +2918,51 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('SummaryItems'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LanguageCode'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SHAREPOINT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DATABASE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SALESFORCE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ONEDRIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SERVICENOW'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CONFLUENCE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GOOGLEDRIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WEBCRAWLER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WORKDOCS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FSX'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SLACK'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BOX'),
-                        new \PHPStan\Type\Constant\ConstantStringType('QUIP'),
-                        new \PHPStan\Type\Constant\ConstantStringType('JIRA'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GITHUB'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALFRESCO'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TEMPLATE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LanguageCode'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SHAREPOINT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DATABASE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SALESFORCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ONEDRIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SERVICENOW'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CONFLUENCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GOOGLEDRIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WEBCRAWLER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WORKDOCS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FSX'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SLACK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BOX'),
+                            new \PHPStan\Type\Constant\ConstantStringType('QUIP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('JIRA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITHUB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALFRESCO'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TEMPLATE'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2638,20 +2974,22 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('SummaryItems'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('EntityId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Persona'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('OWNER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VIEWER'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EntityId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Persona'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('OWNER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VIEWER'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2663,30 +3001,32 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('SummaryItems'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('EntityId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EntityType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DisplayData'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('USER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UserName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GroupName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IdentifiedUserName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FirstName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EntityId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EntityType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisplayData'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('USER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UserName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GroupName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IdentifiedUserName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FirstName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LastName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2698,30 +3038,34 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('SummaryItems'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Endpoints'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EndpointType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Endpoints'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('HOME'),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('EndpointType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantStringType('HOME'),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2734,33 +3078,35 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('FaqSummaryItems'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FileFormat'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LanguageCode'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FileFormat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LanguageCode'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CSV'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CSV_WITH_HEADER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CSV'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CSV_WITH_HEADER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -2771,22 +3117,24 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('FeaturedResultsSetSummaryItems'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('FeaturedResultsSetId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FeaturedResultsSetName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FeaturedResultsSetId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FeaturedResultsSetName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTimestamp'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2798,13 +3146,15 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('GroupsSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OrderingId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OrderingId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2816,32 +3166,34 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('IndexConfigurationSummaryItems'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Edition'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DEVELOPER_EDITION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ENTERPRISE_EDITION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GEN_AI_ENTERPRISE_EDITION'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Edition'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DEVELOPER_EDITION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENTERPRISE_EDITION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GEN_AI_ENTERPRISE_EDITION'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SYSTEM_UPDATING'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SYSTEM_UPDATING'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2853,28 +3205,30 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('BlockListSummaryItems'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE_BUT_UPDATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE_BUT_UPDATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2885,13 +3239,15 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -2903,26 +3259,28 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('ThesaurusSummaryItems'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE_BUT_UPDATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE_BUT_UPDATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -2945,191 +3303,75 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('FeaturedResultsItems'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Format'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AdditionalAttributes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DocumentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DocumentTitle'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DocumentExcerpt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DocumentURI'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DocumentAttributes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ScoreAttributes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FeedbackToken'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TableExcerpt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CollapsedResultDetail'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DOCUMENT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('QUESTION_ANSWER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ANSWER'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TABLE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TEXT'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ValueType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Format'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AdditionalAttributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentTitle'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentExcerpt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentURI'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentAttributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ScoreAttributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FeedbackToken'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TableExcerpt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CollapsedResultDetail'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('TEXT_WITH_HIGHLIGHTS_VALUE'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TextWithHighlightsValue'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Text'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Highlights'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('BeginOffset'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EndOffset'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TopAnswer'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('THESAURUS_SYNONYM'),
-                                    ]),
-                                ]),
-                            ]),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Text'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Highlights'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BeginOffset'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndOffset'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TopAnswer'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('THESAURUS_SYNONYM'),
-                            ]),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Text'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Highlights'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BeginOffset'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndOffset'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TopAnswer'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('THESAURUS_SYNONYM'),
-                            ]),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StringValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StringListValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LongValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateValue'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ScoreConfidence'),
-                    ], [
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('VERY_HIGH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_AVAILABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DOCUMENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('QUESTION_ANSWER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ANSWER'),
                         ]),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Rows'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TotalNumberOfRows'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Cells'),
-                        ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TEXT'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ValueType'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TopAnswer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Highlighted'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Header'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('TEXT_WITH_HIGHLIGHTS_VALUE'),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('TextWithHighlightsValue'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Text'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Highlights'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('BeginOffset'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('EndOffset'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('TopAnswer'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\BooleanType(),
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('THESAURUS_SYNONYM'),
+                                                ]),
+                                            ]),
+                                        ])),
+                                    ]),
+                                ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentAttribute'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExpandedResults'),
-                    ], [
+                        ])),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Text'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Highlights'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('StringValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StringListValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LongValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DateValue'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DocumentId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DocumentTitle'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DocumentExcerpt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DocumentURI'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DocumentAttributes'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Text'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Highlights'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('BeginOffset'),
                                     new \PHPStan\Type\Constant\ConstantStringType('EndOffset'),
@@ -3144,12 +3386,14 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                                         new \PHPStan\Type\Constant\ConstantStringType('THESAURUS_SYNONYM'),
                                     ]),
                                 ]),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Text'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Highlights'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Text'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Highlights'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('BeginOffset'),
                                     new \PHPStan\Type\Constant\ConstantStringType('EndOffset'),
@@ -3164,8 +3408,10 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                                         new \PHPStan\Type\Constant\ConstantStringType('THESAURUS_SYNONYM'),
                                     ]),
                                 ]),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Key'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Value'),
@@ -3178,103 +3424,286 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                                     new \PHPStan\Type\Constant\ConstantStringType('DateValue'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                                 ]),
                             ]),
-                        ]),
-                    ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DocumentAttributeKey'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DocumentAttributeValueType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DocumentAttributeValueCountPairs'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('STRING_VALUE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STRING_LIST_VALUE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LONG_VALUE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DATE_VALUE'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentAttributeValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Count'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FacetResults'),
-                    ], [
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StringValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StringListValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LongValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ScoreConfidence'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VERY_HIGH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NOT_AVAILABLE'),
+                            ]),
                         ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\MixedType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('QUERY_LANGUAGE_INVALID_SYNTAX'),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('SuggestedQueryText'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Corrections'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BeginOffset'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EndOffset'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Term'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CorrectedTerm'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AdditionalAttributes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DocumentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DocumentTitle'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DocumentExcerpt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DocumentURI'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DocumentAttributes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FeedbackToken'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DOCUMENT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('QUESTION_ANSWER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ANSWER'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ValueType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('TEXT_WITH_HIGHLIGHTS_VALUE'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TextWithHighlightsValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Rows'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TotalNumberOfRows'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Cells'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TopAnswer'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Highlighted'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Header'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\BooleanType(),
+                                            new \PHPStan\Type\BooleanType(),
+                                            new \PHPStan\Type\BooleanType(),
+                                        ]),
+                                    ])),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DocumentAttribute'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExpandedResults'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Text'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Highlights'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
                             ], [
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('StringValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('StringListValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LongValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DateValue'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DocumentId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DocumentTitle'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DocumentExcerpt'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DocumentURI'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DocumentAttributes'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Text'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Highlights'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('BeginOffset'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('EndOffset'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('TopAnswer'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\BooleanType(),
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('THESAURUS_SYNONYM'),
+                                                ]),
+                                            ]),
+                                        ])),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Text'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Highlights'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('BeginOffset'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('EndOffset'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('TopAnswer'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\BooleanType(),
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('THESAURUS_SYNONYM'),
+                                                ]),
+                                            ]),
+                                        ])),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('StringValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('StringListValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('LongValue'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('DateValue'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            ]),
+                                        ]),
+                                    ])),
+                                ]),
+                            ])),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentAttributeKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentAttributeValueType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentAttributeValueCountPairs'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('STRING_VALUE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STRING_LIST_VALUE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LONG_VALUE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DATE_VALUE'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DocumentAttributeValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FacetResults'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('StringValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('StringListValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LongValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DateValue'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\MixedType(),
+                            ]),
+                        ])),
+                    ]),
+                ])),
+                new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('QUERY_LANGUAGE_INVALID_SYNTAX'),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SuggestedQueryText'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Corrections'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BeginOffset'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EndOffset'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Term'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CorrectedTerm'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AdditionalAttributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentTitle'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentExcerpt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentURI'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentAttributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FeedbackToken'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DOCUMENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('QUESTION_ANSWER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ANSWER'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ValueType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('TEXT_WITH_HIGHLIGHTS_VALUE'),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('TextWithHighlightsValue'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Text'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Highlights'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('BeginOffset'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('EndOffset'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('TopAnswer'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\BooleanType(),
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('THESAURUS_SYNONYM'),
+                                                ]),
+                                            ]),
+                                        ])),
+                                    ]),
+                                ]),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Text'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Highlights'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('BeginOffset'),
                                     new \PHPStan\Type\Constant\ConstantStringType('EndOffset'),
@@ -3289,70 +3718,55 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                                         new \PHPStan\Type\Constant\ConstantStringType('THESAURUS_SYNONYM'),
                                     ]),
                                 ]),
-                            ]),
+                            ])),
                         ]),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Text'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Highlights'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BeginOffset'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndOffset'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TopAnswer'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('THESAURUS_SYNONYM'),
-                            ]),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Text'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Highlights'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BeginOffset'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndOffset'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TopAnswer'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('THESAURUS_SYNONYM'),
-                            ]),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StringValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StringListValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LongValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Text'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Highlights'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('BeginOffset'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EndOffset'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TopAnswer'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('THESAURUS_SYNONYM'),
+                                    ]),
+                                ]),
+                            ])),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('StringValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('StringListValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LongValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DateValue'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                ]),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -3364,49 +3778,55 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('ResultItems'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DocumentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DocumentTitle'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Content'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DocumentURI'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DocumentAttributes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ScoreAttributes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentTitle'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Content'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentURI'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentAttributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ScoreAttributes'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('StringValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('StringListValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LongValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DateValue'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                ]),
+                            ]),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StringValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StringListValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LongValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ScoreConfidence'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VERY_HIGH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NOT_AVAILABLE'),
+                            ]),
                         ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ScoreConfidence'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('VERY_HIGH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_AVAILABLE'),
-                        ]),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -3485,12 +3905,16 @@ final class kendraClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                         new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                 ]),

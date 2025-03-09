@@ -32,17 +32,21 @@ final class KinesisVideoSignalingChannelsClientReturnTypeExtension implements \P
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('IceServerList'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Uris'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Username'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Password'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Ttl'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Uris'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Username'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Password'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Ttl'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
             ]),
         ]);
     }

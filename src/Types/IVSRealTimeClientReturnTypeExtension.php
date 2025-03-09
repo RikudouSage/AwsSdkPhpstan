@@ -182,10 +182,12 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLISH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUBSCRIBE'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PUBLISH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBSCRIBE'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
             ]),
@@ -217,21 +219,25 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('recordingReconnectWindowSeconds'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AUDIO_VIDEO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUDIO_ONLY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AUDIO_VIDEO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AUDIO_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('targetIntervalSeconds'),
                             new \PHPStan\Type\Constant\ConstantStringType('storage'),
                             new \PHPStan\Type\Constant\ConstantStringType('recordingMode'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SEQUENTIAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LATEST'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SEQUENTIAL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LATEST'),
+                                ]),
+                            ])),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('INTERVAL'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
@@ -251,26 +257,30 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\StringType(),
                     ]),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('participantId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('token'),
-                    new \PHPStan\Type\Constant\ConstantStringType('userId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('attributes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('duration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('capabilities'),
-                    new \PHPStan\Type\Constant\ConstantStringType('expirationTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLISH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUBSCRIBE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('participantId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('token'),
+                        new \PHPStan\Type\Constant\ConstantStringType('userId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('attributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('duration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('capabilities'),
+                        new \PHPStan\Type\Constant\ConstantStringType('expirationTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PUBLISH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBSCRIBE'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -421,73 +431,81 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             new \PHPStan\Type\IntegerType(),
                         ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('state'),
-                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('configuration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('detail'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RECONNECTING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('channel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('state'),
+                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('configuration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('detail'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('channelArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('encoderConfigurationArn'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RECONNECTING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
                             ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('storageConfigurationArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('encoderConfigurationArns'),
-                                new \PHPStan\Type\Constant\ConstantStringType('recordingConfiguration'),
-                                new \PHPStan\Type\Constant\ConstantStringType('thumbnailConfigurations'),
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('channel'),
+                                new \PHPStan\Type\Constant\ConstantStringType('s3'),
                             ], [
-                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('format'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('channelArn'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('encoderConfigurationArn'),
                                 ], [
-                                    new \PHPStan\Type\Constant\ConstantStringType('HLS'),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('targetIntervalSeconds'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('storage'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('storageConfigurationArn'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('encoderConfigurationArns'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('recordingConfiguration'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('thumbnailConfigurations'),
                                 ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('SEQUENTIAL'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('LATEST'),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('format'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantStringType('HLS'),
                                     ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('targetIntervalSeconds'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('storage'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('SEQUENTIAL'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('LATEST'),
+                                                ]),
+                                            ])),
+                                        ]),
+                                    ])),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('recordingPrefix'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
                                 ]),
                             ]),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('s3'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('recordingPrefix'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -669,21 +687,25 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('recordingReconnectWindowSeconds'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AUDIO_VIDEO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUDIO_ONLY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AUDIO_VIDEO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AUDIO_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('targetIntervalSeconds'),
                             new \PHPStan\Type\Constant\ConstantStringType('storage'),
                             new \PHPStan\Type\Constant\ConstantStringType('recordingMode'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SEQUENTIAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LATEST'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SEQUENTIAL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LATEST'),
+                                ]),
+                            ])),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('INTERVAL'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
@@ -777,46 +799,50 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('compositions'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('stageArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('destinations'),
-                    new \PHPStan\Type\Constant\ConstantStringType('state'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('stageArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('destinations'),
                         new \PHPStan\Type\Constant\ConstantStringType('state'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
                         new \PHPStan\Type\Constant\ConstantStringType('startTime'),
                         new \PHPStan\Type\Constant\ConstantStringType('endTime'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                new \PHPStan\Type\Constant\ConstantStringType('state'),
+                                new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RECONNECTING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                                ]),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
                             new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                             new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RECONNECTING'),
                             new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                             new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -828,15 +854,17 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('encoderConfigurations'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -848,29 +876,31 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('ingestConfigurations'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ingestProtocol'),
-                    new \PHPStan\Type\Constant\ConstantStringType('stageArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('participantId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('state'),
-                    new \PHPStan\Type\Constant\ConstantStringType('userId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RTMP'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RTMPS'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ingestProtocol'),
+                        new \PHPStan\Type\Constant\ConstantStringType('stageArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('participantId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('state'),
+                        new \PHPStan\Type\Constant\ConstantStringType('userId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RTMP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RTMPS'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -882,44 +912,46 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('events'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('participantId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('remoteParticipantId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('JOINED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LEFT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_STARTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_STOPPED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUBSCRIBE_STARTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUBSCRIBE_STOPPED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_ERROR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUBSCRIBE_ERROR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('JOIN_ERROR'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('participantId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('remoteParticipantId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('JOINED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LEFT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_STARTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_STOPPED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBSCRIBE_STARTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBSCRIBE_STOPPED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBSCRIBE_ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('JOIN_ERROR'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INSUFFICIENT_CAPABILITIES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('QUOTA_EXCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PUBLISHER_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BITRATE_EXCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RESOLUTION_EXCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STREAM_DURATION_EXCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_AUDIO_CODEC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_VIDEO_CODEC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_PROTOCOL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_STREAM_KEY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REUSE_OF_STREAM_KEY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('B_FRAME_PRESENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_INPUT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_SERVER_EXCEPTION'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('INSUFFICIENT_CAPABILITIES'),
-                        new \PHPStan\Type\Constant\ConstantStringType('QUOTA_EXCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLISHER_NOT_FOUND'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BITRATE_EXCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RESOLUTION_EXCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STREAM_DURATION_EXCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INVALID_AUDIO_CODEC'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INVALID_VIDEO_CODEC'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INVALID_PROTOCOL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INVALID_STREAM_KEY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REUSE_OF_STREAM_KEY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('B_FRAME_PRESENT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INVALID_INPUT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_SERVER_EXCEPTION'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -931,31 +963,33 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('participants'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('participantId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('userId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('state'),
-                    new \PHPStan\Type\Constant\ConstantStringType('firstJoinTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('published'),
-                    new \PHPStan\Type\Constant\ConstantStringType('recordingState'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CONNECTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISCONNECTED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('participantId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('userId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('state'),
+                        new \PHPStan\Type\Constant\ConstantStringType('firstJoinTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('published'),
+                        new \PHPStan\Type\Constant\ConstantStringType('recordingState'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CONNECTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISCONNECTED'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -967,15 +1001,17 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('publicKeys'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -987,15 +1023,17 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('stageSessions'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('sessionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('sessionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1007,17 +1045,19 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('stages'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('activeSessionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('activeSessionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1029,21 +1069,23 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('storageConfigurations'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('s3'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('bucketName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('bucketName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1145,73 +1187,81 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             new \PHPStan\Type\IntegerType(),
                         ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('state'),
-                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('configuration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('detail'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RECONNECTING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('channel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('state'),
+                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('configuration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('detail'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('channelArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('encoderConfigurationArn'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RECONNECTING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
                             ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('storageConfigurationArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('encoderConfigurationArns'),
-                                new \PHPStan\Type\Constant\ConstantStringType('recordingConfiguration'),
-                                new \PHPStan\Type\Constant\ConstantStringType('thumbnailConfigurations'),
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('channel'),
+                                new \PHPStan\Type\Constant\ConstantStringType('s3'),
                             ], [
-                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('format'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('channelArn'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('encoderConfigurationArn'),
                                 ], [
-                                    new \PHPStan\Type\Constant\ConstantStringType('HLS'),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('targetIntervalSeconds'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('storage'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('storageConfigurationArn'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('encoderConfigurationArns'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('recordingConfiguration'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('thumbnailConfigurations'),
                                 ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('SEQUENTIAL'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('LATEST'),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('format'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantStringType('HLS'),
                                     ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('targetIntervalSeconds'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('storage'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('SEQUENTIAL'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('LATEST'),
+                                                ]),
+                                            ])),
+                                        ]),
+                                    ])),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('recordingPrefix'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
                                 ]),
                             ]),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('s3'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('recordingPrefix'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -1300,21 +1350,25 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('recordingReconnectWindowSeconds'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AUDIO_VIDEO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUDIO_ONLY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AUDIO_VIDEO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AUDIO_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('targetIntervalSeconds'),
                             new \PHPStan\Type\Constant\ConstantStringType('storage'),
                             new \PHPStan\Type\Constant\ConstantStringType('recordingMode'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SEQUENTIAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LATEST'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SEQUENTIAL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LATEST'),
+                                ]),
+                            ])),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('INTERVAL'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),

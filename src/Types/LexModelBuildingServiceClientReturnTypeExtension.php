@@ -130,31 +130,35 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('intentName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('intentVersion'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('intentName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('intentVersion'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('messages'),
                     new \PHPStan\Type\Constant\ConstantStringType('maxAttempts'),
                     new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('content'),
-                        new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SSML'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SSML'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -162,19 +166,21 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantStringType('messages'),
                     new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('content'),
-                        new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SSML'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SSML'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\UnionType([
@@ -237,32 +243,82 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('slotConstraint'),
-                    new \PHPStan\Type\Constant\ConstantStringType('slotType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('slotTypeVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('valueElicitationPrompt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('priority'),
-                    new \PHPStan\Type\Constant\ConstantStringType('sampleUtterances'),
-                    new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
-                    new \PHPStan\Type\Constant\ConstantStringType('obfuscationSetting'),
-                    new \PHPStan\Type\Constant\ConstantStringType('defaultValueSpec'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Required'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Optional'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('messages'),
-                        new \PHPStan\Type\Constant\ConstantStringType('maxAttempts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('slotConstraint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('slotType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('slotTypeVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('valueElicitationPrompt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('priority'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sampleUtterances'),
                         new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
+                        new \PHPStan\Type\Constant\ConstantStringType('obfuscationSetting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('defaultValueSpec'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Required'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Optional'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('messages'),
+                            new \PHPStan\Type\Constant\ConstantStringType('maxAttempts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('content'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSML'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_OBFUSCATION'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('defaultValueList'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('messages'),
+                    new \PHPStan\Type\Constant\ConstantStringType('maxAttempts'),
+                    new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('contentType'),
                             new \PHPStan\Type\Constant\ConstantStringType('content'),
@@ -276,65 +332,29 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_OBFUSCATION'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('defaultValueList'),
-                    ], [
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('messages'),
+                    new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
                         ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SSML'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                            ]),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('messages'),
-                    new \PHPStan\Type\Constant\ConstantStringType('maxAttempts'),
-                    new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('content'),
-                        new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SSML'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('messages'),
-                    new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('content'),
-                        new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SSML'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -346,19 +366,21 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                         new \PHPStan\Type\Constant\ConstantStringType('maxAttempts'),
                         new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('content'),
-                            new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SSML'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('content'),
+                                new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SSML'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
                             ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                        ])),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                     ]),
@@ -366,6 +388,29 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                         new \PHPStan\Type\Constant\ConstantStringType('messages'),
                         new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
                     ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('content'),
+                                new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SSML'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('messages'),
+                    new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('contentType'),
                             new \PHPStan\Type\Constant\ConstantStringType('content'),
@@ -379,26 +424,7 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('messages'),
-                    new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('content'),
-                        new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SSML'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -438,20 +464,24 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('timeToLiveInSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('turnsToLive'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('timeToLiveInSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('turnsToLive'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -472,13 +502,17 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                    new \PHPStan\Type\Constant\ConstantStringType('synonyms'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('synonyms'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
@@ -488,15 +522,17 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantStringType('TOP_RESOLUTION'),
                 ]),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('regexConfiguration'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('pattern'),
+                        new \PHPStan\Type\Constant\ConstantStringType('regexConfiguration'),
                     ], [
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('pattern'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -579,13 +615,15 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('intentName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('intentVersion'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('intentName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('intentVersion'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\FloatType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -593,19 +631,21 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantStringType('maxAttempts'),
                     new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('content'),
-                        new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SSML'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SSML'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -613,19 +653,21 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantStringType('messages'),
                     new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('content'),
-                        new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SSML'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SSML'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\UnionType([
@@ -686,58 +728,7 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantStringType('logSettings'),
                     new \PHPStan\Type\Constant\ConstantStringType('iamRoleArn'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('logType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('destination'),
-                        new \PHPStan\Type\Constant\ConstantStringType('kmsKeyArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourcePrefix'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AUDIO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TEXT'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH_LOGS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
-            ]),
-        ]);
-    }
-    private function getBotAliases(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('BotAliases'),
-                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('botVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('botName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('checksum'),
-                    new \PHPStan\Type\Constant\ConstantStringType('conversationLogs'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('logSettings'),
-                        new \PHPStan\Type\Constant\ConstantStringType('iamRoleArn'),
-                    ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('logType'),
                             new \PHPStan\Type\Constant\ConstantStringType('destination'),
@@ -757,9 +748,66 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
                 ]),
+            ]),
+        ]);
+    }
+    private function getBotAliases(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('BotAliases'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('botVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('botName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('checksum'),
+                        new \PHPStan\Type\Constant\ConstantStringType('conversationLogs'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('logSettings'),
+                            new \PHPStan\Type\Constant\ConstantStringType('iamRoleArn'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('logType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('destination'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('kmsKeyArn'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('resourceArn'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('resourcePrefix'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('AUDIO'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TEXT'),
+                                    ]),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH_LOGS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -806,36 +854,38 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('botChannelAssociations'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('botAlias'),
-                    new \PHPStan\Type\Constant\ConstantStringType('botName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('botConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('failureReason'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Facebook'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Slack'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Twilio-Sms'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Kik'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('botAlias'),
+                        new \PHPStan\Type\Constant\ConstantStringType('botName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('botConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failureReason'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Facebook'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Slack'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Twilio-Sms'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Kik'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -847,27 +897,29 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('bots'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('version'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BUILDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('READY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('READY_BASIC_TESTING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NOT_BUILT'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('READY_BASIC_TESTING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_BUILT'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -879,27 +931,29 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('bots'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('version'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BUILDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('READY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('READY_BASIC_TESTING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NOT_BUILT'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('READY_BASIC_TESTING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_BUILT'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -913,41 +967,7 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('slots'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('de-DE'),
-                    new \PHPStan\Type\Constant\ConstantStringType('en-AU'),
-                    new \PHPStan\Type\Constant\ConstantStringType('en-GB'),
-                    new \PHPStan\Type\Constant\ConstantStringType('en-IN'),
-                    new \PHPStan\Type\Constant\ConstantStringType('en-US'),
-                    new \PHPStan\Type\Constant\ConstantStringType('es-419'),
-                    new \PHPStan\Type\Constant\ConstantStringType('es-ES'),
-                    new \PHPStan\Type\Constant\ConstantStringType('es-US'),
-                    new \PHPStan\Type\Constant\ConstantStringType('fr-FR'),
-                    new \PHPStan\Type\Constant\ConstantStringType('fr-CA'),
-                    new \PHPStan\Type\Constant\ConstantStringType('it-IT'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ja-JP'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ko-KR'),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
-            ]),
-        ]);
-    }
-    private function getBuiltinIntents(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('intents'),
-                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('signature'),
-                    new \PHPStan\Type\Constant\ConstantStringType('supportedLocales'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('de-DE'),
                         new \PHPStan\Type\Constant\ConstantStringType('en-AU'),
@@ -963,7 +983,49 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                         new \PHPStan\Type\Constant\ConstantStringType('ja-JP'),
                         new \PHPStan\Type\Constant\ConstantStringType('ko-KR'),
                     ]),
-                ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function getBuiltinIntents(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('intents'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('signature'),
+                        new \PHPStan\Type\Constant\ConstantStringType('supportedLocales'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('de-DE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('en-AU'),
+                                new \PHPStan\Type\Constant\ConstantStringType('en-GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('en-IN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('en-US'),
+                                new \PHPStan\Type\Constant\ConstantStringType('es-419'),
+                                new \PHPStan\Type\Constant\ConstantStringType('es-ES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('es-US'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fr-FR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fr-CA'),
+                                new \PHPStan\Type\Constant\ConstantStringType('it-IT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ja-JP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ko-KR'),
+                            ]),
+                        ])),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -975,27 +1037,31 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('slotTypes'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('signature'),
-                    new \PHPStan\Type\Constant\ConstantStringType('supportedLocales'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('de-DE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('en-AU'),
-                        new \PHPStan\Type\Constant\ConstantStringType('en-GB'),
-                        new \PHPStan\Type\Constant\ConstantStringType('en-IN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('en-US'),
-                        new \PHPStan\Type\Constant\ConstantStringType('es-419'),
-                        new \PHPStan\Type\Constant\ConstantStringType('es-ES'),
-                        new \PHPStan\Type\Constant\ConstantStringType('es-US'),
-                        new \PHPStan\Type\Constant\ConstantStringType('fr-FR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('fr-CA'),
-                        new \PHPStan\Type\Constant\ConstantStringType('it-IT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ja-JP'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ko-KR'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('signature'),
+                        new \PHPStan\Type\Constant\ConstantStringType('supportedLocales'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('de-DE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('en-AU'),
+                                new \PHPStan\Type\Constant\ConstantStringType('en-GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('en-IN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('en-US'),
+                                new \PHPStan\Type\Constant\ConstantStringType('es-419'),
+                                new \PHPStan\Type\Constant\ConstantStringType('es-ES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('es-US'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fr-FR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fr-CA'),
+                                new \PHPStan\Type\Constant\ConstantStringType('it-IT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ja-JP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ko-KR'),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1061,7 +1127,9 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
                     new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                 ]),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
             ]),
         ]);
@@ -1091,32 +1159,82 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('slotConstraint'),
-                    new \PHPStan\Type\Constant\ConstantStringType('slotType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('slotTypeVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('valueElicitationPrompt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('priority'),
-                    new \PHPStan\Type\Constant\ConstantStringType('sampleUtterances'),
-                    new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
-                    new \PHPStan\Type\Constant\ConstantStringType('obfuscationSetting'),
-                    new \PHPStan\Type\Constant\ConstantStringType('defaultValueSpec'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Required'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Optional'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('messages'),
-                        new \PHPStan\Type\Constant\ConstantStringType('maxAttempts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('slotConstraint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('slotType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('slotTypeVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('valueElicitationPrompt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('priority'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sampleUtterances'),
                         new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
+                        new \PHPStan\Type\Constant\ConstantStringType('obfuscationSetting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('defaultValueSpec'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Required'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Optional'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('messages'),
+                            new \PHPStan\Type\Constant\ConstantStringType('maxAttempts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('content'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSML'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_OBFUSCATION'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('defaultValueList'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('messages'),
+                    new \PHPStan\Type\Constant\ConstantStringType('maxAttempts'),
+                    new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('contentType'),
                             new \PHPStan\Type\Constant\ConstantStringType('content'),
@@ -1130,65 +1248,29 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_OBFUSCATION'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('defaultValueList'),
-                    ], [
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('messages'),
+                    new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
                         ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SSML'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                            ]),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('messages'),
-                    new \PHPStan\Type\Constant\ConstantStringType('maxAttempts'),
-                    new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('content'),
-                        new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SSML'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('messages'),
-                    new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('content'),
-                        new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SSML'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1200,19 +1282,21 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                         new \PHPStan\Type\Constant\ConstantStringType('maxAttempts'),
                         new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('content'),
-                            new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SSML'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('content'),
+                                new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SSML'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
                             ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                        ])),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                     ]),
@@ -1220,6 +1304,29 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                         new \PHPStan\Type\Constant\ConstantStringType('messages'),
                         new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
                     ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('content'),
+                                new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SSML'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('messages'),
+                    new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('contentType'),
                             new \PHPStan\Type\Constant\ConstantStringType('content'),
@@ -1233,26 +1340,7 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('messages'),
-                    new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('content'),
-                        new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SSML'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1292,20 +1380,24 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('timeToLiveInSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('turnsToLive'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('timeToLiveInSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('turnsToLive'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1316,19 +1408,21 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('intents'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('version'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1340,19 +1434,21 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('intents'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('version'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1402,20 +1498,26 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantStringType('UPDATE_EXISTING'),
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('details'),
-                    new \PHPStan\Type\Constant\ConstantStringType('referenceURLs'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WARN'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('details'),
+                        new \PHPStan\Type\Constant\ConstantStringType('referenceURLs'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WARN'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1426,48 +1528,50 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('migrationSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('migrationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('v1BotName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('v1BotVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('v1BotLocale'),
-                    new \PHPStan\Type\Constant\ConstantStringType('v2BotId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('v2BotRole'),
-                    new \PHPStan\Type\Constant\ConstantStringType('migrationStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('migrationStrategy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('migrationTimestamp'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('de-DE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('en-AU'),
-                        new \PHPStan\Type\Constant\ConstantStringType('en-GB'),
-                        new \PHPStan\Type\Constant\ConstantStringType('en-IN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('en-US'),
-                        new \PHPStan\Type\Constant\ConstantStringType('es-419'),
-                        new \PHPStan\Type\Constant\ConstantStringType('es-ES'),
-                        new \PHPStan\Type\Constant\ConstantStringType('es-US'),
-                        new \PHPStan\Type\Constant\ConstantStringType('fr-FR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('fr-CA'),
-                        new \PHPStan\Type\Constant\ConstantStringType('it-IT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ja-JP'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ko-KR'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('migrationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('v1BotName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('v1BotVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('v1BotLocale'),
+                        new \PHPStan\Type\Constant\ConstantStringType('v2BotId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('v2BotRole'),
+                        new \PHPStan\Type\Constant\ConstantStringType('migrationStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('migrationStrategy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('migrationTimestamp'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('de-DE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('en-AU'),
+                            new \PHPStan\Type\Constant\ConstantStringType('en-GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('en-IN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('en-US'),
+                            new \PHPStan\Type\Constant\ConstantStringType('es-419'),
+                            new \PHPStan\Type\Constant\ConstantStringType('es-ES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('es-US'),
+                            new \PHPStan\Type\Constant\ConstantStringType('fr-FR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('fr-CA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('it-IT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ja-JP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ko-KR'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_NEW'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_EXISTING'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_NEW'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_EXISTING'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1489,13 +1593,17 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                    new \PHPStan\Type\Constant\ConstantStringType('synonyms'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('synonyms'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
@@ -1505,15 +1613,17 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantStringType('TOP_RESOLUTION'),
                 ]),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('regexConfiguration'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('pattern'),
+                        new \PHPStan\Type\Constant\ConstantStringType('regexConfiguration'),
                     ], [
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('pattern'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1524,19 +1634,21 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('slotTypes'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('version'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1548,19 +1660,21 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('slotTypes'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('version'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('version'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1573,25 +1687,29 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('utterances'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('botVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('utterances'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('utteranceString'),
-                        new \PHPStan\Type\Constant\ConstantStringType('count'),
-                        new \PHPStan\Type\Constant\ConstantStringType('distinctUsers'),
-                        new \PHPStan\Type\Constant\ConstantStringType('firstUtteredDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUtteredDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('botVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('utterances'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('utteranceString'),
+                                new \PHPStan\Type\Constant\ConstantStringType('count'),
+                                new \PHPStan\Type\Constant\ConstantStringType('distinctUsers'),
+                                new \PHPStan\Type\Constant\ConstantStringType('firstUtteredDate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('lastUtteredDate'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1601,13 +1719,15 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1638,13 +1758,15 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('intentName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('intentVersion'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('intentName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('intentVersion'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\FloatType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1652,19 +1774,21 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantStringType('maxAttempts'),
                     new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('content'),
-                        new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SSML'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SSML'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -1672,19 +1796,21 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantStringType('messages'),
                     new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('content'),
-                        new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SSML'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SSML'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\UnionType([
@@ -1719,13 +1845,15 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1754,34 +1882,38 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantStringType('logSettings'),
                     new \PHPStan\Type\Constant\ConstantStringType('iamRoleArn'),
                 ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('logType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('destination'),
+                            new \PHPStan\Type\Constant\ConstantStringType('kmsKeyArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourcePrefix'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AUDIO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TEXT'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH_LOGS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('logType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('destination'),
-                        new \PHPStan\Type\Constant\ConstantStringType('kmsKeyArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourcePrefix'),
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AUDIO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TEXT'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH_LOGS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1811,32 +1943,82 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('slotConstraint'),
-                    new \PHPStan\Type\Constant\ConstantStringType('slotType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('slotTypeVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('valueElicitationPrompt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('priority'),
-                    new \PHPStan\Type\Constant\ConstantStringType('sampleUtterances'),
-                    new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
-                    new \PHPStan\Type\Constant\ConstantStringType('obfuscationSetting'),
-                    new \PHPStan\Type\Constant\ConstantStringType('defaultValueSpec'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Required'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Optional'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('messages'),
-                        new \PHPStan\Type\Constant\ConstantStringType('maxAttempts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('slotConstraint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('slotType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('slotTypeVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('valueElicitationPrompt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('priority'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sampleUtterances'),
                         new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
+                        new \PHPStan\Type\Constant\ConstantStringType('obfuscationSetting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('defaultValueSpec'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Required'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Optional'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('messages'),
+                            new \PHPStan\Type\Constant\ConstantStringType('maxAttempts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('content'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSML'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_OBFUSCATION'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('defaultValueList'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('messages'),
+                    new \PHPStan\Type\Constant\ConstantStringType('maxAttempts'),
+                    new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('contentType'),
                             new \PHPStan\Type\Constant\ConstantStringType('content'),
@@ -1850,65 +2032,29 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_OBFUSCATION'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('defaultValueList'),
-                    ], [
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('messages'),
+                    new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
                         ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SSML'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                            ]),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('messages'),
-                    new \PHPStan\Type\Constant\ConstantStringType('maxAttempts'),
-                    new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('content'),
-                        new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SSML'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('messages'),
-                    new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('content'),
-                        new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SSML'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1920,19 +2066,21 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                         new \PHPStan\Type\Constant\ConstantStringType('maxAttempts'),
                         new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('content'),
-                            new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SSML'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('content'),
+                                new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SSML'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
                             ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                        ])),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                     ]),
@@ -1940,6 +2088,29 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                         new \PHPStan\Type\Constant\ConstantStringType('messages'),
                         new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
                     ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('content'),
+                                new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SSML'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('messages'),
+                    new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('contentType'),
                             new \PHPStan\Type\Constant\ConstantStringType('content'),
@@ -1953,26 +2124,7 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('messages'),
-                    new \PHPStan\Type\Constant\ConstantStringType('responseCard'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('content'),
-                        new \PHPStan\Type\Constant\ConstantStringType('groupNumber'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SSML'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2013,20 +2165,24 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('timeToLiveInSeconds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('turnsToLive'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('timeToLiveInSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('turnsToLive'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -2048,13 +2204,17 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                    new \PHPStan\Type\Constant\ConstantStringType('synonyms'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('synonyms'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
@@ -2065,15 +2225,17 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                 ]),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('regexConfiguration'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('pattern'),
+                        new \PHPStan\Type\Constant\ConstantStringType('regexConfiguration'),
                     ], [
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('pattern'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -2105,13 +2267,15 @@ final class LexModelBuildingServiceClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
                     new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
             ]),
         ]);

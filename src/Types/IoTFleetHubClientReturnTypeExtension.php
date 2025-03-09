@@ -101,29 +101,31 @@ final class IoTFleetHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('applicationSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('applicationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('applicationName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('applicationDescription'),
-                    new \PHPStan\Type\Constant\ConstantStringType('applicationUrl'),
-                    new \PHPStan\Type\Constant\ConstantStringType('applicationCreationDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('applicationLastUpdateDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('applicationState'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('applicationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('applicationName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('applicationDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('applicationUrl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('applicationCreationDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('applicationLastUpdateDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('applicationState'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

@@ -170,7 +170,9 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\Constant\ConstantStringType('Values'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -182,28 +184,32 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\Constant\ConstantStringType('CalculatedAttributeValues'),
                 new \PHPStan\Type\Constant\ConstantStringType('ConditionOverrides'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProfileId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CalculatedAttributeName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IsDataPartial'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProfileId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CalculatedAttributeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IsDataPartial'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Range'),
                 ], [
@@ -227,170 +233,178 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\Constant\ConstantStringType('Errors'),
                 new \PHPStan\Type\Constant\ConstantStringType('Profiles'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProfileId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ProfileId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AccountNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AdditionalInformation'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PartyType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BusinessName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FirstName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MiddleName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BirthDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Gender'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PhoneNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MobilePhoneNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HomePhoneNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BusinessPhoneNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PersonalEmailAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BusinessEmailAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Address'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ShippingAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MailingAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BillingAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FoundByItems'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PartyTypeString'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GenderString'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('INDIVIDUAL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BUSINESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MALE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FEMALE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNSPECIFIED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Address1'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address2'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address3'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address4'),
-                        new \PHPStan\Type\Constant\ConstantStringType('City'),
-                        new \PHPStan\Type\Constant\ConstantStringType('County'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Province'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileId'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
                     ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Address1'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address2'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address3'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address4'),
-                        new \PHPStan\Type\Constant\ConstantStringType('City'),
-                        new \PHPStan\Type\Constant\ConstantStringType('County'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Province'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccountNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AdditionalInformation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PartyType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BusinessName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FirstName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MiddleName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BirthDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Gender'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MobilePhoneNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HomePhoneNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BusinessPhoneNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PersonalEmailAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BusinessEmailAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ShippingAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MailingAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BillingAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FoundByItems'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PartyTypeString'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GenderString'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INDIVIDUAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUSINESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
+                        ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MALE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FEMALE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNSPECIFIED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Address1'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Address2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Address3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Address4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('City'),
+                            new \PHPStan\Type\Constant\ConstantStringType('County'),
+                            new \PHPStan\Type\Constant\ConstantStringType('State'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Province'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Address1'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Address2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Address3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Address4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('City'),
+                            new \PHPStan\Type\Constant\ConstantStringType('County'),
+                            new \PHPStan\Type\Constant\ConstantStringType('State'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Province'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Address1'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Address2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Address3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Address4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('City'),
+                            new \PHPStan\Type\Constant\ConstantStringType('County'),
+                            new \PHPStan\Type\Constant\ConstantStringType('State'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Province'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Address1'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Address2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Address3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Address4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('City'),
+                            new \PHPStan\Type\Constant\ConstantStringType('County'),
+                            new \PHPStan\Type\Constant\ConstantStringType('State'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Province'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('KeyName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
+                        ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Address1'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address2'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address3'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address4'),
-                        new \PHPStan\Type\Constant\ConstantStringType('City'),
-                        new \PHPStan\Type\Constant\ConstantStringType('County'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Province'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Address1'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address2'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address3'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address4'),
-                        new \PHPStan\Type\Constant\ConstantStringType('City'),
-                        new \PHPStan\Type\Constant\ConstantStringType('County'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Province'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('KeyName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -416,11 +430,13 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                     new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
                     new \PHPStan\Type\Constant\ConstantStringType('Expression'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -458,43 +474,49 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                         new \PHPStan\Type\Constant\ConstantStringType('ANY'),
                         new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ANY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BEFORE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AFTER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BETWEEN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_BETWEEN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ON'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN_OR_EQUAL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN_OR_EQUAL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EQUAL'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ANY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('BEFORE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('AFTER'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('BETWEEN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NOT_BETWEEN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ON'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN_OR_EQUAL'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN_OR_EQUAL'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('EQUAL'),
+                                        ]),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\StringType(),
+                                        ])),
+                                    ])),
                                 ]),
-                                new \PHPStan\Type\StringType(),
                             ])),
                         ]),
-                    ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('FIRST_OCCURRENCE'),
@@ -562,7 +584,11 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('MatchingAttributesList'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('ConflictResolvingModel'),
@@ -599,11 +625,15 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                     new \PHPStan\Type\Constant\ConstantStringType('ExportingConfig'),
                 ], [
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Rule'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Rule'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
                         new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
@@ -621,9 +651,15 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                             new \PHPStan\Type\Constant\ConstantStringType('ONE_TO_ONE'),
                             new \PHPStan\Type\Constant\ConstantStringType('MANY_TO_MANY'),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ConflictResolvingModel'),
@@ -682,69 +718,79 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('EventTriggerDimensions'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LogicalOperator'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ObjectAttributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventTriggerDimensions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LogicalOperator'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Source'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ComparisonOperator'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN_OR_EQUAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN_OR_EQUAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EQUAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BEFORE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AFTER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ON'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BETWEEN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_BETWEEN'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ObjectAttributes'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('FieldName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ComparisonOperator'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN_OR_EQUAL'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN_OR_EQUAL'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('EQUAL'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('BEFORE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('AFTER'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ON'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('BETWEEN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NOT_BETWEEN'),
+                                        ]),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\StringType(),
+                                        ])),
+                                    ]),
+                                ])),
                             ]),
-                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ANY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                         ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ANY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('EventExpiration'),
                     new \PHPStan\Type\Constant\ConstantStringType('Periods'),
                 ], [
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Unit'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaxInvocationsPerProfile'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unlimited'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HOURS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WEEKS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxInvocationsPerProfile'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unlimited'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HOURS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WEEKS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\BooleanType(),
                         ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -922,45 +968,53 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('DetectedProfileObjectTypes'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('SourceLastUpdatedTimestampFormat'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Fields'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Keys'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Source'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Target'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ContentType'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceLastUpdatedTimestampFormat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Fields'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Keys'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('STRING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NUMBER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PHONE_NUMBER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL_ADDRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NAME'),
-                        ]),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('StandardIdentifiers'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FieldNames'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PROFILE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ASSET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CASE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORDER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMMUNICATION_RECORD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNIQUE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SECONDARY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LOOKUP_ONLY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NEW_ONLY'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Target'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ContentType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('STRING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PHONE_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL_ADDRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NAME'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('StandardIdentifiers'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FieldNames'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PROFILE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ASSET'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CASE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ORDER'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('COMMUNICATION_RECORD'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UNIQUE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SECONDARY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LOOKUP_ONLY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NEW_ONLY'),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
+                        ]))),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1019,43 +1073,49 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                         new \PHPStan\Type\Constant\ConstantStringType('ANY'),
                         new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ANY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BEFORE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AFTER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BETWEEN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_BETWEEN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ON'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN_OR_EQUAL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN_OR_EQUAL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EQUAL'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ANY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('BEFORE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('AFTER'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('BETWEEN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NOT_BETWEEN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ON'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN_OR_EQUAL'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN_OR_EQUAL'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('EQUAL'),
+                                        ]),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\StringType(),
+                                        ])),
+                                    ])),
                                 ]),
-                                new \PHPStan\Type\StringType(),
                             ])),
                         ]),
-                    ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Range'),
@@ -1087,11 +1147,13 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                     new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
                     new \PHPStan\Type\Constant\ConstantStringType('Expression'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -1176,7 +1238,11 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('MatchingAttributesList'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('ConflictResolvingModel'),
@@ -1213,11 +1279,15 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                     new \PHPStan\Type\Constant\ConstantStringType('ExportingConfig'),
                 ], [
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Rule'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Rule'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
                         new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
@@ -1235,9 +1305,15 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                             new \PHPStan\Type\Constant\ConstantStringType('ONE_TO_ONE'),
                             new \PHPStan\Type\Constant\ConstantStringType('MANY_TO_MANY'),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ConflictResolvingModel'),
@@ -1322,69 +1398,79 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('EventTriggerDimensions'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LogicalOperator'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ObjectAttributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventTriggerDimensions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LogicalOperator'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Source'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ComparisonOperator'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN_OR_EQUAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN_OR_EQUAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EQUAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BEFORE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AFTER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ON'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BETWEEN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_BETWEEN'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ObjectAttributes'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('FieldName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ComparisonOperator'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN_OR_EQUAL'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN_OR_EQUAL'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('EQUAL'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('BEFORE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('AFTER'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ON'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('BETWEEN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NOT_BETWEEN'),
+                                        ]),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\StringType(),
+                                        ])),
+                                    ]),
+                                ])),
                             ]),
-                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ANY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                         ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ANY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('EventExpiration'),
                     new \PHPStan\Type\Constant\ConstantStringType('Periods'),
                 ], [
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Unit'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaxInvocationsPerProfile'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unlimited'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HOURS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WEEKS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxInvocationsPerProfile'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unlimited'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HOURS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WEEKS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\BooleanType(),
                         ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -1434,7 +1520,11 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('MatchingAttributesList'),
                     ], [
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ConflictResolvingModel'),
@@ -1497,7 +1587,9 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -1513,15 +1605,19 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('MatchId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProfileIds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ConfidenceScore'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\FloatType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MatchId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConfidenceScore'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\FloatType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1568,23 +1664,29 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                         new \PHPStan\Type\Constant\ConstantStringType('NAME'),
                     ]),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('StandardIdentifiers'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FieldNames'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PROFILE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ASSET'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CASE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ORDER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMMUNICATION_RECORD'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNIQUE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SECONDARY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LOOKUP_ONLY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NEW_ONLY'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('StandardIdentifiers'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FieldNames'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PROFILE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ASSET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CASE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORDER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('COMMUNICATION_RECORD'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UNIQUE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SECONDARY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOOKUP_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NEW_ONLY'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ])),
+                ]))),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -1623,23 +1725,29 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                         new \PHPStan\Type\Constant\ConstantStringType('NAME'),
                     ]),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('StandardIdentifiers'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FieldNames'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PROFILE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ASSET'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CASE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ORDER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMMUNICATION_RECORD'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNIQUE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SECONDARY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LOOKUP_ONLY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NEW_ONLY'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('StandardIdentifiers'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FieldNames'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PROFILE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ASSET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CASE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORDER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('COMMUNICATION_RECORD'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UNIQUE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SECONDARY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOOKUP_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NEW_ONLY'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ])),
+                ]))),
             ]),
         ]);
     }
@@ -1662,258 +1770,707 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                     new \PHPStan\Type\Constant\ConstantStringType('Groups'),
                     new \PHPStan\Type\Constant\ConstantStringType('Include'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceSegments'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ProfileAttributes'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CalculatedAttributes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SourceSegments'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SourceType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AccountNumber'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AdditionalInformation'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FirstName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LastName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MiddleName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('GenderString'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PartyTypeString'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BirthDate'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PhoneNumber'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BusinessName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BusinessPhoneNumber'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HomePhoneNumber'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MobilePhoneNumber'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PersonalEmailAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BusinessEmailAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Address'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ShippingAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MailingAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BillingAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
-                            ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('BEFORE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('AFTER'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BETWEEN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('NOT_BETWEEN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ON'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('City'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('County'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Province'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ProfileAttributes'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CalculatedAttributes'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('AccountNumber'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AdditionalInformation'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('FirstName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LastName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MiddleName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('GenderString'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PartyTypeString'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('BirthDate'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumber'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('BusinessName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('BusinessPhoneNumber'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('HomePhoneNumber'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MobilePhoneNumber'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PersonalEmailAddress'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('BusinessEmailAddress'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ShippingAddress'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MailingAddress'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('BillingAddress'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('BEFORE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('AFTER'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('BETWEEN'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('NOT_BETWEEN'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ON'),
+                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('City'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('County'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Province'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('State'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('City'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('County'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Province'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('State'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('City'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('County'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Province'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('State'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('City'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('County'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Province'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('State'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('BEFORE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('AFTER'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('BETWEEN'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('NOT_BETWEEN'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ON'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN_OR_EQUAL'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN_OR_EQUAL'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('EQUAL'),
+                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                        ])),
+                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
                                         new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ConditionOverrides'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
@@ -1921,414 +2478,55 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                                             new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                             new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('BEFORE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('AFTER'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('BETWEEN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NOT_BETWEEN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ON'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN_OR_EQUAL'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN_OR_EQUAL'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('EQUAL'),
                                         ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\StringType(),
+                                        ])),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Range'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('Start'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('End'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
+                                            ]),
                                         ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('City'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('County'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Province'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('City'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('County'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Province'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('City'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('County'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Province'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BEFORE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('AFTER'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BETWEEN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('NOT_BETWEEN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ON'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN_OR_EQUAL'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN_OR_EQUAL'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EQUAL'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DimensionType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConditionOverrides'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BEFORE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AFTER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BETWEEN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_BETWEEN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ON'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN_OR_EQUAL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN_OR_EQUAL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EQUAL'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Range'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Start'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('End'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Unit'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
-                                    ]),
+                                    ])),
                                 ]),
                             ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SegmentDefinitionName'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ANY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ANY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SegmentDefinitionName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ANY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ANY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('ALL'),
                         new \PHPStan\Type\Constant\ConstantStringType('ANY'),
@@ -2374,16 +2572,979 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\Constant\ConstantStringType('Failures'),
             ], [
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QueryResult'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Profile'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PRESENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ABSENT'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ProfileId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AccountNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AdditionalInformation'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PartyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BusinessName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FirstName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MiddleName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LastName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BirthDate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Gender'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PhoneNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MobilePhoneNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HomePhoneNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BusinessPhoneNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PersonalEmailAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BusinessEmailAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ShippingAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MailingAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BillingAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FoundByItems'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PartyTypeString'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GenderString'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('INDIVIDUAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUSINESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MALE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FEMALE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UNSPECIFIED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Address1'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Address2'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Address3'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Address4'),
+                                new \PHPStan\Type\Constant\ConstantStringType('City'),
+                                new \PHPStan\Type\Constant\ConstantStringType('County'),
+                                new \PHPStan\Type\Constant\ConstantStringType('State'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Province'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Address1'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Address2'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Address3'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Address4'),
+                                new \PHPStan\Type\Constant\ConstantStringType('City'),
+                                new \PHPStan\Type\Constant\ConstantStringType('County'),
+                                new \PHPStan\Type\Constant\ConstantStringType('State'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Province'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Address1'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Address2'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Address3'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Address4'),
+                                new \PHPStan\Type\Constant\ConstantStringType('City'),
+                                new \PHPStan\Type\Constant\ConstantStringType('County'),
+                                new \PHPStan\Type\Constant\ConstantStringType('State'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Province'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Address1'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Address2'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Address3'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Address4'),
+                                new \PHPStan\Type\Constant\ConstantStringType('City'),
+                                new \PHPStan\Type\Constant\ConstantStringType('County'),
+                                new \PHPStan\Type\Constant\ConstantStringType('State'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Province'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('KeyName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function getSegmentSnapshot(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('SnapshotId'),
+                new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                new \PHPStan\Type\Constant\ConstantStringType('DataFormat'),
+                new \PHPStan\Type\Constant\ConstantStringType('EncryptionKey'),
+                new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('DestinationUri'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CSV'),
+                    new \PHPStan\Type\Constant\ConstantStringType('JSONL'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ORC'),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function getSimilarProfiles(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ProfileIds'),
+                new \PHPStan\Type\Constant\ConstantStringType('MatchId'),
+                new \PHPStan\Type\Constant\ConstantStringType('MatchType'),
+                new \PHPStan\Type\Constant\ConstantStringType('RuleLevel'),
+                new \PHPStan\Type\Constant\ConstantStringType('ConfidenceScore'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RULE_BASED_MATCHING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ML_BASED_MATCHING'),
+                ]),
+                new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\FloatType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function getWorkflow(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('WorkflowId'),
+                new \PHPStan\Type\Constant\ConstantStringType('WorkflowType'),
+                new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                new \PHPStan\Type\Constant\ConstantStringType('ErrorDescription'),
+                new \PHPStan\Type\Constant\ConstantStringType('StartDate'),
+                new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
+                new \PHPStan\Type\Constant\ConstantStringType('Metrics'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantStringType('APPFLOW_INTEGRATION'),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SPLIT'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RETRY'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ProfileId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('QueryResult'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Profile'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AppflowIntegration'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceConnectorType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectorProfileName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Salesforce'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Marketo'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Zendesk'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Servicenow'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AppflowIntegration'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RecordsProcessed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StepsCompleted'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TotalSteps'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ]),
+            ]),
+        ]);
+    }
+    private function getWorkflowSteps(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('WorkflowId'),
+                new \PHPStan\Type\Constant\ConstantStringType('WorkflowType'),
+                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantStringType('APPFLOW_INTEGRATION'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AppflowIntegration'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FlowName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionMessage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RecordsProcessed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BatchRecordsStartTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BatchRecordsEndTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SPLIT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RETRY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listAccountIntegrations(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Uri'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ObjectTypeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ObjectTypeNames'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WorkflowId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IsUnstructured'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventTriggerNames'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listCalculatedAttributeDefinitions(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CalculatedAttributeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listCalculatedAttributesForProfile(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CalculatedAttributeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IsDataPartial'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listDomains(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listEventStreams(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventStreamName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventStreamArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StoppedSince'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DestinationSummary'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Uri'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnhealthySince'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listEventTriggers(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ObjectTypeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventTriggerName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listIdentityResolutionJobs(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('IdentityResolutionJobsList'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobStartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobEndTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobStats'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExportingLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PREPROCESSING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FIND_MATCHING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MERGING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PARTIAL_SUCCESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NumberOfProfilesReviewed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NumberOfMatchesFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NumberOfMergesDone'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Exporting'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('S3BucketName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('S3KeyName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listIntegrations(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Uri'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ObjectTypeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ObjectTypeNames'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WorkflowId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IsUnstructured'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventTriggerNames'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listObjectTypeAttributes(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listProfileAttributeValues(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\IntegerType(),
+            ]),
+        ]);
+    }
+    private function listProfileObjectTypeTemplates(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TemplateId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceObject'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listProfileObjectTypes(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ObjectTypeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxProfileObjectCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxAvailableProfileObjectCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listProfileObjects(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ObjectTypeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileObjectUniqueKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Object'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listRuleBasedMatches(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('MatchIds'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listSegmentDefinitions(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SegmentDefinitionName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SegmentDefinitionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function listTagsForResource(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('tags'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+            ]),
+        ]);
+    }
+    private function listWorkflows(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('WorkflowType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WorkflowId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('APPFLOW_INTEGRATION'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SPLIT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RETRY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function mergeProfiles(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Message'),
+            ], [
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function putIntegration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                new \PHPStan\Type\Constant\ConstantStringType('Uri'),
+                new \PHPStan\Type\Constant\ConstantStringType('ObjectTypeName'),
+                new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                new \PHPStan\Type\Constant\ConstantStringType('ObjectTypeNames'),
+                new \PHPStan\Type\Constant\ConstantStringType('WorkflowId'),
+                new \PHPStan\Type\Constant\ConstantStringType('IsUnstructured'),
+                new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('EventTriggerNames'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
+            ]),
+        ]);
+    }
+    private function putProfileObject(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ProfileObjectUniqueKey'),
+            ], [
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function putProfileObjectType(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ObjectTypeName'),
+                new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                new \PHPStan\Type\Constant\ConstantStringType('TemplateId'),
+                new \PHPStan\Type\Constant\ConstantStringType('ExpirationDays'),
+                new \PHPStan\Type\Constant\ConstantStringType('EncryptionKey'),
+                new \PHPStan\Type\Constant\ConstantStringType('AllowProfileCreation'),
+                new \PHPStan\Type\Constant\ConstantStringType('SourceLastUpdatedTimestampFormat'),
+                new \PHPStan\Type\Constant\ConstantStringType('MaxProfileObjectCount'),
+                new \PHPStan\Type\Constant\ConstantStringType('MaxAvailableProfileObjectCount'),
+                new \PHPStan\Type\Constant\ConstantStringType('Fields'),
+                new \PHPStan\Type\Constant\ConstantStringType('Keys'),
+                new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Target'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ContentType'),
                 ], [
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PRESENT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ABSENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STRING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NUMBER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PHONE_NUMBER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EMAIL_ADDRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NAME'),
                     ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('StandardIdentifiers'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FieldNames'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PROFILE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ASSET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CASE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORDER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('COMMUNICATION_RECORD'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UNIQUE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SECONDARY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOOKUP_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NEW_ONLY'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                ]))),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+            ]),
+        ]);
+    }
+    private function searchProfiles(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ProfileId'),
                         new \PHPStan\Type\Constant\ConstantStringType('AccountNumber'),
@@ -2529,922 +3690,21 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('KeyName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('KeyName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
+                        ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ProfileId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
-            ]),
-        ]);
-    }
-    private function getSegmentSnapshot(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('SnapshotId'),
-                new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                new \PHPStan\Type\Constant\ConstantStringType('DataFormat'),
-                new \PHPStan\Type\Constant\ConstantStringType('EncryptionKey'),
-                new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('DestinationUri'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CSV'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JSONL'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ORC'),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function getSimilarProfiles(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('ProfileIds'),
-                new \PHPStan\Type\Constant\ConstantStringType('MatchId'),
-                new \PHPStan\Type\Constant\ConstantStringType('MatchType'),
-                new \PHPStan\Type\Constant\ConstantStringType('RuleLevel'),
-                new \PHPStan\Type\Constant\ConstantStringType('ConfidenceScore'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('RULE_BASED_MATCHING'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ML_BASED_MATCHING'),
-                ]),
-                new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\FloatType(),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function getWorkflow(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('WorkflowId'),
-                new \PHPStan\Type\Constant\ConstantStringType('WorkflowType'),
-                new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                new \PHPStan\Type\Constant\ConstantStringType('ErrorDescription'),
-                new \PHPStan\Type\Constant\ConstantStringType('StartDate'),
-                new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
-                new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
-                new \PHPStan\Type\Constant\ConstantStringType('Metrics'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantStringType('APPFLOW_INTEGRATION'),
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                    new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SPLIT'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RETRY'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('AppflowIntegration'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceConnectorType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ConnectorProfileName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Salesforce'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Marketo'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Zendesk'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Servicenow'),
-                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('AppflowIntegration'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RecordsProcessed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StepsCompleted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TotalSteps'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                ]),
-            ]),
-        ]);
-    }
-    private function getWorkflowSteps(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('WorkflowId'),
-                new \PHPStan\Type\Constant\ConstantStringType('WorkflowType'),
-                new \PHPStan\Type\Constant\ConstantStringType('Items'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantStringType('APPFLOW_INTEGRATION'),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('AppflowIntegration'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FlowName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RecordsProcessed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BatchRecordsStartTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BatchRecordsEndTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SPLIT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RETRY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listAccountIntegrations(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Items'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Uri'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ObjectTypeName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ObjectTypeNames'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WorkflowId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IsUnstructured'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventTriggerNames'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listCalculatedAttributeDefinitions(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Items'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CalculatedAttributeName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listCalculatedAttributesForProfile(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Items'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CalculatedAttributeName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IsDataPartial'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listDomains(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Items'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listEventStreams(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Items'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventStreamName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventStreamArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StoppedSince'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DestinationSummary'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Uri'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UnhealthySince'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listEventTriggers(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Items'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ObjectTypeName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventTriggerName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listIdentityResolutionJobs(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('IdentityResolutionJobsList'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobStartTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobEndTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobStats'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExportingLocation'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PREPROCESSING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FIND_MATCHING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MERGING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PARTIAL_SUCCESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NumberOfProfilesReviewed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NumberOfMatchesFound'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NumberOfMergesDone'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3Exporting'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('S3BucketName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('S3KeyName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listIntegrations(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Items'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Uri'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ObjectTypeName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ObjectTypeNames'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WorkflowId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IsUnstructured'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventTriggerNames'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listObjectTypeAttributes(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Items'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listProfileAttributeValues(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
-                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                new \PHPStan\Type\Constant\ConstantStringType('Items'),
-                new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\IntegerType(),
-            ]),
-        ]);
-    }
-    private function listProfileObjectTypeTemplates(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Items'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('TemplateId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SourceName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SourceObject'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listProfileObjectTypes(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Items'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ObjectTypeName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MaxProfileObjectCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MaxAvailableProfileObjectCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listProfileObjects(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Items'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ObjectTypeName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProfileObjectUniqueKey'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Object'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listRuleBasedMatches(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('MatchIds'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listSegmentDefinitions(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-                new \PHPStan\Type\Constant\ConstantStringType('Items'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('SegmentDefinitionName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SegmentDefinitionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
-            ]),
-        ]);
-    }
-    private function listTagsForResource(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('tags'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-            ]),
-        ]);
-    }
-    private function listWorkflows(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Items'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('WorkflowType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WorkflowId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusDescription'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantStringType('APPFLOW_INTEGRATION'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SPLIT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RETRY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function mergeProfiles(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-            ], [
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function putIntegration(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
-                new \PHPStan\Type\Constant\ConstantStringType('Uri'),
-                new \PHPStan\Type\Constant\ConstantStringType('ObjectTypeName'),
-                new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
-                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                new \PHPStan\Type\Constant\ConstantStringType('ObjectTypeNames'),
-                new \PHPStan\Type\Constant\ConstantStringType('WorkflowId'),
-                new \PHPStan\Type\Constant\ConstantStringType('IsUnstructured'),
-                new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('EventTriggerNames'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function putProfileObject(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('ProfileObjectUniqueKey'),
-            ], [
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function putProfileObjectType(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('ObjectTypeName'),
-                new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                new \PHPStan\Type\Constant\ConstantStringType('TemplateId'),
-                new \PHPStan\Type\Constant\ConstantStringType('ExpirationDays'),
-                new \PHPStan\Type\Constant\ConstantStringType('EncryptionKey'),
-                new \PHPStan\Type\Constant\ConstantStringType('AllowProfileCreation'),
-                new \PHPStan\Type\Constant\ConstantStringType('SourceLastUpdatedTimestampFormat'),
-                new \PHPStan\Type\Constant\ConstantStringType('MaxProfileObjectCount'),
-                new \PHPStan\Type\Constant\ConstantStringType('MaxAvailableProfileObjectCount'),
-                new \PHPStan\Type\Constant\ConstantStringType('Fields'),
-                new \PHPStan\Type\Constant\ConstantStringType('Keys'),
-                new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
-                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Source'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Target'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ContentType'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('STRING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NUMBER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PHONE_NUMBER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EMAIL_ADDRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NAME'),
                     ]),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('StandardIdentifiers'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FieldNames'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PROFILE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ASSET'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CASE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ORDER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMMUNICATION_RECORD'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNIQUE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SECONDARY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LOOKUP_ONLY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NEW_ONLY'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-            ]),
-        ]);
-    }
-    private function searchProfiles(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Items'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ProfileId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AccountNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AdditionalInformation'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PartyType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BusinessName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FirstName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MiddleName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BirthDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Gender'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PhoneNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MobilePhoneNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HomePhoneNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BusinessPhoneNumber'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PersonalEmailAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BusinessEmailAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Address'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ShippingAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MailingAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BillingAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FoundByItems'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PartyTypeString'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GenderString'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('INDIVIDUAL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BUSINESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MALE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FEMALE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNSPECIFIED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Address1'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address2'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address3'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address4'),
-                        new \PHPStan\Type\Constant\ConstantStringType('City'),
-                        new \PHPStan\Type\Constant\ConstantStringType('County'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Province'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Address1'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address2'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address3'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address4'),
-                        new \PHPStan\Type\Constant\ConstantStringType('City'),
-                        new \PHPStan\Type\Constant\ConstantStringType('County'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Province'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Address1'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address2'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address3'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address4'),
-                        new \PHPStan\Type\Constant\ConstantStringType('City'),
-                        new \PHPStan\Type\Constant\ConstantStringType('County'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Province'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Address1'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address2'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address3'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address4'),
-                        new \PHPStan\Type\Constant\ConstantStringType('City'),
-                        new \PHPStan\Type\Constant\ConstantStringType('County'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Province'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('KeyName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3520,11 +3780,13 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                     new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
                     new \PHPStan\Type\Constant\ConstantStringType('Expression'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -3581,7 +3843,11 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('MatchingAttributesList'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('ConflictResolvingModel'),
@@ -3618,11 +3884,15 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                     new \PHPStan\Type\Constant\ConstantStringType('ExportingConfig'),
                 ], [
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Rule'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Rule'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
                         new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
@@ -3640,9 +3910,15 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                             new \PHPStan\Type\Constant\ConstantStringType('ONE_TO_ONE'),
                             new \PHPStan\Type\Constant\ConstantStringType('MANY_TO_MANY'),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ConflictResolvingModel'),
@@ -3689,69 +3965,79 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('EventTriggerDimensions'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LogicalOperator'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ObjectAttributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventTriggerDimensions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LogicalOperator'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Source'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FieldName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ComparisonOperator'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN_OR_EQUAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN_OR_EQUAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EQUAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BEFORE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AFTER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ON'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BETWEEN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_BETWEEN'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ObjectAttributes'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('FieldName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ComparisonOperator'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUSIVE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUSIVE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('BEGINS_WITH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ENDS_WITH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN_OR_EQUAL'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN_OR_EQUAL'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('EQUAL'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('BEFORE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('AFTER'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ON'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('BETWEEN'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NOT_BETWEEN'),
+                                        ]),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\StringType(),
+                                        ])),
+                                    ]),
+                                ])),
                             ]),
-                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ANY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                         ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ANY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('EventExpiration'),
                     new \PHPStan\Type\Constant\ConstantStringType('Periods'),
                 ], [
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Unit'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaxInvocationsPerProfile'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unlimited'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HOURS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WEEKS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxInvocationsPerProfile'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unlimited'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HOURS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WEEKS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\BooleanType(),
                         ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),

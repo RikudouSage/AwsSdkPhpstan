@@ -231,7 +231,9 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('INBOUND'),
                         new \PHPStan\Type\Constant\ConstantStringType('OUTBOUND'),
@@ -256,11 +258,13 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
                         new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DoH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Do53'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DoH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Do53'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -546,7 +550,9 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('INBOUND'),
                         new \PHPStan\Type\Constant\ConstantStringType('OUTBOUND'),
@@ -571,11 +577,13 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
                         new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DoH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Do53'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DoH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Do53'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -660,23 +668,25 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('RECURSIVE'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Ip'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Ipv6'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServerNameIndication'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DoH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Do53'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Ip'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Ipv6'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServerNameIndication'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DoH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Do53'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
@@ -904,7 +914,9 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('INBOUND'),
                         new \PHPStan\Type\Constant\ConstantStringType('OUTBOUND'),
@@ -929,11 +941,13 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
                         new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DoH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Do53'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DoH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Do53'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1018,23 +1032,25 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('RECURSIVE'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Ip'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Ipv6'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServerNameIndication'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DoH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Do53'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Ip'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Ipv6'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServerNameIndication'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DoH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Do53'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
@@ -1121,7 +1137,9 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('INBOUND'),
                         new \PHPStan\Type\Constant\ConstantStringType('OUTBOUND'),
@@ -1146,11 +1164,13 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
                         new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DoH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Do53'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DoH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Do53'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1505,7 +1525,9 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('INBOUND'),
                         new \PHPStan\Type\Constant\ConstantStringType('OUTBOUND'),
@@ -1530,11 +1552,13 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
                         new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DoH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Do53'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DoH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Do53'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1666,23 +1690,25 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('RECURSIVE'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Ip'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Ipv6'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServerNameIndication'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DoH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Do53'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Ip'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Ipv6'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServerNameIndication'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DoH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Do53'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
@@ -1766,21 +1792,23 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('FirewallConfigs'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FirewallFailOpen'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('USE_LOCAL_RESOURCE_SETTING'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FirewallFailOpen'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('USE_LOCAL_RESOURCE_SETTING'),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1792,19 +1820,21 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('FirewallDomainLists'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatorRequestId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ManagedOwnerName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatorRequestId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManagedOwnerName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1816,7 +1846,9 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Domains'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -1828,42 +1860,44 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('FirewallRuleGroupAssociations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FirewallRuleGroupId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Priority'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MutationProtection'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ManagedOwnerName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatorRequestId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ModificationTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FirewallRuleGroupId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MutationProtection'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManagedOwnerName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatorRequestId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ModificationTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1875,25 +1909,27 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('FirewallRuleGroups'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatorRequestId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ShareStatus'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NOT_SHARED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SHARED_WITH_ME'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SHARED_BY_ME'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatorRequestId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ShareStatus'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_SHARED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SHARED_WITH_ME'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SHARED_BY_ME'),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1905,61 +1941,63 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('FirewallRules'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('FirewallRuleGroupId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FirewallDomainListId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FirewallThreatProtectionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Priority'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Action'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BlockResponse'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BlockOverrideDomain'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BlockOverrideDnsType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BlockOverrideTtl'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatorRequestId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ModificationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FirewallDomainRedirectionAction'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Qtype'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DnsThreatProtection'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ConfidenceThreshold'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALERT'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FirewallRuleGroupId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FirewallDomainListId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FirewallThreatProtectionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BlockResponse'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BlockOverrideDomain'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BlockOverrideDnsType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BlockOverrideTtl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatorRequestId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ModificationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FirewallDomainRedirectionAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Qtype'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DnsThreatProtection'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConfidenceThreshold'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALERT'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NODATA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NXDOMAIN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OVERRIDE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('CNAME'),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INSPECT_REDIRECTION_DOMAIN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TRUST_REDIRECTION_DOMAIN'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DGA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DNS_TUNNELING'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NODATA'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NXDOMAIN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OVERRIDE'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('CNAME'),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('INSPECT_REDIRECTION_DOMAIN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TRUST_REDIRECTION_DOMAIN'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DGA'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DNS_TUNNELING'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1970,39 +2008,41 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('OutpostResolvers'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ModificationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatorRequestId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('InstanceCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PreferredInstanceType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OutpostArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OPERATIONAL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTION_NEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED_CREATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED_DELETION'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ModificationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatorRequestId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InstanceCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PreferredInstanceType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OutpostArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OPERATIONAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTION_NEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED_CREATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED_DELETION'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2015,24 +2055,26 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('ResolverConfigs'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AutodefinedReverse'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING_TO_USE_LOCAL_RESOURCE_SETTING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('USE_LOCAL_RESOURCE_SETTING'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AutodefinedReverse'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING_TO_USE_LOCAL_RESOURCE_SETTING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('USE_LOCAL_RESOURCE_SETTING'),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -2044,24 +2086,26 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('ResolverDnssecConfigs'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ValidationStatus'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING_TO_USE_LOCAL_RESOURCE_SETTING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('USE_LOCAL_RESOURCE_SETTING'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ValidationStatus'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING_TO_USE_LOCAL_RESOURCE_SETTING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('USE_LOCAL_RESOURCE_SETTING'),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -2075,38 +2119,40 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('IpId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Ip'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Ipv6'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ModificationTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED_CREATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ATTACHING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ATTACHED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REMAP_DETACHING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REMAP_ATTACHING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DETACHING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED_RESOURCE_GONE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED_FAS_EXPIRED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IpId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Ip'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Ipv6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ModificationTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED_CREATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ATTACHING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ATTACHED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REMAP_DETACHING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REMAP_ATTACHING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DETACHING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED_RESOURCE_GONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED_FAS_EXPIRED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -2120,59 +2166,65 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatorRequestId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Direction'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IpAddressCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HostVPCId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ModificationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OutpostArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PreferredInstanceType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResolverEndpointType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Protocols'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('INBOUND'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OUTBOUND'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatorRequestId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Direction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IpAddressCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HostVPCId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ModificationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OutpostArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PreferredInstanceType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResolverEndpointType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Protocols'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INBOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OUTBOUND'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OPERATIONAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AUTO_RECOVERING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTION_NEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DoH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Do53'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
+                            ]),
+                        ])),
                     ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OPERATIONAL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AUTO_RECOVERING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTION_NEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DoH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Do53'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -2188,34 +2240,36 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResolverQueryLogConfigId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTION_NEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResolverQueryLogConfigId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Error'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTION_NEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DESTINATION_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACCESS_DENIED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_SERVICE_ERROR'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DESTINATION_NOT_FOUND'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACCESS_DENIED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_SERVICE_ERROR'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -2231,38 +2285,40 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ShareStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AssociationCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DestinationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatorRequestId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ShareStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AssociationCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DestinationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatorRequestId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_SHARED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SHARED_WITH_ME'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SHARED_BY_ME'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NOT_SHARED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SHARED_WITH_ME'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SHARED_BY_ME'),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -2276,27 +2332,29 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResolverRuleId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VPCId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OVERRIDDEN'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResolverRuleId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VPCId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OVERRIDDEN'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -2310,66 +2368,70 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatorRequestId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RuleType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TargetIps'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResolverEndpointId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ShareStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ModificationTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FORWARD'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SYSTEM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RECURSIVE'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Ip'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Ipv6'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServerNameIndication'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatorRequestId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RuleType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetIps'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResolverEndpointId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ShareStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ModificationTime'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DoH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Do53'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                         ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FORWARD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SYSTEM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RECURSIVE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Ip'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ipv6'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ServerNameIndication'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DoH'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Do53'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_SHARED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SHARED_WITH_ME'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SHARED_BY_ME'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NOT_SHARED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SHARED_WITH_ME'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SHARED_BY_ME'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -2380,13 +2442,15 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2712,7 +2776,9 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('INBOUND'),
                         new \PHPStan\Type\Constant\ConstantStringType('OUTBOUND'),
@@ -2737,11 +2803,13 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
                         new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DoH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Do53'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DoH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Do53'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -2785,23 +2853,25 @@ final class Route53ResolverClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('RECURSIVE'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Ip'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Ipv6'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServerNameIndication'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DoH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Do53'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Ip'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Ipv6'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServerNameIndication'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DoH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Do53'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DoH-FIPS'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([

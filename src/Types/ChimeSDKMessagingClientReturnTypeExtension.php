@@ -155,41 +155,45 @@ final class ChimeSDKMessagingClientReturnTypeExtension implements \PHPStan\Type\
                         new \PHPStan\Type\Constant\ConstantStringType('DEFAULT'),
                         new \PHPStan\Type\Constant\ConstantStringType('HIDDEN'),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MemberArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BadRequest'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Conflict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Forbidden'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PreconditionFailed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Throttled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Throttling'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unauthorized'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unprocessable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupAssociationsExist'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberAssociationsExist'),
+                        ]),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('MemberArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BadRequest'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Conflict'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Forbidden'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotFound'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PreconditionFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceFailure'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Throttled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Throttling'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unauthorized'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unprocessable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VoiceConnectorGroupAssociationsExist'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumberAssociationsExist'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -434,30 +438,32 @@ final class ChimeSDKMessagingClientReturnTypeExtension implements \PHPStan\Type\
                     new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Configuration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionOrder'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FallbackAction'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Lambda'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Configuration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionOrder'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FallbackAction'),
                         ], [
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InvocationType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Lambda'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantStringType('ASYNC'),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('InvocationType'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ASYNC'),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ABORT'),
                             ]),
                         ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ABORT'),
-                        ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -721,15 +727,19 @@ final class ChimeSDKMessagingClientReturnTypeExtension implements \PHPStan\Type\
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('StringValues'),
                     ], [
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MemberArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MemberArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -775,16 +785,18 @@ final class ChimeSDKMessagingClientReturnTypeExtension implements \PHPStan\Type\
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('StreamingConfigurations'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DataType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Channel'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChannelMessage'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DataType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Channel'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ChannelMessage'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -798,17 +810,19 @@ final class ChimeSDKMessagingClientReturnTypeExtension implements \PHPStan\Type\
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Member'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Member'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -819,38 +833,42 @@ final class ChimeSDKMessagingClientReturnTypeExtension implements \PHPStan\Type\
                 new \PHPStan\Type\Constant\ConstantStringType('ChannelFlows'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ChannelFlowArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Processors'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ChannelFlowArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Configuration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionOrder'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FallbackAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Processors'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Lambda'),
-                        ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InvocationType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Configuration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ExecutionOrder'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FallbackAction'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantStringType('ASYNC'),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Lambda'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('InvocationType'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ASYNC'),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ABORT'),
+                                ]),
                             ]),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ABORT'),
-                        ]),
+                        ])),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -864,17 +882,19 @@ final class ChimeSDKMessagingClientReturnTypeExtension implements \PHPStan\Type\
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Member'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Member'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -886,44 +906,46 @@ final class ChimeSDKMessagingClientReturnTypeExtension implements \PHPStan\Type\
                 new \PHPStan\Type\Constant\ConstantStringType('ChannelMemberships'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ChannelSummary'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AppInstanceUserMembershipSummary'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChannelArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Mode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Privacy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Metadata'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastMessageTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChannelSummary'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AppInstanceUserMembershipSummary'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('UNRESTRICTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RESTRICTED'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ChannelArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Mode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Privacy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Metadata'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LastMessageTimestamp'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('UNRESTRICTED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RESTRICTED'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReadMarkerTimestamp'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubChannelId'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DEFAULT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HIDDEN'),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadMarkerTimestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SubChannelId'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DEFAULT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIDDEN'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -939,63 +961,69 @@ final class ChimeSDKMessagingClientReturnTypeExtension implements \PHPStan\Type\
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('MessageId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Content'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Metadata'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastEditedTimestamp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Sender'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Redacted'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MessageAttributes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ContentType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Target'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CONTROL'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MessageId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Content'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Metadata'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastEditedTimestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Sender'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Redacted'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MessageAttributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ContentType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Target'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Detail'),
-                    ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DENIED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CONTROL'),
                         ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Detail'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SENT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DENIED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('StringValues'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ])),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MemberArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('StringValues'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MemberArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1010,17 +1038,19 @@ final class ChimeSDKMessagingClientReturnTypeExtension implements \PHPStan\Type\
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Moderator'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Moderator'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1031,71 +1061,7 @@ final class ChimeSDKMessagingClientReturnTypeExtension implements \PHPStan\Type\
                 new \PHPStan\Type\Constant\ConstantStringType('Channels'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChannelArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Mode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Privacy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Metadata'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastMessageTimestamp'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UNRESTRICTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RESTRICTED'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listChannelsAssociatedWithChannelFlow(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Channels'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChannelArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Mode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Privacy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Metadata'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UNRESTRICTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RESTRICTED'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listChannelsModeratedByAppInstanceUser(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Channels'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ChannelSummary'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
                         new \PHPStan\Type\Constant\ConstantStringType('ChannelArn'),
@@ -1117,7 +1083,77 @@ final class ChimeSDKMessagingClientReturnTypeExtension implements \PHPStan\Type\
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listChannelsAssociatedWithChannelFlow(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Channels'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChannelArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Mode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Privacy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Metadata'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNRESTRICTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RESTRICTED'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listChannelsModeratedByAppInstanceUser(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Channels'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ChannelSummary'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ChannelArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Mode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Privacy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Metadata'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LastMessageTimestamp'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('UNRESTRICTED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RESTRICTED'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1131,13 +1167,15 @@ final class ChimeSDKMessagingClientReturnTypeExtension implements \PHPStan\Type\
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('SubChannelId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MembershipCount'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SubChannelId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MembershipCount'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1148,13 +1186,15 @@ final class ChimeSDKMessagingClientReturnTypeExtension implements \PHPStan\Type\
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1219,16 +1259,18 @@ final class ChimeSDKMessagingClientReturnTypeExtension implements \PHPStan\Type\
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('StreamingConfigurations'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DataType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Channel'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChannelMessage'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DataType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Channel'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ChannelMessage'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1253,27 +1295,29 @@ final class ChimeSDKMessagingClientReturnTypeExtension implements \PHPStan\Type\
                 new \PHPStan\Type\Constant\ConstantStringType('Channels'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChannelArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Mode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Privacy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Metadata'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastMessageTimestamp'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UNRESTRICTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RESTRICTED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChannelArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Mode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Privacy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Metadata'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastMessageTimestamp'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNRESTRICTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RESTRICTED'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

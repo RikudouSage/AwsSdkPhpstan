@@ -92,7 +92,9 @@ final class ElasticLoadBalancingClientReturnTypeExtension implements \PHPStan\Ty
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -102,7 +104,9 @@ final class ElasticLoadBalancingClientReturnTypeExtension implements \PHPStan\Ty
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -186,11 +190,13 @@ final class ElasticLoadBalancingClientReturnTypeExtension implements \PHPStan\Ty
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Instances'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -201,13 +207,15 @@ final class ElasticLoadBalancingClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('Limits'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextMarker'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Max'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Max'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -218,17 +226,19 @@ final class ElasticLoadBalancingClientReturnTypeExtension implements \PHPStan\Ty
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('InstanceStates'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReasonCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReasonCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -273,13 +283,15 @@ final class ElasticLoadBalancingClientReturnTypeExtension implements \PHPStan\Ty
                     ], [
                         new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -290,21 +302,25 @@ final class ElasticLoadBalancingClientReturnTypeExtension implements \PHPStan\Ty
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('PolicyDescriptions'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PolicyTypeName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PolicyAttributeDescriptions'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyTypeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyAttributeDescriptions'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AttributeValue'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -314,27 +330,31 @@ final class ElasticLoadBalancingClientReturnTypeExtension implements \PHPStan\Ty
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('PolicyTypeDescriptions'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('PolicyTypeName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PolicyAttributeTypeDescriptions'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyTypeName'),
                         new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Cardinality'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyAttributeTypeDescriptions'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Cardinality'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -345,107 +365,131 @@ final class ElasticLoadBalancingClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('LoadBalancerDescriptions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextMarker'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('LoadBalancerName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DNSName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CanonicalHostedZoneName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CanonicalHostedZoneNameID'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ListenerDescriptions'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Policies'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BackendServerDescriptions'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZones'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VPCId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Instances'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HealthCheck'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SourceSecurityGroup'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Scheme'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Listener'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PolicyNames'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LoadBalancerName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DNSName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CanonicalHostedZoneName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CanonicalHostedZoneNameID'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ListenerDescriptions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Policies'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BackendServerDescriptions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZones'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VPCId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Instances'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HealthCheck'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceSecurityGroup'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Scheme'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Listener'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PolicyNames'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LoadBalancerPort'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('InstanceProtocol'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('InstancePort'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SSLCertificateId'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LoadBalancerPort'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InstanceProtocol'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InstancePort'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SSLCertificateId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AppCookieStickinessPolicies'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LBCookieStickinessPolicies'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OtherPolicies'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CookieName'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CookieExpirationPeriod'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('InstancePort'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PolicyNames'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Target'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Interval'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Timeout'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnhealthyThreshold'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HealthyThreshold'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AppCookieStickinessPolicies'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LBCookieStickinessPolicies'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OtherPolicies'),
-                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CookieName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OwnerAlias'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GroupName'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CookieExpirationPeriod'),
-                        ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InstancePort'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PolicyNames'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Target'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Interval'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Timeout'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UnhealthyThreshold'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HealthyThreshold'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('OwnerAlias'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GroupName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -456,19 +500,23 @@ final class ElasticLoadBalancingClientReturnTypeExtension implements \PHPStan\Ty
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('TagDescriptions'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('LoadBalancerName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LoadBalancerName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -478,7 +526,9 @@ final class ElasticLoadBalancingClientReturnTypeExtension implements \PHPStan\Ty
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -488,7 +538,9 @@ final class ElasticLoadBalancingClientReturnTypeExtension implements \PHPStan\Ty
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZones'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -498,7 +550,9 @@ final class ElasticLoadBalancingClientReturnTypeExtension implements \PHPStan\Ty
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZones'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -545,13 +599,15 @@ final class ElasticLoadBalancingClientReturnTypeExtension implements \PHPStan\Ty
                     ], [
                         new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -562,11 +618,13 @@ final class ElasticLoadBalancingClientReturnTypeExtension implements \PHPStan\Ty
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Instances'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }

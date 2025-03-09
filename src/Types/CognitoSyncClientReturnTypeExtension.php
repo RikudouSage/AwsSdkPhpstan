@@ -206,7 +206,9 @@ final class CognitoSyncClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\Constant\ConstantStringType('ApplicationArns'),
                     new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
                 ], [
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -232,23 +234,25 @@ final class CognitoSyncClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('Count'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('IdentityId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DatasetName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedBy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DataStorage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NumRecords'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IdentityId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DatasetName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataStorage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NumRecords'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -263,17 +267,19 @@ final class CognitoSyncClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('Count'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('IdentityPoolId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SyncSessionsCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DataStorage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IdentityPoolId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SyncSessionsCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataStorage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
@@ -294,26 +300,30 @@ final class CognitoSyncClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('DatasetDeletedAfterRequestedSyncCount'),
                 new \PHPStan\Type\Constant\ConstantStringType('SyncSessionToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SyncCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedBy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceLastModifiedDate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SyncCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceLastModifiedDate'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -349,7 +359,9 @@ final class CognitoSyncClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\Constant\ConstantStringType('ApplicationArns'),
                     new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
                 ], [
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -385,21 +397,23 @@ final class CognitoSyncClientReturnTypeExtension implements \PHPStan\Type\Dynami
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Records'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SyncCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedBy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceLastModifiedDate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SyncCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceLastModifiedDate'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
             ]),
         ]);
     }

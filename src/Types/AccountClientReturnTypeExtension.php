@@ -175,19 +175,21 @@ final class AccountClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('Regions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RegionOptStatus'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED_BY_DEFAULT'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RegionName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RegionOptStatus'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED_BY_DEFAULT'),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }

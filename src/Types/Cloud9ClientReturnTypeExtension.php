@@ -103,23 +103,25 @@ final class Cloud9ClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('memberships'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('permissions'),
-                    new \PHPStan\Type\Constant\ConstantStringType('userId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('userArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('environmentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastAccess'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('owner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('read-write'),
-                        new \PHPStan\Type\Constant\ConstantStringType('read-only'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('permissions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('userId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('userArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('environmentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastAccess'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('owner'),
+                            new \PHPStan\Type\Constant\ConstantStringType('read-write'),
+                            new \PHPStan\Type\Constant\ConstantStringType('read-only'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -150,59 +152,61 @@ final class Cloud9ClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('environments'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('connectionType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ownerArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lifecycle'),
-                    new \PHPStan\Type\Constant\ConstantStringType('managedCredentialsStatus'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ssh'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ec2'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CONNECT_SSH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CONNECT_SSM'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('reason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('failureResource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('connectionType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ownerArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lifecycle'),
+                        new \PHPStan\Type\Constant\ConstantStringType('managedCredentialsStatus'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ssh'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ec2'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CONNECT_SSH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CONNECT_SSM'),
                         ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('reason'),
+                            new \PHPStan\Type\Constant\ConstantStringType('failureResource'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED_ON_CREATE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED_BY_OWNER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED_BY_DEFAULT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED_BY_OWNER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED_BY_COLLABORATOR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_REMOVAL_BY_COLLABORATOR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_START_REMOVAL_BY_COLLABORATOR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_REMOVAL_BY_OWNER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_START_REMOVAL_BY_OWNER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED_REMOVAL_BY_COLLABORATOR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED_REMOVAL_BY_OWNER'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED_ON_CREATE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED_BY_OWNER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED_BY_DEFAULT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED_BY_OWNER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED_BY_COLLABORATOR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_REMOVAL_BY_COLLABORATOR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_START_REMOVAL_BY_COLLABORATOR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_REMOVAL_BY_OWNER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_START_REMOVAL_BY_OWNER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED_REMOVAL_BY_COLLABORATOR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED_REMOVAL_BY_OWNER'),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -214,7 +218,9 @@ final class Cloud9ClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('environmentIds'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -224,13 +230,15 @@ final class Cloud9ClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }

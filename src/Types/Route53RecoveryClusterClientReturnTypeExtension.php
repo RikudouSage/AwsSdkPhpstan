@@ -54,24 +54,26 @@ final class Route53RecoveryClusterClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('RoutingControls'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ControlPanelArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ControlPanelName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RoutingControlArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RoutingControlName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RoutingControlState'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('On'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Off'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ControlPanelArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ControlPanelName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoutingControlArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoutingControlName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoutingControlState'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('On'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Off'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

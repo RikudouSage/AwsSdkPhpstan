@@ -58,7 +58,9 @@ final class HealthClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('eventScopeCode'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
                     new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_SPECIFIC'),
@@ -75,33 +77,35 @@ final class HealthClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('entities'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('entityArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('entityValue'),
-                    new \PHPStan\Type\Constant\ConstantStringType('entityUrl'),
-                    new \PHPStan\Type\Constant\ConstantStringType('awsAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('entityMetadata'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IMPAIRED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNIMPAIRED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('entityArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('entityValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('entityUrl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('awsAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('entityMetadata'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IMPAIRED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNIMPAIRED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -114,44 +118,48 @@ final class HealthClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('failedSet'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('entityArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('entityValue'),
-                    new \PHPStan\Type\Constant\ConstantStringType('entityUrl'),
-                    new \PHPStan\Type\Constant\ConstantStringType('awsAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('entityMetadata'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IMPAIRED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNIMPAIRED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('entityArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('entityValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('entityUrl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('awsAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('entityMetadata'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IMPAIRED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNIMPAIRED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('awsAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('awsAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -162,47 +170,9 @@ final class HealthClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('entityAggregates'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('eventArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('count'),
-                    new \PHPStan\Type\Constant\ConstantStringType('statuses'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IMPAIRED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNIMPAIRED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
-                    ]), new \PHPStan\Type\IntegerType()),
-                ]),
-            ]),
-        ]);
-    }
-    private function describeEntityAggregatesForOrganization(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('organizationEntityAggregates'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('eventArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('count'),
-                    new \PHPStan\Type\Constant\ConstantStringType('statuses'),
-                    new \PHPStan\Type\Constant\ConstantStringType('accounts'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IMPAIRED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNIMPAIRED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
-                    ]), new \PHPStan\Type\IntegerType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('count'),
                         new \PHPStan\Type\Constant\ConstantStringType('statuses'),
                     ], [
@@ -216,7 +186,51 @@ final class HealthClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                             new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
                         ]), new \PHPStan\Type\IntegerType()),
                     ]),
-                ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function describeEntityAggregatesForOrganization(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('organizationEntityAggregates'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('eventArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('count'),
+                        new \PHPStan\Type\Constant\ConstantStringType('statuses'),
+                        new \PHPStan\Type\Constant\ConstantStringType('accounts'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IMPAIRED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNIMPAIRED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
+                        ]), new \PHPStan\Type\IntegerType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('count'),
+                                new \PHPStan\Type\Constant\ConstantStringType('statuses'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('IMPAIRED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UNIMPAIRED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
+                                ]), new \PHPStan\Type\IntegerType()),
+                            ]),
+                        ])),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -227,13 +241,15 @@ final class HealthClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('eventAggregates'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('aggregateValue'),
-                    new \PHPStan\Type\Constant\ConstantStringType('count'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('aggregateValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('count'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -245,65 +261,69 @@ final class HealthClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('successfulSet'),
                 new \PHPStan\Type\Constant\ConstantStringType('failedSet'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('event'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventDescription'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventMetadata'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('service'),
-                        new \PHPStan\Type\Constant\ConstantStringType('eventTypeCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('eventTypeCategory'),
-                        new \PHPStan\Type\Constant\ConstantStringType('region'),
-                        new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
-                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('eventScopeCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('event'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventMetadata'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('service'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eventTypeCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eventTypeCategory'),
+                            new \PHPStan\Type\Constant\ConstantStringType('region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
+                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eventScopeCode'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('issue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('accountNotification'),
+                                new \PHPStan\Type\Constant\ConstantStringType('scheduledChange'),
+                                new \PHPStan\Type\Constant\ConstantStringType('investigation'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('open'),
+                                new \PHPStan\Type\Constant\ConstantStringType('closed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('upcoming'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_SPECIFIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('latestDescription'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('eventArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('issue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('accountNotification'),
-                            new \PHPStan\Type\Constant\ConstantStringType('scheduledChange'),
-                            new \PHPStan\Type\Constant\ConstantStringType('investigation'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('open'),
-                            new \PHPStan\Type\Constant\ConstantStringType('closed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('upcoming'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_SPECIFIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('latestDescription'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('eventArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -314,69 +334,73 @@ final class HealthClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('successfulSet'),
                 new \PHPStan\Type\Constant\ConstantStringType('failedSet'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('awsAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('event'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventDescription'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventMetadata'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('service'),
-                        new \PHPStan\Type\Constant\ConstantStringType('eventTypeCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('eventTypeCategory'),
-                        new \PHPStan\Type\Constant\ConstantStringType('region'),
-                        new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
-                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('eventScopeCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('awsAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('event'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventMetadata'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('service'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eventTypeCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eventTypeCategory'),
+                            new \PHPStan\Type\Constant\ConstantStringType('region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
+                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eventScopeCode'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('issue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('accountNotification'),
+                                new \PHPStan\Type\Constant\ConstantStringType('scheduledChange'),
+                                new \PHPStan\Type\Constant\ConstantStringType('investigation'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('open'),
+                                new \PHPStan\Type\Constant\ConstantStringType('closed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('upcoming'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_SPECIFIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('latestDescription'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('awsAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('issue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('accountNotification'),
-                            new \PHPStan\Type\Constant\ConstantStringType('scheduledChange'),
-                            new \PHPStan\Type\Constant\ConstantStringType('investigation'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('open'),
-                            new \PHPStan\Type\Constant\ConstantStringType('closed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('upcoming'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_SPECIFIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('latestDescription'),
-                    ], [
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('awsAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -387,20 +411,22 @@ final class HealthClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('eventTypes'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('service'),
-                    new \PHPStan\Type\Constant\ConstantStringType('code'),
-                    new \PHPStan\Type\Constant\ConstantStringType('category'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('issue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('accountNotification'),
-                        new \PHPStan\Type\Constant\ConstantStringType('scheduledChange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('investigation'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('service'),
+                        new \PHPStan\Type\Constant\ConstantStringType('code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('category'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('issue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('accountNotification'),
+                            new \PHPStan\Type\Constant\ConstantStringType('scheduledChange'),
+                            new \PHPStan\Type\Constant\ConstantStringType('investigation'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -412,44 +438,46 @@ final class HealthClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('events'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('service'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventTypeCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventTypeCategory'),
-                    new \PHPStan\Type\Constant\ConstantStringType('region'),
-                    new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
-                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventScopeCode'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('issue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('accountNotification'),
-                        new \PHPStan\Type\Constant\ConstantStringType('scheduledChange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('investigation'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('service'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventTypeCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventTypeCategory'),
+                        new \PHPStan\Type\Constant\ConstantStringType('region'),
+                        new \PHPStan\Type\Constant\ConstantStringType('availabilityZone'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventScopeCode'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('issue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('accountNotification'),
+                            new \PHPStan\Type\Constant\ConstantStringType('scheduledChange'),
+                            new \PHPStan\Type\Constant\ConstantStringType('investigation'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('open'),
+                            new \PHPStan\Type\Constant\ConstantStringType('closed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('upcoming'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_SPECIFIC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('open'),
-                        new \PHPStan\Type\Constant\ConstantStringType('closed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('upcoming'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_SPECIFIC'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -461,42 +489,44 @@ final class HealthClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('events'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('service'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventTypeCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventTypeCategory'),
-                    new \PHPStan\Type\Constant\ConstantStringType('eventScopeCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('region'),
-                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('issue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('accountNotification'),
-                        new \PHPStan\Type\Constant\ConstantStringType('scheduledChange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('investigation'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('service'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventTypeCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventTypeCategory'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventScopeCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('region'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('issue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('accountNotification'),
+                            new \PHPStan\Type\Constant\ConstantStringType('scheduledChange'),
+                            new \PHPStan\Type\Constant\ConstantStringType('investigation'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_SPECIFIC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('open'),
+                            new \PHPStan\Type\Constant\ConstantStringType('closed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('upcoming'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLIC'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_SPECIFIC'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('open'),
-                        new \PHPStan\Type\Constant\ConstantStringType('closed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('upcoming'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

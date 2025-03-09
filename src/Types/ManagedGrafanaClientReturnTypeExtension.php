@@ -113,27 +113,31 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('providers'),
                         new \PHPStan\Type\Constant\ConstantStringType('samlConfigurationStatus'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_SSO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SAML'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_SSO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SAML'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CONFIGURED'),
                             new \PHPStan\Type\Constant\ConstantStringType('NOT_CONFIGURED'),
                         ]),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_OPENSEARCH_SERVICE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PROMETHEUS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('XRAY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TIMESTREAM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SITEWISE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ATHENA'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TWINMAKER'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_OPENSEARCH_SERVICE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PROMETHEUS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('XRAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTREAM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SITEWISE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ATHENA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TWINMAKER'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
@@ -152,12 +156,20 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('prefixListIds'),
                         new \PHPStan\Type\Constant\ConstantStringType('vpceIds'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_MANAGED'),
                         new \PHPStan\Type\Constant\ConstantStringType('SERVICE_MANAGED'),
@@ -183,8 +195,12 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
                         new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -232,27 +248,31 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('providers'),
                         new \PHPStan\Type\Constant\ConstantStringType('samlConfigurationStatus'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_SSO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SAML'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_SSO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SAML'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CONFIGURED'),
                             new \PHPStan\Type\Constant\ConstantStringType('NOT_CONFIGURED'),
                         ]),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_OPENSEARCH_SERVICE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PROMETHEUS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('XRAY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TIMESTREAM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SITEWISE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ATHENA'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TWINMAKER'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_OPENSEARCH_SERVICE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PROMETHEUS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('XRAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTREAM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SITEWISE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ATHENA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TWINMAKER'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
@@ -271,12 +291,20 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('prefixListIds'),
                         new \PHPStan\Type\Constant\ConstantStringType('vpceIds'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_MANAGED'),
                         new \PHPStan\Type\Constant\ConstantStringType('SERVICE_MANAGED'),
@@ -302,8 +330,12 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
                         new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -407,27 +439,31 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('providers'),
                         new \PHPStan\Type\Constant\ConstantStringType('samlConfigurationStatus'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_SSO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SAML'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_SSO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SAML'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CONFIGURED'),
                             new \PHPStan\Type\Constant\ConstantStringType('NOT_CONFIGURED'),
                         ]),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_OPENSEARCH_SERVICE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PROMETHEUS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('XRAY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TIMESTREAM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SITEWISE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ATHENA'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TWINMAKER'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_OPENSEARCH_SERVICE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PROMETHEUS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('XRAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTREAM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SITEWISE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ATHENA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TWINMAKER'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
@@ -446,12 +482,20 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('prefixListIds'),
                         new \PHPStan\Type\Constant\ConstantStringType('vpceIds'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_MANAGED'),
                         new \PHPStan\Type\Constant\ConstantStringType('SERVICE_MANAGED'),
@@ -477,8 +521,12 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
                         new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -564,27 +612,31 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('providers'),
                         new \PHPStan\Type\Constant\ConstantStringType('samlConfigurationStatus'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_SSO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SAML'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_SSO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SAML'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CONFIGURED'),
                             new \PHPStan\Type\Constant\ConstantStringType('NOT_CONFIGURED'),
                         ]),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_OPENSEARCH_SERVICE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PROMETHEUS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('XRAY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TIMESTREAM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SITEWISE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ATHENA'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TWINMAKER'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_OPENSEARCH_SERVICE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PROMETHEUS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('XRAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTREAM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SITEWISE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ATHENA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TWINMAKER'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
@@ -603,12 +655,20 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('prefixListIds'),
                         new \PHPStan\Type\Constant\ConstantStringType('vpceIds'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_MANAGED'),
                         new \PHPStan\Type\Constant\ConstantStringType('SERVICE_MANAGED'),
@@ -634,8 +694,12 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
                         new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -658,10 +722,12 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     ], [
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AWS_SSO'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SAML'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AWS_SSO'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SAML'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('configuration'),
                         new \PHPStan\Type\Constant\ConstantStringType('status'),
@@ -673,7 +739,9 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('loginValidityDuration'),
                             new \PHPStan\Type\Constant\ConstantStringType('roleValues'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('email'),
                                 new \PHPStan\Type\Constant\ConstantStringType('groups'),
@@ -701,8 +769,12 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                 new \PHPStan\Type\Constant\ConstantStringType('admin'),
                                 new \PHPStan\Type\Constant\ConstantStringType('editor'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
                         ]),
                         new \PHPStan\Type\UnionType([
@@ -767,27 +839,31 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('providers'),
                         new \PHPStan\Type\Constant\ConstantStringType('samlConfigurationStatus'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_SSO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SAML'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_SSO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SAML'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CONFIGURED'),
                             new \PHPStan\Type\Constant\ConstantStringType('NOT_CONFIGURED'),
                         ]),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_OPENSEARCH_SERVICE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PROMETHEUS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('XRAY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TIMESTREAM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SITEWISE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ATHENA'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TWINMAKER'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_OPENSEARCH_SERVICE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PROMETHEUS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('XRAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTREAM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SITEWISE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ATHENA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TWINMAKER'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
@@ -806,12 +882,20 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('prefixListIds'),
                         new \PHPStan\Type\Constant\ConstantStringType('vpceIds'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_MANAGED'),
                         new \PHPStan\Type\Constant\ConstantStringType('SERVICE_MANAGED'),
@@ -837,8 +921,12 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
                         new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -853,26 +941,28 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('permissions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('role'),
-                    new \PHPStan\Type\Constant\ConstantStringType('user'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ADMIN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EDITOR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VIEWER'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('role'),
+                        new \PHPStan\Type\Constant\ConstantStringType('user'),
                     ], [
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SSO_USER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SSO_GROUP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ADMIN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EDITOR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VIEWER'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SSO_USER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SSO_GROUP'),
+                            ]),
                         ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -893,7 +983,9 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('grafanaVersions'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -909,19 +1001,21 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('expiresAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUsedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('expiresAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUsedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -935,21 +1029,23 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('workspaceId'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('grafanaRole'),
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('isDisabled'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ADMIN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EDITOR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VIEWER'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('grafanaRole'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('isDisabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ADMIN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EDITOR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VIEWER'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -962,64 +1058,70 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('workspaces'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('authentication'),
-                    new \PHPStan\Type\Constant\ConstantStringType('created'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('endpoint'),
-                    new \PHPStan\Type\Constant\ConstantStringType('grafanaToken'),
-                    new \PHPStan\Type\Constant\ConstantStringType('grafanaVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('licenseType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('modified'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('notificationDestinations'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('providers'),
-                        new \PHPStan\Type\Constant\ConstantStringType('samlConfigurationStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('authentication'),
+                        new \PHPStan\Type\Constant\ConstantStringType('created'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('endpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('grafanaToken'),
+                        new \PHPStan\Type\Constant\ConstantStringType('grafanaVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('licenseType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modified'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('notificationDestinations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_SSO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SAML'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('providers'),
+                            new \PHPStan\Type\Constant\ConstantStringType('samlConfigurationStatus'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_SSO'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SAML'),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CONFIGURED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NOT_CONFIGURED'),
+                            ]),
                         ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CONFIGURED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_CONFIGURED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENTERPRISE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENTERPRISE_FREE_TRIAL'),
                         ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPGRADING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETION_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPGRADE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LICENSE_REMOVAL_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VERSION_UPDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VERSION_UPDATE_FAILED'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENTERPRISE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ENTERPRISE_FREE_TRIAL'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('SNS'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPGRADING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETION_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPGRADE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LICENSE_REMOVAL_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VERSION_UPDATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VERSION_UPDATE_FAILED'),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1041,39 +1143,43 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('errors'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('causedBy'),
-                    new \PHPStan\Type\Constant\ConstantStringType('code'),
-                    new \PHPStan\Type\Constant\ConstantStringType('message'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('action'),
-                        new \PHPStan\Type\Constant\ConstantStringType('role'),
-                        new \PHPStan\Type\Constant\ConstantStringType('users'),
+                        new \PHPStan\Type\Constant\ConstantStringType('causedBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('message'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ADD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REVOKE'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ADMIN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EDITOR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VIEWER'),
-                        ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('id'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('role'),
+                            new \PHPStan\Type\Constant\ConstantStringType('users'),
                         ], [
-                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SSO_USER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SSO_GROUP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ADD'),
+                                new \PHPStan\Type\Constant\ConstantStringType('REVOKE'),
                             ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ADMIN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EDITOR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VIEWER'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSO_USER'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSO_GROUP'),
+                                    ]),
+                                ]),
+                            ])),
                         ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1118,27 +1224,31 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('providers'),
                         new \PHPStan\Type\Constant\ConstantStringType('samlConfigurationStatus'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_SSO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SAML'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_SSO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SAML'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CONFIGURED'),
                             new \PHPStan\Type\Constant\ConstantStringType('NOT_CONFIGURED'),
                         ]),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_OPENSEARCH_SERVICE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PROMETHEUS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('XRAY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TIMESTREAM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SITEWISE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ATHENA'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TWINMAKER'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_OPENSEARCH_SERVICE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PROMETHEUS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('XRAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTREAM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SITEWISE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ATHENA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TWINMAKER'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
@@ -1157,12 +1267,20 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('prefixListIds'),
                         new \PHPStan\Type\Constant\ConstantStringType('vpceIds'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_MANAGED'),
                         new \PHPStan\Type\Constant\ConstantStringType('SERVICE_MANAGED'),
@@ -1188,8 +1306,12 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
                         new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -1212,10 +1334,12 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     ], [
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AWS_SSO'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SAML'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AWS_SSO'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SAML'),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('configuration'),
                         new \PHPStan\Type\Constant\ConstantStringType('status'),
@@ -1227,7 +1351,9 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('loginValidityDuration'),
                             new \PHPStan\Type\Constant\ConstantStringType('roleValues'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('email'),
                                 new \PHPStan\Type\Constant\ConstantStringType('groups'),
@@ -1255,8 +1381,12 @@ final class ManagedGrafanaClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                 new \PHPStan\Type\Constant\ConstantStringType('admin'),
                                 new \PHPStan\Type\Constant\ConstantStringType('editor'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
                         ]),
                         new \PHPStan\Type\UnionType([

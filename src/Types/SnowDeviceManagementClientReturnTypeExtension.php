@@ -87,19 +87,21 @@ final class SnowDeviceManagementClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('available'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('total'),
-                    new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                    new \PHPStan\Type\Constant\ConstantStringType('used'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('total'),
+                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                        new \PHPStan\Type\Constant\ConstantStringType('used'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('UNLOCKED'),
                     new \PHPStan\Type\Constant\ConstantStringType('LOCKED'),
@@ -110,32 +112,34 @@ final class SnowDeviceManagementClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('defaultGateway'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ipAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ipAddressAssignment'),
-                    new \PHPStan\Type\Constant\ConstantStringType('macAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('netmask'),
-                    new \PHPStan\Type\Constant\ConstantStringType('physicalConnectorType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('physicalNetworkInterfaceId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DHCP'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STATIC'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('defaultGateway'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipAddressAssignment'),
+                        new \PHPStan\Type\Constant\ConstantStringType('macAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('netmask'),
+                        new \PHPStan\Type\Constant\ConstantStringType('physicalConnectorType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('physicalNetworkInterfaceId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DHCP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STATIC'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RJ45'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SFP_PLUS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('QSFP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RJ45_2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WIFI'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RJ45'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SFP_PLUS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('QSFP'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RJ45_2'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WIFI'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('installState'),
                     new \PHPStan\Type\Constant\ConstantStringType('installedVersion'),
@@ -155,87 +159,93 @@ final class SnowDeviceManagementClientReturnTypeExtension implements \PHPStan\Ty
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('instances'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('instance'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('amiLaunchIndex'),
-                        new \PHPStan\Type\Constant\ConstantStringType('blockDeviceMappings'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cpuOptions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('imageId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('instanceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('publicIpAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('rootDeviceName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('securityGroups'),
-                        new \PHPStan\Type\Constant\ConstantStringType('state'),
-                        new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('instance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
                     ], [
-                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('deviceName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ebs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('amiLaunchIndex'),
+                            new \PHPStan\Type\Constant\ConstantStringType('blockDeviceMappings'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cpuOptions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                            new \PHPStan\Type\Constant\ConstantStringType('imageId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('instanceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('publicIpAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('rootDeviceName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('securityGroups'),
+                            new \PHPStan\Type\Constant\ConstantStringType('state'),
+                            new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('attachTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('deleteOnTermination'),
-                                new \PHPStan\Type\Constant\ConstantStringType('status'),
-                                new \PHPStan\Type\Constant\ConstantStringType('volumeId'),
-                            ], [
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ATTACHING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ATTACHED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DETACHING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DETACHED'),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('deviceName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ebs'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('attachTime'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('deleteOnTermination'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('volumeId'),
+                                    ], [
+                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('ATTACHING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ATTACHED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DETACHING'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DETACHED'),
+                                        ]),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
                                 ]),
-                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('coreCount'),
+                                new \PHPStan\Type\Constant\ConstantStringType('threadsPerCore'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('coreCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('threadsPerCore'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('groupId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('groupName'),
-                        ], [
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SHUTTING_DOWN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TERMINATED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('groupId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('groupName'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('code'),
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SHUTTING_DOWN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TERMINATED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                                ]),
                             ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -291,7 +301,9 @@ final class SnowDeviceManagementClientReturnTypeExtension implements \PHPStan\Ty
                     new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
                 ]),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -305,15 +317,17 @@ final class SnowDeviceManagementClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('resources'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -324,17 +338,19 @@ final class SnowDeviceManagementClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('devices'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('associatedWithJob'),
-                    new \PHPStan\Type\Constant\ConstantStringType('managedDeviceArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('managedDeviceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('associatedWithJob'),
+                        new \PHPStan\Type\Constant\ConstantStringType('managedDeviceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('managedDeviceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -346,25 +362,27 @@ final class SnowDeviceManagementClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('executions'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('executionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('managedDeviceId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('state'),
-                    new \PHPStan\Type\Constant\ConstantStringType('taskId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TIMED_OUT'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('executionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('managedDeviceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('state'),
+                        new \PHPStan\Type\Constant\ConstantStringType('taskId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TIMED_OUT'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -387,21 +405,23 @@ final class SnowDeviceManagementClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\Constant\ConstantStringType('tasks'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('state'),
-                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('taskArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('taskId'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('state'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('taskArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('taskId'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }

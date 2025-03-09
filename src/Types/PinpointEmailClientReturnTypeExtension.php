@@ -166,7 +166,9 @@ final class PinpointEmailClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('TEMPORARY_FAILURE'),
                         new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
                     ]),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
             ]),
         ]);
@@ -227,15 +229,17 @@ final class PinpointEmailClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('BlacklistReport'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('RblName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ListingTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RblName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ListingTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]))),
             ]),
         ]);
     }
@@ -278,13 +282,15 @@ final class PinpointEmailClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 ], [
                     new \PHPStan\Type\BooleanType(),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -294,62 +300,68 @@ final class PinpointEmailClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('EventDestinations'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MatchingEventTypes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseDestination'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CloudWatchDestination'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SnsDestination'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PinpointDestination'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SEND'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REJECT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BOUNCE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLAINT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELIVERY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CLICK'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RENDERING_FAILURE'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeliveryStreamArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MatchingEventTypes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseDestination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchDestination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SnsDestination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PinpointDestination'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DimensionConfigurations'),
-                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SEND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('REJECT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BOUNCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('COMPLAINT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELIVERY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CLICK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RENDERING_FAILURE'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DimensionName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DimensionValueSource'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DefaultDimensionValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeliveryStreamArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MESSAGE_TAG'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL_HEADER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LINK_TAG'),
-                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DimensionConfigurations'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionValueSource'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DefaultDimensionValue'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('MESSAGE_TAG'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EMAIL_HEADER'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LINK_TAG'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ApplicationArn'),
+                        ], [
                             new \PHPStan\Type\StringType(),
                         ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -383,20 +395,22 @@ final class PinpointEmailClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('DedicatedIps'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Ip'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WarmupStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WarmupPercentage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PoolName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DONE'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Ip'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WarmupStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WarmupPercentage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PoolName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DONE'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -418,36 +432,44 @@ final class PinpointEmailClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('PENDING_EXPIRATION'),
                     new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Domain'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SubscriptionStartDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('InboxPlacementTrackingOption'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Global'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TrackedIsps'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Domain'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubscriptionStartDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InboxPlacementTrackingOption'),
                     ], [
-                        new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Global'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TrackedIsps'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
                     ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Domain'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SubscriptionStartDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('InboxPlacementTrackingOption'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Global'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TrackedIsps'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Domain'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubscriptionStartDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InboxPlacementTrackingOption'),
                     ], [
-                        new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Global'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TrackedIsps'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -492,33 +514,37 @@ final class PinpointEmailClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\FloatType(),
                     new \PHPStan\Type\FloatType(),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('IspName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PlacementStatistics'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InboxPercentage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SpamPercentage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MissingPercentage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SpfPercentage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DkimPercentage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IspName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PlacementStatistics'),
                     ], [
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InboxPercentage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SpamPercentage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MissingPercentage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SpfPercentage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DkimPercentage'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -548,7 +574,9 @@ final class PinpointEmailClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\IntegerType(),
@@ -557,7 +585,9 @@ final class PinpointEmailClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\FloatType(),
                     new \PHPStan\Type\FloatType(),
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
             ]),
         ]);
@@ -586,51 +616,57 @@ final class PinpointEmailClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\IntegerType(),
                     ]),
                     new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IspName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InboxRawCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SpamRawCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InboxPercentage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SpamPercentage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IspName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InboxRawCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SpamRawCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InboxPercentage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SpamPercentage'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                    ])),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('StartDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VolumeStatistics'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DomainIspPlacements'),
-                ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InboxRawCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SpamRawCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProjectedInbox'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProjectedSpam'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VolumeStatistics'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DomainIspPlacements'),
                     ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InboxRawCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SpamRawCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ProjectedInbox'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ProjectedSpam'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('IspName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InboxRawCount'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SpamRawCount'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InboxPercentage'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SpamPercentage'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                        ])),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IspName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InboxRawCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SpamRawCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InboxPercentage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SpamPercentage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -665,7 +701,9 @@ final class PinpointEmailClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('TEMPORARY_FAILURE'),
                         new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
                     ]),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('MailFromDomain'),
@@ -684,13 +722,15 @@ final class PinpointEmailClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('REJECT_MESSAGE'),
                     ]),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -701,7 +741,9 @@ final class PinpointEmailClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('ConfigurationSets'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -713,7 +755,9 @@ final class PinpointEmailClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('DedicatedIpPools'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -725,24 +769,26 @@ final class PinpointEmailClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('DeliverabilityTestReports'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ReportId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReportName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Subject'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FromEmailAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeliverabilityTestStatus'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ReportId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReportName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Subject'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FromEmailAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeliverabilityTestStatus'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -754,37 +800,43 @@ final class PinpointEmailClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('DomainDeliverabilityCampaigns'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CampaignId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ImageUrl'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Subject'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FromAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SendingIps'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FirstSeenDateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastSeenDateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('InboxCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SpamCount'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReadRate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeleteRate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReadDeleteRate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProjectedVolume'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Esps'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CampaignId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImageUrl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Subject'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FromAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SendingIps'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FirstSeenDateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastSeenDateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InboxCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SpamCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReadRate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeleteRate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReadDeleteRate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProjectedVolume'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Esps'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -796,19 +848,21 @@ final class PinpointEmailClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('EmailIdentities'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('IdentityType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IdentityName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SendingEnabled'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EMAIL_ADDRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DOMAIN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MANAGED_DOMAIN'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IdentityType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IdentityName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SendingEnabled'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL_ADDRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DOMAIN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MANAGED_DOMAIN'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -819,13 +873,15 @@ final class PinpointEmailClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }

@@ -399,30 +399,42 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('DatasetGroupArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('AttributeConfigs'),
                     new \PHPStan\Type\Constant\ConstantStringType('AdditionalDatasets'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Transformations'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Configuration'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Transformations'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Configuration'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ]))),
+                        ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
@@ -537,19 +549,21 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('string'),
-                            new \PHPStan\Type\Constant\ConstantStringType('integer'),
-                            new \PHPStan\Type\Constant\ConstantStringType('float'),
-                            new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('geolocation'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('string'),
+                                new \PHPStan\Type\Constant\ConstantStringType('integer'),
+                                new \PHPStan\Type\Constant\ConstantStringType('float'),
+                                new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('geolocation'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
@@ -578,7 +592,9 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('RETAIL'),
                     new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
@@ -729,19 +745,21 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('string'),
-                            new \PHPStan\Type\Constant\ConstantStringType('integer'),
-                            new \PHPStan\Type\Constant\ConstantStringType('float'),
-                            new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('geolocation'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('string'),
+                                new \PHPStan\Type\Constant\ConstantStringType('integer'),
+                                new \PHPStan\Type\Constant\ConstantStringType('float'),
+                                new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('geolocation'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -809,7 +827,9 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
@@ -841,19 +861,21 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('string'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('integer'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('float'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('geolocation'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('string'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('integer'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('float'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('geolocation'),
+                                    ]),
                                 ]),
-                            ]),
+                            ])),
                         ]),
                         new \PHPStan\Type\StringType(),
                     ]),
@@ -927,13 +949,15 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('BaselineMetrics'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                        ])),
                     ]),
                 ]),
                 new \PHPStan\Type\StringType(),
@@ -975,9 +999,13 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('LatencyOptimized'),
@@ -1000,45 +1028,53 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('ContinuousParameterRanges'),
                         new \PHPStan\Type\Constant\ConstantStringType('IntegerParameterRanges'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MinValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ScalingType'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Auto'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Linear'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Logarithmic'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ReverseLogarithmic'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MinValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ScalingType'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Auto'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Linear'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Logarithmic'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ReverseLogarithmic'),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MaxValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MinValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ScalingType'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Auto'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Linear'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Logarithmic'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ReverseLogarithmic'),
+                                ]),
                             ]),
-                        ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MaxValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MinValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ScalingType'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Auto'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Linear'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Logarithmic'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ReverseLogarithmic'),
+                                ]),
+                            ]),
+                        ])),
                     ]),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1046,13 +1082,15 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('SupplementaryFeatures'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ForecastFrequency'),
@@ -1060,20 +1098,26 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('Featurizations'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FeaturizationPipeline'),
-                    ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FeaturizationMethodName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FeaturizationMethodParameters'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FeaturizationPipeline'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantStringType('filling'),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('FeaturizationMethodName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FeaturizationMethodParameters'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantStringType('filling'),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                ]),
+                            ])),
                         ]),
-                    ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
@@ -1085,27 +1129,33 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('PredictorExecutions'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AlgorithmArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TestWindows'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TestWindowStart'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TestWindowEnd'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AlgorithmArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TestWindows'),
                         ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('TestWindowStart'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TestWindowEnd'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                                ], [
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                         ]),
-                    ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -1204,19 +1254,21 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('string'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('integer'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('float'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('geolocation'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('string'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('integer'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('float'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('geolocation'),
+                                    ]),
                                 ]),
-                            ]),
+                            ])),
                         ]),
                         new \PHPStan\Type\StringType(),
                     ]),
@@ -1248,39 +1300,43 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Action'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TimeSeriesConditions'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Operation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TimeSeriesConditions'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ADD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SUBTRACT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MULTIPLY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DIVIDE'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Operation'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ADD'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBTRACT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MULTIPLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIVIDE'),
+                            ]),
+                            new \PHPStan\Type\FloatType(),
                         ]),
-                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AttributeValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Condition'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('EQUALS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_EQUALS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN'),
+                                ]),
+                            ]),
+                        ])),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Condition'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EQUALS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_EQUALS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LESS_THAN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GREATER_THAN'),
-                        ]),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('S3Config'),
                     new \PHPStan\Type\Constant\ConstantStringType('Schema'),
@@ -1299,24 +1355,28 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('string'),
-                                new \PHPStan\Type\Constant\ConstantStringType('integer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('float'),
-                                new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('geolocation'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AttributeType'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('string'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('integer'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('float'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('geolocation'),
+                                ]),
                             ]),
-                        ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -1337,7 +1397,9 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('S3Config'),
                 ], [
@@ -1369,56 +1431,64 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('AutoMLOverrideStrategy'),
                 new \PHPStan\Type\Constant\ConstantStringType('OptimizationMetric'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('AlgorithmArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TestWindows'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TestWindowStart'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TestWindowEnd'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EvaluationType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Metrics'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AlgorithmArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TestWindows'),
                     ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SUMMARY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPUTED'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RMSE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WeightedQuantileLosses'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ErrorMetrics'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AverageWeightedQuantileLoss'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Quantile'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LossValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TestWindowStart'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TestWindowEnd'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ItemCount'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EvaluationType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Metrics'),
                             ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SUMMARY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('COMPUTED'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RMSE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WeightedQuantileLosses'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMetrics'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AverageWeightedQuantileLoss'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Quantile'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('LossValue'),
+                                        ], [
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('ForecastType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('WAPE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('RMSE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MASE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MAPE'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
                             ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ForecastType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WAPE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RMSE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MASE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MAPE'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
+                        ])),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('LatencyOptimized'),
@@ -1441,17 +1511,19 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('DatasetGroups'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DatasetGroupArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DatasetGroupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DatasetGroupArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DatasetGroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1463,40 +1535,42 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('DatasetImportJobs'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DatasetImportJobArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DatasetImportJobName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DataSource'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ImportMode'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3Config'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DatasetImportJobArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DatasetImportJobName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImportMode'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KMSKeyArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Config'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KMSKeyArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FULL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INCREMENTAL'),
                         ]),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FULL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INCREMENTAL'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1508,33 +1582,35 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Datasets'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DatasetArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DatasetName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DatasetType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Domain'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TARGET_TIME_SERIES'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RELATED_TIME_SERIES'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ITEM_METADATA'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DatasetArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DatasetName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DatasetType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Domain'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TARGET_TIME_SERIES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RELATED_TIME_SERIES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ITEM_METADATA'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RETAIL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVENTORY_PLANNING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EC2_CAPACITY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WORK_FORCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WEB_TRAFFIC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('METRICS'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RETAIL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                        new \PHPStan\Type\Constant\ConstantStringType('INVENTORY_PLANNING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EC2_CAPACITY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WORK_FORCE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WEB_TRAFFIC'),
-                        new \PHPStan\Type\Constant\ConstantStringType('METRICS'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1546,37 +1622,39 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Explainabilities'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ExplainabilityArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExplainabilityName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExplainabilityConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeSeriesGranularity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TimePointGranularity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExplainabilityArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExplainabilityName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExplainabilityConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SPECIFIC'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TimeSeriesGranularity'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TimePointGranularity'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SPECIFIC'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SPECIFIC'),
+                            ]),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SPECIFIC'),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1588,35 +1666,37 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('ExplainabilityExports'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ExplainabilityExportArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExplainabilityExportName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Destination'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3Config'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExplainabilityExportArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExplainabilityExportName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Destination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KMSKeyArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Config'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KMSKeyArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1628,35 +1708,37 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('ForecastExportJobs'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ForecastExportJobArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ForecastExportJobName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Destination'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3Config'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ForecastExportJobArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ForecastExportJobName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Destination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KMSKeyArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Config'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KMSKeyArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1668,27 +1750,29 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Forecasts'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ForecastArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ForecastName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PredictorArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedUsingAutoPredictor'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DatasetGroupArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ForecastArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ForecastName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PredictorArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedUsingAutoPredictor'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DatasetGroupArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1701,51 +1785,55 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('PredictorMonitorEvaluations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MonitorArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EvaluationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EvaluationState'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WindowStartDatetime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WindowEndDatetime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PredictorEvent'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MonitorDataSource'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MetricResults'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NumItemsEvaluated'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Detail'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Datetime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MonitorArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EvaluationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EvaluationState'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WindowStartDatetime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WindowEndDatetime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PredictorEvent'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MonitorDataSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MetricResults'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NumItemsEvaluated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
                     ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Detail'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Datetime'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DatasetImportJobArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ForecastArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PredictorArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MetricValue'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DatasetImportJobArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ForecastArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PredictorArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MetricValue'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1756,21 +1844,23 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Monitors'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('MonitorArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MonitorName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MonitorArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MonitorName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1782,35 +1872,37 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('PredictorBacktestExportJobs'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('PredictorBacktestExportJobArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PredictorBacktestExportJobName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Destination'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3Config'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PredictorBacktestExportJobArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PredictorBacktestExportJobName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Destination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KMSKeyArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Config'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KMSKeyArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1822,36 +1914,38 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Predictors'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('PredictorArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PredictorName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DatasetGroupArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IsAutoPredictor'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReferencePredictorSummary'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PredictorArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PredictorName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DatasetGroupArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IsAutoPredictor'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReferencePredictorSummary'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Active'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Deleted'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Active'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Deleted'),
+                            ]),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1862,13 +1956,15 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1879,23 +1975,25 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('WhatIfAnalyses'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('WhatIfAnalysisArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WhatIfAnalysisName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ForecastArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('WhatIfAnalysisArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WhatIfAnalysisName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ForecastArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1907,37 +2005,41 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('WhatIfForecastExports'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('WhatIfForecastExportArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WhatIfForecastArns'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WhatIfForecastExportName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Destination'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3Config'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WhatIfForecastExportArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WhatIfForecastArns'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WhatIfForecastExportName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Destination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KMSKeyArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Config'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KMSKeyArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1949,23 +2051,25 @@ final class ForecastServiceClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('WhatIfForecasts'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('WhatIfForecastArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WhatIfForecastName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WhatIfAnalysisArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('WhatIfForecastArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WhatIfForecastName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WhatIfAnalysisArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

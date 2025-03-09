@@ -126,13 +126,15 @@ final class IdentityStoreClientReturnTypeExtension implements \PHPStan\Type\Dyna
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Issuer'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Issuer'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -181,13 +183,15 @@ final class IdentityStoreClientReturnTypeExtension implements \PHPStan\Type\Dyna
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Issuer'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Issuer'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Formatted'),
                     new \PHPStan\Type\Constant\ConstantStringType('FamilyName'),
@@ -206,43 +210,49 @@ final class IdentityStoreClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Primary'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('StreetAddress'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Locality'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Formatted'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Primary'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Primary'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Primary'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('StreetAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Locality'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Formatted'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Primary'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Primary'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -294,19 +304,21 @@ final class IdentityStoreClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Results'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MemberId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MembershipExists'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MemberId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MembershipExists'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
                     ]),
-                    new \PHPStan\Type\BooleanType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -317,21 +329,23 @@ final class IdentityStoreClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('GroupMemberships'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('IdentityStoreId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MembershipId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MemberId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IdentityStoreId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MembershipId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MemberId'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -343,21 +357,23 @@ final class IdentityStoreClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('GroupMemberships'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('IdentityStoreId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MembershipId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MemberId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IdentityStoreId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MembershipId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MemberId'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -369,25 +385,29 @@ final class IdentityStoreClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('Groups'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExternalIds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IdentityStoreId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Issuer'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExternalIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IdentityStoreId'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Issuer'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -399,41 +419,97 @@ final class IdentityStoreClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('Users'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('UserName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExternalIds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NickName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProfileUrl'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Emails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Addresses'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PhoneNumbers'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Title'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PreferredLanguage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Locale'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Timezone'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IdentityStoreId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Issuer'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExternalIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NickName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileUrl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Emails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Addresses'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PhoneNumbers'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PreferredLanguage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Locale'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Timezone'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IdentityStoreId'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Formatted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FamilyName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GivenName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MiddleName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HonorificPrefix'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HonorificSuffix'),
-                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Issuer'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Formatted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FamilyName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GivenName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MiddleName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HonorificPrefix'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HonorificSuffix'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Primary'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('StreetAddress'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Locality'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Formatted'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Primary'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Primary'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                        ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
@@ -441,53 +517,7 @@ final class IdentityStoreClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Primary'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('StreetAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Locality'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Formatted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Primary'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Primary'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

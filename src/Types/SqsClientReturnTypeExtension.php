@@ -97,22 +97,26 @@ final class SqsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Successful'),
                 new \PHPStan\Type\Constant\ConstantStringType('Failed'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SenderFault'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SenderFault'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -139,22 +143,26 @@ final class SqsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Successful'),
                 new \PHPStan\Type\Constant\ConstantStringType('Failed'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SenderFault'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SenderFault'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -214,7 +222,9 @@ final class SqsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('queueUrls'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -225,27 +235,29 @@ final class SqsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Results'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('TaskHandle'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SourceArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DestinationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MaxNumberOfMessagesPerSecond'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ApproximateNumberOfMessagesMoved'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ApproximateNumberOfMessagesToMove'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FailureReason'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartedTimestamp'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TaskHandle'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DestinationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxNumberOfMessagesPerSecond'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApproximateNumberOfMessagesMoved'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApproximateNumberOfMessagesToMove'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FailureReason'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartedTimestamp'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -266,7 +278,9 @@ final class SqsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('QueueUrls'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -283,54 +297,60 @@ final class SqsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Messages'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('MessageId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReceiptHandle'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MD5OfBody'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Body'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MD5OfMessageAttributes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MessageAttributes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('All'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SenderId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SentTimestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ApproximateReceiveCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ApproximateFirstReceiveTimestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SequenceNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MessageDeduplicationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MessageGroupId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AWSTraceHeader'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeadLetterQueueSourceArn'),
-                    ]), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('StringValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BinaryValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StringListValues'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BinaryListValues'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DataType'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MessageId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReceiptHandle'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MD5OfBody'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Body'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MD5OfMessageAttributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MessageAttributes'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
                         new \PHPStan\Type\StringType(),
-                    ])),
-                ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('All'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SenderId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SentTimestamp'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ApproximateReceiveCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ApproximateFirstReceiveTimestamp'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SequenceNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MessageDeduplicationId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MessageGroupId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AWSTraceHeader'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeadLetterQueueSourceArn'),
+                        ]), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('StringValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BinaryValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StringListValues'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BinaryListValues'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DataType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ResourceType(),
+                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ResourceType(),
+                                    new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -365,32 +385,36 @@ final class SqsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Successful'),
                 new \PHPStan\Type\Constant\ConstantStringType('Failed'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MessageId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MD5OfMessageBody'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MD5OfMessageAttributes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MD5OfMessageSystemAttributes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SequenceNumber'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SenderFault'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MessageId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MD5OfMessageBody'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MD5OfMessageAttributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MD5OfMessageSystemAttributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SequenceNumber'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SenderFault'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }

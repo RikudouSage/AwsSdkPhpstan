@@ -129,17 +129,19 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IPAddressType'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IPAddressType'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -170,29 +172,33 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IPAddressType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IPAddressType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('KeyId'),
                         new \PHPStan\Type\Constant\ConstantStringType('Type'),
@@ -203,10 +209,12 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                             new \PHPStan\Type\Constant\ConstantStringType('AWS_OWNED_KMS_KEY'),
                         ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TLS_SNI'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HTTP_HOST'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TLS_SNI'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HTTP_HOST'),
+                        ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Status'),
@@ -309,13 +317,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
@@ -373,13 +383,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -401,18 +413,22 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IdentifiedRuleIds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IdentifiedType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnalysisDetail'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('STATELESS_RULE_FORWARDING_ASYMMETRICALLY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STATELESS_RULE_CONTAINS_TCP_FLAGS'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IdentifiedRuleIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IdentifiedType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AnalysisDetail'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('STATELESS_RULE_FORWARDING_ASYMMETRICALLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STATELESS_RULE_CONTAINS_TCP_FLAGS'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -447,13 +463,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -466,17 +484,19 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                             new \PHPStan\Type\Constant\ConstantStringType('AWS_OWNED_KMS_KEY'),
                         ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CertificateSerial'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CertificateSerial'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('CertificateSerial'),
@@ -518,29 +538,33 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IPAddressType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IPAddressType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('KeyId'),
                         new \PHPStan\Type\Constant\ConstantStringType('Type'),
@@ -551,10 +575,12 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                             new \PHPStan\Type\Constant\ConstantStringType('AWS_OWNED_KMS_KEY'),
                         ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TLS_SNI'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HTTP_HOST'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TLS_SNI'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HTTP_HOST'),
+                        ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Status'),
@@ -655,13 +681,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
@@ -723,13 +751,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -751,18 +781,22 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IdentifiedRuleIds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IdentifiedType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnalysisDetail'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('STATELESS_RULE_FORWARDING_ASYMMETRICALLY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STATELESS_RULE_CONTAINS_TCP_FLAGS'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IdentifiedRuleIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IdentifiedType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AnalysisDetail'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('STATELESS_RULE_FORWARDING_ASYMMETRICALLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STATELESS_RULE_CONTAINS_TCP_FLAGS'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -795,13 +829,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -814,17 +850,19 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                             new \PHPStan\Type\Constant\ConstantStringType('AWS_OWNED_KMS_KEY'),
                         ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CertificateSerial'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CertificateSerial'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('CertificateSerial'),
@@ -868,29 +906,33 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IPAddressType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IPAddressType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('KeyId'),
                         new \PHPStan\Type\Constant\ConstantStringType('Type'),
@@ -901,10 +943,12 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                             new \PHPStan\Type\Constant\ConstantStringType('AWS_OWNED_KMS_KEY'),
                         ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TLS_SNI'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HTTP_HOST'),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TLS_SNI'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HTTP_HOST'),
+                        ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Status'),
@@ -1008,13 +1052,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
@@ -1041,48 +1087,62 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('TLSInspectionConfigurationArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('PolicyVariables'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Priority'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ActionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ActionDefinition'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PublishMetricAction'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Priority'),
                         ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ActionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ActionDefinition'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PublishMetricAction'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                    ])),
                                 ]),
                             ]),
                         ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Priority'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Override'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Override'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantStringType('DROP_TO_ALERT'),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantStringType('DROP_TO_ALERT'),
+                            ]),
                         ]),
-                    ]),
-                    new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('RuleOrder'),
                         new \PHPStan\Type\Constant\ConstantStringType('StreamExceptionPolicy'),
@@ -1110,7 +1170,9 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Definition'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ])),
                     ]),
                 ]),
@@ -1128,23 +1190,25 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('LogDestinationConfigs'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LogType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LogDestinationType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LogDestination'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ALERT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TLS'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('LogType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LogDestinationType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LogDestination'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ALERT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FLOW'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TLS'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLogs'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisDataFirehose'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLogs'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KinesisDataFirehose'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1181,12 +1245,16 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Definition'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Definition'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1210,167 +1278,201 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                             new \PHPStan\Type\Constant\ConstantStringType('TargetTypes'),
                             new \PHPStan\Type\Constant\ConstantStringType('GeneratedRulesType'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('TLS_SNI'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HTTP_HOST'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('TLS_SNI'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('HTTP_HOST'),
+                                ]),
+                            ])),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('ALLOWLIST'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DENYLIST'),
                             ]),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Action'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Header'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RuleOptions'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PASS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DROP'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ALERT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('REJECT'),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Source'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SourcePort'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Direction'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Destination'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DestinationPort'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Header'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RuleOptions'),
                             ], [
                                 new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('IP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TCP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UDP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ICMP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HTTP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FTP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TLS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SMB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DNS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DCERPC'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SSH'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SMTP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IMAP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MSN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KRB5'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IKEV2'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TFTP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NTP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DHCP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PASS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DROP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALERT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('REJECT'),
                                 ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('FORWARD'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ANY'),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SourcePort'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Direction'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Destination'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DestinationPort'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('IP'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TCP'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UDP'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ICMP'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('HTTP'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('FTP'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TLS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SMB'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DNS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DCERPC'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SMTP'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('IMAP'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MSN'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('KRB5'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('IKEV2'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TFTP'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NTP'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DHCP'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FORWARD'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ANY'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Keyword'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Settings'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\StringType(),
+                                        ])),
+                                    ]),
+                                ])),
                             ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Keyword'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Settings'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('StatelessRules'),
                             new \PHPStan\Type\Constant\ConstantStringType('CustomActions'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('RuleDefinition'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Priority'),
-                            ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('MatchAttributes'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Actions'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RuleDefinition'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Priority'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Sources'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Destinations'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('SourcePorts'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DestinationPorts'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Protocols'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('TCPFlags'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MatchAttributes'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Actions'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('AddressDefinition'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Sources'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Destinations'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SourcePorts'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DestinationPorts'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Protocols'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TCPFlags'),
                                         ], [
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('AddressDefinition'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                ]),
+                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('AddressDefinition'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                ]),
+                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('FromPort'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ToPort'),
+                                                ], [
+                                                    new \PHPStan\Type\IntegerType(),
+                                                    new \PHPStan\Type\IntegerType(),
+                                                ]),
+                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('FromPort'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ToPort'),
+                                                ], [
+                                                    new \PHPStan\Type\IntegerType(),
+                                                    new \PHPStan\Type\IntegerType(),
+                                                ]),
+                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\IntegerType(),
+                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('Flags'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('Masks'),
+                                                ], [
+                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                        new \PHPStan\Type\UnionType([
+                                                            new \PHPStan\Type\Constant\ConstantStringType('FIN'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('SYN'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('RST'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('PSH'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('ACK'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('URG'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('ECE'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('CWR'),
+                                                        ]),
+                                                    ])),
+                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                        new \PHPStan\Type\UnionType([
+                                                            new \PHPStan\Type\Constant\ConstantStringType('FIN'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('SYN'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('RST'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('PSH'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('ACK'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('URG'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('ECE'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('CWR'),
+                                                        ]),
+                                                    ])),
+                                                ]),
+                                            ])),
+                                        ]),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\StringType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('AddressDefinition'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('FromPort'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ToPort'),
-                                        ], [
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('FromPort'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ToPort'),
-                                        ], [
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Flags'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Masks'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('FIN'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SYN'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('RST'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('PSH'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ACK'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('URG'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ECE'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CWR'),
-                                            ]),
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('FIN'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SYN'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('RST'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('PSH'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ACK'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('URG'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ECE'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CWR'),
-                                            ]),
-                                        ]),
+                                        ])),
                                     ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ActionName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ActionDefinition'),
+                                ], [
                                     new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ActionName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ActionDefinition'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('PublishMetricAction'),
-                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PublishMetricAction'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                ]),
+                                            ])),
                                         ]),
                                     ]),
                                 ]),
-                            ]),
+                            ])),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1413,13 +1515,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1441,18 +1545,22 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IdentifiedRuleIds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IdentifiedType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnalysisDetail'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('STATELESS_RULE_FORWARDING_ASYMMETRICALLY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STATELESS_RULE_CONTAINS_TCP_FLAGS'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IdentifiedRuleIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IdentifiedType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AnalysisDetail'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('STATELESS_RULE_FORWARDING_ASYMMETRICALLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STATELESS_RULE_CONTAINS_TCP_FLAGS'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1501,67 +1609,83 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ServerCertificateConfigurations'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ServerCertificates'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Scopes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CertificateAuthorityArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CheckCertificateRevocationStatus'),
-                    ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServerCertificates'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Scopes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CertificateAuthorityArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CheckCertificateRevocationStatus'),
                         ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Sources'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Destinations'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SourcePorts'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DestinationPorts'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Protocols'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('AddressDefinition'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('AddressDefinition'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('FromPort'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ToPort'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('FromPort'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ToPort'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                        ]),
+                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\IntegerType(),
+                                    ])),
+                                ]),
+                            ])),
                             new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Sources'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Destinations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourcePorts'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DestinationPorts'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Protocols'),
-                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AddressDefinition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RevokedStatusAction'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UnknownStatusAction'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AddressDefinition'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('FromPort'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ToPort'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('FromPort'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ToPort'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RevokedStatusAction'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UnknownStatusAction'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PASS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DROP'),
-                                new \PHPStan\Type\Constant\ConstantStringType('REJECT'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PASS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DROP'),
-                                new \PHPStan\Type\Constant\ConstantStringType('REJECT'),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PASS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DROP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('REJECT'),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PASS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DROP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('REJECT'),
+                                ]),
                             ]),
                         ]),
-                    ]),
+                    ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('TLSInspectionConfigurationArn'),
@@ -1585,13 +1709,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1604,17 +1730,19 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                             new \PHPStan\Type\Constant\ConstantStringType('AWS_OWNED_KMS_KEY'),
                         ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CertificateSerial'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CertificateSerial'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('CertificateSerial'),
@@ -1641,17 +1769,19 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IPAddressType'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IPAddressType'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1677,29 +1807,31 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('HTTP_HOST'),
                 ]),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FirstAccessed'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastAccessed'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Domain'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Hits'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UniqueSources'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FirstAccessed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastAccessed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Domain'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Hits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UniqueSources'),
                     ], [
-                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Count'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -1710,20 +1842,22 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('AnalysisReports'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('AnalysisReportId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AnalysisType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReportTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TLS_SNI'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HTTP_HOST'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AnalysisReportId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AnalysisType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReportTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TLS_SNI'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HTTP_HOST'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1736,13 +1870,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('FirewallPolicies'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1754,13 +1890,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Firewalls'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('FirewallName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FirewallArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FirewallName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FirewallArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1772,13 +1910,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('RuleGroups'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1790,13 +1930,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('TLSInspectionConfigurations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1808,13 +1950,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -1855,10 +1999,12 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('FirewallName'),
                 new \PHPStan\Type\Constant\ConstantStringType('UpdateToken'),
             ], [
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('TLS_SNI'),
-                    new \PHPStan\Type\Constant\ConstantStringType('HTTP_HOST'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TLS_SNI'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HTTP_HOST'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1952,13 +2098,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
@@ -2006,23 +2154,25 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('LogDestinationConfigs'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LogType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LogDestinationType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LogDestination'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ALERT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TLS'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('LogType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LogDestinationType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LogDestination'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ALERT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FLOW'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TLS'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLogs'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisDataFirehose'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLogs'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KinesisDataFirehose'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -2066,13 +2216,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2094,18 +2246,22 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IdentifiedRuleIds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IdentifiedType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnalysisDetail'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('STATELESS_RULE_FORWARDING_ASYMMETRICALLY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STATELESS_RULE_CONTAINS_TCP_FLAGS'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IdentifiedRuleIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IdentifiedType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AnalysisDetail'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('STATELESS_RULE_FORWARDING_ASYMMETRICALLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STATELESS_RULE_CONTAINS_TCP_FLAGS'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -2156,13 +2312,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2175,17 +2333,19 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                             new \PHPStan\Type\Constant\ConstantStringType('AWS_OWNED_KMS_KEY'),
                         ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CertificateSerial'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CertificateSerial'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('CertificateSerial'),

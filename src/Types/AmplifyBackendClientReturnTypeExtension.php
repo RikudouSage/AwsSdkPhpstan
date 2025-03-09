@@ -334,7 +334,9 @@ final class AmplifyBackendClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -361,36 +363,38 @@ final class AmplifyBackendClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('Service'),
                     new \PHPStan\Type\Constant\ConstantStringType('TransformSchema'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Mode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Settings'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CognitoUserPoolId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExpirationTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OpenIDAuthTTL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OpenIDClientId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OpenIDIatTTL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OpenIDIssueURL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OpenIDProviderName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Mode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Settings'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('API_KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_COGNITO_USER_POOLS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OPENID_CONNECT'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CognitoUserPoolId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ExpirationTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OpenIDAuthTTL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OpenIDClientId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OpenIDIatTTL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OpenIDIssueURL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OpenIDProviderName'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ResolutionStrategy'),
@@ -532,10 +536,12 @@ final class AmplifyBackendClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                 new \PHPStan\Type\Constant\ConstantStringType('MfaTypes'),
                                 new \PHPStan\Type\Constant\ConstantStringType('SmsMessage'),
                             ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SMS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TOTP'),
-                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('SMS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TOTP'),
+                                    ]),
+                                ])),
                                 new \PHPStan\Type\StringType(),
                             ]),
                         ]),
@@ -552,15 +558,21 @@ final class AmplifyBackendClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                 new \PHPStan\Type\Constant\ConstantStringType('CODE'),
                                 new \PHPStan\Type\Constant\ConstantStringType('IMPLICIT'),
                             ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PHONE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OPENID'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PROFILE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_COGNITO_SIGNIN_USER_ADMIN'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PHONE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OPENID'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PROFILE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_COGNITO_SIGNIN_USER_ADMIN'),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Facebook'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Google'),
@@ -605,33 +617,37 @@ final class AmplifyBackendClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('AdditionalConstraints'),
                             new \PHPStan\Type\Constant\ConstantStringType('MinimumLength'),
                         ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('REQUIRE_DIGIT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('REQUIRE_LOWERCASE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('REQUIRE_SYMBOL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('REQUIRE_UPPERCASE'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('REQUIRE_DIGIT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('REQUIRE_LOWERCASE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('REQUIRE_SYMBOL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('REQUIRE_UPPERCASE'),
+                                ]),
+                            ])),
                             new \PHPStan\Type\FloatType(),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ADDRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BIRTHDATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAMILY_NAME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GENDER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GIVEN_NAME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LOCALE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MIDDLE_NAME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NAME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NICKNAME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PHONE_NUMBER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PICTURE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PREFERRED_USERNAME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROFILE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATED_AT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WEBSITE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ZONE_INFO'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ADDRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BIRTHDATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAMILY_NAME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('GENDER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('GIVEN_NAME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOCALE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MIDDLE_NAME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NAME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NICKNAME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PHONE_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PICTURE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PREFERRED_USERNAME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROFILE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATED_AT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WEBSITE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ZONE_INFO'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
                             new \PHPStan\Type\Constant\ConstantStringType('EMAIL_AND_PHONE_NUMBER'),
@@ -714,16 +730,20 @@ final class AmplifyBackendClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('Authenticated'),
                         new \PHPStan\Type\Constant\ConstantStringType('UnAuthenticated'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('READ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_AND_UPDATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('READ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_AND_UPDATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('READ'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATE_AND_UPDATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('READ'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATE_AND_UPDATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
+                            ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantStringType('S3'),
                 ]),
@@ -790,25 +810,27 @@ final class AmplifyBackendClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Jobs'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('AppId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BackendEnvironmentName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Operation'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UpdateTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AppId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BackendEnvironmentName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Error'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Operation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdateTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -820,13 +842,15 @@ final class AmplifyBackendClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Buckets'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

@@ -282,13 +282,15 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantStringType('MFAOptions'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\BooleanType(),
@@ -302,16 +304,18 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                         new \PHPStan\Type\Constant\ConstantStringType('FORCE_CHANGE_PASSWORD'),
                         new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL_PROVIDER'),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DeliveryMedium'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SMS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DeliveryMedium'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SMS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -366,13 +370,15 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantStringType('DeviceLastAuthenticatedDate'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -395,13 +401,15 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('UserMFASettingList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\BooleanType(),
@@ -415,18 +423,22 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantStringType('FORCE_CHANGE_PASSWORD'),
                     new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL_PROVIDER'),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DeliveryMedium'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SMS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DeliveryMedium'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SMS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -481,24 +493,26 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                         new \PHPStan\Type\StringType(),
                     ]),
                 ]),
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('SMS_MFA'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EMAIL_OTP'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SOFTWARE_TOKEN_MFA'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SELECT_MFA_TYPE'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MFA_SETUP'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PASSWORD_VERIFIER'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_CHALLENGE'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SELECT_CHALLENGE'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DEVICE_SRP_AUTH'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DEVICE_PASSWORD_VERIFIER'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ADMIN_NO_SRP_AUTH'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NEW_PASSWORD_REQUIRED'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SMS_OTP'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PASSWORD'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WEB_AUTHN'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PASSWORD_SRP'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SMS_MFA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EMAIL_OTP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SOFTWARE_TOKEN_MFA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SELECT_MFA_TYPE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MFA_SETUP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PASSWORD_VERIFIER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_CHALLENGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SELECT_CHALLENGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEVICE_SRP_AUTH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEVICE_PASSWORD_VERIFIER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ADMIN_NO_SRP_AUTH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NEW_PASSWORD_REQUIRED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SMS_OTP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PASSWORD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WEB_AUTHN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PASSWORD_SRP'),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -515,25 +529,29 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('Devices'),
                 new \PHPStan\Type\Constant\ConstantStringType('PaginationToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceKey'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceAttributes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceCreateDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceLastModifiedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceLastAuthenticatedDate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceAttributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceCreateDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceLastModifiedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceLastAuthenticatedDate'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -545,23 +563,25 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('Groups'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('GroupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserPoolId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Precedence'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('GroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserPoolId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Precedence'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -573,86 +593,90 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('AuthEvents'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('EventId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventResponse'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventRisk'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChallengeResponses'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventContextData'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventFeedback'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SignIn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SignUp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ForgotPassword'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PasswordChange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResendCode'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Pass'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Fail'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RiskDecision'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RiskLevel'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CompromisedCredentialsDetected'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NoRisk'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AccountTakeover'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Block'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Low'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Medium'),
-                            new \PHPStan\Type\Constant\ConstantStringType('High'),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ChallengeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChallengeResponse'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Password'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Mfa'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failure'),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IpAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeviceName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Timezone'),
-                        new \PHPStan\Type\Constant\ConstantStringType('City'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventResponse'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventRisk'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChallengeResponses'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventContextData'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventFeedback'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FeedbackValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Provider'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FeedbackDate'),
-                    ], [
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Valid'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Invalid'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SignIn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SignUp'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ForgotPassword'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PasswordChange'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResendCode'),
                         ]),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Pass'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Fail'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RiskDecision'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RiskLevel'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CompromisedCredentialsDetected'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NoRisk'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AccountTakeover'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Block'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Low'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Medium'),
+                                new \PHPStan\Type\Constant\ConstantStringType('High'),
+                            ]),
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ChallengeName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ChallengeResponse'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Password'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Mfa'),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Failure'),
+                                ]),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IpAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeviceName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Timezone'),
+                            new \PHPStan\Type\Constant\ConstantStringType('City'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FeedbackValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Provider'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FeedbackDate'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Valid'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Invalid'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -868,7 +892,9 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -894,49 +920,51 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Category'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ColorMode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Extension'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Bytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FAVICON_ICO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAVICON_SVG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL_GRAPHIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SMS_GRAPHIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUTH_APP_GRAPHIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PASSWORD_GRAPHIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PASSKEY_GRAPHIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAGE_HEADER_LOGO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAGE_HEADER_BACKGROUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAGE_FOOTER_LOGO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAGE_FOOTER_BACKGROUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAGE_BACKGROUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FORM_BACKGROUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FORM_LOGO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IDP_BUTTON_ICON'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LIGHT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DARK'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DYNAMIC'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ICO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('JPEG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PNG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SVG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WEBP'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Category'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ColorMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Extension'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Bytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('FAVICON_ICO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAVICON_SVG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL_GRAPHIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SMS_GRAPHIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AUTH_APP_GRAPHIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PASSWORD_GRAPHIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PASSKEY_GRAPHIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAGE_HEADER_LOGO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAGE_HEADER_BACKGROUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAGE_FOOTER_LOGO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAGE_FOOTER_BACKGROUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAGE_BACKGROUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FORM_BACKGROUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FORM_LOGO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IDP_BUTTON_ICON'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LIGHT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DARK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DYNAMIC'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ICO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('JPEG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PNG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SVG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WEBP'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ResourceType(),
+                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                            ]),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -958,13 +986,15 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ScopeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ScopeDescription'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ScopeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ScopeDescription'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1084,12 +1114,14 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('AllowedFirstAuthFactors'),
                         ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PASSWORD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL_OTP'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SMS_OTP'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WEB_AUTHN'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PASSWORD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EMAIL_OTP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SMS_OTP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WEB_AUTHN'),
+                                ]),
+                            ])),
                         ]),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -1155,53 +1187,61 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeDataType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeveloperOnlyAttribute'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Mutable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Required'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NumberAttributeConstraints'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StringAttributeConstraints'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeDataType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeveloperOnlyAttribute'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Mutable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Required'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NumberAttributeConstraints'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StringAttributeConstraints'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('String'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Number'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Boolean'),
+                            ]),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MinValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MaxValue'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MinLength'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MaxLength'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('String'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Number'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Boolean'),
+                            new \PHPStan\Type\Constant\ConstantStringType('phone_number'),
+                            new \PHPStan\Type\Constant\ConstantStringType('email'),
                         ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MinValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxValue'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('phone_number'),
+                            new \PHPStan\Type\Constant\ConstantStringType('email'),
+                            new \PHPStan\Type\Constant\ConstantStringType('preferred_username'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MinLength'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxLength'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('phone_number'),
+                            new \PHPStan\Type\Constant\ConstantStringType('email'),
                         ]),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('phone_number'),
-                        new \PHPStan\Type\Constant\ConstantStringType('email'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('phone_number'),
-                        new \PHPStan\Type\Constant\ConstantStringType('email'),
-                        new \PHPStan\Type\Constant\ConstantStringType('preferred_username'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('phone_number'),
-                        new \PHPStan\Type\Constant\ConstantStringType('email'),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1227,10 +1267,12 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('AttributesRequireVerificationBeforeUpdate'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('phone_number'),
-                            new \PHPStan\Type\Constant\ConstantStringType('email'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('phone_number'),
+                                new \PHPStan\Type\Constant\ConstantStringType('email'),
+                            ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('OFF'),
@@ -1319,17 +1361,19 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('RecoveryMechanisms'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Priority'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('verified_email'),
-                                new \PHPStan\Type\Constant\ConstantStringType('verified_phone_number'),
-                                new \PHPStan\Type\Constant\ConstantStringType('admin_only'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('verified_email'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('verified_phone_number'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('admin_only'),
+                                ]),
                             ]),
-                        ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('LITE'),
@@ -1406,29 +1450,45 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                             new \PHPStan\Type\Constant\ConstantStringType('days'),
                         ]),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ADMIN_NO_SRP_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_AUTH_FLOW_ONLY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('USER_PASSWORD_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW_ADMIN_USER_PASSWORD_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW_CUSTOM_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW_USER_PASSWORD_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW_USER_SRP_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW_REFRESH_TOKEN_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW_USER_AUTH'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ADMIN_NO_SRP_AUTH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_AUTH_FLOW_ONLY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('USER_PASSWORD_AUTH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW_ADMIN_USER_PASSWORD_AUTH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW_CUSTOM_AUTH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW_USER_PASSWORD_AUTH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW_USER_SRP_AUTH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW_REFRESH_TOKEN_AUTH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW_USER_AUTH'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('implicit'),
-                        new \PHPStan\Type\Constant\ConstantStringType('client_credentials'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('implicit'),
+                            new \PHPStan\Type\Constant\ConstantStringType('client_credentials'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ApplicationId'),
@@ -1554,7 +1614,9 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -1580,49 +1642,51 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Category'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ColorMode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Extension'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Bytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FAVICON_ICO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAVICON_SVG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL_GRAPHIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SMS_GRAPHIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUTH_APP_GRAPHIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PASSWORD_GRAPHIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PASSKEY_GRAPHIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAGE_HEADER_LOGO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAGE_HEADER_BACKGROUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAGE_FOOTER_LOGO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAGE_FOOTER_BACKGROUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAGE_BACKGROUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FORM_BACKGROUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FORM_LOGO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IDP_BUTTON_ICON'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LIGHT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DARK'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DYNAMIC'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ICO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('JPEG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PNG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SVG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WEBP'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Category'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ColorMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Extension'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Bytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('FAVICON_ICO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAVICON_SVG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL_GRAPHIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SMS_GRAPHIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AUTH_APP_GRAPHIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PASSWORD_GRAPHIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PASSKEY_GRAPHIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAGE_HEADER_LOGO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAGE_HEADER_BACKGROUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAGE_FOOTER_LOGO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAGE_FOOTER_BACKGROUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAGE_BACKGROUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FORM_BACKGROUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FORM_LOGO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IDP_BUTTON_ICON'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LIGHT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DARK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DYNAMIC'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ICO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('JPEG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PNG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SVG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WEBP'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ResourceType(),
+                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                            ]),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -1648,49 +1712,51 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Category'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ColorMode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Extension'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Bytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FAVICON_ICO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAVICON_SVG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL_GRAPHIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SMS_GRAPHIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUTH_APP_GRAPHIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PASSWORD_GRAPHIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PASSKEY_GRAPHIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAGE_HEADER_LOGO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAGE_HEADER_BACKGROUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAGE_FOOTER_LOGO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAGE_FOOTER_BACKGROUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAGE_BACKGROUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FORM_BACKGROUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FORM_LOGO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IDP_BUTTON_ICON'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LIGHT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DARK'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DYNAMIC'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ICO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('JPEG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PNG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SVG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WEBP'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Category'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ColorMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Extension'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Bytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('FAVICON_ICO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAVICON_SVG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL_GRAPHIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SMS_GRAPHIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AUTH_APP_GRAPHIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PASSWORD_GRAPHIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PASSKEY_GRAPHIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAGE_HEADER_LOGO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAGE_HEADER_BACKGROUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAGE_FOOTER_LOGO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAGE_FOOTER_BACKGROUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAGE_BACKGROUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FORM_BACKGROUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FORM_LOGO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IDP_BUTTON_ICON'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LIGHT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DARK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DYNAMIC'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ICO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('JPEG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PNG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SVG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WEBP'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ResourceType(),
+                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                            ]),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -1712,13 +1778,15 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ScopeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ScopeDescription'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ScopeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ScopeDescription'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1743,11 +1811,13 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                         new \PHPStan\Type\Constant\ConstantStringType('EventFilter'),
                         new \PHPStan\Type\Constant\ConstantStringType('Actions'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SIGN_IN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PASSWORD_CHANGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SIGN_UP'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SIGN_IN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PASSWORD_CHANGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SIGN_UP'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('EventAction'),
                         ], [
@@ -1847,8 +1917,12 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                         new \PHPStan\Type\Constant\ConstantStringType('BlockedIPRangeList'),
                         new \PHPStan\Type\Constant\ConstantStringType('SkippedIPRangeList'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -1970,12 +2044,14 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('AllowedFirstAuthFactors'),
                         ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PASSWORD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL_OTP'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SMS_OTP'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WEB_AUTHN'),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PASSWORD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EMAIL_OTP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SMS_OTP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WEB_AUTHN'),
+                                ]),
+                            ])),
                         ]),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -2041,53 +2117,61 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeDataType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeveloperOnlyAttribute'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Mutable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Required'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NumberAttributeConstraints'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StringAttributeConstraints'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AttributeDataType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeveloperOnlyAttribute'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Mutable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Required'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NumberAttributeConstraints'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StringAttributeConstraints'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('String'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Number'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DateTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Boolean'),
+                            ]),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MinValue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MaxValue'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MinLength'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MaxLength'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('String'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Number'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Boolean'),
+                            new \PHPStan\Type\Constant\ConstantStringType('phone_number'),
+                            new \PHPStan\Type\Constant\ConstantStringType('email'),
                         ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MinValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxValue'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('phone_number'),
+                            new \PHPStan\Type\Constant\ConstantStringType('email'),
+                            new \PHPStan\Type\Constant\ConstantStringType('preferred_username'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MinLength'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxLength'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('phone_number'),
+                            new \PHPStan\Type\Constant\ConstantStringType('email'),
                         ]),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('phone_number'),
-                        new \PHPStan\Type\Constant\ConstantStringType('email'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('phone_number'),
-                        new \PHPStan\Type\Constant\ConstantStringType('email'),
-                        new \PHPStan\Type\Constant\ConstantStringType('preferred_username'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('phone_number'),
-                        new \PHPStan\Type\Constant\ConstantStringType('email'),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2113,10 +2197,12 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('AttributesRequireVerificationBeforeUpdate'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('phone_number'),
-                            new \PHPStan\Type\Constant\ConstantStringType('email'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('phone_number'),
+                                new \PHPStan\Type\Constant\ConstantStringType('email'),
+                            ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('OFF'),
@@ -2205,17 +2291,19 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('RecoveryMechanisms'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Priority'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('verified_email'),
-                                new \PHPStan\Type\Constant\ConstantStringType('verified_phone_number'),
-                                new \PHPStan\Type\Constant\ConstantStringType('admin_only'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('verified_email'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('verified_phone_number'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('admin_only'),
+                                ]),
                             ]),
-                        ]),
+                        ])),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('LITE'),
@@ -2292,29 +2380,45 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                             new \PHPStan\Type\Constant\ConstantStringType('days'),
                         ]),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ADMIN_NO_SRP_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_AUTH_FLOW_ONLY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('USER_PASSWORD_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW_ADMIN_USER_PASSWORD_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW_CUSTOM_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW_USER_PASSWORD_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW_USER_SRP_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW_REFRESH_TOKEN_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW_USER_AUTH'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ADMIN_NO_SRP_AUTH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_AUTH_FLOW_ONLY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('USER_PASSWORD_AUTH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW_ADMIN_USER_PASSWORD_AUTH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW_CUSTOM_AUTH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW_USER_PASSWORD_AUTH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW_USER_SRP_AUTH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW_REFRESH_TOKEN_AUTH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW_USER_AUTH'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('implicit'),
-                        new \PHPStan\Type\Constant\ConstantStringType('client_credentials'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('implicit'),
+                            new \PHPStan\Type\Constant\ConstantStringType('client_credentials'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ApplicationId'),
@@ -2415,7 +2519,9 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('CSVHeader'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -2433,13 +2539,15 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantStringType('DeviceLastAuthenticatedDate'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -2501,7 +2609,9 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -2519,37 +2629,39 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantStringType('LogConfigurations'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LogLevel'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EventSource'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLogsConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('S3Configuration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FirehoseConfiguration'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INFO'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('userNotification'),
-                            new \PHPStan\Type\Constant\ConstantStringType('userAuthEvents'),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LogGroupArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LogLevel'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EventSource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLogsConfiguration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Configuration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FirehoseConfiguration'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INFO'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('userNotification'),
+                                new \PHPStan\Type\Constant\ConstantStringType('userAuthEvents'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LogGroupArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BucketArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('StreamArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BucketArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StreamArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -2601,25 +2713,31 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('UserMFASettingList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DeliveryMedium'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SMS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DeliveryMedium'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SMS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -2655,13 +2773,17 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('PASSWORD'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EMAIL_OTP'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SMS_OTP'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WEB_AUTHN'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PASSWORD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EMAIL_OTP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SMS_OTP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WEB_AUTHN'),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -2777,24 +2899,26 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                         new \PHPStan\Type\StringType(),
                     ]),
                 ]),
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('SMS_MFA'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EMAIL_OTP'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SOFTWARE_TOKEN_MFA'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SELECT_MFA_TYPE'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MFA_SETUP'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PASSWORD_VERIFIER'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_CHALLENGE'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SELECT_CHALLENGE'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DEVICE_SRP_AUTH'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DEVICE_PASSWORD_VERIFIER'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ADMIN_NO_SRP_AUTH'),
-                    new \PHPStan\Type\Constant\ConstantStringType('NEW_PASSWORD_REQUIRED'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SMS_OTP'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PASSWORD'),
-                    new \PHPStan\Type\Constant\ConstantStringType('WEB_AUTHN'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PASSWORD_SRP'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SMS_MFA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EMAIL_OTP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SOFTWARE_TOKEN_MFA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SELECT_MFA_TYPE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MFA_SETUP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PASSWORD_VERIFIER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_CHALLENGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SELECT_CHALLENGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEVICE_SRP_AUTH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEVICE_PASSWORD_VERIFIER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ADMIN_NO_SRP_AUTH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NEW_PASSWORD_REQUIRED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SMS_OTP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PASSWORD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WEB_AUTHN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PASSWORD_SRP'),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -2805,25 +2929,29 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('Devices'),
                 new \PHPStan\Type\Constant\ConstantStringType('PaginationToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceKey'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceAttributes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceCreateDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceLastModifiedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceLastAuthenticatedDate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceAttributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceCreateDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceLastModifiedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceLastAuthenticatedDate'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2835,23 +2963,25 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('Groups'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('GroupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserPoolId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Precedence'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('GroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserPoolId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Precedence'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2863,24 +2993,26 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('Providers'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ProviderName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProviderType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SAML'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Facebook'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Google'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LoginWithAmazon'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SignInWithApple'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OIDC'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ProviderName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProviderType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SAML'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Facebook'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Google'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LoginWithAmazon'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SignInWithApple'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OIDC'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2892,23 +3024,27 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('ResourceServers'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('UserPoolId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Identifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Scopes'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ScopeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ScopeDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserPoolId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Identifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Scopes'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ScopeName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ScopeDescription'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2930,44 +3066,46 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('UserImportJobs'),
                 new \PHPStan\Type\Constant\ConstantStringType('PaginationToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('JobName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('JobId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserPoolId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PreSignedUrl'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StartDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CompletionDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLogsRoleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ImportedUsers'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SkippedUsers'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FailedUsers'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CompletionMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Created'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Stopping'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Expired'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('JobName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JobId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserPoolId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PreSignedUrl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CompletionDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLogsRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImportedUsers'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SkippedUsers'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FailedUsers'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CompletionMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Created'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Stopping'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Expired'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2979,15 +3117,17 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('UserPoolClients'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ClientId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserPoolId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ClientName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ClientId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserPoolId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ClientName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2999,76 +3139,78 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('UserPools'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LambdaConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PreSignUp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CustomMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PostConfirmation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PreAuthentication'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PostAuthentication'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DefineAuthChallenge'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreateAuthChallenge'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VerifyAuthChallengeResponse'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PreTokenGeneration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UserMigration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PreTokenGenerationConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CustomSMSSender'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CustomEmailSender'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KMSKeyID'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LambdaConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LambdaVersion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LambdaArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PreSignUp'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CustomMessage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PostConfirmation'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PreAuthentication'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PostAuthentication'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DefineAuthChallenge'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CreateAuthChallenge'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VerifyAuthChallengeResponse'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PreTokenGeneration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UserMigration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PreTokenGenerationConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CustomSMSSender'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CustomEmailSender'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KMSKeyID'),
                         ], [
-                            new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LambdaVersion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LambdaArn'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('V1_0'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('V2_0'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('V3_0'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LambdaVersion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LambdaArn'),
+                            ], [
                                 new \PHPStan\Type\Constant\ConstantStringType('V1_0'),
-                                new \PHPStan\Type\Constant\ConstantStringType('V2_0'),
-                                new \PHPStan\Type\Constant\ConstantStringType('V3_0'),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LambdaVersion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LambdaArn'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantStringType('V1_0'),
+                                new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LambdaVersion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LambdaArn'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantStringType('V1_0'),
-                            new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LambdaVersion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LambdaArn'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantStringType('V1_0'),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3080,47 +3222,53 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('Users'),
                 new \PHPStan\Type\Constant\ConstantStringType('PaginationToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Username'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserCreateDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserLastModifiedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MFAOptions'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Username'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserCreateDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserLastModifiedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MFAOptions'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UNCONFIRMED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CONFIRMED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPROMISED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RESET_REQUIRED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FORCE_CHANGE_PASSWORD'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL_PROVIDER'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DeliveryMedium'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SMS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNCONFIRMED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CONFIRMED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPROMISED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RESET_REQUIRED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FORCE_CHANGE_PASSWORD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL_PROVIDER'),
                         ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DeliveryMedium'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SMS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3132,47 +3280,53 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('Users'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Username'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserCreateDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserLastModifiedDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                    new \PHPStan\Type\Constant\ConstantStringType('UserStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MFAOptions'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Username'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserCreateDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserLastModifiedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UserStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MFAOptions'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UNCONFIRMED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CONFIRMED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPROMISED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RESET_REQUIRED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FORCE_CHANGE_PASSWORD'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL_PROVIDER'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DeliveryMedium'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SMS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNCONFIRMED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CONFIRMED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ARCHIVED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPROMISED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RESET_REQUIRED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FORCE_CHANGE_PASSWORD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL_PROVIDER'),
                         ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DeliveryMedium'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SMS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3184,21 +3338,25 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('Credentials'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CredentialId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FriendlyCredentialName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RelyingPartyId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AuthenticatorAttachment'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AuthenticatorTransports'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CredentialId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FriendlyCredentialName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RelyingPartyId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AuthenticatorAttachment'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AuthenticatorTransports'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3294,37 +3452,39 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantStringType('LogConfigurations'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LogLevel'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EventSource'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLogsConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('S3Configuration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FirehoseConfiguration'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INFO'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('userNotification'),
-                            new \PHPStan\Type\Constant\ConstantStringType('userAuthEvents'),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LogGroupArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LogLevel'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EventSource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLogsConfiguration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Configuration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FirehoseConfiguration'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INFO'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('userNotification'),
+                                new \PHPStan\Type\Constant\ConstantStringType('userAuthEvents'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LogGroupArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BucketArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('StreamArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BucketArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StreamArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -3349,11 +3509,13 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                         new \PHPStan\Type\Constant\ConstantStringType('EventFilter'),
                         new \PHPStan\Type\Constant\ConstantStringType('Actions'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SIGN_IN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PASSWORD_CHANGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SIGN_UP'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SIGN_IN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PASSWORD_CHANGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SIGN_UP'),
+                            ]),
+                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('EventAction'),
                         ], [
@@ -3453,8 +3615,12 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                         new \PHPStan\Type\Constant\ConstantStringType('BlockedIPRangeList'),
                         new \PHPStan\Type\Constant\ConstantStringType('SkippedIPRangeList'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -3763,7 +3929,9 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -3789,49 +3957,51 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Category'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ColorMode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Extension'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Bytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FAVICON_ICO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAVICON_SVG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL_GRAPHIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SMS_GRAPHIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUTH_APP_GRAPHIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PASSWORD_GRAPHIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PASSKEY_GRAPHIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAGE_HEADER_LOGO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAGE_HEADER_BACKGROUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAGE_FOOTER_LOGO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAGE_FOOTER_BACKGROUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAGE_BACKGROUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FORM_BACKGROUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FORM_LOGO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IDP_BUTTON_ICON'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LIGHT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DARK'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DYNAMIC'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ICO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('JPEG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PNG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SVG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WEBP'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Category'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ColorMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Extension'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Bytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('FAVICON_ICO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAVICON_SVG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL_GRAPHIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SMS_GRAPHIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AUTH_APP_GRAPHIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PASSWORD_GRAPHIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PASSKEY_GRAPHIC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAGE_HEADER_LOGO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAGE_HEADER_BACKGROUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAGE_FOOTER_LOGO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAGE_FOOTER_BACKGROUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PAGE_BACKGROUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FORM_BACKGROUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FORM_LOGO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IDP_BUTTON_ICON'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LIGHT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DARK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DYNAMIC'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ICO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('JPEG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PNG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SVG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WEBP'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ResourceType(),
+                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                            ]),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -3853,13 +4023,15 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ScopeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ScopeDescription'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ScopeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ScopeDescription'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ]),
             ]),
         ]);
@@ -3870,18 +4042,20 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('CodeDeliveryDetailsList'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Destination'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeliveryMedium'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SMS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Destination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeliveryMedium'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SMS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -3957,29 +4131,45 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                             new \PHPStan\Type\Constant\ConstantStringType('days'),
                         ]),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ADMIN_NO_SRP_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_AUTH_FLOW_ONLY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('USER_PASSWORD_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW_ADMIN_USER_PASSWORD_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW_CUSTOM_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW_USER_PASSWORD_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW_USER_SRP_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW_REFRESH_TOKEN_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW_USER_AUTH'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ADMIN_NO_SRP_AUTH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_AUTH_FLOW_ONLY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('USER_PASSWORD_AUTH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW_ADMIN_USER_PASSWORD_AUTH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW_CUSTOM_AUTH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW_USER_PASSWORD_AUTH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW_USER_SRP_AUTH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW_REFRESH_TOKEN_AUTH'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW_USER_AUTH'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('implicit'),
-                        new \PHPStan\Type\Constant\ConstantStringType('client_credentials'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('implicit'),
+                            new \PHPStan\Type\Constant\ConstantStringType('client_credentials'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ApplicationId'),

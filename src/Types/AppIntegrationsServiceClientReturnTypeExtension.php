@@ -117,10 +117,16 @@ final class AppIntegrationsServiceClientReturnTypeExtension implements \PHPStan\
                     new \PHPStan\Type\Constant\ConstantStringType('Folders'),
                     new \PHPStan\Type\Constant\ConstantStringType('Filters'),
                 ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ]))),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType())),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])))),
             ]),
         ]);
     }
@@ -194,29 +200,37 @@ final class AppIntegrationsServiceClientReturnTypeExtension implements \PHPStan\
                         new \PHPStan\Type\Constant\ConstantStringType('ApprovedOrigins'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Event'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Event'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Schema'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Event'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Event'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Schema'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -255,10 +269,16 @@ final class AppIntegrationsServiceClientReturnTypeExtension implements \PHPStan\
                     new \PHPStan\Type\Constant\ConstantStringType('Folders'),
                     new \PHPStan\Type\Constant\ConstantStringType('Filters'),
                 ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ]))),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType())),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])))),
             ]),
         ]);
     }
@@ -293,15 +313,17 @@ final class AppIntegrationsServiceClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('ApplicationAssociations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationAssociationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ClientId'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationAssociationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ClientId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -313,21 +335,23 @@ final class AppIntegrationsServiceClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('Applications'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Namespace'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Namespace'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -339,56 +363,58 @@ final class AppIntegrationsServiceClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('DataIntegrationAssociations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DataIntegrationAssociationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DataIntegrationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ClientId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DestinationURI'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastExecutionStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionConfiguration'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataIntegrationAssociationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataIntegrationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ClientId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DestinationURI'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastExecutionStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionConfiguration'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        ]),
                         new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionMode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnDemandConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ScheduleConfiguration'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ON_DEMAND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SCHEDULED'),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            ]),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FirstExecutionFrom'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Object'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ScheduleExpression'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OnDemandConfiguration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ScheduleConfiguration'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ON_DEMAND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SCHEDULED'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('FirstExecutionFrom'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Object'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ScheduleExpression'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -400,15 +426,17 @@ final class AppIntegrationsServiceClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('DataIntegrations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SourceURI'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceURI'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -420,21 +448,23 @@ final class AppIntegrationsServiceClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('EventIntegrationAssociations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('EventIntegrationAssociationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventIntegrationAssociationId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventIntegrationName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ClientId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventBridgeRuleName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ClientAssociationMetadata'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EventIntegrationAssociationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventIntegrationAssociationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventIntegrationName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ClientId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventBridgeRuleName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ClientAssociationMetadata'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -446,25 +476,27 @@ final class AppIntegrationsServiceClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('EventIntegrations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('EventIntegrationArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventFilter'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EventBridgeBus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventIntegrationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventFilter'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventBridgeBus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

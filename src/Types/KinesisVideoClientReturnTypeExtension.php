@@ -294,13 +294,15 @@ final class KinesisVideoClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('MappedResourceConfigurationList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ARN'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ARN'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -436,17 +438,19 @@ final class KinesisVideoClientReturnTypeExtension implements \PHPStan\Type\Dynam
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('ResourceEndpointList'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ResourceEndpoint'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('WSS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HTTPS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WEBRTC'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceEndpoint'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('WSS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HTTPS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WEBRTC'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -457,89 +461,91 @@ final class KinesisVideoClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('EdgeConfigs'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('StreamName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StreamARN'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SyncStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FailedStatusDetails'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EdgeConfig'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SYNCING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACKNOWLEDGED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_SYNC'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SYNC_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING_ACKNOWLEDGED'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('HubDeviceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RecorderConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UploaderConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeletionConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StreamName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StreamARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SyncStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FailedStatusDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EdgeConfig'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SYNCING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACKNOWLEDGED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_SYNC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SYNC_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING_ACKNOWLEDGED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MediaSourceConfig'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ScheduleConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HubDeviceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RecorderConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UploaderConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeletionConfig'),
                         ], [
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MediaUriSecretArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MediaUriType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MediaSourceConfig'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ScheduleConfig'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('RTSP_URI'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FILE_URI'),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MediaUriSecretArn'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MediaUriType'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('RTSP_URI'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('FILE_URI'),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScheduleExpression'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DurationInSeconds'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ]),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ScheduleExpression'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DurationInSeconds'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ScheduleConfig'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ScheduleConfig'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ScheduleExpression'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DurationInSeconds'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EdgeRetentionInHours'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LocalSizeConfig'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeleteAfterUpload'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxLocalMediaSizeInMB'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StrategyOnFullSize'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DELETE_OLDEST_MEDIA'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DENY_NEW_MEDIA'),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScheduleExpression'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DurationInSeconds'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ]),
                             ]),
-                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('EdgeRetentionInHours'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LocalSizeConfig'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DeleteAfterUpload'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaxLocalMediaSizeInMB'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('StrategyOnFullSize'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_OLDEST_MEDIA'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DENY_NEW_MEDIA'),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
                         ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -551,35 +557,37 @@ final class KinesisVideoClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('ChannelInfoList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ChannelName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChannelARN'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChannelType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChannelStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SingleMasterConfiguration'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SINGLE_MASTER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FULL_MESH'),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MessageTtlSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChannelName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChannelARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChannelType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChannelStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SingleMasterConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
                     ], [
-                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SINGLE_MASTER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FULL_MESH'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MessageTtlSeconds'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -591,32 +599,34 @@ final class KinesisVideoClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('StreamInfoList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('DeviceName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StreamName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('StreamARN'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MediaType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DataRetentionInHours'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StreamName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StreamARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MediaType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataRetentionInHours'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

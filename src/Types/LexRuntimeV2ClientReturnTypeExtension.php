@@ -58,118 +58,128 @@ final class LexRuntimeV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('sessionState'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('content'),
-                    new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('imageResponseCard'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ImageResponseCard'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SSML'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('title'),
-                        new \PHPStan\Type\Constant\ConstantStringType('subtitle'),
-                        new \PHPStan\Type\Constant\ConstantStringType('imageUrl'),
-                        new \PHPStan\Type\Constant\ConstantStringType('buttons'),
+                        new \PHPStan\Type\Constant\ConstantStringType('content'),
+                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('imageResponseCard'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('text'),
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('nluConfidence'),
-                    new \PHPStan\Type\Constant\ConstantStringType('sentimentResponse'),
-                    new \PHPStan\Type\Constant\ConstantStringType('intent'),
-                    new \PHPStan\Type\Constant\ConstantStringType('interpretationSource'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('score'),
-                    ], [
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('sentiment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('sentimentScore'),
-                    ], [
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MIXED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NEGATIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NEUTRAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('POSITIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ImageResponseCard'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SSML'),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('positive'),
-                            new \PHPStan\Type\Constant\ConstantStringType('negative'),
-                            new \PHPStan\Type\Constant\ConstantStringType('neutral'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mixed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('title'),
+                            new \PHPStan\Type\Constant\ConstantStringType('subtitle'),
+                            new \PHPStan\Type\Constant\ConstantStringType('imageUrl'),
+                            new \PHPStan\Type\Constant\ConstantStringType('buttons'),
                         ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                         ]),
                     ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('slots'),
-                        new \PHPStan\Type\Constant\ConstantStringType('state'),
-                        new \PHPStan\Type\Constant\ConstantStringType('confirmationState'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nluConfidence'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sentimentResponse'),
+                        new \PHPStan\Type\Constant\ConstantStringType('intent'),
+                        new \PHPStan\Type\Constant\ConstantStringType('interpretationSource'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('shape'),
-                            new \PHPStan\Type\Constant\ConstantStringType('values'),
-                            new \PHPStan\Type\Constant\ConstantStringType('subSlots'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('score'),
                         ], [
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('sentiment'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sentimentScore'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MIXED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NEGATIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NEUTRAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('POSITIVE'),
+                            ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('originalValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('interpretedValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('resolvedValues'),
+                                new \PHPStan\Type\Constant\ConstantStringType('positive'),
+                                new \PHPStan\Type\Constant\ConstantStringType('negative'),
+                                new \PHPStan\Type\Constant\ConstantStringType('neutral'),
+                                new \PHPStan\Type\Constant\ConstantStringType('mixed'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('slots'),
+                            new \PHPStan\Type\Constant\ConstantStringType('state'),
+                            new \PHPStan\Type\Constant\ConstantStringType('confirmationState'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('shape'),
+                                new \PHPStan\Type\Constant\ConstantStringType('values'),
+                                new \PHPStan\Type\Constant\ConstantStringType('subSlots'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('originalValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('interpretedValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('resolvedValues'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Scalar'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('List'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Composite'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\MixedType(),
+                                ])),
+                                new \PHPStan\Type\MixedType(),
+                            ])),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Fulfilled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ReadyForFulfillment'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Waiting'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FulfillmentInProgress'),
                             ]),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Scalar'),
-                                new \PHPStan\Type\Constant\ConstantStringType('List'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Composite'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confirmed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Denied'),
+                                new \PHPStan\Type\Constant\ConstantStringType('None'),
                             ]),
-                            new \PHPStan\Type\MixedType(),
-                            new \PHPStan\Type\MixedType(),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Fulfilled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadyForFulfillment'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Waiting'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FulfillmentInProgress'),
                         ]),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Confirmed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Denied'),
-                            new \PHPStan\Type\Constant\ConstantStringType('None'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Bedrock'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Lex'),
                         ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Bedrock'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Lex'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('dialogAction'),
                     new \PHPStan\Type\Constant\ConstantStringType('intent'),
@@ -226,14 +236,18 @@ final class LexRuntimeV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Scalar'),
                                 new \PHPStan\Type\Constant\ConstantStringType('List'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Composite'),
                             ]),
-                            new \PHPStan\Type\MixedType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\MixedType(),
+                            ])),
                             new \PHPStan\Type\MixedType(),
                         ])),
                         new \PHPStan\Type\UnionType([
@@ -250,21 +264,23 @@ final class LexRuntimeV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('None'),
                         ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('timeToLive'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contextAttributes'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('timeToLiveInSeconds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('turnsToLive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('timeToLive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contextAttributes'),
                         ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('timeToLiveInSeconds'),
+                                new \PHPStan\Type\Constant\ConstantStringType('turnsToLive'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
+                    ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -274,11 +290,13 @@ final class LexRuntimeV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('runtimeHintValues'),
                             new \PHPStan\Type\Constant\ConstantStringType('subSlotHints'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('phrase'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('phrase'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                             new \PHPStan\Type\MixedType(),
                         ]))),
                     ]),
@@ -321,36 +339,40 @@ final class LexRuntimeV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('sessionId'),
                 new \PHPStan\Type\Constant\ConstantStringType('recognizedBotMember'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('content'),
-                    new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('imageResponseCard'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ImageResponseCard'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SSML'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('title'),
-                        new \PHPStan\Type\Constant\ConstantStringType('subtitle'),
-                        new \PHPStan\Type\Constant\ConstantStringType('imageUrl'),
-                        new \PHPStan\Type\Constant\ConstantStringType('buttons'),
+                        new \PHPStan\Type\Constant\ConstantStringType('content'),
+                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('imageResponseCard'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CustomPayload'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ImageResponseCard'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PlainText'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SSML'),
+                        ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('text'),
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('title'),
+                            new \PHPStan\Type\Constant\ConstantStringType('subtitle'),
+                            new \PHPStan\Type\Constant\ConstantStringType('imageUrl'),
+                            new \PHPStan\Type\Constant\ConstantStringType('buttons'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                         ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('dialogAction'),
                     new \PHPStan\Type\Constant\ConstantStringType('intent'),
@@ -407,14 +429,18 @@ final class LexRuntimeV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ]),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Scalar'),
                                 new \PHPStan\Type\Constant\ConstantStringType('List'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Composite'),
                             ]),
-                            new \PHPStan\Type\MixedType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\MixedType(),
+                            ])),
                             new \PHPStan\Type\MixedType(),
                         ])),
                         new \PHPStan\Type\UnionType([
@@ -431,21 +457,23 @@ final class LexRuntimeV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('None'),
                         ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('timeToLive'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contextAttributes'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('timeToLiveInSeconds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('turnsToLive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('timeToLive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contextAttributes'),
                         ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('timeToLiveInSeconds'),
+                                new \PHPStan\Type\Constant\ConstantStringType('turnsToLive'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
+                    ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -455,97 +483,105 @@ final class LexRuntimeV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('runtimeHintValues'),
                             new \PHPStan\Type\Constant\ConstantStringType('subSlotHints'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('phrase'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('phrase'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
                             new \PHPStan\Type\MixedType(),
                         ]))),
                     ]),
                 ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('nluConfidence'),
-                    new \PHPStan\Type\Constant\ConstantStringType('sentimentResponse'),
-                    new \PHPStan\Type\Constant\ConstantStringType('intent'),
-                    new \PHPStan\Type\Constant\ConstantStringType('interpretationSource'),
-                ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('score'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nluConfidence'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sentimentResponse'),
+                        new \PHPStan\Type\Constant\ConstantStringType('intent'),
+                        new \PHPStan\Type\Constant\ConstantStringType('interpretationSource'),
                     ], [
-                        new \PHPStan\Type\FloatType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('sentiment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('sentimentScore'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MIXED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NEGATIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NEUTRAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('POSITIVE'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('score'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('positive'),
-                            new \PHPStan\Type\Constant\ConstantStringType('negative'),
-                            new \PHPStan\Type\Constant\ConstantStringType('neutral'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mixed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sentiment'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sentimentScore'),
                         ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('slots'),
-                        new \PHPStan\Type\Constant\ConstantStringType('state'),
-                        new \PHPStan\Type\Constant\ConstantStringType('confirmationState'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('shape'),
-                            new \PHPStan\Type\Constant\ConstantStringType('values'),
-                            new \PHPStan\Type\Constant\ConstantStringType('subSlots'),
-                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MIXED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NEGATIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NEUTRAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('POSITIVE'),
+                            ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('originalValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('interpretedValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('resolvedValues'),
+                                new \PHPStan\Type\Constant\ConstantStringType('positive'),
+                                new \PHPStan\Type\Constant\ConstantStringType('negative'),
+                                new \PHPStan\Type\Constant\ConstantStringType('neutral'),
+                                new \PHPStan\Type\Constant\ConstantStringType('mixed'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('slots'),
+                            new \PHPStan\Type\Constant\ConstantStringType('state'),
+                            new \PHPStan\Type\Constant\ConstantStringType('confirmationState'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('shape'),
+                                new \PHPStan\Type\Constant\ConstantStringType('values'),
+                                new \PHPStan\Type\Constant\ConstantStringType('subSlots'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('originalValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('interpretedValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('resolvedValues'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Scalar'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('List'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Composite'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\MixedType(),
+                                ])),
+                                new \PHPStan\Type\MixedType(),
+                            ])),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Fulfilled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ReadyForFulfillment'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Waiting'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FulfillmentInProgress'),
                             ]),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Scalar'),
-                                new \PHPStan\Type\Constant\ConstantStringType('List'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Composite'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Confirmed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Denied'),
+                                new \PHPStan\Type\Constant\ConstantStringType('None'),
                             ]),
-                            new \PHPStan\Type\MixedType(),
-                            new \PHPStan\Type\MixedType(),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Fulfilled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadyForFulfillment'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Waiting'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FulfillmentInProgress'),
                         ]),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Confirmed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Denied'),
-                            new \PHPStan\Type\Constant\ConstantStringType('None'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Bedrock'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Lex'),
                         ]),
                     ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Bedrock'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Lex'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([

@@ -177,21 +177,29 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('Ipv6AllowedForDualStack'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\BooleanType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('BaseScreenshots'),
                         new \PHPStan\Type\Constant\ConstantStringType('BaseCanaryRunId'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ScreenshotName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IgnoreCoordinates'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ScreenshotName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IgnoreCoordinates'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
+                        ])),
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -260,144 +268,154 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Canaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Schedule'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RunConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SuccessRetentionPeriodInDays'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FailureRetentionPeriodInDays'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Timeline'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ArtifactS3Location'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EngineArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('RuntimeVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VpcConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VisualReference'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ProvisionedResourceCleanup'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ArtifactConfig'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceLocationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Handler'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Schedule'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RunConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SuccessRetentionPeriodInDays'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FailureRetentionPeriodInDays'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Timeline'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ArtifactS3Location'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EngineArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RuntimeVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VpcConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VisualReference'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedResourceCleanup'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ArtifactConfig'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Expression'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DurationInSeconds'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeoutInSeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MemoryInMB'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ActiveTracing'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StateReasonCode'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('READY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_PERMISSIONS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_COMPLETE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_COMPLETE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SYNC_DELETE_IN_PROGRESS'),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Created'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastStarted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastStopped'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Ipv6AllowedForDualStack'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BaseScreenshots'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BaseCanaryRunId'),
-                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ScreenshotName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IgnoreCoordinates'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SourceLocationArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Handler'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AUTOMATIC'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OFF'),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('S3Encryption'),
-                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EncryptionMode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KmsKeyArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Expression'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DurationInSeconds'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TimeoutInSeconds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MemoryInMB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ActiveTracing'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('State'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StateReasonCode'),
                         ], [
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SSE_S3'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SSE_KMS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                             ]),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('INVALID_PERMISSIONS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATE_PENDING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATE_PENDING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UPDATE_COMPLETE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_COMPLETE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SYNC_DELETE_IN_PROGRESS'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Created'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LastStarted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LastStopped'),
+                        ], [
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Ipv6AllowedForDualStack'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BaseScreenshots'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BaseCanaryRunId'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScreenshotName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('IgnoreCoordinates'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AUTOMATIC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OFF'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Encryption'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('EncryptionMode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsKeyArn'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SSE_S3'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SSE_KMS'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -409,46 +427,48 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('CanariesLastRun'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('CanaryName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('LastRun'),
-                ], [
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Timeline'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ArtifactS3Location'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CanaryName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastRun'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('State'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StateReasonCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Timeline'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ArtifactS3Location'),
                         ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PASSED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('State'),
+                                new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
+                                new \PHPStan\Type\Constant\ConstantStringType('StateReasonCode'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PASSED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CANARY_FAILURE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EXECUTION_FAILURE'),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Started'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Completed'),
+                            ], [
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             ]),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CANARY_FAILURE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EXECUTION_FAILURE'),
-                            ]),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Started'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Completed'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -460,17 +480,19 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('RuntimeVersions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('VersionName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ReleaseDate'),
-                    new \PHPStan\Type\Constant\ConstantStringType('DeprecationDate'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('VersionName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReleaseDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeprecationDate'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -588,21 +610,29 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('Ipv6AllowedForDualStack'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\BooleanType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('BaseScreenshots'),
                         new \PHPStan\Type\Constant\ConstantStringType('BaseCanaryRunId'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ScreenshotName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IgnoreCoordinates'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ScreenshotName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IgnoreCoordinates'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
+                        ])),
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -635,40 +665,42 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('CanaryRuns'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Timeline'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ArtifactS3Location'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StateReasonCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Timeline'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ArtifactS3Location'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PASSED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('State'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StateReasonCode'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PASSED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CANARY_FAILURE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EXECUTION_FAILURE'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Started'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Completed'),
+                        ], [
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CANARY_FAILURE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EXECUTION_FAILURE'),
-                        ]),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Started'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Completed'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -704,15 +736,17 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Groups'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -724,7 +758,9 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Resources'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -736,15 +772,17 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Groups'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

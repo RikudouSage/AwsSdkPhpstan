@@ -944,13 +944,15 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('templateName'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('majorVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('templateName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('majorVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('templateName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -965,7 +967,9 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('PUBLISHED'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('DIRECTLY_DEFINED'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECTLY_DEFINED'),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -1135,7 +1139,9 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                             new \PHPStan\Type\Constant\ConstantStringType('templateMinorVersion'),
                             new \PHPStan\Type\Constant\ConstantStringType('templateName'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
@@ -1205,7 +1211,9 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                             new \PHPStan\Type\Constant\ConstantStringType('templateMinorVersion'),
                             new \PHPStan\Type\Constant\ConstantStringType('templateName'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
@@ -1605,13 +1613,15 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('templateName'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('majorVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('templateName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('majorVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('templateName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -1626,7 +1636,9 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('PUBLISHED'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('DIRECTLY_DEFINED'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECTLY_DEFINED'),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -1828,7 +1840,9 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                             new \PHPStan\Type\Constant\ConstantStringType('templateMinorVersion'),
                             new \PHPStan\Type\Constant\ConstantStringType('templateName'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
@@ -1898,7 +1912,9 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                             new \PHPStan\Type\Constant\ConstantStringType('templateMinorVersion'),
                             new \PHPStan\Type\Constant\ConstantStringType('templateName'),
                         ], [
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\StringType(),
+                            ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
@@ -2143,17 +2159,19 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('startedAt'),
                     new \PHPStan\Type\Constant\ConstantStringType('status'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('event'),
-                        new \PHPStan\Type\Constant\ConstantStringType('externalId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('time'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('event'),
+                            new \PHPStan\Type\Constant\ConstantStringType('externalId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('time'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('INITIATED'),
@@ -2450,17 +2468,19 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('target'),
                     new \PHPStan\Type\Constant\ConstantStringType('targetRevision'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('event'),
-                        new \PHPStan\Type\Constant\ConstantStringType('externalId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('time'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('event'),
+                            new \PHPStan\Type\Constant\ConstantStringType('externalId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('time'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('branch'),
                         new \PHPStan\Type\Constant\ConstantStringType('directory'),
@@ -2512,17 +2532,19 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('target'),
                     new \PHPStan\Type\Constant\ConstantStringType('targetRevision'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('event'),
-                        new \PHPStan\Type\Constant\ConstantStringType('externalId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('time'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('event'),
+                            new \PHPStan\Type\Constant\ConstantStringType('externalId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('time'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('branch'),
                         new \PHPStan\Type\Constant\ConstantStringType('directory'),
@@ -2580,34 +2602,38 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('serviceInstanceName'),
                     new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('contexts'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdReason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resolvedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resolvedReason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contexts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                            new \PHPStan\Type\Constant\ConstantStringType('createdReason'),
+                            new \PHPStan\Type\Constant\ConstantStringType('id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resolvedAt'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resolvedReason'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
                         ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('AUTOMATED'),
                         ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantStringType('AUTOMATED'),
-                    ]),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -2692,13 +2718,15 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('templateName'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('majorVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('templateName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('majorVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('templateName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -2713,7 +2741,9 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('PUBLISHED'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('DIRECTLY_DEFINED'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECTLY_DEFINED'),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -2783,17 +2813,19 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('target'),
                     new \PHPStan\Type\Constant\ConstantStringType('targetRevision'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('event'),
-                        new \PHPStan\Type\Constant\ConstantStringType('externalId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('time'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('event'),
+                            new \PHPStan\Type\Constant\ConstantStringType('externalId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('time'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('branch'),
                         new \PHPStan\Type\Constant\ConstantStringType('directory'),
@@ -2845,17 +2877,19 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('target'),
                     new \PHPStan\Type\Constant\ConstantStringType('targetRevision'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('event'),
-                        new \PHPStan\Type\Constant\ConstantStringType('externalId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('time'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('event'),
+                            new \PHPStan\Type\Constant\ConstantStringType('externalId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('time'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('branch'),
                         new \PHPStan\Type\Constant\ConstantStringType('directory'),
@@ -2910,13 +2944,15 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('outputs'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('valueString'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('valueString'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -2928,18 +2964,20 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('provisionedResources'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('identifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('provisioningEngine'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDFORMATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TERRAFORM'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('identifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('provisioningEngine'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDFORMATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TERRAFORM'),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -2950,44 +2988,46 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('components'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('deploymentStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('deploymentStatusMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('environmentName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastAttemptedDeploymentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastDeploymentAttemptedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastDeploymentSucceededAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastSucceededDeploymentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('serviceInstanceName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_COMPLETE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deploymentStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deploymentStatusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('environmentName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastAttemptedDeploymentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastDeploymentAttemptedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastDeploymentSucceededAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastSucceededDeploymentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('serviceInstanceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_COMPLETE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2999,53 +3039,55 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('deployments'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('completedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('componentName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('deploymentStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('environmentName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastAttemptedDeploymentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastSucceededDeploymentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('serviceInstanceName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('targetArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('targetResourceCreatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('targetResourceType'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_COMPLETE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('completedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('componentName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deploymentStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('environmentName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastAttemptedDeploymentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastSucceededDeploymentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('serviceInstanceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('targetArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('targetResourceCreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('targetResourceType'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_COMPLETE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENVIRONMENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SERVICE_PIPELINE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SERVICE_INSTANCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPONENT'),
+                        ]),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ENVIRONMENT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SERVICE_PIPELINE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SERVICE_INSTANCE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('COMPONENT'),
-                    ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3057,33 +3099,35 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('environmentAccountConnections'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('componentRoleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('environmentAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('environmentName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('managementAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('requestedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CONNECTED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('componentRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('environmentAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('environmentName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('managementAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('requestedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CONNECTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
+                        ]),
                     ]),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3096,13 +3140,15 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('outputs'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('valueString'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('valueString'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -3114,18 +3160,20 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('provisionedResources'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('identifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('provisioningEngine'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDFORMATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TERRAFORM'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('identifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('provisioningEngine'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDFORMATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TERRAFORM'),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -3137,34 +3185,36 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('templateVersions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('majorVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('minorVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('recommendedMinorVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('statusMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('templateName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('REGISTRATION_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REGISTRATION_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DRAFT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLISHED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('majorVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('minorVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('recommendedMinorVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('statusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('templateName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('REGISTRATION_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REGISTRATION_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DRAFT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PUBLISHED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -3176,25 +3226,27 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('templates'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('displayName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('provisioning'),
-                    new \PHPStan\Type\Constant\ConstantStringType('recommendedVersion'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_MANAGED'),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('displayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('provisioning'),
+                        new \PHPStan\Type\Constant\ConstantStringType('recommendedVersion'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_MANAGED'),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -3205,54 +3257,56 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('environments'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('componentRoleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('deploymentStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('deploymentStatusMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('environmentAccountConnectionId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('environmentAccountId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastAttemptedDeploymentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastDeploymentAttemptedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastDeploymentSucceededAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastSucceededDeploymentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('protonServiceRoleArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('provisioning'),
-                    new \PHPStan\Type\Constant\ConstantStringType('templateMajorVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('templateMinorVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('templateName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_COMPLETE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('componentRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deploymentStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deploymentStatusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('environmentAccountConnectionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('environmentAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastAttemptedDeploymentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastDeploymentAttemptedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastDeploymentSucceededAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastSucceededDeploymentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('protonServiceRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('provisioning'),
+                        new \PHPStan\Type\Constant\ConstantStringType('templateMajorVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('templateMinorVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('templateName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_COMPLETE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_MANAGED'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_MANAGED'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3265,21 +3319,23 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('repositories'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('connectionArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('provider'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('GITHUB'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GITHUB_ENTERPRISE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BITBUCKET'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('connectionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('provider'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('GITHUB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITHUB_ENTERPRISE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BITBUCKET'),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -3291,17 +3347,19 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('syncDefinitions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('branch'),
-                    new \PHPStan\Type\Constant\ConstantStringType('directory'),
-                    new \PHPStan\Type\Constant\ConstantStringType('parent'),
-                    new \PHPStan\Type\Constant\ConstantStringType('target'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('branch'),
+                        new \PHPStan\Type\Constant\ConstantStringType('directory'),
+                        new \PHPStan\Type\Constant\ConstantStringType('parent'),
+                        new \PHPStan\Type\Constant\ConstantStringType('target'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -3313,13 +3371,15 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('outputs'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('valueString'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('valueString'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -3331,18 +3391,20 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('provisionedResources'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('identifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('provisioningEngine'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDFORMATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TERRAFORM'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('identifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('provisioningEngine'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDFORMATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TERRAFORM'),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -3354,46 +3416,48 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('serviceInstances'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('deploymentStatus'),
-                    new \PHPStan\Type\Constant\ConstantStringType('deploymentStatusMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('environmentName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastAttemptedDeploymentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastDeploymentAttemptedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastDeploymentSucceededAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastSucceededDeploymentId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('templateMajorVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('templateMinorVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('templateName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_COMPLETE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deploymentStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deploymentStatusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('environmentName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastAttemptedDeploymentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastDeploymentAttemptedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastDeploymentSucceededAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastSucceededDeploymentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('templateMajorVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('templateMinorVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('templateName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_COMPLETE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -3405,13 +3469,15 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('outputs'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('valueString'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('valueString'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -3423,18 +3489,20 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('provisionedResources'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('identifier'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('provisioningEngine'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDFORMATION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TERRAFORM'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('identifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('provisioningEngine'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDFORMATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TERRAFORM'),
+                        ]),
                     ]),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -3446,34 +3514,36 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('templateVersions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('majorVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('minorVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('recommendedMinorVersion'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('statusMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('templateName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('REGISTRATION_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('REGISTRATION_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DRAFT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PUBLISHED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('majorVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('minorVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('recommendedMinorVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('statusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('templateName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('REGISTRATION_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REGISTRATION_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DRAFT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PUBLISHED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -3485,25 +3555,27 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('templates'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('displayName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('pipelineProvisioning'),
-                    new \PHPStan\Type\Constant\ConstantStringType('recommendedVersion'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_MANAGED'),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('displayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('pipelineProvisioning'),
+                        new \PHPStan\Type\Constant\ConstantStringType('recommendedVersion'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_MANAGED'),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -3515,40 +3587,42 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('services'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('statusMessage'),
-                    new \PHPStan\Type\Constant\ConstantStringType('templateName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED_CLEANUP_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED_CLEANUP_COMPLETE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED_CLEANUP_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED_CLEANUP_IN_PROGRESS'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED_CLEANUP_COMPLETE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED_CLEANUP_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_COMPLETE_CLEANUP_FAILED'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('statusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('templateName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED_CLEANUP_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED_CLEANUP_COMPLETE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED_CLEANUP_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED_CLEANUP_IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED_CLEANUP_COMPLETE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED_CLEANUP_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_COMPLETE_CLEANUP_FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                ])),
             ]),
         ]);
     }
@@ -3560,13 +3634,15 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -4101,13 +4177,15 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('status'),
                     new \PHPStan\Type\Constant\ConstantStringType('type'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -4200,13 +4278,15 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('templateName'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('majorVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('templateName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('majorVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('templateName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -4221,7 +4301,9 @@ final class ProtonClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('PUBLISHED'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('DIRECTLY_DEFINED'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECTLY_DEFINED'),
+                    ])),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
